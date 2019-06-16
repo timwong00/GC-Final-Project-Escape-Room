@@ -10,6 +10,7 @@ export class Room1frontComponent implements OnInit {
 
   items: any;
   selectedItems: any[];
+  isShowing: boolean = false;
 
   constructor(private itemsService: ItemsService) {
    }
@@ -33,7 +34,9 @@ export class Room1frontComponent implements OnInit {
   //   console.log(index);
   // }
 
-
+  toggleShow() {
+    this.isShowing = !this.isShowing;
+  }
 
 }
 
