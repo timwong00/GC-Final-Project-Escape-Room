@@ -41,7 +41,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/cli\">CLI Documentation</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n  </li>\n</ul>\n\n<room1front></room1front>\n"
+module.exports = "\r\n<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
@@ -92,8 +92,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 /* harmony import */ var _items_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./items.service */ "./src/app/items.service.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _room1front_room1front_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./room1front/room1front.component */ "./src/app/room1front/room1front.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _room1front_room1front_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./room1front/room1front.component */ "./src/app/room1front/room1front.component.ts");
+/* harmony import */ var _landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./landing-page/landing-page.component */ "./src/app/landing-page/landing-page.component.ts");
 
 
 
@@ -101,21 +103,30 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+var appRoutes = [
+    { path: "", redirectTo: "/landing", pathMatch: "full" },
+    { path: "landing", component: _landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_8__["LandingPageComponent"] },
+    { path: "room1front", component: _room1front_room1front_component__WEBPACK_IMPORTED_MODULE_7__["Room1frontComponent"] }
+];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-                _room1front_room1front_component__WEBPACK_IMPORTED_MODULE_6__["Room1frontComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
+                _room1front_room1front_component__WEBPACK_IMPORTED_MODULE_7__["Room1frontComponent"],
+                _landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_8__["LandingPageComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"]
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
+                _angular_router__WEBPACK_IMPORTED_MODULE_5__["RouterModule"].forRoot(appRoutes)
             ],
             providers: [_items_service__WEBPACK_IMPORTED_MODULE_4__["ItemsService"]],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -144,9 +155,15 @@ __webpack_require__.r(__webpack_exports__);
 var ItemsService = /** @class */ (function () {
     function ItemsService(http) {
         this.http = http;
+        this.selectedItems = [];
     }
     ItemsService.prototype.getItems = function () {
         return this.http.get("/items", { responseType: "json" });
+    };
+    ItemsService.prototype.collectItem = function (selectedItem) {
+        this.selectedItems.push(selectedItem);
+        // console.log(this.selectedItems);
+        return this.selectedItems;
     };
     ItemsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -161,6 +178,66 @@ var ItemsService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/landing-page/landing-page.component.css":
+/*!*********************************************************!*\
+  !*** ./src/app/landing-page/landing-page.component.css ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "html {\r\n    background-image: url(\"https://thumbs.gfycat.com/SlimGenuineGrizzlybear-size_restricted.gif\");\r\n    background-position: top left;\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGFuZGluZy1wYWdlL2xhbmRpbmctcGFnZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksNkZBQTZGO0lBQzdGLDZCQUE2QjtJQUM3QixzQkFBc0I7SUFDdEIsNEJBQTRCO0FBQ2hDIiwiZmlsZSI6InNyYy9hcHAvbGFuZGluZy1wYWdlL2xhbmRpbmctcGFnZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaHRtbCB7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCJodHRwczovL3RodW1icy5nZnljYXQuY29tL1NsaW1HZW51aW5lR3JpenpseWJlYXItc2l6ZV9yZXN0cmljdGVkLmdpZlwiKTtcclxuICAgIGJhY2tncm91bmQtcG9zaXRpb246IHRvcCBsZWZ0O1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbn0iXX0= */"
+
+/***/ }),
+
+/***/ "./src/app/landing-page/landing-page.component.html":
+/*!**********************************************************!*\
+  !*** ./src/app/landing-page/landing-page.component.html ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<nav>\r\n  <img src=\"\" alt=\"logo\">\r\n</nav>\r\n\r\n<button (click)=\"toggleShow()\">HOW TO PLAY</button>\r\n<button [routerLink]=\"['/room1front']\">PLAY</button>\r\n\r\n<section *ngIf=\"isShowing\">\r\n  <p>Directions on how to play...</p>\r\n</section>"
+
+/***/ }),
+
+/***/ "./src/app/landing-page/landing-page.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/landing-page/landing-page.component.ts ***!
+  \********************************************************/
+/*! exports provided: LandingPageComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LandingPageComponent", function() { return LandingPageComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var LandingPageComponent = /** @class */ (function () {
+    function LandingPageComponent() {
+        this.isShowing = false;
+    }
+    LandingPageComponent.prototype.ngOnInit = function () {
+    };
+    LandingPageComponent.prototype.toggleShow = function () {
+        this.isShowing = !this.isShowing;
+    };
+    LandingPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'landing-page',
+            template: __webpack_require__(/*! ./landing-page.component.html */ "./src/app/landing-page/landing-page.component.html"),
+            styles: [__webpack_require__(/*! ./landing-page.component.css */ "./src/app/landing-page/landing-page.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], LandingPageComponent);
+    return LandingPageComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/room1front/room1front.component.css":
 /*!*****************************************************!*\
   !*** ./src/app/room1front/room1front.component.css ***!
@@ -168,7 +245,7 @@ var ItemsService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Jvb20xZnJvbnQvcm9vbTFmcm9udC5jb21wb25lbnQuY3NzIn0= */"
+module.exports = "@font-face {\r\n    font-family: 'true_liesregular';\r\n    src: url('true_lies-webfont.woff2') format('woff2'),\r\n         url('true_lies-webfont.woff') format('woff');\r\n    font-weight: normal;\r\n    font-style: normal;\r\n}\r\n\r\nh1 {\r\n    font-family: 'true_liesregular';\r\n    font-size: 30px;\r\n    font-weight: bold;\r\n    font-style: normal;\r\n}\r\n\r\nsection {\r\n    border: 1px solid black;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcm9vbTFmcm9udC9yb29tMWZyb250LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSwrQkFBK0I7SUFDL0I7cURBQzhEO0lBQzlELG1CQUFtQjtJQUNuQixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSwrQkFBK0I7SUFDL0IsZUFBZTtJQUNmLGlCQUFpQjtJQUNqQixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSx1QkFBdUI7QUFDM0IiLCJmaWxlIjoic3JjL2FwcC9yb29tMWZyb250L3Jvb20xZnJvbnQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBmb250LWZhY2Uge1xyXG4gICAgZm9udC1mYW1pbHk6ICd0cnVlX2xpZXNyZWd1bGFyJztcclxuICAgIHNyYzogdXJsKCcuLi8uLi9hc3NldHMvdHJ1ZV9saWVzLXdlYmZvbnQud29mZjInKSBmb3JtYXQoJ3dvZmYyJyksXHJcbiAgICAgICAgIHVybCgnLi4vLi4vYXNzZXRzL3RydWVfbGllcy13ZWJmb250LndvZmYnKSBmb3JtYXQoJ3dvZmYnKTtcclxuICAgIGZvbnQtd2VpZ2h0OiBub3JtYWw7XHJcbiAgICBmb250LXN0eWxlOiBub3JtYWw7XHJcbn1cclxuXHJcbmgxIHtcclxuICAgIGZvbnQtZmFtaWx5OiAndHJ1ZV9saWVzcmVndWxhcic7XHJcbiAgICBmb250LXNpemU6IDMwcHg7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGZvbnQtc3R5bGU6IG5vcm1hbDtcclxufVxyXG5cclxuc2VjdGlvbiB7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCBibGFjaztcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -179,7 +256,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  room1front works!\n</p>\n"
+module.exports = "\r\n<h1>Room 1 Front Component</h1>\r\n\r\n<section>\r\n  <div *ngFor=\"let item of items; index as i\">\r\n    <img src=\"{{ item.image }}\" alt=\"{{ item.item_name }}\" (click)=\"selectItem(item)\">\r\n  </div>\r\n</section>\r\n\r\n<section>\r\n  <div *ngFor=\"let selected of selectedItems; index as i\">\r\n    <img src=\"{{ selected.image }}\" alt=\"{{ selected.item_name }}\">\r\n  </div>\r\n</section>"
 
 /***/ }),
 
@@ -207,8 +284,14 @@ var Room1frontComponent = /** @class */ (function () {
         var _this = this;
         this.itemsService.getItems().subscribe(function (response) {
             _this.items = response;
-            console.log(_this.items);
+            // console.log(this.items);
         });
+        this.selectedItems = this.itemsService.selectedItems;
+        // console.log(this.selectedItems);
+    };
+    Room1frontComponent.prototype.selectItem = function (selectedItem) {
+        // console.log(selectedItem);
+        this.itemsService.collectItem(selectedItem);
     };
     Room1frontComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -286,7 +369,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/mirjanakulics/Documents/GC-Final-Project-Escape-Room/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! C:\Users\Amanda\documents\grand_circus\projects\gc-final-project-escape-room\src\main.ts */"./src/main.ts");
 
 
 /***/ })

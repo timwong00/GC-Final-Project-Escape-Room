@@ -5,7 +5,7 @@ const items = express.Router();
 const pool = require("./connection");
 
 function getItems(res) {
-  pool.query("select * from surgical_items").then(result=>res.json(result.rows));
+  pool.query("select * from EscapeItems").then(result=>res.json(result.rows));
 }
 
 items.get("/items", (req, res) => {

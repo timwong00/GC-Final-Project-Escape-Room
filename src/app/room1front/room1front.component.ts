@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from '@angular/core';
+
 import { ItemsService } from "../items.service";
 import { TimerService } from "../timer.service";
 
@@ -8,17 +9,46 @@ import { TimerService } from "../timer.service";
   styleUrls: ["./room1front.component.css"]
 })
 export class Room1frontComponent implements OnInit {
+
   items: any;
+  selectedItems: any[];
+  isShowing: boolean = false;
 
   constructor(
     private itemsService: ItemsService,
     private timerService: TimerService
   ) {}
 
+
   ngOnInit() {
     this.itemsService.getItems().subscribe(response => {
       this.items = response;
+
       console.log(this.items);
     });
   }
 }
+
+        // console.log(this.items);
+        this.itemsService.setItems(response);
+    });
+    this.selectedItems = this.itemsService.selectedItems;
+    // console.log(this.selectedItems);
+  }
+
+  selectItem(selectedItem) {
+    // console.log(selectedItem);
+    this.itemsService.collectItem(selectedItem);
+  }
+
+  removeItem(index: number) {
+    this.itemsService.deleteItem(index);
+    console.log(index);
+  }
+
+  toggleShow() {
+    this.isShowing = !this.isShowing;
+  }
+
+}
+

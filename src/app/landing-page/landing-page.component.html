@@ -1,0 +1,11 @@
+<nav>
+  <img src="" alt="logo">
+</nav>
+
+<button (click)="toggleShow()">HOW TO PLAY</button>
+<button [routerLink]="['/room1front']">PLAY</button>
+
+<section *ngIf="isShowing">
+  <p>Directions on how to play...</p>
+</section>
+
