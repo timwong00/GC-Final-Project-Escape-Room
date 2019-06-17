@@ -21,12 +21,4 @@ export class Room1frontComponent implements OnInit {
       console.log(this.items);
     });
   }
-
-  startTimer(): void {
-    this.timerService.startTimer();
-  }
-
-  stopTimer(): void {
-    this.timerService.stopTimer();
-  }
 }

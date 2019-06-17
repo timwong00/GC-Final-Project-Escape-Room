@@ -5,11 +5,13 @@ import { ItemsService } from "./items.service";
 
 import { AppComponent } from './app.component';
 import { Room1frontComponent } from './room1front/room1front.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Room1frontComponent
+    Room1frontComponent,
+    HeaderComponent
     ],
   imports: [
     BrowserModule,
