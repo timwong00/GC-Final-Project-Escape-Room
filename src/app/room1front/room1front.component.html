@@ -1,3 +1,14 @@
-<p>
-  room1front works!
-</p>
+
+<h1>Room 1 Front Component</h1>
+
+<section>
+  <div *ngFor="let item of items; index as i">
+    <img src="{{ item.image }}" alt="{{ item.item_name }}" (click)="selectItem(item)">
+  </div>
+</section>
+
+<section>
+  <div *ngFor="let selected of selectedItems; index as i">
+    <img src="{{ selected.image }}" alt="{{ selected.item_name }}">
+  </div>
+</section>

@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'true_liesregular';
+    src: url('../../assets/true_lies-webfont.woff2') format('woff2'),
+         url('../../assets/true_lies-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'true_liesregular';
+    font-size: 30px;
+    font-weight: bold;
+    font-style: normal;
+}
+
+section {
+    border: 1px solid black;
+}
