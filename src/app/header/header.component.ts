@@ -7,6 +7,7 @@ import { TimerService } from "../timer.service";
   styleUrls: ["./header.component.css"]
 })
 export class HeaderComponent implements OnInit {
+  clickedMenu: boolean = false;
   constructor(private timerService: TimerService) {}
 
   ngOnInit() {}
@@ -17,5 +18,9 @@ export class HeaderComponent implements OnInit {
 
   stopTimer(): void {
     this.timerService.stopTimer();
+  }
+
+  openMenu() {
+    this.clickedMenu = !this.clickedMenu;
   }
 }

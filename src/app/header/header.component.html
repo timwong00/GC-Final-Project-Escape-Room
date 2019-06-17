@@ -1,26 +1,43 @@
 <section class="header">
-  <div id="battery">
-    <div class="battery battery-drain"></div>
-    <!-- {{ this.timerService.timeRemaining }} seconds left -->
+  <button (click)="openMenu()" class="openMenu-btn">Menu</button>
+  <div *ngIf="clickedMenu" id="menu">
+    <p>Menu</p>
+    <div class="btn-container">
+      <button class="menu-options">
+        How to play
+      </button>
+      <button class="menu-options">
+        Reset Game
+      </button>
+      <button class="menu-options">
+        Quit Game
+      </button>
+    </div>
   </div>
-  <div id="inventory">
-    <div class="items">
-      item 1
+  <div class="game-header">
+    <div id="battery">
+      <div class="battery battery-drain"></div>
+      <!-- {{ this.timerService.timeRemaining }} seconds left -->
     </div>
-    <div class="items">
-      item 2
-    </div>
-    <div class="items">
-      item 3
-    </div>
-    <div class="items">
-      item 4
-    </div>
-    <div class="items">
-      item 5
-    </div>
-    <div class="items">
-      item 6
+    <div id="inventory">
+      <div class="items">
+        filler 1
+      </div>
+      <div class="items">
+        filler 2
+      </div>
+      <div class="items">
+        filler 3
+      </div>
+      <div class="items">
+        filler 4
+      </div>
+      <div class="items">
+        filler 5
+      </div>
+      <div class="items">
+        filler 6
+      </div>
     </div>
   </div>
 </section>
