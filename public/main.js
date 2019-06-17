@@ -41,7 +41,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<router-outlet></router-outlet>\r\n"
+module.exports = "\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
@@ -96,6 +96,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _room1front_room1front_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./room1front/room1front.component */ "./src/app/room1front/room1front.component.ts");
 /* harmony import */ var _landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./landing-page/landing-page.component */ "./src/app/landing-page/landing-page.component.ts");
+/* harmony import */ var _room1left_room1left_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./room1left/room1left.component */ "./src/app/room1left/room1left.component.ts");
+/* harmony import */ var _room1right_room1right_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./room1right/room1right.component */ "./src/app/room1right/room1right.component.ts");
+/* harmony import */ var _room2front_room2front_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./room2front/room2front.component */ "./src/app/room2front/room2front.component.ts");
+/* harmony import */ var _room2left_room2left_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./room2left/room2left.component */ "./src/app/room2left/room2left.component.ts");
+/* harmony import */ var _room2right_room2right_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./room2right/room2right.component */ "./src/app/room2right/room2right.component.ts");
+/* harmony import */ var _room3front_room3front_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./room3front/room3front.component */ "./src/app/room3front/room3front.component.ts");
+/* harmony import */ var _room3left_room3left_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./room3left/room3left.component */ "./src/app/room3left/room3left.component.ts");
+/* harmony import */ var _room3right_room3right_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./room3right/room3right.component */ "./src/app/room3right/room3right.component.ts");
+
+
+
+
+
+
+
+
 
 
 
@@ -108,7 +124,15 @@ __webpack_require__.r(__webpack_exports__);
 var appRoutes = [
     { path: "", redirectTo: "/landing", pathMatch: "full" },
     { path: "landing", component: _landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_8__["LandingPageComponent"] },
-    { path: "room1front", component: _room1front_room1front_component__WEBPACK_IMPORTED_MODULE_7__["Room1frontComponent"] }
+    { path: "room1front", component: _room1front_room1front_component__WEBPACK_IMPORTED_MODULE_7__["Room1frontComponent"] },
+    { path: "room1left", component: _room1left_room1left_component__WEBPACK_IMPORTED_MODULE_9__["Room1leftComponent"] },
+    { path: "room1right", component: _room1right_room1right_component__WEBPACK_IMPORTED_MODULE_10__["Room1rightComponent"] },
+    { path: "room2front", component: _room2front_room2front_component__WEBPACK_IMPORTED_MODULE_11__["Room2frontComponent"] },
+    { path: "room2left", component: _room2left_room2left_component__WEBPACK_IMPORTED_MODULE_12__["Room2leftComponent"] },
+    { path: "room2right", component: _room2right_room2right_component__WEBPACK_IMPORTED_MODULE_13__["Room2rightComponent"] },
+    { path: "room3front", component: _room3front_room3front_component__WEBPACK_IMPORTED_MODULE_14__["Room3frontComponent"] },
+    { path: "room3left", component: _room3left_room3left_component__WEBPACK_IMPORTED_MODULE_15__["Room3leftComponent"] },
+    { path: "room3right", component: _room3right_room3right_component__WEBPACK_IMPORTED_MODULE_16__["Room3rightComponent"] }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -118,7 +142,15 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_6__["AppComponent"],
                 _room1front_room1front_component__WEBPACK_IMPORTED_MODULE_7__["Room1frontComponent"],
-                _landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_8__["LandingPageComponent"]
+                _landing_page_landing_page_component__WEBPACK_IMPORTED_MODULE_8__["LandingPageComponent"],
+                _room1left_room1left_component__WEBPACK_IMPORTED_MODULE_9__["Room1leftComponent"],
+                _room1right_room1right_component__WEBPACK_IMPORTED_MODULE_10__["Room1rightComponent"],
+                _room2front_room2front_component__WEBPACK_IMPORTED_MODULE_11__["Room2frontComponent"],
+                _room2left_room2left_component__WEBPACK_IMPORTED_MODULE_12__["Room2leftComponent"],
+                _room2right_room2right_component__WEBPACK_IMPORTED_MODULE_13__["Room2rightComponent"],
+                _room3front_room3front_component__WEBPACK_IMPORTED_MODULE_14__["Room3frontComponent"],
+                _room3left_room3left_component__WEBPACK_IMPORTED_MODULE_15__["Room3leftComponent"],
+                _room3right_room3right_component__WEBPACK_IMPORTED_MODULE_16__["Room3rightComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -165,6 +197,15 @@ var ItemsService = /** @class */ (function () {
         // console.log(this.selectedItems);
         return this.selectedItems;
     };
+    ItemsService.prototype.deleteItem = function (index) {
+        this.items.splice(index, 1);
+        return this.items;
+        // console.log(index);
+        // console.log(this.items);
+    };
+    ItemsService.prototype.setItems = function (itemList) {
+        this.items = itemList;
+    };
     ItemsService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
             providedIn: 'root'
@@ -185,7 +226,7 @@ var ItemsService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "html {\r\n    background-image: url(\"https://thumbs.gfycat.com/SlimGenuineGrizzlybear-size_restricted.gif\");\r\n    background-position: top left;\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGFuZGluZy1wYWdlL2xhbmRpbmctcGFnZS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksNkZBQTZGO0lBQzdGLDZCQUE2QjtJQUM3QixzQkFBc0I7SUFDdEIsNEJBQTRCO0FBQ2hDIiwiZmlsZSI6InNyYy9hcHAvbGFuZGluZy1wYWdlL2xhbmRpbmctcGFnZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaHRtbCB7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCJodHRwczovL3RodW1icy5nZnljYXQuY29tL1NsaW1HZW51aW5lR3JpenpseWJlYXItc2l6ZV9yZXN0cmljdGVkLmdpZlwiKTtcclxuICAgIGJhY2tncm91bmQtcG9zaXRpb246IHRvcCBsZWZ0O1xyXG4gICAgYmFja2dyb3VuZC1zaXplOiBjb3ZlcjtcclxuICAgIGJhY2tncm91bmQtcmVwZWF0OiBuby1yZXBlYXQ7XHJcbn0iXX0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2xhbmRpbmctcGFnZS9sYW5kaW5nLXBhZ2UuY29tcG9uZW50LmNzcyJ9 */"
 
 /***/ }),
 
@@ -196,7 +237,7 @@ module.exports = "html {\r\n    background-image: url(\"https://thumbs.gfycat.co
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav>\r\n  <img src=\"\" alt=\"logo\">\r\n</nav>\r\n\r\n<button (click)=\"toggleShow()\">HOW TO PLAY</button>\r\n<button [routerLink]=\"['/room1front']\">PLAY</button>\r\n\r\n<section *ngIf=\"isShowing\">\r\n  <p>Directions on how to play...</p>\r\n</section>"
+module.exports = "<nav>\n  <img src=\"\" alt=\"logo\">\n</nav>\n\n<button (click)=\"toggleShow()\">HOW TO PLAY</button>\n<button [routerLink]=\"['/room1front']\">PLAY</button>\n\n<section *ngIf=\"isShowing\">\n  <p>Directions on how to play...</p>\n</section>\n\n"
 
 /***/ }),
 
@@ -245,7 +286,7 @@ var LandingPageComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "@font-face {\r\n    font-family: 'true_liesregular';\r\n    src: url('true_lies-webfont.woff2') format('woff2'),\r\n         url('true_lies-webfont.woff') format('woff');\r\n    font-weight: normal;\r\n    font-style: normal;\r\n}\r\n\r\nh1 {\r\n    font-family: 'true_liesregular';\r\n    font-size: 30px;\r\n    font-weight: bold;\r\n    font-style: normal;\r\n}\r\n\r\nsection {\r\n    border: 1px solid black;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcm9vbTFmcm9udC9yb29tMWZyb250LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSwrQkFBK0I7SUFDL0I7cURBQzhEO0lBQzlELG1CQUFtQjtJQUNuQixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSwrQkFBK0I7SUFDL0IsZUFBZTtJQUNmLGlCQUFpQjtJQUNqQixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSx1QkFBdUI7QUFDM0IiLCJmaWxlIjoic3JjL2FwcC9yb29tMWZyb250L3Jvb20xZnJvbnQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBmb250LWZhY2Uge1xyXG4gICAgZm9udC1mYW1pbHk6ICd0cnVlX2xpZXNyZWd1bGFyJztcclxuICAgIHNyYzogdXJsKCcuLi8uLi9hc3NldHMvdHJ1ZV9saWVzLXdlYmZvbnQud29mZjInKSBmb3JtYXQoJ3dvZmYyJyksXHJcbiAgICAgICAgIHVybCgnLi4vLi4vYXNzZXRzL3RydWVfbGllcy13ZWJmb250LndvZmYnKSBmb3JtYXQoJ3dvZmYnKTtcclxuICAgIGZvbnQtd2VpZ2h0OiBub3JtYWw7XHJcbiAgICBmb250LXN0eWxlOiBub3JtYWw7XHJcbn1cclxuXHJcbmgxIHtcclxuICAgIGZvbnQtZmFtaWx5OiAndHJ1ZV9saWVzcmVndWxhcic7XHJcbiAgICBmb250LXNpemU6IDMwcHg7XHJcbiAgICBmb250LXdlaWdodDogYm9sZDtcclxuICAgIGZvbnQtc3R5bGU6IG5vcm1hbDtcclxufVxyXG5cclxuc2VjdGlvbiB7XHJcbiAgICBib3JkZXI6IDFweCBzb2xpZCBibGFjaztcclxufSJdfQ== */"
+module.exports = "@font-face {\n    font-family: 'true_liesregular';\n    src: url('true_lies-webfont.woff2') format('woff2'),\n         url('true_lies-webfont.woff') format('woff');\n    font-weight: normal;\n    font-style: normal;\n}\n\nh1 {\n    font-family: 'true_liesregular';\n    font-size: 30px;\n    font-weight: bold;\n    font-style: normal;\n}\n\nsection {\n    border: 1px solid black;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcm9vbTFmcm9udC9yb29tMWZyb250LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSwrQkFBK0I7SUFDL0I7cURBQzhEO0lBQzlELG1CQUFtQjtJQUNuQixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSwrQkFBK0I7SUFDL0IsZUFBZTtJQUNmLGlCQUFpQjtJQUNqQixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSx1QkFBdUI7QUFDM0IiLCJmaWxlIjoic3JjL2FwcC9yb29tMWZyb250L3Jvb20xZnJvbnQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIkBmb250LWZhY2Uge1xuICAgIGZvbnQtZmFtaWx5OiAndHJ1ZV9saWVzcmVndWxhcic7XG4gICAgc3JjOiB1cmwoJy4uLy4uL2Fzc2V0cy90cnVlX2xpZXMtd2ViZm9udC53b2ZmMicpIGZvcm1hdCgnd29mZjInKSxcbiAgICAgICAgIHVybCgnLi4vLi4vYXNzZXRzL3RydWVfbGllcy13ZWJmb250LndvZmYnKSBmb3JtYXQoJ3dvZmYnKTtcbiAgICBmb250LXdlaWdodDogbm9ybWFsO1xuICAgIGZvbnQtc3R5bGU6IG5vcm1hbDtcbn1cblxuaDEge1xuICAgIGZvbnQtZmFtaWx5OiAndHJ1ZV9saWVzcmVndWxhcic7XG4gICAgZm9udC1zaXplOiAzMHB4O1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgIGZvbnQtc3R5bGU6IG5vcm1hbDtcbn1cblxuc2VjdGlvbiB7XG4gICAgYm9yZGVyOiAxcHggc29saWQgYmxhY2s7XG59Il19 */"
 
 /***/ }),
 
@@ -256,7 +297,7 @@ module.exports = "@font-face {\r\n    font-family: 'true_liesregular';\r\n    sr
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n<h1>Room 1 Front Component</h1>\r\n\r\n<section>\r\n  <div *ngFor=\"let item of items; index as i\">\r\n    <img src=\"{{ item.image }}\" alt=\"{{ item.item_name }}\" (click)=\"selectItem(item)\">\r\n  </div>\r\n</section>\r\n\r\n<section>\r\n  <div *ngFor=\"let selected of selectedItems; index as i\">\r\n    <img src=\"{{ selected.image }}\" alt=\"{{ selected.item_name }}\">\r\n  </div>\r\n</section>"
+module.exports = "\n<h1>Room 1 Front Component</h1>\n\n<section *ngIf=\"!isShowing\">\n  <p>The insane surgeon, Dr. Lobotomy, has just escaped from jail. Known for performing unnecessary and inhumane operations on unwilling participants, he’s suspected to be lurking in your town. After staying late at the office one night, the last thing you remember is walking to your car in the dark. You just woke up here, strapped to a chair, and know you must be Dr. Lobotomy’s next victim. Use the items you find in the room to escape before he returns to finish his work!</p>\n  <button (click)=\"toggleShow()\">OK</button>\n</section>\n\n<section>\n  <div *ngFor=\"let item of items; index as i\">\n    <img src=\"{{ item.image }}\" alt=\"{{ item.item_name }}\" (click)=\"[selectItem(item), removeItem(i)]\">\n  </div>\n</section>\n\n<section>\n  <div *ngFor=\"let selected of selectedItems; index as i\">\n    <img src=\"{{ selected.image }}\" alt=\"{{ selected.item_name }}\">\n  </div>\n</section>"
 
 /***/ }),
 
@@ -279,12 +320,14 @@ __webpack_require__.r(__webpack_exports__);
 var Room1frontComponent = /** @class */ (function () {
     function Room1frontComponent(itemsService) {
         this.itemsService = itemsService;
+        this.isShowing = false;
     }
     Room1frontComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.itemsService.getItems().subscribe(function (response) {
             _this.items = response;
             // console.log(this.items);
+            _this.itemsService.setItems(response);
         });
         this.selectedItems = this.itemsService.selectedItems;
         // console.log(this.selectedItems);
@@ -292,6 +335,13 @@ var Room1frontComponent = /** @class */ (function () {
     Room1frontComponent.prototype.selectItem = function (selectedItem) {
         // console.log(selectedItem);
         this.itemsService.collectItem(selectedItem);
+    };
+    Room1frontComponent.prototype.removeItem = function (index) {
+        this.itemsService.deleteItem(index);
+        console.log(index);
+    };
+    Room1frontComponent.prototype.toggleShow = function () {
+        this.isShowing = !this.isShowing;
     };
     Room1frontComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -302,6 +352,478 @@ var Room1frontComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_items_service__WEBPACK_IMPORTED_MODULE_2__["ItemsService"]])
     ], Room1frontComponent);
     return Room1frontComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/room1left/room1left.component.css":
+/*!***************************************************!*\
+  !*** ./src/app/room1left/room1left.component.css ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Jvb20xbGVmdC9yb29tMWxlZnQuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/room1left/room1left.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/room1left/room1left.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  room1left works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/room1left/room1left.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/room1left/room1left.component.ts ***!
+  \**************************************************/
+/*! exports provided: Room1leftComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Room1leftComponent", function() { return Room1leftComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _items_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../items.service */ "./src/app/items.service.ts");
+
+
+
+var Room1leftComponent = /** @class */ (function () {
+    function Room1leftComponent(itemsService) {
+        this.itemsService = itemsService;
+    }
+    Room1leftComponent.prototype.ngOnInit = function () {
+    };
+    Room1leftComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'room1left',
+            template: __webpack_require__(/*! ./room1left.component.html */ "./src/app/room1left/room1left.component.html"),
+            styles: [__webpack_require__(/*! ./room1left.component.css */ "./src/app/room1left/room1left.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_items_service__WEBPACK_IMPORTED_MODULE_2__["ItemsService"]])
+    ], Room1leftComponent);
+    return Room1leftComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/room1right/room1right.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/room1right/room1right.component.css ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Jvb20xcmlnaHQvcm9vbTFyaWdodC5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/room1right/room1right.component.html":
+/*!******************************************************!*\
+  !*** ./src/app/room1right/room1right.component.html ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  room1right works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/room1right/room1right.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/room1right/room1right.component.ts ***!
+  \****************************************************/
+/*! exports provided: Room1rightComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Room1rightComponent", function() { return Room1rightComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _items_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../items.service */ "./src/app/items.service.ts");
+
+
+
+var Room1rightComponent = /** @class */ (function () {
+    function Room1rightComponent(itemsService) {
+        this.itemsService = itemsService;
+    }
+    Room1rightComponent.prototype.ngOnInit = function () {
+    };
+    Room1rightComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'room1right',
+            template: __webpack_require__(/*! ./room1right.component.html */ "./src/app/room1right/room1right.component.html"),
+            styles: [__webpack_require__(/*! ./room1right.component.css */ "./src/app/room1right/room1right.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_items_service__WEBPACK_IMPORTED_MODULE_2__["ItemsService"]])
+    ], Room1rightComponent);
+    return Room1rightComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/room2front/room2front.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/room2front/room2front.component.css ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Jvb20yZnJvbnQvcm9vbTJmcm9udC5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/room2front/room2front.component.html":
+/*!******************************************************!*\
+  !*** ./src/app/room2front/room2front.component.html ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  room2front works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/room2front/room2front.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/room2front/room2front.component.ts ***!
+  \****************************************************/
+/*! exports provided: Room2frontComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Room2frontComponent", function() { return Room2frontComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _items_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../items.service */ "./src/app/items.service.ts");
+
+
+
+var Room2frontComponent = /** @class */ (function () {
+    function Room2frontComponent(itemsService) {
+        this.itemsService = itemsService;
+    }
+    Room2frontComponent.prototype.ngOnInit = function () {
+    };
+    Room2frontComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'room2front',
+            template: __webpack_require__(/*! ./room2front.component.html */ "./src/app/room2front/room2front.component.html"),
+            styles: [__webpack_require__(/*! ./room2front.component.css */ "./src/app/room2front/room2front.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_items_service__WEBPACK_IMPORTED_MODULE_2__["ItemsService"]])
+    ], Room2frontComponent);
+    return Room2frontComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/room2left/room2left.component.css":
+/*!***************************************************!*\
+  !*** ./src/app/room2left/room2left.component.css ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Jvb20ybGVmdC9yb29tMmxlZnQuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/room2left/room2left.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/room2left/room2left.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  room2left works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/room2left/room2left.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/room2left/room2left.component.ts ***!
+  \**************************************************/
+/*! exports provided: Room2leftComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Room2leftComponent", function() { return Room2leftComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _items_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../items.service */ "./src/app/items.service.ts");
+
+
+
+var Room2leftComponent = /** @class */ (function () {
+    function Room2leftComponent(itemsService) {
+        this.itemsService = itemsService;
+    }
+    Room2leftComponent.prototype.ngOnInit = function () {
+    };
+    Room2leftComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'room2left',
+            template: __webpack_require__(/*! ./room2left.component.html */ "./src/app/room2left/room2left.component.html"),
+            styles: [__webpack_require__(/*! ./room2left.component.css */ "./src/app/room2left/room2left.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_items_service__WEBPACK_IMPORTED_MODULE_2__["ItemsService"]])
+    ], Room2leftComponent);
+    return Room2leftComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/room2right/room2right.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/room2right/room2right.component.css ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Jvb20ycmlnaHQvcm9vbTJyaWdodC5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/room2right/room2right.component.html":
+/*!******************************************************!*\
+  !*** ./src/app/room2right/room2right.component.html ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  room2right works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/room2right/room2right.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/room2right/room2right.component.ts ***!
+  \****************************************************/
+/*! exports provided: Room2rightComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Room2rightComponent", function() { return Room2rightComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _items_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../items.service */ "./src/app/items.service.ts");
+
+
+
+var Room2rightComponent = /** @class */ (function () {
+    function Room2rightComponent(itemsService) {
+        this.itemsService = itemsService;
+    }
+    Room2rightComponent.prototype.ngOnInit = function () {
+    };
+    Room2rightComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'room2right',
+            template: __webpack_require__(/*! ./room2right.component.html */ "./src/app/room2right/room2right.component.html"),
+            styles: [__webpack_require__(/*! ./room2right.component.css */ "./src/app/room2right/room2right.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_items_service__WEBPACK_IMPORTED_MODULE_2__["ItemsService"]])
+    ], Room2rightComponent);
+    return Room2rightComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/room3front/room3front.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/room3front/room3front.component.css ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Jvb20zZnJvbnQvcm9vbTNmcm9udC5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/room3front/room3front.component.html":
+/*!******************************************************!*\
+  !*** ./src/app/room3front/room3front.component.html ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  room3front works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/room3front/room3front.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/room3front/room3front.component.ts ***!
+  \****************************************************/
+/*! exports provided: Room3frontComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Room3frontComponent", function() { return Room3frontComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _items_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../items.service */ "./src/app/items.service.ts");
+
+
+
+var Room3frontComponent = /** @class */ (function () {
+    function Room3frontComponent(itemsService) {
+        this.itemsService = itemsService;
+    }
+    Room3frontComponent.prototype.ngOnInit = function () {
+    };
+    Room3frontComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'room3front',
+            template: __webpack_require__(/*! ./room3front.component.html */ "./src/app/room3front/room3front.component.html"),
+            styles: [__webpack_require__(/*! ./room3front.component.css */ "./src/app/room3front/room3front.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_items_service__WEBPACK_IMPORTED_MODULE_2__["ItemsService"]])
+    ], Room3frontComponent);
+    return Room3frontComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/room3left/room3left.component.css":
+/*!***************************************************!*\
+  !*** ./src/app/room3left/room3left.component.css ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Jvb20zbGVmdC9yb29tM2xlZnQuY29tcG9uZW50LmNzcyJ9 */"
+
+/***/ }),
+
+/***/ "./src/app/room3left/room3left.component.html":
+/*!****************************************************!*\
+  !*** ./src/app/room3left/room3left.component.html ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  room3left works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/room3left/room3left.component.ts":
+/*!**************************************************!*\
+  !*** ./src/app/room3left/room3left.component.ts ***!
+  \**************************************************/
+/*! exports provided: Room3leftComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Room3leftComponent", function() { return Room3leftComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _items_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../items.service */ "./src/app/items.service.ts");
+
+
+
+var Room3leftComponent = /** @class */ (function () {
+    function Room3leftComponent(itemsService) {
+        this.itemsService = itemsService;
+    }
+    Room3leftComponent.prototype.ngOnInit = function () {
+    };
+    Room3leftComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'room3left',
+            template: __webpack_require__(/*! ./room3left.component.html */ "./src/app/room3left/room3left.component.html"),
+            styles: [__webpack_require__(/*! ./room3left.component.css */ "./src/app/room3left/room3left.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_items_service__WEBPACK_IMPORTED_MODULE_2__["ItemsService"]])
+    ], Room3leftComponent);
+    return Room3leftComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/room3right/room3right.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/room3right/room3right.component.css ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Jvb20zcmlnaHQvcm9vbTNyaWdodC5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/room3right/room3right.component.html":
+/*!******************************************************!*\
+  !*** ./src/app/room3right/room3right.component.html ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\n  room3right works!\n</p>\n"
+
+/***/ }),
+
+/***/ "./src/app/room3right/room3right.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/room3right/room3right.component.ts ***!
+  \****************************************************/
+/*! exports provided: Room3rightComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Room3rightComponent", function() { return Room3rightComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _items_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../items.service */ "./src/app/items.service.ts");
+
+
+
+var Room3rightComponent = /** @class */ (function () {
+    function Room3rightComponent(itemsService) {
+        this.itemsService = itemsService;
+    }
+    Room3rightComponent.prototype.ngOnInit = function () {
+    };
+    Room3rightComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'room3right',
+            template: __webpack_require__(/*! ./room3right.component.html */ "./src/app/room3right/room3right.component.html"),
+            styles: [__webpack_require__(/*! ./room3right.component.css */ "./src/app/room3right/room3right.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_items_service__WEBPACK_IMPORTED_MODULE_2__["ItemsService"]])
+    ], Room3rightComponent);
+    return Room3rightComponent;
 }());
 
 
@@ -369,7 +891,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Amanda\documents\grand_circus\projects\gc-final-project-escape-room\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/mirjanakulics/Documents/GC-Final-Project-Escape-Room/src/main.ts */"./src/main.ts");
 
 
 /***/ })
