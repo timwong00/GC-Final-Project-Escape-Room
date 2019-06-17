@@ -1,9 +1,26 @@
-<p>
-  header works!
-</p>
-
-<div id="battery" class="battery">
-  {{ this.timerService.timeRemaining }} seconds left
-</div>
-<button (click)="startTimer()">Start</button>
-<button (click)="stopTimer()">Stop</button>
+<section class="header">
+  <div id="battery">
+    <div class="battery battery-drain"></div>
+    <!-- {{ this.timerService.timeRemaining }} seconds left -->
+  </div>
+  <div id="inventory">
+    <div class="items">
+      item 1
+    </div>
+    <div class="items">
+      item 2
+    </div>
+    <div class="items">
+      item 3
+    </div>
+    <div class="items">
+      item 4
+    </div>
+    <div class="items">
+      item 5
+    </div>
+    <div class="items">
+      item 6
+    </div>
+  </div>
+</section>

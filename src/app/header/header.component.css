@@ -1,3 +1,21 @@
+.header {
+  border-bottom: 5px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+#inventory {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  margin: 5px;
+  width: 200px;
+}
+
+.items {
+  border: 1px solid black;
+}
+
 #battery:after {
   background-color: #fff;
   border: 2px solid #000;
@@ -9,12 +27,48 @@
   top: 6px;
   width: 6px;
 }
+
 #battery {
   background-color: #fff;
   border: 2px solid #000;
   height: 32px;
-  margin-left: auto;
-  margin-right: auto;
   position: relative;
   width: 100px;
+  margin: 5px;
+  margin-right: 30px;
+}
+
+.battery-drain {
+  background-color: green;
+  height: 100%;
+  /* Animation code */
+  /* -webkit-animation-name: widthChange; Safari 4.0 - 8.0 */
+  /* -webkit-animation-duration: 60s; Safari 4.0 - 8.0 */
+  animation-name: widthChange;
+  animation-duration: 300s;
+}
+
+@keyframes widthChange {
+  0% {
+    background-color: green;
+    width: 100%;
+  }
+  50% {
+    background-color: yellow;
+    width: 50%;
+  }
+  100% {
+    background-color: red;
+    width: 0;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #battery {
+    width: 200px;
+  }
+
+  #inventory {
+    width: 500px;
+  }
 }

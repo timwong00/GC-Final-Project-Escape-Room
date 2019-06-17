@@ -5,7 +5,7 @@ import { AstMemoryEfficientTransformer } from "@angular/compiler";
   providedIn: "root"
 })
 export class TimerService {
-  timeRemaining: number = 180000;
+  timeRemaining: number = 300;
   interval;
   constructor() {}
 
@@ -14,13 +14,13 @@ export class TimerService {
       if (this.timeRemaining >= 0) {
         return this.timeRemaining--;
       } else {
-        this.timeRemaining = 180000;
+        this.timeRemaining = 300;
       }
     }, 1000);
   }
 
   stopTimer(): void {
     clearInterval(this.interval);
-    this.timeRemaining = 180000;
+    this.timeRemaining = 300;
   }
 }
