@@ -45,7 +45,7 @@ export class Room1Service {
 
   checkMatch(itemsToMatch) {
     if (itemsToMatch[0] == itemsToMatch[1]) {
-      console.log("match");
+      console.log("Items match");
       let index = this.uItems.findIndex(item => item.item_name == itemsToMatch[1]);
       this.uItems.splice(index, 1);
       let index2 = this.selectedItems.findIndex(item => item.match_item_name == itemsToMatch[0]);
