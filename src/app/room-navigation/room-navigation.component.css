@@ -1,0 +1,10 @@
+.room-navigation-arrows {
+  border-top: 5px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.navigationArrows {
+  cursor: pointer;
+}
