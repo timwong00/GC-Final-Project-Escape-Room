@@ -5,6 +5,7 @@ import { ItemsService } from "./items.service";
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { Room1frontComponent } from './room1front/room1front.component';
+import { HeaderComponent } from './header/header.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { Room1leftComponent } from './room1left/room1left.component';
 import { Room1rightComponent } from './room1right/room1right.component';
@@ -33,6 +34,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     Room1frontComponent,
+    HeaderComponent
     LandingPageComponent,
     Room1leftComponent,
     Room1rightComponent,

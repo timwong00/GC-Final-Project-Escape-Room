@@ -1,10 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
+
 import { ItemsService } from "../items.service";
+import { TimerService } from "../timer.service";
 
 @Component({
-  selector: 'room1front',
-  templateUrl: './room1front.component.html',
-  styleUrls: ['./room1front.component.css']
+  selector: "room1front",
+  templateUrl: "./room1front.component.html",
+  styleUrls: ["./room1front.component.css"]
 })
 export class Room1frontComponent implements OnInit {
 
@@ -12,12 +14,21 @@ export class Room1frontComponent implements OnInit {
   selectedItems: any[];
   isShowing: boolean = false;
 
-  constructor(private itemsService: ItemsService) {
-   }
+  constructor(
+    private itemsService: ItemsService,
+    private timerService: TimerService
+  ) {}
+
 
   ngOnInit() {
     this.itemsService.getItems().subscribe(response => {
       this.items = response;
+
+      console.log(this.items);
+    });
+  }
+}
+
         // console.log(this.items);
         this.itemsService.setItems(response);
     });
@@ -40,6 +51,4 @@ export class Room1frontComponent implements OnInit {
   }
 
 }
-
-
 
