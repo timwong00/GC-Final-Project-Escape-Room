@@ -7,7 +7,7 @@
 
 <section>
   <div *ngFor="let item of items; index as i">
-    <img src="{{ item.image }}" alt="{{ item.item_name }}" (click)="selectItem(item)">
+    <img src="{{ item.image }}" alt="{{ item.item_name }}" (click)="[selectItem(item), removeItem(i)]">
   </div>
 </section>
 
