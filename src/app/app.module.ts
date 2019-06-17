@@ -1,20 +1,20 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 import { ItemsService } from "./items.service";
-import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
-import { Room1frontComponent } from './room1front/room1front.component';
-import { HeaderComponent } from './header/header.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { Room1leftComponent } from './room1left/room1left.component';
-import { Room1rightComponent } from './room1right/room1right.component';
-import { Room2frontComponent } from './room2front/room2front.component';
-import { Room2leftComponent } from './room2left/room2left.component';
-import { Room2rightComponent } from './room2right/room2right.component';
-import { Room3frontComponent } from './room3front/room3front.component';
-import { Room3leftComponent } from './room3left/room3left.component';
-import { Room3rightComponent } from './room3right/room3right.component';
+import { RouterModule, Routes } from "@angular/router";
+import { AppComponent } from "./app.component";
+import { Room1frontComponent } from "./room1front/room1front.component";
+import { HeaderComponent } from "./header/header.component";
+import { LandingPageComponent } from "./landing-page/landing-page.component";
+import { Room1leftComponent } from "./room1left/room1left.component";
+import { Room1rightComponent } from "./room1right/room1right.component";
+import { Room2frontComponent } from "./room2front/room2front.component";
+import { Room2leftComponent } from "./room2left/room2left.component";
+import { Room2rightComponent } from "./room2right/room2right.component";
+import { Room3frontComponent } from "./room3front/room3front.component";
+import { Room3leftComponent } from "./room3left/room3left.component";
+import { Room3rightComponent } from "./room3right/room3right.component";
 
 const appRoutes: Routes = [
   { path: "", redirectTo: "/landing", pathMatch: "full" },
@@ -28,13 +28,13 @@ const appRoutes: Routes = [
   { path: "room3front", component: Room3frontComponent },
   { path: "room3left", component: Room3leftComponent },
   { path: "room3right", component: Room3rightComponent }
-]
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     Room1frontComponent,
-    HeaderComponent
+    HeaderComponent,
     LandingPageComponent,
     Room1leftComponent,
     Room1rightComponent,
@@ -44,13 +44,9 @@ const appRoutes: Routes = [
     Room3frontComponent,
     Room3leftComponent,
     Room3rightComponent
-    ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    RouterModule.forRoot(appRoutes)
   ],
+  imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(appRoutes)],
   providers: [ItemsService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
