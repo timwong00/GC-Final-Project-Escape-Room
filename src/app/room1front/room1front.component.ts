@@ -10,6 +10,7 @@ export class Room1frontComponent implements OnInit {
 
   items: any;
   selectedItems: any[];
+  isShowing: boolean = false;
 
   constructor(private itemsService: ItemsService) {
    }
@@ -18,6 +19,7 @@ export class Room1frontComponent implements OnInit {
     this.itemsService.getItems().subscribe(response => {
       this.items = response;
         // console.log(this.items);
+        this.itemsService.setItems(response);
     });
     this.selectedItems = this.itemsService.selectedItems;
     // console.log(this.selectedItems);
@@ -28,12 +30,14 @@ export class Room1frontComponent implements OnInit {
     this.itemsService.collectItem(selectedItem);
   }
 
-  // removeItem(index: number) {
-  //   this.itemsService.deleteItem(index);
-  //   console.log(index);
-  // }
+  removeItem(index: number) {
+    this.itemsService.deleteItem(index);
+    console.log(index);
+  }
 
-
+  toggleShow() {
+    this.isShowing = !this.isShowing;
+  }
 
 }
 

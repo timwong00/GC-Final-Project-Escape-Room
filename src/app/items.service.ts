@@ -22,12 +22,15 @@ export class ItemsService {
     return this.selectedItems; 
   }
 
-  // deleteItem(index: number) {
-  //   this.items.splice(index, 1);
-  //   return this.items;
-  //   console.log(index);
-  //   console.log(this.items);
-  // }
+  deleteItem(index: number) {
+    this.items.splice(index, 1);
+    return this.items;
+    // console.log(index);
+    // console.log(this.items);
+  }
 
+  setItems(itemList) {
+    this.items = itemList;
+  }
 
 }
