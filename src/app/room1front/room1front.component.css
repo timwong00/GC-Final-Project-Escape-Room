@@ -16,3 +16,7 @@ h1 {
 section {
     border: 1px solid black;
 }
+
+.clicked {
+    color: red;
+}

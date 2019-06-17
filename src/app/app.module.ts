@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from "@angular/common/http";
-import { ItemsService } from "./items.service";
+import { Room1Service } from "./room1.service";
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { Room1frontComponent } from './room1front/room1front.component';
@@ -48,7 +48,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ItemsService],
+  providers: [Room1Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
