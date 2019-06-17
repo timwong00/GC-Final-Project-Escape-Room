@@ -16,17 +16,47 @@
   transform: translate(-50%, -50%);
 }
 
+.openMenu-btn,
+.menu-options {
+  background-color: none;
+  border: none;
+  outline: none;
+}
+
+.openMenu-btn:hover,
+.openMenu-btn:active,
+.closeMenu-btn:hover,
+.menu-options:hover {
+  color: red;
+}
+
+#menu > p {
+  font-size: 24px;
+}
+
 .btn-container {
+  position: relative;
   display: flex;
   flex-direction: column;
-  width: 100px;
+  width: 150px;
 }
 
 .menu-options {
+  margin-bottom: 5px;
   width: 100%;
   height: 30px;
 }
 
+.closeMenu-btn {
+  position: absolute;
+  right: 0;
+}
+
+.openMenu-btn,
+.closeMenu-btn,
+.menu-options {
+  cursor: pointer;
+}
 .game-header {
   width: 90%;
   display: flex;
@@ -102,6 +132,19 @@
     width: 95%;
   }
 
+  #menu {
+    width: 200px;
+    height: 300px;
+  }
+
+  .menu-options {
+    margin-bottom: 25px;
+  }
+
+  .openMenu-btn,
+  .menu-options {
+    font-size: 20px;
+  }
   #battery {
     width: 200px;
   }

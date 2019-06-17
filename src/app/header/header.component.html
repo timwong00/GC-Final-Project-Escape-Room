@@ -2,6 +2,9 @@
   <button (click)="openMenu()" class="openMenu-btn">Menu</button>
   <div *ngIf="clickedMenu" id="menu">
     <p>Menu</p>
+    <i (click)="closeMenu()" class="material-icons closeMenu-btn">
+      clear
+    </i>
     <div class="btn-container">
       <button class="menu-options">
         How to play
