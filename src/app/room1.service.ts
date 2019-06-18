@@ -15,11 +15,11 @@ export class Room1Service {
   }
 
   getItems() {
-    return this.http.get("/items", { responseType: "json" });
+    return this.http.get("/room-1-items", { responseType: "json" });
   }
 
   getUnlockItems() {
-    return this.http.get("/unlock-items", { responseType: "json" });
+    return this.http.get("/room-1-unlock-items", { responseType: "json" });
   }
 
   collectItem(selectedItem) {
