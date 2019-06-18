@@ -1,6 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Room1Service } from "../room1.service";
 import { GameProgressionService } from "../game-progression.service";
+import { MatchService } from "../match.service";
+import { InventoryService } from "../inventory.service";
 
 @Component({
   selector: "room1front",
@@ -10,38 +12,38 @@ import { GameProgressionService } from "../game-progression.service";
 export class Room1frontComponent implements OnInit {
   items: any;
   unlockItems: any;
-  selectedItems: any[];
+  inventoryItems: any[];
   itemsToMatch: any[] = [];
   isShowing: boolean = false;
   gameProgress: string;
   constructor(
     private gameProgressionService: GameProgressionService,
-    private room1Service: Room1Service,
+    private room1Service: Room1Service, private matchService: MatchService, private inventoryService: InventoryService
   ) {}
 
   ngOnInit() {
-    this.room1Service.getItems().subscribe(response => {
+    this.room1Service.getRoomOneItems().subscribe(response => {
       this.items = response;
         // console.log(this.items);
-        this.room1Service.setItems(response);
+        this.inventoryService.setItems(response);
     });
-    this.room1Service.getUnlockItems().subscribe(response => {
+    this.room1Service.getRoomOneUnlockItems().subscribe(response => {
       this.unlockItems = response;
       // console.log(this.unlockItems);
-      this.room1Service.setUnlockItems(response);
+      this.matchService.setUnlockItems(response);
     });
-    this.selectedItems = this.room1Service.selectedItems;
-    this.itemsToMatch = this.room1Service.itemsToMatch;
-    // console.log(this.selectedItems);
+    this.inventoryItems = this.inventoryService.inventoryItems;
+    this.itemsToMatch = this.matchService.itemsToMatch;
+    // console.log(this.inventoryItems);
   }
 
-  selectItem(selectedItem) {
-    // console.log(selectedItem);
-    this.room1Service.collectItem(selectedItem);
+  selectItem(inventoryItem) {
+    // console.log(inventoryItem);
+    this.inventoryService.collectItem(inventoryItem);
   }
 
   removeItem(index: number) {
-    this.room1Service.deleteItem(index);
+    this.inventoryService.deleteItem(index);
     // console.log(index);
   }
 
@@ -53,17 +55,13 @@ export class Room1frontComponent implements OnInit {
   setGameProgress(): void {
     this.gameProgressionService.setGameProgress(this.gameProgress);
   }
-  matchItems1(clickedItem1) {
-    // this.room1Service.checkMatch(clickedItem1);
-    console.log(clickedItem1);
-    this.itemsToMatch.splice(0, 1, clickedItem1);
-  }
+ 
 
   matchItems2(clickedItem2) {
-    console.log(clickedItem2);
-    this.itemsToMatch.splice(1, 1, clickedItem2);
+    // console.log(clickedItem2);
+    this.matchService.itemsToMatch.splice(1, 1, clickedItem2);
+    this.matchService.checkMatch(this.itemsToMatch);
     // console.log(this.itemsToMatch);
-    this.room1Service.checkMatch(this.itemsToMatch);
 
   }
 

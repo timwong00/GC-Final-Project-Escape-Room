@@ -23,24 +23,10 @@
       <!-- {{ this.timerService.timeRemaining }} seconds left -->
     </div>
     <div id="inventory">
-      <div class="items">
-        filler 1
+      <div *ngFor="let iItem of inventoryItems; index as i">
+        <img src="{{ iItem.image }}" class="items item{{ i }}" alt="{{ iItem.item_name }}" (click)="matchItems1(iItem.match_item_name)">
       </div>
-      <div class="items">
-        filler 2
-      </div>
-      <div class="items">
-        filler 3
-      </div>
-      <div class="items">
-        filler 4
-      </div>
-      <div class="items">
-        filler 5
-      </div>
-      <div class="items">
-        filler 6
-      </div>
+      
     </div>
   </div>
 </section>
