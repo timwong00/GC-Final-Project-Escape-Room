@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 const { Pool } = require("pg");
 
@@ -8,8 +8,7 @@ const credentials = {
   host: "localhost",
   port: 5432,
   database: "EscapeRoom",
-  ssl: false,
+  ssl: false
 };
-
 
 module.exports = new Pool(credentials);
