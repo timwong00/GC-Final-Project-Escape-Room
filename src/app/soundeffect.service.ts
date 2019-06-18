@@ -18,4 +18,29 @@ export class SoundeffectService {
   getBreakWindow() {
     return this.http.get(`${this.apiurl}` + "/448004/" + `${this.apikey}`);
   }
+
+  getKeyUnlock() {
+    return this.http.get(`${this.apiurl}` + "/235467/" + `${this.apikey}`);
+  }
+
+  getDoorUnlock() {
+    return this.http.get(`${this.apiurl}` + "/214000/" + `${this.apikey}`);
+  }
+
+  getScissorCutting() {
+    return this.http.get(`${this.apiurl}` + "/457038/" + `${this.apikey}`);
+  }
+
+  getChairLeg() {
+    return this.http.get(`${this.apiurl}` + "/328559/" + `${this.apikey}`);
+  }
+
+  getChiselSound() {
+    return this.http.get(`${this.apiurl}` + "/461441/" + `${this.apikey}`);
+  }
+
+  getKeyCode() {
+    return this.http.get(`${this.apiurl}` + "/399120/" + `${this.apikey}`);
+  }
+ 
 }
