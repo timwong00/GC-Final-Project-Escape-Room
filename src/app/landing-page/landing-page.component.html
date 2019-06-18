@@ -1,11 +1,16 @@
-<nav>
-  <img src="" alt="logo">
-</nav>
+<section class="container">
+  <h1>Escape Room!</h1>
+  <!-- <img src="" alt="logo"> -->
+  <h3>Will you make it out in time?!</h3>
 
-<button (click)="toggleShow()">HOW TO PLAY</button>
-<button [routerLink]="['/room1front']">PLAY</button>
+  <div class="btn_container">
+    <button class="how-to-play" (click)="toggleShow()">HOW TO PLAY</button>
+    <button class="play" [routerLink]="['/room1front']">PLAY</button>
+  </div>
 
-<section *ngIf="isShowing">
-  <p>Directions on how to play...</p>
+  <section *ngIf="isShowing">
+    <p>Directions on how to play...</p>
+  </section>
 </section>
 
+<!-- <img class="splatter" src="http://static.indigoimages.ca/2015/shop/orange-paint-splatter.png"> -->

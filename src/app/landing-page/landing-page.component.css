@@ -1,0 +1,105 @@
+@font-face {
+  font-family: 'true_liesregular';
+  src: url('../../assets/true_lies-webfont.woff2') format('woff2'),
+       url('../../assets/true_lies-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  margin: 0px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: black;
+}
+
+h1 {
+  position: relative;
+  padding: 5px;
+  color: white;
+  opacity: 0.3;
+
+  font-family: 'true_liesregular';
+  font-size: 50px;
+  font-weight: bold;
+  font-style: normal;
+/* 
+  width: 50%; */
+}
+
+h3 {
+  position: relative;
+  padding: 5px;
+  color: white;
+  opacity: 0.3;
+
+  font-family: 'true_liesregular';
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+/* 
+  width: 50%; */
+}
+
+img {
+  size: 30px;
+  background-color: grey;
+  opacity: 0.5;
+}
+
+.play {
+  position: relative;
+  /* display: flex;
+  align-content: center;
+  flex-direction: row; */
+  padding: 30px;
+  border-radius: 50%;
+  background-color: red;
+  opacity: 0.5;
+
+  font-family: 'true_liesregular';
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+
+  margin: 10px;
+}
+
+.how-to-play {
+  position: relative;
+  /* display: flex;
+  align-content: center;
+  flex-direction: row; */
+  padding: 30px;
+  border-radius: 50%;
+  background-color: red;
+  opacity: 0.5;
+
+  font-family: 'true_liesregular';
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+
+  margin: 10px;
+
+}
+
+.btn_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .btn_container {
+    flex-direction: row;
+  }
+}
+
+
+
