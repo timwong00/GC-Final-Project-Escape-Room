@@ -1,0 +1,23 @@
+<p>
+  room-navigation works!
+</p>
+<div class="room-navigation-arrows">
+  <img
+    class="navigationArrows"
+    src="/src/assets/img/Arrow Left.png"
+    alt="Arrow Left"
+    (click)="[navigateLeft(), getGameProgress()]"
+  />
+  <img
+    class="navigationArrows"
+    src="/src/assets/img/Arrow Front.png"
+    alt="Arrow Front"
+    (click)="[navigateFront(), getGameProgress()]"
+  />
+  <img
+    class="navigationArrows"
+    src="/src/assets/img/Arrow Right.png"
+    alt="Arrow Right"
+    (click)="[navigateRight(), getGameProgress()]"
+  />
+</div>

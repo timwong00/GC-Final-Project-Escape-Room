@@ -1,7 +1,13 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Room1Service } from "../room1.service";
 import { Component, OnInit, Input } from "@angular/core";
+<<<<<<< HEAD
+
+import { ItemsService } from "../items.service";
+import { GameProgressionService } from "../game-progression.service";
+=======
 import { TimerService } from "../timer.service";
+>>>>>>> master
 
 @Component({
   selector: "room1front",
@@ -14,11 +20,18 @@ export class Room1frontComponent implements OnInit {
   selectedItems: any[];
   itemsToMatch: any[] = [];
   isShowing: boolean = false;
+<<<<<<< HEAD
+  gameProgress: string;
+  constructor(
+    private itemsService: ItemsService,
+    private gameProgressionService: GameProgressionService
+=======
 
 
   constructor(
     private itemsService: Room1Service,
     private timerService: TimerService
+>>>>>>> master
   ) {}
 
   ngOnInit() {
@@ -51,6 +64,12 @@ export class Room1frontComponent implements OnInit {
     this.isShowing = !this.isShowing;
   }
 
+<<<<<<< HEAD
+  // need to set game progress when advancing to next level
+  setGameProgress(): void {
+    this.gameProgressionService.setGameProgress(this.gameProgress);
+  }
+=======
   matchItems1(clickedItem1) {
     // this.room1Service.checkMatch(clickedItem1);
     console.log(clickedItem1);
@@ -65,4 +84,5 @@ export class Room1frontComponent implements OnInit {
 
   }
 
+>>>>>>> master
 }
