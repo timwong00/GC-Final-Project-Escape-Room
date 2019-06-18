@@ -4,6 +4,8 @@ import { HttpClientModule } from "@angular/common/http";
 
 import { Room1Service } from "./room1.service";
 import { GameProgressionService } from "./game-progression.service";
+import { InventoryService } from "./inventory.service";
+import { MatchService } from "./match.service";
 import { RouterModule, Routes } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { Room1frontComponent } from "./room1front/room1front.component";
@@ -52,7 +54,12 @@ const appRoutes: Routes = [
 
   imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(appRoutes)],
 
-  providers: [Room1Service, GameProgressionService],
+  providers: [
+    Room1Service,
+    GameProgressionService,
+    InventoryService,
+    MatchService
+  ],
 
   bootstrap: [AppComponent]
 })

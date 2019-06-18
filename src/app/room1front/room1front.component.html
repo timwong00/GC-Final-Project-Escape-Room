@@ -22,8 +22,3 @@
 </div>
 
 
-<section>
-  <div *ngFor="let selected of selectedItems; index as i">
-    <img src="{{ selected.image }}" class="item{{ i }}" alt="{{ selected.item_name }}" (click)="matchItems1(selected.match_item_name)">
-  </div>
-</section>
