@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
 
 import { ItemsService } from "../items.service";
-import { GameProgressionService } from "../game-progression.service";
+import { TimerService } from "../timer.service";
 
 @Component({
   selector: "room1front",
@@ -12,10 +12,10 @@ export class Room1frontComponent implements OnInit {
   items: any;
   selectedItems: any[];
   isShowing: boolean = false;
-  gameProgress: string;
+
   constructor(
     private itemsService: ItemsService,
-    private gameProgressionService: GameProgressionService
+    private timerService: TimerService
   ) {}
 
   ngOnInit() {
@@ -40,10 +40,5 @@ export class Room1frontComponent implements OnInit {
 
   toggleShow() {
     this.isShowing = !this.isShowing;
-  }
-
-  // need to set game progress when advancing to next level
-  setGameProgress(): void {
-    this.gameProgressionService.setGameProgress(this.gameProgress);
   }
 }

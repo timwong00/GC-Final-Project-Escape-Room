@@ -2,7 +2,6 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 import { ItemsService } from "./items.service";
-import { GameProgressionService } from "./game-progression.service";
 import { RouterModule, Routes } from "@angular/router";
 import { AppComponent } from "./app.component";
 import { Room1frontComponent } from "./room1front/room1front.component";
@@ -16,7 +15,7 @@ import { Room2rightComponent } from "./room2right/room2right.component";
 import { Room3frontComponent } from "./room3front/room3front.component";
 import { Room3leftComponent } from "./room3left/room3left.component";
 import { Room3rightComponent } from "./room3right/room3right.component";
-import { RoomNavigationComponent } from "./room-navigation/room-navigation.component";
+import { RoomNavigationComponent } from './room-navigation/room-navigation.component';
 
 const appRoutes: Routes = [
   { path: "", redirectTo: "/landing", pathMatch: "full" },
@@ -49,7 +48,7 @@ const appRoutes: Routes = [
     RoomNavigationComponent
   ],
   imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(appRoutes)],
-  providers: [ItemsService, GameProgressionService],
+  providers: [ItemsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
