@@ -1,5 +1,5 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
 import { Room1Service } from "./room1.service";
 import { RouterModule, Routes } from '@angular/router';
@@ -27,12 +27,13 @@ const appRoutes: Routes = [
   { path: "room3front", component: Room3frontComponent },
   { path: "room3left", component: Room3leftComponent },
   { path: "room3right", component: Room3rightComponent }
-]
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     Room1frontComponent,
+    HeaderComponent,
     LandingPageComponent,
     Room1leftComponent,
     Room1rightComponent,
@@ -42,13 +43,10 @@ const appRoutes: Routes = [
     Room3frontComponent,
     Room3leftComponent,
     Room3rightComponent
-    ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    RouterModule.forRoot(appRoutes)
   ],
+
+  imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(appRoutes)],
   providers: [Room1Service],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

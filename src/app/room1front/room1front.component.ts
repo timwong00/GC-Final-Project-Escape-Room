@@ -1,21 +1,25 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Room1Service } from "../room1.service";
+import { Component, OnInit, Input } from "@angular/core";
+import { TimerService } from "../timer.service";
 
 @Component({
-  selector: 'room1front',
-  templateUrl: './room1front.component.html',
-  styleUrls: ['./room1front.component.css']
+  selector: "room1front",
+  templateUrl: "./room1front.component.html",
+  styleUrls: ["./room1front.component.css"]
 })
 export class Room1frontComponent implements OnInit {
-
   items: any;
   unlockItems: any;
   selectedItems: any[];
   itemsToMatch: any[] = [];
   isShowing: boolean = false;
 
-  constructor(private room1Service: Room1Service) {
-   }
+
+  constructor(
+    private itemsService: Room1Service,
+    private timerService: TimerService
+  ) {}
 
   ngOnInit() {
     this.room1Service.getItems().subscribe(response => {
@@ -62,6 +66,3 @@ export class Room1frontComponent implements OnInit {
   }
 
 }
-
-
-
