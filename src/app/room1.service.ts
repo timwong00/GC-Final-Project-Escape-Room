@@ -13,6 +13,7 @@ export class Room1Service {
   constructor(private http: HttpClient) {
   }
 
+
   getRoomOneItems() {
     return this.http.get("/room-1-items", { responseType: "json" });
   }

@@ -18,19 +18,25 @@ export class Room1frontComponent implements OnInit {
   gameProgress: string;
   constructor(
     private gameProgressionService: GameProgressionService,
+
     private room1Service: Room1Service, private matchService: MatchService, private inventoryService: InventoryService
   ) {}
+
 
   ngOnInit() {
     this.room1Service.getRoomOneItems().subscribe(response => {
       this.items = response;
+
         // console.log(this.items);
         this.inventoryService.setItems(response);
+
     });
     this.room1Service.getRoomOneUnlockItems().subscribe(response => {
       this.unlockItems = response;
+
       // console.log(this.unlockItems);
       this.matchService.setUnlockItems(response);
+
     });
     this.inventoryItems = this.inventoryService.inventoryItems;
     this.itemsToMatch = this.matchService.itemsToMatch;

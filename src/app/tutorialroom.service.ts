@@ -4,14 +4,14 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class Room3Service {
+export class TutorialroomService {
 
   constructor(private http: HttpClient) { }
   getItems() {
-    return this.http.get("/room-3-items", { responseType: "json" });
+    return this.http.get("/tutorial-items", { responseType: "json" });
   }
 
   getUnlockItems() {
-    return this.http.get("/room-3-unlock-items", { responseType: "json" });
+    return this.http.get("/tutorial-unlock-items", { responseType: "json" });
   }
 }
