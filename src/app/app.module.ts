@@ -1,7 +1,8 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
-import { ItemsService } from "./items.service";
+
+import { Room1Service } from "./room1.service";
 import { GameProgressionService } from "./game-progression.service";
 import { RouterModule, Routes } from "@angular/router";
 import { AppComponent } from "./app.component";
@@ -48,8 +49,11 @@ const appRoutes: Routes = [
     Room3rightComponent,
     RoomNavigationComponent
   ],
+
   imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(appRoutes)],
-  providers: [ItemsService, GameProgressionService],
+
+  providers: [Room1Service, GameProgressionService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule {}
