@@ -24,9 +24,13 @@
     </div>
     <div id="inventory">
       <div *ngFor="let iItem of inventoryItems; index as i">
-        <img src="{{ iItem.image }}" class="items item{{ i }}" alt="{{ iItem.item_name }}" (click)="matchItems1(iItem.match_item_name)">
+        <img
+          src="{{ iItem.image }}"
+          class="items item{{ i }}"
+          alt="{{ iItem.item_name }}"
+          (click)="matchItems1(iItem.match_item_name)"
+        />
       </div>
-      
     </div>
   </div>
 </section>
