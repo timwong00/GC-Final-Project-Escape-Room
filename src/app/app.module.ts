@@ -20,9 +20,9 @@ import { Room3frontComponent } from "./room3front/room3front.component";
 import { Room3leftComponent } from "./room3left/room3left.component";
 import { Room3rightComponent } from "./room3right/room3right.component";
 import { RoomNavigationComponent } from "./room-navigation/room-navigation.component";
-import { TutorialfrontComponent } from './tutorialfront/tutorialfront.component';
-import { TutorialleftComponent } from './tutorialleft/tutorialleft.component';
-import { TutorialrightComponent } from './tutorialright/tutorialright.component';
+import { TutorialfrontComponent } from "./tutorialfront/tutorialfront.component";
+import { TutorialleftComponent } from "./tutorialleft/tutorialleft.component";
+import { TutorialrightComponent } from "./tutorialright/tutorialright.component";
 
 const appRoutes: Routes = [
   { path: "", redirectTo: "/app-root", pathMatch: "full" },
@@ -37,8 +37,8 @@ const appRoutes: Routes = [
   { path: "room3left", component: Room3leftComponent },
   { path: "room3right", component: Room3rightComponent },
   { path: "tutorialfront", component: TutorialfrontComponent },
-  { path: "tutorialleft", component: TutorialfrontComponent },
-  { path: "tutorialright", component: TutorialfrontComponent }
+  { path: "tutorialleft", component: TutorialleftComponent },
+  { path: "tutorialright", component: TutorialrightComponent }
 ];
 
 @NgModule({
