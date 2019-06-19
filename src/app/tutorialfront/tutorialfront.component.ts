@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { TutorialroomService } from "../tutorialroom.service";
 import { GameProgressionService } from "../game-progression.service";
 import { MatchService } from "../match.service";
 import { InventoryService } from "../inventory.service";
 
 @Component({
-  selector: 'tutorialfront',
-  templateUrl: './tutorialfront.component.html',
-  styleUrls: ['./tutorialfront.component.css']
+  selector: "tutorialfront",
+  templateUrl: "./tutorialfront.component.html",
+  styleUrls: ["./tutorialfront.component.css"]
 })
 export class TutorialfrontComponent implements OnInit {
   items: any;
@@ -17,16 +17,17 @@ export class TutorialfrontComponent implements OnInit {
   gameProgress: string;
   isShowing: boolean = false;
 
-  constructor(private tutorialRoomService: TutorialroomService,
+  constructor(
+    private tutorialRoomService: TutorialroomService,
     private gameProgressionService: GameProgressionService,
     private matchService: MatchService,
     private inventoryService: InventoryService
-  ) { }
+  ) {}
 
   ngOnInit() {
     this.tutorialRoomService.getTutorialItems().subscribe(response => {
       this.items = response;
-      this.inventoryService.setItems(response);
+      this.tutorialRoomService.setItems(response);
     });
     this.tutorialRoomService.getTutorialUnlockItems().subscribe(response => {
       this.unlockItems = response;

@@ -7,7 +7,11 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
+module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\n/* * {\n  background-color: black;\n} */\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUE4RTtBQUM5RTs7R0FFRyIsImZpbGUiOiJzcmMvc3R5bGVzLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cbi8qICoge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbn0gKi8iXX0= */", '', '']]
+=======
 module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\r\n/* * {\r\n  background-color: black;\r\n} */\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9zdHlsZXMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUE4RTtBQUM5RTs7R0FFRyIsImZpbGUiOiJzcmMvc3R5bGVzLmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cclxuLyogKiB7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XHJcbn0gKi8iXX0= */", '', '']]
+>>>>>>> master
 
 /***/ }),
 
@@ -557,7 +561,11 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
+module.exports = __webpack_require__(/*! /Users/tim/Documents/Grand Circus/GC Final Project/GC-Final-Project-Escape-Room/src/styles.css */"./src/styles.css");
+=======
 module.exports = __webpack_require__(/*! C:\Users\Amanda\documents\grand_circus\projects\gc-final-project-escape-room\src\styles.css */"./src/styles.css");
+>>>>>>> master
 
 
 /***/ })

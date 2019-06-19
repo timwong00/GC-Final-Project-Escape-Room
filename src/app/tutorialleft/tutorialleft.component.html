@@ -1,3 +1,7 @@
-<p>
-  tutorialleft works!
-</p>
+<div *ngFor="let item of unlockItems">
+  <img
+    src=""
+    alt="{{ item.item_name }}"
+    (click)="matchItems2(item.item_name)"
+  />
+</div>
