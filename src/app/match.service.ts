@@ -19,22 +19,20 @@ export class MatchService {
     private inventoryService: InventoryService,
     private gameProgressionService: GameProgressionService,
     private router: Router
-    ) {}
-
+  ) {}
 
   setInventoryItemToMatch(inventoryItem) {
     this.itemsToMatch.splice(0, 1, inventoryItem);
-    // console.log(this.itemsToMatch);
+    console.log(this.itemsToMatch);
   }
 
   setUnlockItemToMatch(unlockItem) {
     this.itemsToMatch.splice(1, 1, unlockItem);
-    // console.log(this.itemsToMatch);
+    console.log(this.itemsToMatch);
   }
-  
 
   enterNextRoom() {
-    if(this.room1Service.uItems.length == 0) {
+    if (this.room1Service.uItems.length == 0) {
       // this.router.navigate(["/room2front"]);
       if (this.gameProgressionService.gameProgress === "Tutorial") {
         this.router.navigate(["/room1front"]);
@@ -48,7 +46,7 @@ export class MatchService {
       } else if (this.gameProgressionService.gameProgress === "Room 3") {
         // this.router.navigate(["/room3front"]);
         // need to be you win page
-      }      
+      }
       // console.log("exit");
     } else {
       return;
@@ -56,9 +54,8 @@ export class MatchService {
     }
   }
 
-
   checkMatch() {
-    if (this.itemsToMatch[0] == this.itemsToMatch[1]) {   
+    if (this.itemsToMatch[0] == this.itemsToMatch[1]) {
       let index = this.room1Service.uItems.findIndex(
         item => item.item_name == this.itemsToMatch[1]
       );

@@ -1,2 +1,7 @@
-<img src="{{ item_image }}" alt="{{ item_name }}" />
-<p>Hello</p>
+<div *ngFor="let item of items">
+  <img
+    src=""
+    alt="{{ item.item_name }}"
+    (click)="[selectItem(item), removeItem(item)]"
+  />
+</div>
