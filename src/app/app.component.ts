@@ -20,7 +20,7 @@ export class AppComponent {
 
   startGame() {
     // change to "Tutorial"
-    this.gameProgressionService.setGameProgress("Room 1");
+    this.gameProgressionService.setGameProgress("Tutorial");
     this.playingGame = true;
   }
 }
