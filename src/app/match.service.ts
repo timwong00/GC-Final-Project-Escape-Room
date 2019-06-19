@@ -38,7 +38,6 @@ export class MatchService {
   }
 
   enterNextRoom() {
-    // this.router.navigate(["/room2front"]);
     if (this.gameProgressionService.gameProgress === "Tutorial") {
       if (this.tutorialRoomService.uItems.length == 0) {
         this.router.navigate(["/room1front"]);
@@ -59,10 +58,11 @@ export class MatchService {
         //   // ***NEED TO UPDATE*** to be you-win page
         // }
         // console.log("exit");
-      } else {
-        return;
-        // console.log("nope");
       }
+      // else {
+      //   return;
+      //   // console.log("nope");
+      // }
     }
   }
   checkMatch() {
