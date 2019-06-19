@@ -5,7 +5,11 @@
 
   <div class="btn_container">
     <button class="how-to-play" (click)="toggleShow()">HOW TO PLAY</button>
-    <button class="play" [routerLink]="['/tutorialfront']">PLAY</button>
+
+    <button class="play" [routerLink]="['/tutorialfront']" (click)="startGame()">
+      PLAY
+    </button>
+
   </div>
 
   <section *ngIf="isShowing">
