@@ -7,10 +7,15 @@ import { Room3Service } from "../room3.service";
   styleUrls: ['./room3front.component.css']
 })
 export class Room3frontComponent implements OnInit {
+  isShowing: boolean = false;
 
   constructor(private room3Service: Room3Service) { }
 
   ngOnInit() {
+  }
+
+  toggleShow() {
+    this.isShowing = !this.isShowing;
   }
 
 }
