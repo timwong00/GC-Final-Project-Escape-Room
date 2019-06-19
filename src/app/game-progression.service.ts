@@ -4,18 +4,18 @@ import { Injectable } from "@angular/core";
   providedIn: "root"
 })
 export class GameProgressionService {
-  gameProgress: any;
+  gameProgress: any = null;
   constructor() {}
 
   setGameProgress(gameProgress) {
     this.gameProgress = gameProgress;
-    console.log(this.gameProgress);
-    console.log(gameProgress);
+    // console.log(this.gameProgress);
+    // console.log(gameProgress);
     return this.gameProgress;
   }
 
   getGameProgress() {
-    console.log(this.gameProgress);
+    // console.log(this.gameProgress);
     return this.gameProgress;
   }
 }

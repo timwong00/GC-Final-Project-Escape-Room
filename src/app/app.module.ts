@@ -22,8 +22,8 @@ import { Room3rightComponent } from "./room3right/room3right.component";
 import { RoomNavigationComponent } from "./room-navigation/room-navigation.component";
 
 const appRoutes: Routes = [
-  { path: "", redirectTo: "/landing", pathMatch: "full" },
-  { path: "landing", component: LandingPageComponent },
+  { path: "", redirectTo: "/app-root", pathMatch: "full" },
+  { path: "app-root", component: AppComponent },
   { path: "room1front", component: Room1frontComponent },
   { path: "room1left", component: Room1leftComponent },
   { path: "room1right", component: Room1rightComponent },
