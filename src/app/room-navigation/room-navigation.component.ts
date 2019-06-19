@@ -15,6 +15,7 @@ export class RoomNavigationComponent implements OnInit {
     private gameProgressionService: GameProgressionService
   ) {
     console.log(this.gameProgressionService.gameProgress);
+    
   }
 
   ngOnInit() {}

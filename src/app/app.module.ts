@@ -58,7 +58,8 @@ const appRoutes: Routes = [
     Room1Service,
     GameProgressionService,
     InventoryService,
-    MatchService
+    MatchService,
+    RoomNavigationComponent
   ],
 
   bootstrap: [AppComponent]

@@ -4,7 +4,10 @@ import { Injectable } from "@angular/core";
   providedIn: "root"
 })
 export class GameProgressionService {
-  gameProgress: any;
+  gameProgress: 
+  // any[] = ["Tutorial", "Room 1", "Room 2", "Room 3"]
+  string = "Room 1"
+  ;
   constructor() {}
 
   setGameProgress(gameProgress) {
