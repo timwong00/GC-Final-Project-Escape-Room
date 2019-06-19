@@ -1,0 +1,24 @@
+<h1>Tutorial Front Component</h1>
+
+<section *ngIf="!isShowing">
+  <p>The insane surgeon, Dr. Lobotomy, has just escaped from jail. Known for performing unnecessary and inhumane
+    operations on unwilling participants, he’s suspected to be lurking in your town. After staying late at the office
+    one night, the last thing you remember is walking to your car in the dark. You just woke up here, strapped to a
+    chair, and know you must be Dr. Lobotomy’s next victim. Use the items you find in the room to escape before he
+    returns to finish his work!</p>
+  <button (click)="toggleShow()">OK</button>
+</section>
+
+<section>
+<div *ngFor="let uItem of unlockItems; index as i">
+  <img src="{{ uItem.image }}" class="uItem{{ i }}" alt="{{ uItem.item_name }}" (click)="matchItems2(uItem.item_name)" >
+</div>
+</section>
+
+
+<div *ngFor="let item of items; index as i">
+  <img src="{{ item.image }}" class="item{{ i }}" alt="{{ item.item_name }}"
+    (click)="[selectItem(item), removeItem(i)]">
+</div>
+
+

@@ -1,43 +1,38 @@
-import { Component, OnInit, Input } from "@angular/core";
-import { Room1Service } from "../room1.service";
+import { Component, OnInit } from '@angular/core';
+import { TutorialroomService } from "../tutorialroom.service";
 import { GameProgressionService } from "../game-progression.service";
 import { MatchService } from "../match.service";
 import { InventoryService } from "../inventory.service";
 
 @Component({
-  selector: "room1front",
-  templateUrl: "./room1front.component.html",
-  styleUrls: ["./room1front.component.css"]
+  selector: 'tutorialfront',
+  templateUrl: './tutorialfront.component.html',
+  styleUrls: ['./tutorialfront.component.css']
 })
-export class Room1frontComponent implements OnInit {
+export class TutorialfrontComponent implements OnInit {
   items: any;
   unlockItems: any;
   inventoryItems: any[];
   itemsToMatch: any[] = [];
-  isShowing: boolean = false;
   gameProgress: string;
+  isShowing: boolean = false;
 
-  constructor(
-    private room1Service: Room1Service,
+  constructor(private tutorialRoomService: TutorialroomService,
     private gameProgressionService: GameProgressionService,
     private matchService: MatchService,
     private inventoryService: InventoryService
-  ) {}
+  ) { }
 
   ngOnInit() {
-    this.room1Service.getRoomOneItems().subscribe(response => {
+    this.tutorialRoomService.getTutorialItems().subscribe(response => {
       this.items = response;
-      // console.log(this.items);
       this.inventoryService.setItems(response);
     });
-    this.room1Service.getRoomOneUnlockItems().subscribe(response => {
+    this.tutorialRoomService.getTutorialUnlockItems().subscribe(response => {
       this.unlockItems = response;
-      // console.log(this.unlockItems);
-      this.room1Service.setUnlockItems(response);
+      this.tutorialRoomService.setUnlockItems(response);
     });
-    // this.inventoryItems = this.inventoryService.inventoryItems;
     this.itemsToMatch = this.matchService.itemsToMatch;
-    // console.log(this.inventoryItems);
   }
 
   selectItem(inventoryItem) {
