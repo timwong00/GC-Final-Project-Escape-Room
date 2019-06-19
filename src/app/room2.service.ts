@@ -5,14 +5,20 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class Room2Service {
+  items: any;
+  uItems: any;
 
   constructor(private http: HttpClient) { }
-  getItems() {
+  getRoomTwoItems() {
     return this.http.get("/room-2-items", { responseType: "json" });
   }
 
-  getUnlockItems() {
+  getRoomTwoUnlockItems() {
     return this.http.get("/room-2-unlock-items", { responseType: "json" });
+  }
+
+  setUnlockItems(uItemList) {
+    this.uItems = uItemList;
   }
 }
 

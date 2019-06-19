@@ -7,6 +7,7 @@ import { HttpClient } from "@angular/common/http";
 export class TutorialroomService {
   items: any;
   uItems: any;
+  items: any;
 
   constructor(private http: HttpClient) {}
   getTutorialItems() {

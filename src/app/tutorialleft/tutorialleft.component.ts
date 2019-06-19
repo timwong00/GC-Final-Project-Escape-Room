@@ -26,7 +26,7 @@ export class TutorialleftComponent implements OnInit {
     console.log(itemToUnlock);
     this.matchService.setUnlockItemToMatch(itemToUnlock);
     // this.matchService.itemsToMatch.splice(1, 1, itemToUnlock);
-    // this.matchService.checkMatch();
+    this.matchService.checkMatch();
     // console.log(this.itemsToMatch);
   }
 }
