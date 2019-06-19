@@ -1,3 +1,10 @@
-<p>
-  room1right works!
-</p>
+<!-- <div>
+    <img src="{{ scalpelImage }}" class="uItem{{ i }}" alt="{{ scalpelName }}" 
+    (click)="[selectItem(scalpel), removeItem(scalpelName)]">
+  </div> -->
+
+
+  <div *ngFor="let item of items; index as i">
+      <img src="{{ item.image }}" class="item{{ i }}" alt="{{ item.item_name }}"
+        (click)="[selectItem(item), removeItem(i)]">
+    </div>

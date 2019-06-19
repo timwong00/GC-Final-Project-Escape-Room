@@ -22,4 +22,24 @@ export class Room1Service {
   setUnlockItems(uItemList) {
     this.uItems = uItemList;
   }
+
+  deleteItem(index) {
+    // let index = this.items.findIndex(
+    //   item => item.item_name == itemName.item_name
+    // );
+    this.items.splice(index, 1);
+    // return this.items;
+    // console.log(this.items);
+    // console.log(index);
+    
+  }
+
+  setItems(itemList) {
+    this.items = itemList;
+    // console.log(this.items);
+  }
+
+  returnItems() {
+    return this.items;
+  }
 }

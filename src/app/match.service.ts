@@ -76,6 +76,7 @@ export class MatchService {
           item => item.match_item_name == this.itemsToMatch[0]
         );
         this.inventoryService.inventoryItems.splice(index2, 1);
+
       } else if (this.gameProgressionService.gameProgress === "Room 1") {
         let index = this.room1Service.uItems.findIndex(
           item => item.item_name == this.itemsToMatch[1]
@@ -84,6 +85,9 @@ export class MatchService {
         let index2 = this.inventoryService.inventoryItems.findIndex(
           item => item.match_item_name == this.itemsToMatch[0]
         );
+        this.inventoryService.inventoryItems.splice(index2, 1);
+        console.log(this.room1Service.uItems);
+
       } else if (this.gameProgressionService.gameProgress === "Room 2") {
         let index = this.room2Service.uItems.findIndex(
           item => item.item_name == this.itemsToMatch[1]
@@ -92,6 +96,8 @@ export class MatchService {
         let index2 = this.inventoryService.inventoryItems.findIndex(
           item => item.match_item_name == this.itemsToMatch[0]
         );
+        this.inventoryService.inventoryItems.splice(index2, 1);
+
       } else if (this.gameProgressionService.gameProgress === "Room 3") {
         let index = this.room3Service.uItems.findIndex(
           item => item.item_name == this.itemsToMatch[1]
@@ -100,6 +106,7 @@ export class MatchService {
         let index2 = this.inventoryService.inventoryItems.findIndex(
           item => item.match_item_name == this.itemsToMatch[0]
         );
+        this.inventoryService.inventoryItems.splice(index2, 1);
       }
       this.enterNextRoom();
       this.itemsToMatch = [];
