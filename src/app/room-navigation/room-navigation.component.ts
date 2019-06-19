@@ -17,7 +17,9 @@ export class RoomNavigationComponent implements OnInit {
     console.log(this.gameProgressionService.gameProgress);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.gameProgress = this.gameProgressionService.getGameProgress();
+  }
 
   getGameProgress(): string {
     this.gameProgress = this.gameProgressionService.getGameProgress();
@@ -25,6 +27,7 @@ export class RoomNavigationComponent implements OnInit {
   }
 
   navigateLeft(): void {
+    this.getGameProgress();
     if (this.gameProgress === "Tutorial") {
       this.router.navigate(["/tutorialleft"]);
     } else if (this.gameProgress === "Room 1") {
@@ -37,6 +40,7 @@ export class RoomNavigationComponent implements OnInit {
   }
 
   navigateFront(): void {
+    this.getGameProgress();
     if (this.gameProgress === "Tutorial") {
       this.router.navigate(["/tutorialfront"]);
     } else if (this.gameProgress === "Room 1") {
@@ -49,6 +53,7 @@ export class RoomNavigationComponent implements OnInit {
   }
 
   navigateRight(): void {
+    this.getGameProgress();
     if (this.gameProgress === "Tutorial") {
       this.router.navigate(["/tutorialright"]);
     } else if (this.gameProgress === "Room 1") {
