@@ -21,9 +21,6 @@ export class MatchService {
     private router: Router
   ) { }
 
-  // setUnlockItems(uItemList) {
-  //   this.uItems = uItemList;
-  // }
 
   setInventoryItemToMatch(inventoryItem) {
     this.itemsToMatch.splice(0, 1, inventoryItem);
@@ -34,26 +31,24 @@ export class MatchService {
     this.itemsToMatch.splice(1, 1, unlockItem);
     // console.log(this.itemsToMatch);
   }
-
-  // getGameProgress(): string {
-  //   this.gameProgress = this.gameProgressionService.getGameProgress();
-  //   return this.gameProgress;
-  // }  
+  
 
   enterNextRoom() {
-    if (this.room1Service.uItems.length == 0) {
-      this.gameProgressionService.setGameProgress("Room 2");  //this needs to dynamically set progress
-
+    if(this.room1Service.uItems.length == 0) {
       // this.router.navigate(["/room2front"]);
       if (this.gameProgressionService.gameProgress === "Tutorial") {
-        this.router.navigate(["/tutorialroomfront"]);
-      } else if (this.gameProgressionService.gameProgress === "Room 1") {
         this.router.navigate(["/room1front"]);
-      } else if (this.gameProgressionService.gameProgress === "Room 2") {
+        this.gameProgressionService.setGameProgress("Room 1");
+      } else if (this.gameProgressionService.gameProgress === "Room 1") {
         this.router.navigate(["/room2front"]);
-      } else if (this.gameProgressionService.gameProgress === "Room 3") {
+        this.gameProgressionService.setGameProgress("Room 2");
+      } else if (this.gameProgressionService.gameProgress === "Room 2") {
         this.router.navigate(["/room3front"]);
-      }
+        this.gameProgressionService.setGameProgress("Room 3");
+      } else if (this.gameProgressionService.gameProgress === "Room 3") {
+        // this.router.navigate(["/room3front"]);
+        // need to be you-win page
+      }      
       // console.log("exit");
     } else {
       return;

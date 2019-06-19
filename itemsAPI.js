@@ -42,7 +42,7 @@ items.get("/tutorial-items", (req, res) => {
 
 items.get("/tutorial-unlock-items", (req,res) => {
   getTutorialUnlockItems(res);
-})
+});
 
 items.get("/room-1-items", (req, res) => {
   getRoomOneItems(res);
@@ -50,7 +50,7 @@ items.get("/room-1-items", (req, res) => {
 
 items.get("/room-1-unlock-items", (req,res) => {
   getRoomOneUnlockItems(res);
-})
+});
 
 items.get("/room-2-items", (req, res) => {
   getRoomTwoItems(res);
@@ -58,7 +58,7 @@ items.get("/room-2-items", (req, res) => {
 
 items.get("/room-2-unlock-items", (req,res) => {
   getRoomTwoUnlockItems(res);
-})
+});
 
 items.get("/room-3-items", (req, res) => {
   getRoomThreeItems(res);
@@ -66,7 +66,7 @@ items.get("/room-3-items", (req, res) => {
 
 items.get("/room-3-unlock-items", (req,res) => {
   getRoomThreeUnlockItems(res);
-})
+});
 
 
 module.exports = items;

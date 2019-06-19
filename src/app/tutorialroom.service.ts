@@ -5,15 +5,16 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class TutorialroomService {
-  items: any;
   uItems: any;
-  
+  items: any;
+
+
   constructor(private http: HttpClient) { }
-  getItems() {
+  getTutorialItems() {
     return this.http.get("/tutorial-items", { responseType: "json" });
   }
 
-  getUnlockItems() {
+  getTutorialUnlockItems() {
     return this.http.get("/tutorial-unlock-items", { responseType: "json" });
   }
 
