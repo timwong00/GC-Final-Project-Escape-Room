@@ -1,7 +1,31 @@
-<div *ngFor="let item of unlockItems">
-  <img
-    src=""
-    alt="{{ item.item_name }}"
-    (click)="matchItems2(item.item_name)"
-  />
-</div>
+<section class="background">
+  <h1>Tutorial Left Component</h1>
+  <div *ngFor="let item of unlockItems">
+    <img
+      src=""
+      alt="{{ item.item_name }}"
+      (click)="matchItems2(item.item_name)"
+    />
+  </div>  
+
+  <section>
+    <div *ngFor="let uItem of unlockItems; index as i">
+      <img
+        src="{{ uItem.image }}"
+        class="uItem{{ i }}"
+        alt="{{ uItem.item_name }}"
+        (click)="matchItems2(uItem.item_name)"
+      />
+    </div>
+  </section>
+
+  <div *ngFor="let item of items; index as i">
+    <img
+      src="{{ item.image }}"
+      class="item{{ i }}"
+      alt="{{ item.item_name }}"
+      (click)="[selectItem(item), removeItem(i)]"
+    />
+  </div>
+</section>
+
