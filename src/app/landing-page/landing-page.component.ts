@@ -1,21 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { GameProgressionService } from "../game-progression.service";
 
 @Component({
-  selector: 'landing-page',
-  templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.css']
+  selector: "landing-page",
+  templateUrl: "./landing-page.component.html",
+  styleUrls: ["./landing-page.component.css"]
 })
 export class LandingPageComponent implements OnInit {
-
   isShowing: boolean = false;
 
-  constructor() { }
+  constructor(private gameProgressionService: GameProgressionService) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   toggleShow() {
     this.isShowing = !this.isShowing;
   }
 
+  startGame() {
+    this.gameProgressionService.setGameProgress("Tutorial");
+  }
 }
