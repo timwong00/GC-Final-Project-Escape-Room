@@ -1,3 +1,6 @@
-<p>
-  room2front works!
-</p>
+<h1>Room 2 Front Component</h1>
+
+<section *ngIf="!isShowing">
+  <p>Congratulations! You have escaped the operation room and moved into the hallway. You are one step closer to escaping Dr. Lobotomy!</p>
+  <button (click)="toggleShow()">OK</button>
+</section>
