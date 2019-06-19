@@ -19,7 +19,7 @@ export class MatchService {
     private inventoryService: InventoryService,
     private gameProgressionService: GameProgressionService,
     private router: Router
-    ) {}
+  ) { }
 
   // setUnlockItems(uItemList) {
   //   this.uItems = uItemList;
@@ -41,7 +41,7 @@ export class MatchService {
   // }  
 
   enterNextRoom() {
-    if(this.room1Service.uItems.length == 0) {
+    if (this.room1Service.uItems.length == 0) {
       this.gameProgressionService.setGameProgress("Room 2");  //this needs to dynamically set progress
 
       // this.router.navigate(["/room2front"]);
@@ -53,7 +53,7 @@ export class MatchService {
         this.router.navigate(["/room2front"]);
       } else if (this.gameProgressionService.gameProgress === "Room 3") {
         this.router.navigate(["/room3front"]);
-      }      
+      }
       // console.log("exit");
     } else {
       return;
@@ -63,14 +63,19 @@ export class MatchService {
 
 
   checkMatch() {
-    if (this.itemsToMatch[0] == this.itemsToMatch[1]) {   
-      let index = this.room1Service.uItems.findIndex(
-        item => item.item_name == this.itemsToMatch[1]
-      );
-      this.room1Service.uItems.splice(index, 1);
-      let index2 = this.inventoryService.inventoryItems.findIndex(
-        item => item.match_item_name == this.itemsToMatch[0]
-      );
+    if (this.itemsToMatch[0] == this.itemsToMatch[1]) {
+      if (this.gameProgressionService.gameProgress === "Tutorial") {
+        let index = this.tutorialService.uItems.findIndex(
+          item => item.item_name == this.itemsToMatch[1]
+        );
+        this.room1Service.uItems.splice(index, 1);
+        let index2 = this.inventoryService.inventoryItems.findIndex(
+          item => item.match_item_name == this.itemsToMatch[0]
+        );
+
+      } else if () { }
+
+
       this.inventoryService.inventoryItems.splice(index2, 1);
       this.enterNextRoom();
       this.itemsToMatch = [];
