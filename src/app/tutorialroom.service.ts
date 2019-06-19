@@ -6,6 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TutorialroomService {
   uItems: any;
+  items: any;
+
 
   constructor(private http: HttpClient) { }
   getTutorialItems() {
@@ -19,5 +21,4 @@ export class TutorialroomService {
   setUnlockItems(uItemList) {
     this.uItems = uItemList;
   }
-
 }
