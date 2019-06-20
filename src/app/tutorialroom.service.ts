@@ -7,6 +7,7 @@ import { HttpClient } from "@angular/common/http";
 export class TutorialroomService {
   items: any;
   uItems: any;
+  isShowing: boolean = true;
 
   constructor(private http: HttpClient) {}
   getTutorialItems() {
@@ -46,4 +47,9 @@ export class TutorialroomService {
     this.items.splice(index, 1);
     // return this.items;
   }
+
+  hidePrompt() {
+    this.isShowing = false;
+  }
+
 }
