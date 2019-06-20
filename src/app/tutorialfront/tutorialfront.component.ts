@@ -25,15 +25,26 @@ export class TutorialfrontComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.tutorialRoomService.getTutorialItems().subscribe(response => {
-      this.items = response;
-      this.tutorialRoomService.setItems(response);
-    });
-    this.tutorialRoomService.getTutorialUnlockItems().subscribe(response => {
-      this.unlockItems = response;
-      this.tutorialRoomService.setUnlockItems(response);
-    });
-    this.itemsToMatch = this.matchService.itemsToMatch;
+    if (this.tutorialRoomService.items == undefined) {
+      this.tutorialRoomService.getTutorialItems().subscribe(response => {
+        // this.items = response;
+        // console.log("working");
+        this.tutorialRoomService.setItems(response);
+        this.items = this.tutorialRoomService.items;
+      });
+    } else {
+      this.items = this.tutorialRoomService.items;
+    }
+    if (this.tutorialRoomService.uItems == undefined) {
+      this.tutorialRoomService.getTutorialUnlockItems().subscribe(response => {
+        // this.unlockItems = response;
+        this.tutorialRoomService.setUnlockItems(response);
+        this.unlockItems = this.tutorialRoomService.uItems;
+      });
+    } else {
+      this.unlockItems = this.tutorialRoomService.uItems;
+    }
+    // this.itemsToMatch = this.matchService.itemsToMatch;
   }
 
   selectItem(inventoryItem) {
