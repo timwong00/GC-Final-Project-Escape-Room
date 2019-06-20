@@ -12,15 +12,16 @@
       <button class="menu-options">
         Reset Game
       </button>
-      <button class="menu-options">
+      <button class="menu-options" (click)="stopTimer()">
         Quit Game
       </button>
     </div>
   </div>
   <div class="game-header">
-    <div id="battery">
-      <div class="battery battery-drain"></div>
-      <!-- {{ this.timerService.timeRemaining }} seconds left -->
+    <div *ngIf="this.timerService.finishedTutorial" id="battery">
+      <div class="battery battery-drain">
+        {{ this.timerService.timeRemaining }} seconds left
+      </div>
     </div>
     <div id="inventory">
       <div *ngFor="let iItem of inventoryItems; index as i">

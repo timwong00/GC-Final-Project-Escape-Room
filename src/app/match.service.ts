@@ -6,6 +6,7 @@ import { InventoryService } from "./inventory.service";
 import { GameProgressionService } from "./game-progression.service";
 import { Router } from "@angular/router";
 import { TutorialroomService } from "./tutorialroom.service";
+import { TimerService } from "./timer.service";
 
 @Injectable({
   providedIn: "root"
@@ -24,7 +25,8 @@ export class MatchService {
     private inventoryService: InventoryService,
     private gameProgressionService: GameProgressionService,
     private tutorialRoomService: TutorialroomService,
-    private router: Router
+    private router: Router,
+    private timerService: TimerService
   ) {}
 
   setInventoryItemToMatch(inventoryItem) {
@@ -41,6 +43,7 @@ export class MatchService {
     if (this.gameProgressionService.gameProgress === "Tutorial") {
       if (this.tutorialRoomService.uItems.length == 0) {
         this.router.navigate(["/room1front"]);
+        this.timerService.startTimer();
         this.gameProgressionService.setGameProgress("Room 1");
       }
     } else if (this.gameProgressionService.gameProgress === "Room 1") {
@@ -76,7 +79,6 @@ export class MatchService {
           item => item.match_item_name == this.itemsToMatch[0]
         );
         this.inventoryService.inventoryItems.splice(index2, 1);
-
       } else if (this.gameProgressionService.gameProgress === "Room 1") {
         let index = this.room1Service.uItems.findIndex(
           item => item.item_name == this.itemsToMatch[1]
@@ -87,7 +89,6 @@ export class MatchService {
         );
         this.inventoryService.inventoryItems.splice(index2, 1);
         console.log(this.room1Service.uItems);
-
       } else if (this.gameProgressionService.gameProgress === "Room 2") {
         let index = this.room2Service.uItems.findIndex(
           item => item.item_name == this.itemsToMatch[1]
@@ -97,7 +98,6 @@ export class MatchService {
           item => item.match_item_name == this.itemsToMatch[0]
         );
         this.inventoryService.inventoryItems.splice(index2, 1);
-
       } else if (this.gameProgressionService.gameProgress === "Room 3") {
         let index = this.room3Service.uItems.findIndex(
           item => item.item_name == this.itemsToMatch[1]
