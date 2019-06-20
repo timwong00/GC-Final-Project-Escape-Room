@@ -1,18 +1,22 @@
 <div class="room-navigation-arrows">
-  <i class="material-icons navigationArrows" (click)="navigateLeft()">
+  <i
+    class="material-icons navigationArrows"
+    (click)="navigateLeft()"
+    [ngClass]="{ activeLeft: navigateDirection === 'left' }"
+  >
     arrow_left
   </i>
   <i
     class="material-icons navigationArrows"
     (click)="navigateFront()"
-    [routerLinkActive]="activeFront"
+    [ngClass]="{ activeLeft: navigateDirection === 'front' }"
   >
     arrow_drop_up
   </i>
   <i
     class="material-icons navigationArrows"
     (click)="navigateRight()"
-    [routerLinkActive]="activeRight"
+    [ngClass]="{ activeLeft: navigateDirection === 'right' }"
   >
     arrow_right
   </i>
