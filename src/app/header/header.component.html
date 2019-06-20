@@ -17,21 +17,21 @@
       </button>
     </div>
   </div>
-  <div class="game-header">
-    <div *ngIf="this.timerService.finishedTutorial" id="battery">
-      <div class="battery battery-drain">
-        {{ this.timerService.timeRemaining }} seconds left
-      </div>
-    </div>
-    <div id="inventory">
-      <div *ngFor="let iItem of inventoryItems; index as i">
-        <img
-          src=""
-          class="items item{{ i }}"
-          alt="{{ iItem.item_name }}"
-          (click)="matchItems1(iItem.match_item_name)"
-        />
-      </div>
+  <!-- <div class="game-header"> -->
+  <div *ngIf="this.timerService.finishedTutorial" id="battery">
+    <div class="battery battery-drain">
+      {{ this.timerService.timeRemaining }} seconds left
     </div>
   </div>
+  <div id="inventory">
+    <div *ngFor="let iItem of inventoryItems; index as i">
+      <img
+        src=""
+        class="items item{{ i }}"
+        alt="{{ iItem.item_name }}"
+        (click)="matchItems1(iItem.match_item_name)"
+      />
+    </div>
+  </div>
+  <!-- </div> -->
 </section>
