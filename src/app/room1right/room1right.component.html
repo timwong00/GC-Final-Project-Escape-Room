@@ -2,9 +2,13 @@
     <img src="{{ scalpelImage }}" class="uItem{{ i }}" alt="{{ scalpelName }}" 
     (click)="[selectItem(scalpel), removeItem(scalpelName)]">
   </div> -->
-
-
+<section class="background">
   <div *ngFor="let item of items; index as i">
-      <img src="{{ item.image }}" class="item{{ i }}" alt="{{ item.item_name }}"
-        (click)="[selectItem(item), removeItem(i)]">
-    </div>
+    <img
+      src="{{ item.image }}"
+      class="item{{ i }}"
+      alt="{{ item.item_name }}"
+      (click)="[selectItem(item), removeItem(i)]"
+    />
+  </div>
+</section>

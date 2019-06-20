@@ -25,3 +25,45 @@ section {
 .uItem1 {
     display: none;
 }
+
+.rotate {
+    color: white;
+    height: 85vh;
+    width: 100vw;
+  }
+  /* Mobile Landscape View */
+  @media all and (min-width: 568px) {
+    .background {
+      background-image: url("../../assets/img/Surgery-F-2.png");
+      background-size: cover;
+      height: 80vh;
+      width: 100vw;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    .rotate {
+      display: none;
+    }
+  }
+  
+  /* iPad Portrait View -- display rotate message */
+  /* 
+  @media all and (min-width: 768px) {
+    .background {
+      display: none;
+    }
+    .rotate {
+      display: block;
+    }
+  } */
+  /* iPad Landscape View */
+  @media all and (min-width: 1024px) {
+    .background {
+      background-image: url("../../assets/img/Surgery-F-2.png");
+      background-size: cover;
+      height: 85vh;
+      width: 100vw;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
