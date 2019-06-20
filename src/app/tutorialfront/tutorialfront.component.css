@@ -6,7 +6,7 @@
 /* Mobile Landscape View */
 @media all and (min-width: 568px) {
   .background {
-    background-image: url("../../assets/img/Surgery-F.png");
+    background-image: url("../../assets/img/Surgery-F-2.png");
     background-size: cover;
     height: 80vh;
     width: 100vw;
@@ -31,7 +31,7 @@
 /* iPad Landscape View */
 @media all and (min-width: 1024px) {
   .background {
-    background-image: url("../../assets/img/Surgery-F.png");
+    background-image: url("../../assets/img/Surgery-F-2.png");
     background-size: cover;
     height: 85vh;
     width: 100vw;
