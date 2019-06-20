@@ -15,7 +15,7 @@ export class TutorialfrontComponent implements OnInit {
   inventoryItems: any[];
   itemsToMatch: any[] = [];
   gameProgress: string;
-  isShowing: boolean = false;
+  // isShowing: boolean = true;
 
   constructor(
     private tutorialRoomService: TutorialroomService,
@@ -57,9 +57,9 @@ export class TutorialfrontComponent implements OnInit {
     // console.log(index);
   }
 
-  toggleShow() {
-    this.isShowing = !this.isShowing;
-  }
+  // toggleShow() {
+  //   this.isShowing = !this.isShowing;
+  // }
 
   // need to set game progress when advancing to next level
   setGameProgress(): void {
@@ -72,5 +72,9 @@ export class TutorialfrontComponent implements OnInit {
     // this.matchService.itemsToMatch.splice(1, 1, itemToUnlock);
     this.matchService.checkMatch();
     // console.log(this.itemsToMatch);
+  }
+
+  hidePrompt() {
+    this.tutorialRoomService.hidePrompt();
   }
 }

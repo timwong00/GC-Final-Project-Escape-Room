@@ -7,6 +7,7 @@ import { HttpClient } from "@angular/common/http";
 export class Room1Service {
   items: any;
   uItems: any;
+  isShowing: boolean = true;
   // itemsToMatch: any[] = [];
 
   constructor(private http: HttpClient) {}
@@ -45,4 +46,9 @@ export class Room1Service {
   hasUnlockItems() {
     return this.uItems;
   }
+
+  hidePrompt() {
+    this.isShowing = false;
+  }
+
 }

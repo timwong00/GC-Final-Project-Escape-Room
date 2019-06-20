@@ -84,4 +84,9 @@ export class Room1frontComponent implements OnInit {
     this.matchService.checkMatch();
     // console.log(this.itemsToMatch);
   }
+
+  hidePrompt() {
+    this.room1Service.hidePrompt();
+  }
+
 }
