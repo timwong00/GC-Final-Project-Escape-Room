@@ -16,6 +16,15 @@
   .rotate {
     display: none;
   }
+
+  .resize {
+    height: 400px;
+    width: 550px;
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+  }
+
 }
 
 /* iPad Portrait View -- display rotate message */

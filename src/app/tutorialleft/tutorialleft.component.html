@@ -1,9 +1,12 @@
 <section class="background">
   <div *ngFor="let item of unlockItems">
     <img
-      src=""
+      src="../../assets/img/Surgery-Arm.png"
       alt="{{ item.item_name }}"
+      class="resize"
       (click)="matchItems2(item.item_name)"
     />
   </div>
 </section>
+
+
