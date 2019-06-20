@@ -1,20 +1,37 @@
 <div class="room-navigation-arrows">
-  <img
+  <i class="material-icons navigationArrows" (click)="navigateLeft()">
+    arrow_left
+  </i>
+  <i
+    class="material-icons navigationArrows"
+    (click)="navigateFront()"
+    [routerLinkActive]="activeFront"
+  >
+    arrow_drop_up
+  </i>
+  <i
+    class="material-icons navigationArrows"
+    (click)="navigateRight()"
+    [routerLinkActive]="activeRight"
+  >
+    arrow_right
+  </i>
+</div>
+<!-- <img
     class="navigationArrows"
     src="assets/img/Arrow Left.png"
     alt="Arrow Left"
-    (click)="navigateLeft()"
   />
   <img
     class="navigationArrows"
     src="assets/img/Arrow Front.png"
     alt="Arrow Front"
-    (click)="navigateFront()"
+    "
   />
   <img
     class="navigationArrows"
     src="assets/img/Arrow Right.png"
     alt="Arrow Right"
-    (click)="navigateRight()"
-  />
-</div>
+    "
+    
+  /> -->
