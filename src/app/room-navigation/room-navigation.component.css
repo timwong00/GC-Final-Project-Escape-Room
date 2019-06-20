@@ -3,15 +3,14 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 10vh;
- }
- .navigationArrows {
+  height: 5vh;
+}
+.navigationArrows {
   cursor: pointer;
   margin-top: 10px;
-  margin-bottom: 10px;
-  width: 50px;
-  height: 50px;
+  /* margin-bottom: 5px; */
+  width: 30px;
+  height: 30px;
   background-color: black;
   border-radius: 50%;
- }
- 
+}
