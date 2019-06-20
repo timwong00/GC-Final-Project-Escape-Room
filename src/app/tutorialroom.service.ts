@@ -17,6 +17,19 @@ export class TutorialroomService {
     return this.http.get("/tutorial-unlock-items", { responseType: "json" });
   }
 
+  // hasItems() {
+  //   return this.items;
+  // }
+
+  // hasUnlockItems() {
+  //   return this.uItems;
+  // }
+
+  setItems(itemList) {
+    this.items = itemList;
+    // console.log(this.items);
+  }
+
   setUnlockItems(uItemList) {
     this.uItems = uItemList;
   }
@@ -32,10 +45,5 @@ export class TutorialroomService {
     // // console.log(itemName, index);
     this.items.splice(index, 1);
     // return this.items;
-  }
-
-  setItems(itemList) {
-    this.items = itemList;
-    // console.log(this.items);
   }
 }

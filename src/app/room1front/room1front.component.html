@@ -5,16 +5,21 @@
   <button (click)="toggleShow()">OK</button>
 </section>
 
-<section>
+
 <div *ngFor="let uItem of unlockItems; index as i">
-  <img src="{{ uItem.image }}" class="uItem{{ i }}" alt="{{ uItem.item_name }}" (click)="matchItems2(uItem.item_name)" >
+  <img src="{{ uItem.image }}" class="uItem{{ i }}" alt="{{ uItem.item_name }}" 
+  (click)="matchItems2(uItem.item_name)" >
 </div>
-</section>
 
 
-<div *ngFor="let item of items; index as i">
+<!-- <div *ngFor="let item of items; index as i">
   <img src="{{ item.image }}" class="item{{ i }}" alt="{{ item.item_name }}"
     (click)="[selectItem(item), removeItem(i)]">
-</div>
+</div>  -->
 
+<!-- 
+<div>
+    <img src="{{ doorImage }}" class="uItem{{ i }}" alt="{{ doorName }}" 
+    (click)="matchItems2(door.item_name)">
+  </div> -->
 
