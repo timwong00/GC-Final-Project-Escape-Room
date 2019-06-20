@@ -1,9 +1,10 @@
 .header {
   border-bottom: 5px solid black;
   display: flex;
-}
-
-#menu {
+ }
+ 
+ 
+ #menu {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,73 +15,75 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-.openMenu-btn,
-.menu-options {
-  background-color: none;
+ 
+ }
+ 
+ .openMenu-btn,
+ .menu-options {
+  background-color: black;
   border: none;
   outline: none;
-}
-
-.openMenu-btn:hover,
-.openMenu-btn:active,
-.closeMenu-btn:hover,
-.menu-options:hover {
   color: red;
-}
-
-#menu > p {
+ }
+ 
+ .openMenu-btn:hover,
+ .openMenu-btn:active,
+ .closeMenu-btn:hover,
+ .menu-options:hover {
+  color: white;
+ }
+ 
+ #menu > p {
   font-size: 24px;
-}
-
-.btn-container {
+ }
+ 
+ .btn-container {
   position: relative;
   display: flex;
   flex-direction: column;
   width: 150px;
-}
-
-.menu-options {
+ }
+ 
+ .menu-options {
   margin-bottom: 5px;
   width: 100%;
   height: 30px;
-}
-
-.closeMenu-btn {
+ }
+ 
+ .closeMenu-btn {
   position: absolute;
   right: 0;
-}
-
-.openMenu-btn,
-.closeMenu-btn,
-.menu-options {
+ }
+ 
+ .openMenu-btn,
+ .closeMenu-btn,
+ .menu-options {
   cursor: pointer;
-}
-.game-header {
+ }
+ .game-header {
   width: 90%;
   display: flex;
   justify-content: space-between;
-}
-
-.material-icons {
+ }
+ 
+ .material-icons {
   margin-top: 5px;
   font-size: 36px;
-}
-
-#inventory {
+ }
+ 
+ #inventory {
   display: flex;
   justify-content: space-between;
   border: 1px solid black;
   margin: 5px;
   width: 200px;
-}
-
-.items {
+ }
+ 
+ .items {
   border: 1px solid black;
-}
-
-#battery:after {
+ }
+ 
+ #battery:after {
   background-color: #fff;
   border: 2px solid #000;
   content: "";
@@ -90,9 +93,9 @@
   right: -6px;
   top: 6px;
   width: 6px;
-}
-
-#battery {
+ }
+ 
+ #battery {
   background-color: #fff;
   border: 2px solid #000;
   height: 32px;
@@ -100,9 +103,9 @@
   width: 100px;
   margin: 5px;
   margin-right: 30px;
-}
-
-.battery-drain {
+ }
+ 
+ .battery-drain {
   background-color: green;
   height: 100%;
   /* Animation code */
@@ -110,9 +113,9 @@
   /* -webkit-animation-duration: 60s; Safari 4.0 - 8.0 */
   animation-name: widthChange;
   animation-duration: 300s;
-}
-
-@keyframes widthChange {
+ }
+ 
+ @keyframes widthChange {
   0% {
     background-color: green;
     width: 100%;
@@ -125,22 +128,22 @@
     background-color: red;
     width: 0;
   }
-}
-
-@media screen and (min-width: 768px) {
+ }
+ 
+ @media screen and (min-width: 768px) {
   .game-header {
     width: 95%;
   }
-
+ 
   #menu {
     width: 200px;
     height: 300px;
   }
-
+ 
   .menu-options {
     margin-bottom: 25px;
   }
-
+ 
   .openMenu-btn,
   .menu-options {
     font-size: 20px;
@@ -148,8 +151,8 @@
   #battery {
     width: 200px;
   }
-
+ 
   #inventory {
     width: 500px;
   }
-}
+ }

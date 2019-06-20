@@ -1,25 +1,34 @@
-@media all and (min-width: 767px) {
-
-.background {
+body {
+  background-color: black;
+ }
+ 
+ .text {
+  background-color: white;
+ }
+ 
+ @media all and (min-width: 767px) {
+ 
+ .background {
   background-image: url("../../assets/img/Surgery-F.png");
   background-size: cover;
   height: 100vh;
   width: 150vw;
   background-repeat: no-repeat;
   background-position: center center;
-}
-}
-@media all and (orientation: landscape) {
-
-.background {
+ 
+ }
+ }
+ @media all and (orientation: landscape) {
+ 
+ .background {
   background-image: url("../../assets/img/Surgery-F.png");
   background-size: cover;
   height: 100vh;
   width: 150vw;
   background-repeat: no-repeat;
   background-position: center center;
-}
-}
+ }
+ }
  @media all and (max-width: 767px) {
   .background {
     background-image: url("../../assets/img/Surgery-F.png");
