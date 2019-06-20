@@ -31,7 +31,6 @@ export class Room1Service {
     // return this.items;
     // console.log(this.items);
     // console.log(index);
-    
   }
 
   setItems(itemList) {
@@ -39,7 +38,11 @@ export class Room1Service {
     // console.log(this.items);
   }
 
-  returnItems() {
+  hasItems() {
     return this.items;
+  }
+
+  hasUnlockItems() {
+    return this.uItems;
   }
 }

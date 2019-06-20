@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { TimerService } from "../timer.service";
 import { InventoryService } from "../inventory.service";
 import { MatchService } from "../match.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "headerComponent",
@@ -16,7 +17,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     private timerService: TimerService,
     private matchService: MatchService,
-    private inventoryService: InventoryService
+    private inventoryService: InventoryService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -30,6 +32,7 @@ export class HeaderComponent implements OnInit {
 
   stopTimer(): void {
     this.timerService.stopTimer();
+    // this.router.navigate(["/app-root"]);
   }
 
   openMenu() {
