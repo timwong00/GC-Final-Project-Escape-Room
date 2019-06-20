@@ -2,11 +2,15 @@
   <div *ngFor="let item of items">
 
     <img
-      src="https://www.stickpng.com/assets/images/580b585b2edbce24c47b284d.png"
+      src="{{ item.item_image }}"
       class="{{ item.item_name }}"
       alt="{{ item.item_name }}"
-      (click)="[selectItem(item), removeItem(item)]"
+      (click)="showHint()"
     />
+    <div *ngIf="this.tutorialRoomService.showingHint" class="hint">
+      <p>{{ item.item_use }}</p>
+      <button (click)="[selectItem(item), removeItem(item), hideHint()]">Grab Item</button>
+    </div>
 
   </div>
 </section>

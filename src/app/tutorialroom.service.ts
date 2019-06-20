@@ -8,6 +8,7 @@ export class TutorialroomService {
   items: any;
   uItems: any;
   isShowing: boolean = true;
+  showingHint: boolean;
 
   constructor(private http: HttpClient) {}
   getTutorialItems() {
@@ -50,6 +51,14 @@ export class TutorialroomService {
 
   hidePrompt() {
     this.isShowing = false;
+  }
+
+  showItemHint() {
+    this.showingHint = true;
+  }
+
+  hideItemHint() {
+    this.showingHint = false;
   }
 
 }
