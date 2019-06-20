@@ -16,6 +16,9 @@ export class Room1frontComponent implements OnInit {
   itemsToMatch: any[] = [];
   isShowing: boolean = false;
   gameProgress: string;
+  door: any;
+  doorName: string;
+  doorImage: any;
 
   constructor(
     private room1Service: Room1Service,
@@ -25,18 +28,32 @@ export class Room1frontComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.room1Service.getRoomOneItems().subscribe(response => {
-      this.items = response;
-      // console.log(this.items);
-      this.inventoryService.setItems(response);
-    });
-    this.room1Service.getRoomOneUnlockItems().subscribe(response => {
-      this.unlockItems = response;
-      // console.log(this.unlockItems);
-      this.room1Service.setUnlockItems(response);
-    });
+    if (this.room1Service.items == undefined) {
+      this.room1Service.getRoomOneItems().subscribe(response => {
+        // this.items = response;
+        // console.log(this.items);
+        this.room1Service.setItems(response);
+        this.items = this.room1Service.items;
+      });
+    } else {
+      this.items = this.room1Service.items;
+    }
+    if (this.room1Service.uItems == undefined) {
+      this.room1Service.getRoomOneUnlockItems().subscribe(response => {
+        this.room1Service.setUnlockItems(response);
+        this.unlockItems = this.room1Service.uItems;
+        // this.unlockItems = response;
+        // console.log(this.unlockItems);
+        // this.door = this.unlockItems[0];
+        // this.doorName = this.door.item_name;
+        // this.doorImage = this.door.item_image;
+        // console.log(this.room1Service.uItems);
+      });
+    } else {
+      this.unlockItems = this.room1Service.uItems;
+    }
     // this.inventoryItems = this.inventoryService.inventoryItems;
-    this.itemsToMatch = this.matchService.itemsToMatch;
+    // this.itemsToMatch = this.matchService.itemsToMatch;
     // console.log(this.inventoryItems);
   }
 
@@ -45,8 +62,9 @@ export class Room1frontComponent implements OnInit {
     this.inventoryService.collectItem(inventoryItem);
   }
 
-  removeItem(index: number) {
-    this.inventoryService.deleteItem(index);
+  removeItem(index) {
+    this.room1Service.deleteItem(index);
+    // console.log(itemName);
     // console.log(index);
   }
 

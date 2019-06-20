@@ -21,3 +21,7 @@ section {
 .clicked {
     color: red;
 }
+
+.uItem1 {
+    display: none;
+}
