@@ -1,10 +1,12 @@
 <section class="background">
   <div *ngFor="let item of items">
+
     <img
       src="https://www.stickpng.com/assets/images/580b585b2edbce24c47b284d.png"
       class="{{ item.item_name }}"
       alt="{{ item.item_name }}"
       (click)="[selectItem(item), removeItem(item)]"
     />
+
   </div>
 </section>
