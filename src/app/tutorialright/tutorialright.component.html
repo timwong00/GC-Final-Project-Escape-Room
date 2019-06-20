@@ -1,9 +1,5 @@
 <section class="background">
   <div *ngFor="let item of items">
-    <img
-      src=""
-      alt="{{ item.item_name }}"
-      (click)="[selectItem(item), removeItem(item)]"
-    />
+    <img src="" alt="{{ item.item_name }}" (click)="[selectItem(item), removeItem(item)]" />
   </div>
 </section>

@@ -1,15 +1,22 @@
+<section class="background">
 
-<div *ngFor="let uItem of unlockItems; index as i">
-  <img src="{{ uItem.item_image }}" class="uItem{{ i }}" alt="{{ uItem.item_name }}" 
-    (click)="matchItems2(uItem.item_name)" >
-</div>
+  <div *ngFor="let uItem of unlockItems; index as i">
+    <img src="{{ uItem.item_image }}" class="uItem{{ i }}" alt="{{ uItem.item_name }}"
+      (click)="matchItems2(uItem.item_name)">
+  </div>
 
-<div *ngFor="let item of items; index as i">
+  <div *ngFor="let item of items; index as i">
     <img src="{{ item.item_image }}" class="item{{ i }}" alt="{{ item.item_name }}"
       (click)="[selectItem(item), removeItem(i)]">
   </div>
 
-  <!-- <div>
+
+
+  <div *ngFor="let item of unlockItems">
+    <img src="" alt="{{ item.item_name }}" (click)="matchItems2(item.item_name)" />
+  </div>
+</section>
+<!-- <div>
     <img src="{{ containerImage }}" class="uItem{{ i }}" alt="{{ containerName }}" 
     (click)="matchItems2(container.item_name)">
   </div>
@@ -19,4 +26,3 @@
     <img src="{{ doorHandleImage }}" class="item{{ i }}" alt="{{ doorHandleName }}" 
     (click)="[selectItem(doorHandle), removeItem(doorHandleName)]">
   </div> -->
-
