@@ -22,7 +22,14 @@ export class Room3Service {
     this.uItems = uItemList;
   }
 
-  
+  deleteItem(index) {
+    this.items.splice(index,1);
+  }
+
+  setItems(itemList) {
+    this.items = itemList;
+  }
+
   hidePrompt() {
     this.isShowing = false;
   }
