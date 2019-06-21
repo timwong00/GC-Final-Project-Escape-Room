@@ -1,5 +1,8 @@
 import { Injectable, Input } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
+// import { GameProgressionService } from "../app/game-progression.service";
+// import { TimerService } from "../app/timer.service";
+// import { Router } from "@angular/router";
 
 @Injectable({
   providedIn: "root"
@@ -8,9 +11,15 @@ export class Room1Service {
   items: any;
   uItems: any;
   isShowing: boolean = true;
-  // itemsToMatch: any[] = [];
+  // timeRemaining: number;
+  itemsToMatch: any[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    // private gameProgressionService: GameProgressionService,
+    // private timerService: TimerService,
+    // private router: Router
+    ) {}
 
   getRoomOneItems() {
     return this.http.get("/room-1-items", { responseType: "json" });
@@ -50,5 +59,16 @@ export class Room1Service {
   hidePrompt() {
     this.isShowing = false;
   }
+
+  // endGame() {
+  //   console.log(this.timerService.timeRemaining);
+  //   if (this.timerService.timeRemaining = 280) {
+  //     // console.log("end game");
+  //     this.router.navigate(["/endgame"]);
+  //     this.gameProgressionService.setGameProgress("Game Lost");
+  //   } else {
+  //     return;
+  //   }
+  // }
 
 }

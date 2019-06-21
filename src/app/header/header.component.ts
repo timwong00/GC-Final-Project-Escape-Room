@@ -49,4 +49,6 @@ export class HeaderComponent implements OnInit {
     // this.matchService.checkMatch(inventoryItem);
     // this.itemsToMatch.splice(0, 1, clickedItem1);
   }
+
+
 }

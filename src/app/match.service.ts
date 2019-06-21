@@ -27,7 +27,7 @@ export class MatchService {
     private tutorialRoomService: TutorialroomService,
     private router: Router,
     private timerService: TimerService
-  ) {}
+  ) { }
 
   setInventoryItemToMatch(inventoryItem) {
     this.itemsToMatch.splice(0, 1, inventoryItem);
@@ -55,19 +55,16 @@ export class MatchService {
       if (this.room2Service.uItems.length == 0) {
         this.router.navigate(["/room3front"]);
         this.gameProgressionService.setGameProgress("Room 3");
-      } else if (this.gameProgressionService.gameProgress === "Room 3") {
-        //   if (this.room3Service.uItems.length == 0) {
-        //   // this.router.navigate(["/room3front"]);
-        //   // ***NEED TO UPDATE*** to be you-win page
-        // }
-        // console.log("exit");
       }
-      // else {
-      //   return;
-      //   // console.log("nope");
-      // }
+    } else if (this.gameProgressionService.gameProgress === "Room 3") {
+      if (this.room3Service.uItems.length == 0) {
+        this.router.navigate(["/endgame"]);
+        this.gameProgressionService.setGameProgress("Game Won");
+      }
     }
   }
+
+
   checkMatch() {
     if (this.itemsToMatch[0] == this.itemsToMatch[1]) {
       if (this.gameProgressionService.gameProgress === "Tutorial") {

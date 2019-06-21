@@ -10,6 +10,7 @@ export class TutorialroomService {
   isShowing: boolean = true;
 
   constructor(private http: HttpClient) {}
+
   getTutorialItems() {
     return this.http.get("/tutorial-items", { responseType: "json" });
   }
