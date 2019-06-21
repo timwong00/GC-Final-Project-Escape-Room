@@ -37,13 +37,13 @@ export class TutorialrightComponent implements OnInit {
     // console.log(index);
   }
 
-  showHint() {
-    this.tutorialRoomService.showItemHint();
+  showItemHint(i) {
+    this.tutorialRoomService.showItemHint(i);
+    console.log(this.tutorialRoomService.items[i].showingHint);
   }
 
-  hideHint() {
-    this.tutorialRoomService.hideItemHint();
-    console.log(this.tutorialRoomService.showingHint);
-    
-  }
+  // hideItemHint(i) {
+  //   this.tutorialRoomService.hideItemHint(i);
+  //   // console.log(this.tutorialRoomService.showingHint);
+  // }
 }

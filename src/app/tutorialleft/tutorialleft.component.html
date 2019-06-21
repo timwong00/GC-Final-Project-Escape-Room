@@ -1,14 +1,14 @@
 <section class="background">
-  <div *ngFor="let uItem of unlockItems">
+  <div *ngFor="let uItem of unlockItems; index as i">
     <img
       src="{{ uItem.item_image }}"
       alt="{{ uItem.item_name }}"
       class="resize"
-      (click)="[matchItems2(uItem.item_name), showHint()]"
+      (click)="[matchItems2(uItem.item_name), showUnlockHint(i)]"
     />
-    <div *ngIf="this.tutorialRoomService.showingHint" class="hint">
+    <div *ngIf="this.tutorialRoomService.uItems[i].showingHint" class="hint">
       <p>{{ uItem.item_use }}</p>
-      <button (click)="hideHint()">OK</button>
+      <button (click)="hideUnlockHint(i)">OK</button>
     </div>
   </div>
 </section>

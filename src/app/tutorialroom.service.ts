@@ -53,12 +53,20 @@ export class TutorialroomService {
     this.isShowing = false;
   }
 
-  showItemHint() {
-    this.showingHint = true;
+  showItemHint(i) {
+    this.items[i].showingHint = true;
   }
 
-  hideItemHint() {
-    this.showingHint = false;
+  showUnlockItemHint(i) {
+    this.uItems[i].showingHint = true;
   }
 
+  hideItemHint(i) {
+    // console.log(this.items[i].showingHint);
+    this.items[i].showingHint = false;
+  }
+
+  hideUnlockItemHint(i) {
+    this.uItems[i].showingHint = false;
+  }
 }
