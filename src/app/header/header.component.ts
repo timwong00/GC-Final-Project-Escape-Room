@@ -20,10 +20,10 @@ export class HeaderComponent implements OnInit {
   clickedMenu: boolean = false;
 
   constructor(
-    private timerService: TimerService,
-    private matchService: MatchService,
-    private inventoryService: InventoryService,
-    private router: Router
+    public timerService: TimerService,
+    public matchService: MatchService,
+    public inventoryService: InventoryService,
+    public router: Router
   ) {}
 
   ngOnInit() {
@@ -54,6 +54,4 @@ export class HeaderComponent implements OnInit {
     // this.matchService.checkMatch(inventoryItem);
     // this.itemsToMatch.splice(0, 1, clickedItem1);
   }
-
-
 }
