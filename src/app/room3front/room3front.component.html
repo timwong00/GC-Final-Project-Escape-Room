@@ -1,7 +1,22 @@
-<h1>Room 3 Front Component</h1>
+<section class="background">
 
-<section *ngIf="!isShowing">
-  <p>Great job! You have found Dr. Lobotomy's laboratory, which holds your escape route to the outside world. Hurry to find your way out before the crazy doctor returns or your battery runs out!!
-      !</p>
-  <button (click)="toggleShow()">OK</button>
+  <section *ngIf="!isShowing">
+    <p>Great job! You have found Dr. Lobotomy's laboratory, which holds your escape route to the outside world. Hurry to find your way out before the crazy doctor returns or your battery runs out!!
+        !</p>
+    <button (click)="toggleShow()">OK</button>
+  </section>
+  
+  <div *ngFor="let uItem of unlockItems; index as i">
+    <img
+      src="{{ uItem.image }}"
+      class="uItem{{ i }}"
+      alt="{{ uItem.item_name }}"
+      (click)="matchItems2(uItem.item_name)"
+    />
+  </div>
+
+
+
+
+
 </section>

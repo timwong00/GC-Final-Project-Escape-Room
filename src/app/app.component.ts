@@ -1,5 +1,9 @@
 import { Component } from "@angular/core";
 import { GameProgressionService } from "./game-progression.service";
+import { TutorialroomService } from "./tutorialroom.service";
+import { Room1Service } from "./room1.service";
+import { Room2Service } from "./room2.service";
+import { Room3Service } from "./room3.service";
 
 @Component({
   selector: "app-root",
@@ -12,7 +16,13 @@ export class AppComponent {
   gameProgress: any = null;
   title = "escape-room";
 
-  constructor(private gameProgressionService: GameProgressionService) {}
+  constructor(
+    private gameProgressionService: GameProgressionService,
+    private tutorialRoomService: TutorialroomService,
+    private room1Service: Room1Service,
+    private room2Service: Room2Service,
+    private room3Service: Room3Service,
+    ) {}
 
   toggleShow() {
     this.isShowing = !this.isShowing;
@@ -22,5 +32,9 @@ export class AppComponent {
     // change to "Tutorial"
     this.gameProgressionService.setGameProgress("Tutorial");
     this.playingGame = true;
+    this.tutorialRoomService.isShowing = true;
+    this.room1Service.isShowing = true;
+    this.room2Service.isShowing = true;
+    this.room3Service.isShowing = true;
   }
 }

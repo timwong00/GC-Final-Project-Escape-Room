@@ -29,4 +29,13 @@ export class TutorialleftComponent implements OnInit {
     this.matchService.checkMatch();
     // console.log(this.itemsToMatch);
   }
+
+   showHint() {
+    this.tutorialRoomService.showItemHint();
+  }
+
+  hideHint() {
+    this.tutorialRoomService.hideItemHint();
+    console.log("hide");   
+  }
 }

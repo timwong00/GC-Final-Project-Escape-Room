@@ -7,6 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class Room3Service {
   items: any;
   uItems: any;
+  isShowing: boolean = true;
   
   constructor(private http: HttpClient) { }
   getRoomThreeItems() {
@@ -19,5 +20,10 @@ export class Room3Service {
 
   setUnlockItems(uItemList) {
     this.uItems = uItemList;
+  }
+
+  
+  hidePrompt() {
+    this.isShowing = false;
   }
 }
