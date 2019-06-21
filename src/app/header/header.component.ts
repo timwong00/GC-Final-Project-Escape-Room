@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, HostListener } from "@angular/core";
 import { TimerService } from "../timer.service";
 import { InventoryService } from "../inventory.service";
 import { MatchService } from "../match.service";
@@ -10,6 +10,11 @@ import { Router } from "@angular/router";
   styleUrls: ["./header.component.css"]
 })
 export class HeaderComponent implements OnInit {
+  // when escape is pressed; toggle menu
+  @HostListener(`window: keydown.escape`) escapeEvent() {
+    this.openMenu();
+  }
+
   itemsToMatch: any[] = [];
   inventoryItems: any[];
   clickedMenu: boolean = false;
@@ -36,7 +41,7 @@ export class HeaderComponent implements OnInit {
   }
 
   openMenu() {
-    this.clickedMenu = true;
+    this.clickedMenu = !this.clickedMenu;
   }
 
   closeMenu() {

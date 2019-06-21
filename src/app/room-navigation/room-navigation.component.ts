@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, HostListener } from "@angular/core";
 import { Router } from "@angular/router";
 import { GameProgressionService } from "../game-progression.service";
 import { fromEvent } from "rxjs";
@@ -9,6 +9,26 @@ import { fromEvent } from "rxjs";
   styleUrls: ["./room-navigation.component.css"]
 })
 export class RoomNavigationComponent implements OnInit {
+  // hostlistener decorator declares a DOM event to listen for
+  // in this case we are listening for window keydown specifically arrow keys
+  // when those event are made, the functions are called
+  @HostListener(`window:keydown.arrowleft`) arrowLeftEvent() {
+    this.navigateLeft();
+  }
+
+  @HostListener(`window:keydown.arrowup`) arrowUpEvent() {
+    this.navigateFront();
+  }
+
+  @HostListener(`window:keydown.arrowright`) arrowRightEvent() {
+    this.navigateRight();
+  }
+
+  // change this to popup? or remove
+  @HostListener(`window:keydown.arrowdown`) arrowDownEvent() {
+    console.log("Don't turn back now! You have to get out");
+  }
+
   gameProgress: any;
   // navigateDirection: any;
   constructor(
