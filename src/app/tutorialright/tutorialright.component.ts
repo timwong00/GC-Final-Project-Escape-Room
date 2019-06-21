@@ -36,4 +36,14 @@ export class TutorialrightComponent implements OnInit {
     // console.log(itemName);
     // console.log(index);
   }
+
+  showItemHint(i) {
+    this.tutorialRoomService.showItemHint(i);
+    console.log(this.tutorialRoomService.items[i].showingHint);
+  }
+
+  // hideItemHint(i) {
+  //   this.tutorialRoomService.hideItemHint(i);
+  //   // console.log(this.tutorialRoomService.showingHint);
+  // }
 }

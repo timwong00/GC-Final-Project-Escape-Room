@@ -23,10 +23,15 @@ export class TutorialleftComponent implements OnInit {
   }
 
   matchItems2(itemToUnlock) {
-    console.log(itemToUnlock);
     this.matchService.setUnlockItemToMatch(itemToUnlock);
-    // this.matchService.itemsToMatch.splice(1, 1, itemToUnlock);
     this.matchService.checkMatch();
-    // console.log(this.itemsToMatch);
+  }
+
+  showUnlockHint(i) {
+    this.tutorialRoomService.showUnlockItemHint(i);
+  }
+
+  hideUnlockHint(i) {
+    this.tutorialRoomService.hideUnlockItemHint(i);
   }
 }

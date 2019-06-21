@@ -1,3 +1,4 @@
+
 .rotate {
   color: white;
   height: 85vh;
@@ -25,8 +26,17 @@
     position: absolute;
     bottom: 50px;
     left: 0;
+    z-index: 1;
   }
 
+  .hint {
+    background-color: white;
+    z-index: 10;
+  }
+  
+  button {
+    z-index: 15;
+  }
 }
 
 /* iPad Portrait View -- display rotate message */

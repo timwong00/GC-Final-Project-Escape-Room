@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { GameProgressionService } from "../game-progression.service";
+import { fromEvent } from "rxjs";
 
 @Component({
   selector: "room-navigation",
@@ -8,8 +9,8 @@ import { GameProgressionService } from "../game-progression.service";
   styleUrls: ["./room-navigation.component.css"]
 })
 export class RoomNavigationComponent implements OnInit {
-  // initial game progress should be tutorial
   gameProgress: any;
+  // navigateDirection: any;
   constructor(
     private router: Router,
     private gameProgressionService: GameProgressionService
@@ -28,6 +29,7 @@ export class RoomNavigationComponent implements OnInit {
 
   navigateLeft(): void {
     this.getGameProgress();
+    this.gameProgressionService.navigateDirection = "left";
     if (this.gameProgress === "Tutorial") {
       this.router.navigate(["/tutorialleft"]);
     } else if (this.gameProgress === "Room 1") {
@@ -41,6 +43,7 @@ export class RoomNavigationComponent implements OnInit {
 
   navigateFront(): void {
     this.getGameProgress();
+    this.gameProgressionService.navigateDirection = "front";
     if (this.gameProgress === "Tutorial") {
       this.router.navigate(["/tutorialfront"]);
     } else if (this.gameProgress === "Room 1") {
@@ -54,6 +57,7 @@ export class RoomNavigationComponent implements OnInit {
 
   navigateRight(): void {
     this.getGameProgress();
+    this.gameProgressionService.navigateDirection = "right";
     if (this.gameProgress === "Tutorial") {
       this.router.navigate(["/tutorialright"]);
     } else if (this.gameProgress === "Room 1") {

@@ -28,7 +28,6 @@ export class TutorialfrontComponent implements OnInit {
     if (this.tutorialRoomService.items == undefined) {
       this.tutorialRoomService.getTutorialItems().subscribe(response => {
         // this.items = response;
-        // console.log("working");
         this.tutorialRoomService.setItems(response);
         this.items = this.tutorialRoomService.items;
       });
@@ -61,7 +60,6 @@ export class TutorialfrontComponent implements OnInit {
   //   this.isShowing = !this.isShowing;
   // }
 
-  // need to set game progress when advancing to next level
   setGameProgress(): void {
     this.gameProgressionService.setGameProgress(this.gameProgress);
   }

@@ -1,6 +1,5 @@
 .rotate {
-    display: none;
-  }
+  display: none;
 }
 
 /* iPad Portrait View -- display rotate message */
@@ -13,8 +12,9 @@
       display: block;
     }
   } */
+
 /* iPad Landscape View */
-@media all and (min-width: 1024px) {
+/* @media all and (min-width: 1024px) {
   .background {
     background-image: url("../../assets/img/LAB-R.png");
     background-size: cover;
@@ -23,7 +23,7 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
-}
+} */
 
 /* @media all and (orientation: landscape) {
     .background {

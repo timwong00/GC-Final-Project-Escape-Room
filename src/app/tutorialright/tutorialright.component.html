@@ -1,12 +1,16 @@
 <section class="background">
-  <div *ngFor="let item of items">
-
+  <div *ngFor="let item of items; index as i">
     <img
-      src="https://www.stickpng.com/assets/images/580b585b2edbce24c47b284d.png"
+      src="{{ item.item_image }}"
       class="{{ item.item_name }}"
       alt="{{ item.item_name }}"
-      (click)="[selectItem(item), removeItem(item)]"
+      (click)="showItemHint(i)"
     />
-
+    <div *ngIf="this.tutorialRoomService.items[i].showingHint" class="hint">
+      <p>{{ item.item_use }}</p>
+      <button (click)="[selectItem(item), removeItem(item)]">
+        Grab Item
+      </button>
+    </div>
   </div>
 </section>
