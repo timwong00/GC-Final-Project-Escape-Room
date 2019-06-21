@@ -11,6 +11,7 @@ export class TutorialroomService {
   showingHint: boolean;
 
   constructor(private http: HttpClient) {}
+
   getTutorialItems() {
     return this.http.get("/tutorial-items", { responseType: "json" });
   }

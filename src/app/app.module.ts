@@ -1,7 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { HttpClientModule } from "@angular/common/http";
-
 import { Room1Service } from "./room1.service";
 import { GameProgressionService } from "./game-progression.service";
 import { InventoryService } from "./inventory.service";
@@ -23,6 +22,7 @@ import { RoomNavigationComponent } from "./room-navigation/room-navigation.compo
 import { TutorialfrontComponent } from "./tutorialfront/tutorialfront.component";
 import { TutorialleftComponent } from "./tutorialleft/tutorialleft.component";
 import { TutorialrightComponent } from "./tutorialright/tutorialright.component";
+import { EndGameComponent } from './end-game/end-game.component';
 
 const appRoutes: Routes = [
   { path: "", redirectTo: "/app-root", pathMatch: "full" },
@@ -38,7 +38,8 @@ const appRoutes: Routes = [
   { path: "room3right", component: Room3rightComponent },
   { path: "tutorialfront", component: TutorialfrontComponent },
   { path: "tutorialleft", component: TutorialleftComponent },
-  { path: "tutorialright", component: TutorialrightComponent }
+  { path: "tutorialright", component: TutorialrightComponent },
+  { path: "endgame", component: EndGameComponent }
 ];
 
 @NgModule({
@@ -58,7 +59,8 @@ const appRoutes: Routes = [
     RoomNavigationComponent,
     TutorialfrontComponent,
     TutorialleftComponent,
-    TutorialrightComponent
+    TutorialrightComponent,
+    EndGameComponent
   ],
 
   imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(appRoutes)],

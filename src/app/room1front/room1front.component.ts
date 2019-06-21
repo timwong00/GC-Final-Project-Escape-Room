@@ -3,6 +3,8 @@ import { Room1Service } from "../room1.service";
 import { GameProgressionService } from "../game-progression.service";
 import { MatchService } from "../match.service";
 import { InventoryService } from "../inventory.service";
+// import { TimerService } from "../timer.service";
+// import { Router } from "@angular/router";
 
 @Component({
   selector: "room1front",
@@ -19,15 +21,23 @@ export class Room1frontComponent implements OnInit {
   door: any;
   doorName: string;
   doorImage: any;
+  // timeRemaining: number;
 
   constructor(
     private room1Service: Room1Service,
     private gameProgressionService: GameProgressionService,
     private matchService: MatchService,
-    private inventoryService: InventoryService
+    private inventoryService: InventoryService,
+    // private timerService: TimerService,
+    // private router: Router
   ) {}
 
   ngOnInit() {
+    // this.timeRemaining = this.timerService.timeRemaining;
+    // this.room1Service.timeRemaining = this.timeRemaining;
+    // console.log(`${this.timeRemaining} in comp`);
+    // this.room1Service.endGame();
+
     if (this.room1Service.items == undefined) {
       this.room1Service.getRoomOneItems().subscribe(response => {
         // this.items = response;
