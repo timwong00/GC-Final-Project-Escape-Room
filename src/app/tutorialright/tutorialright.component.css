@@ -11,6 +11,10 @@
   display: none;
 }
 
+.hint {
+  background-color: white;
+}
+
 /* Mobile Landscape View */
 @media all and (min-width: 568px) {
   .background {
