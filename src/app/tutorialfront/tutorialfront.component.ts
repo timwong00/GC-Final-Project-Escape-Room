@@ -18,10 +18,10 @@ export class TutorialfrontComponent implements OnInit {
   // isShowing: boolean = true;
 
   constructor(
-    private tutorialRoomService: TutorialroomService,
-    private gameProgressionService: GameProgressionService,
-    private matchService: MatchService,
-    private inventoryService: InventoryService
+    public tutorialRoomService: TutorialroomService,
+    public gameProgressionService: GameProgressionService,
+    public matchService: MatchService,
+    public inventoryService: InventoryService
   ) {}
 
   ngOnInit() {
