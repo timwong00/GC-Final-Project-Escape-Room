@@ -1,29 +1,29 @@
 .item0 {
-    display: none;
+  display: none;
 }
 
 .rotate {
-    color: white;
-    height: 85vh;
+  color: white;
+  height: 85vh;
+  width: 100vw;
+}
+/* Mobile Landscape View */
+@media all and (min-width: 568px) {
+  .background {
+    background-image: url("../../assets/img/Hallway-L.png");
+    background-size: cover;
+    height: 80vh;
     width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
-  /* Mobile Landscape View */
-  @media all and (min-width: 568px) {
-    .background {
-      background-image: url("../../assets/img/Hallway-L.png");
-      background-size: cover;
-      height: 80vh;
-      width: 100vw;
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
-    .rotate {
-      display: none;
-    }
+  .rotate {
+    display: none;
   }
-  
-  /* iPad Portrait View -- display rotate message */
-  /* 
+}
+
+/* iPad Portrait View -- display rotate message */
+/* 
     @media all and (min-width: 768px) {
       .background {
         display: none;
@@ -32,8 +32,9 @@
         display: block;
       }
     } */
-  /* iPad Landscape View */
-  @media all and (min-width: 1024px) {
+
+/* iPad Landscape View */
+/* @media all and (min-width: 1024px) {
     .background {
       background-image: url("../../assets/img/Hallway-R.png");
       background-size: cover;
@@ -41,10 +42,10 @@
       width: 85vw;
       background-repeat: no-repeat;
       background-position: center center;
-    }
-  }
-  
-  /* @media all and (orientation: landscape) {
+    } */
+/* } */
+
+/* @media all and (orientation: landscape) {
       .background {
         background-image: url("../../assets/img/Surgery-F.png");
         background-size: cover;
@@ -54,7 +55,7 @@
         background-position: center center;
       }
     } */
-  /* @media all and (max-width: 767px) {
+/* @media all and (max-width: 767px) {
       .background {
         background-image: url("../../assets/img/Surgery-F.png");
         background-size: cover;
@@ -64,4 +65,3 @@
         background-position: center center;
       }
     } */
-  

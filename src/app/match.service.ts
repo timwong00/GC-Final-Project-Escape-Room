@@ -31,12 +31,12 @@ export class MatchService {
 
   setInventoryItemToMatch(inventoryItem) {
     this.itemsToMatch.splice(0, 1, inventoryItem);
-    console.log(this.itemsToMatch);
   }
 
   setUnlockItemToMatch(unlockItem) {
-    this.itemsToMatch.splice(1, 1, unlockItem);
-    console.log(this.itemsToMatch);
+    if (this.itemsToMatch !== []) {
+      this.itemsToMatch.splice(1, 1, unlockItem);
+    }
   }
 
   enterNextRoom() {

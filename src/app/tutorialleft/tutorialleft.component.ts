@@ -30,12 +30,12 @@ export class TutorialleftComponent implements OnInit {
     // console.log(this.itemsToMatch);
   }
 
-   showHint() {
+  showHint() {
     this.tutorialRoomService.showItemHint();
   }
 
   hideHint() {
     this.tutorialRoomService.hideItemHint();
-    console.log("hide");   
+    // console.log("hide");
   }
 }

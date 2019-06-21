@@ -4,17 +4,13 @@
       src="{{ uItem.item_image }}"
       alt="{{ uItem.item_name }}"
       class="resize"
-      (click)="showHint()"
+      (click)="[matchItems2(uItem.item_name), showHint()]"
     />
     <div *ngIf="this.tutorialRoomService.showingHint" class="hint">
-        <p>{{ uItem.item_use }}</p>
-        <button (click)="hideHint()">OK</button>
-      </div>
-      
+      <p>{{ uItem.item_use }}</p>
+      <button (click)="hideHint()">OK</button>
+    </div>
   </div>
 </section>
-
-
-
 
 <!-- [matchItems2(uItem.item_name),  -->
