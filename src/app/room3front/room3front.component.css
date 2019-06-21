@@ -2,6 +2,24 @@
   display: none;
 }
 
+.verbiage {
+  color: white;
+  font-size: 22px;
+}
+.prompt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+  width: 50%;
+  background-color: rgba(0,0,0,.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+
 /* iPad Portrait View -- display rotate message */
 /* 
   @media all and (min-width: 768px) {

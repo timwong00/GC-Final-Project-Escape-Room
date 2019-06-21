@@ -10,7 +10,7 @@
 /* Mobile Landscape View */
 @media all and (min-width: 568px) {
   .background {
-    background-image: url("../../assets/img/Hallway-L.png");
+    background-image: url("../../assets/img/Hallway-R.png");
     background-size: cover;
     height: 80vh;
     width: 100vw;
