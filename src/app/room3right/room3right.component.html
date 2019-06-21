@@ -1,5 +1,5 @@
 <section class="background">
-
+  
   <div *ngFor="let uItem of unlockItems; index as i">
     <img
       src="{{ uItem.image }}"
@@ -8,5 +8,13 @@
       (click)="matchItems2(uItem.item_name)"
     />
   </div>
+
+  <div *ngFor= "let item of items; index as i">
+  <img
+      src="{{ item.item_image }}"
+      class="item{{ i }}"
+      alt="{{ item.item_name }}"
+      (click)="[selectItem(item), removeItem(i)]"
+    />
 
 </section>

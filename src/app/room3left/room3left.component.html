@@ -9,4 +9,12 @@
     />
   </div>
 
+  <div *ngFor= "let item of items; index as i">
+  <img
+      src="{{ item.item_image }}"
+      class="item{{ i }}"
+      alt="{{ item.item_name }}"
+      (click)="[selectItem(item), removeItem(i)]"
+    />
+
 </section>
