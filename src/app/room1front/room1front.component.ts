@@ -24,13 +24,13 @@ export class Room1frontComponent implements OnInit {
   // timeRemaining: number;
 
   constructor(
-    private room1Service: Room1Service,
-    private gameProgressionService: GameProgressionService,
-    private matchService: MatchService,
-    private inventoryService: InventoryService,
-    // private timerService: TimerService,
-    // private router: Router
-  ) {}
+    public room1Service: Room1Service,
+    public gameProgressionService: GameProgressionService,
+    public matchService: MatchService,
+    public inventoryService: InventoryService
+  ) // private timerService: TimerService,
+  // private router: Router
+  {}
 
   ngOnInit() {
     // this.timeRemaining = this.timerService.timeRemaining;
@@ -98,5 +98,4 @@ export class Room1frontComponent implements OnInit {
   hidePrompt() {
     this.room1Service.hidePrompt();
   }
-
 }

@@ -32,8 +32,8 @@ export class RoomNavigationComponent implements OnInit {
   gameProgress: any;
   // navigateDirection: any;
   constructor(
-    private router: Router,
-    private gameProgressionService: GameProgressionService
+    public router: Router,
+    public gameProgressionService: GameProgressionService
   ) {
     console.log(this.gameProgressionService.gameProgress);
   }
