@@ -1,3 +1,12 @@
-<p>
-  room2right works!
-</p>
+<section class="background">
+
+  <div *ngFor="let uItem of unlockItems; index as i">
+    <img
+      src="{{ uItem.image }}"
+      class="uItem{{ i }}"
+      alt="{{ uItem.item_name }}"
+      (click)="matchItems2(uItem.item_name)"
+    />
+  </div>
+
+</section>

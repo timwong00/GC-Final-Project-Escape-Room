@@ -1,16 +1,30 @@
 .room-navigation-arrows {
-  border-top: 5px solid black;
+  /* border-top: 1px solid black; */
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  height: 5vh;
+  height: 1vh;
 }
 .navigationArrows {
   cursor: pointer;
+  color: white;
+  font-size: 70px;
   margin-top: 10px;
   /* margin-bottom: 5px; */
   width: 30px;
   height: 30px;
-  background-color: black;
-  border-radius: 50%;
+  /* background-color: black;
+  border-radius: 50%; */
+}
+
+.activeFront {
+  color: yellow;
+}
+
+.activeLeft {
+  color: yellow;
+}
+
+.activeRight {
+  color: yellow;
 }

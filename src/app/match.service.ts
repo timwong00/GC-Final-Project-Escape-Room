@@ -31,12 +31,12 @@ export class MatchService {
 
   setInventoryItemToMatch(inventoryItem) {
     this.itemsToMatch.splice(0, 1, inventoryItem);
-    console.log(this.itemsToMatch);
   }
 
   setUnlockItemToMatch(unlockItem) {
-    this.itemsToMatch.splice(1, 1, unlockItem);
-    console.log(this.itemsToMatch);
+    if (this.itemsToMatch !== []) {
+      this.itemsToMatch.splice(1, 1, unlockItem);
+    }
   }
 
   enterNextRoom() {
@@ -45,17 +45,19 @@ export class MatchService {
         this.router.navigate(["/room1front"]);
         this.timerService.startTimer();
         this.gameProgressionService.setGameProgress("Room 1");
+        this.gameProgressionService.navigateDirection = "front";
       }
     } else if (this.gameProgressionService.gameProgress === "Room 1") {
       if (this.room1Service.uItems.length == 0) {
         this.router.navigate(["/room2front"]);
         this.gameProgressionService.setGameProgress("Room 2");
+        this.gameProgressionService.navigateDirection = "front";
       }
     } else if (this.gameProgressionService.gameProgress === "Room 2") {
       if (this.room2Service.uItems.length == 0) {
         this.router.navigate(["/room3front"]);
         this.gameProgressionService.setGameProgress("Room 3");
-      }
+        this.gameProgressionService.navigateDirection = "front";
     } else if (this.gameProgressionService.gameProgress === "Room 3") {
       if (this.room3Service.uItems.length == 0) {
         this.router.navigate(["/endgame"]);

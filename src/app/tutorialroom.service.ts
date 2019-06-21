@@ -8,6 +8,7 @@ export class TutorialroomService {
   items: any;
   uItems: any;
   isShowing: boolean = true;
+  showingHint: boolean;
 
   constructor(private http: HttpClient) {}
 
@@ -53,4 +54,20 @@ export class TutorialroomService {
     this.isShowing = false;
   }
 
+  showItemHint(i) {
+    this.items[i].showingHint = true;
+  }
+
+  showUnlockItemHint(i) {
+    this.uItems[i].showingHint = true;
+  }
+
+  hideItemHint(i) {
+    // console.log(this.items[i].showingHint);
+    this.items[i].showingHint = false;
+  }
+
+  hideUnlockItemHint(i) {
+    this.uItems[i].showingHint = false;
+  }
 }

@@ -4,10 +4,8 @@ import { Injectable } from "@angular/core";
   providedIn: "root"
 })
 export class GameProgressionService {
-
-
   gameProgress: any = null;
-
+  navigateDirection: any = "front";
   constructor() {}
 
   setGameProgress(gameProgress) {
