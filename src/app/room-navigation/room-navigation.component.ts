@@ -10,7 +10,7 @@ import { fromEvent } from "rxjs";
 })
 export class RoomNavigationComponent implements OnInit {
   gameProgress: any;
-  navigateDirection: any = "front";
+  // navigateDirection: any;
   constructor(
     private router: Router,
     private gameProgressionService: GameProgressionService
@@ -29,7 +29,7 @@ export class RoomNavigationComponent implements OnInit {
 
   navigateLeft(): void {
     this.getGameProgress();
-    this.navigateDirection = "left";
+    this.gameProgressionService.navigateDirection = "left";
     if (this.gameProgress === "Tutorial") {
       this.router.navigate(["/tutorialleft"]);
     } else if (this.gameProgress === "Room 1") {
@@ -43,7 +43,7 @@ export class RoomNavigationComponent implements OnInit {
 
   navigateFront(): void {
     this.getGameProgress();
-    this.navigateDirection = "front";
+    this.gameProgressionService.navigateDirection = "front";
     if (this.gameProgress === "Tutorial") {
       this.router.navigate(["/tutorialfront"]);
     } else if (this.gameProgress === "Room 1") {
@@ -57,7 +57,7 @@ export class RoomNavigationComponent implements OnInit {
 
   navigateRight(): void {
     this.getGameProgress();
-    this.navigateDirection = "right";
+    this.gameProgressionService.navigateDirection = "right";
     if (this.gameProgress === "Tutorial") {
       this.router.navigate(["/tutorialright"]);
     } else if (this.gameProgress === "Room 1") {

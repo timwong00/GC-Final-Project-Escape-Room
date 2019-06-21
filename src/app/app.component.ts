@@ -21,8 +21,8 @@ export class AppComponent {
     private tutorialRoomService: TutorialroomService,
     private room1Service: Room1Service,
     private room2Service: Room2Service,
-    private room3Service: Room3Service,
-    ) {}
+    private room3Service: Room3Service
+  ) {}
 
   toggleShow() {
     this.isShowing = !this.isShowing;

@@ -2,21 +2,27 @@
   <i
     class="material-icons navigationArrows"
     (click)="navigateLeft()"
-    [ngClass]="{ activeLeft: navigateDirection === 'left' }"
+    [ngClass]="{
+      activeLeft: this.gameProgressionService.navigateDirection === 'left'
+    }"
   >
     arrow_left
   </i>
   <i
     class="material-icons navigationArrows"
     (click)="navigateFront()"
-    [ngClass]="{ activeLeft: navigateDirection === 'front' }"
+    [ngClass]="{
+      activeLeft: this.gameProgressionService.navigateDirection === 'front'
+    }"
   >
     arrow_drop_up
   </i>
   <i
     class="material-icons navigationArrows"
     (click)="navigateRight()"
-    [ngClass]="{ activeLeft: navigateDirection === 'right' }"
+    [ngClass]="{
+      activeLeft: this.gameProgressionService.navigateDirection === 'right'
+    }"
   >
     arrow_right
   </i>
