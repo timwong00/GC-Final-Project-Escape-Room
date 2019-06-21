@@ -22,6 +22,15 @@ export class Room2Service {
     this.uItems = uItemList;
   }
 
+  setItems(itemList) {
+    this.items = itemList;
+    // console.log(this.items);
+  }
+
+  deleteItem(index) {
+    this.items.splice(index, 1);
+  }
+
   hidePrompt() {
     this.isShowing = false;
   }
