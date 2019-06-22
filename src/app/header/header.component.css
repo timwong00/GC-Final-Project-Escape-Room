@@ -149,6 +149,22 @@
 
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
+  .header {
+    height: 10vh;
+  }
+
+  .openMenu-btn {
+    font-size: 16px;
+  }
+
+  #inventory {
+    display: flex;
+    width: 50%;
+    background-color: slategray;
+    border-radius: 15px;
+    margin: 1px;
+    padding: 5px;
+  }
 }
 
 @media screen and (min-width: 768px) {

@@ -4,7 +4,7 @@
   width: 100vw;
 }
 
-.rotate {
+.rotateMessage {
   font-size: 24px;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 30px;
-  display: none !important;
+  display: none;
 }
 
 /* .verbiage {
@@ -48,13 +48,12 @@
   .background {
     background-image: url("../../assets/img/Surgery-F-2.png");
     background-size: cover;
-    height: 80vh;
-    width: 100vw;
+    height: 77vh;
     background-repeat: no-repeat;
     background-position: center center;
   }
 
-  .rotate {
+  .rotateMessage {
     display: none;
   }
 
@@ -62,17 +61,6 @@
     display: flex;
   }
 }
-
-/* iPad Portrait View -- display rotate message */
-/* 
-@media all and (min-width: 768px) and (orientation: portrait) {
-  .background {
-    display: none;
-  }
-  .rotate {
-    display: block;
-  }
-} */
 
 /* iPad Landscape View */
 @media screen and (min-width: 768px) and (orientation: Landscape) {
