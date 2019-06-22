@@ -23,6 +23,7 @@
   font-size: 22px;
 }
 
+
 /* Mobile Landscape View */
 @media all and (min-width: 568px) {
   .background {
@@ -33,6 +34,28 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
+
+ .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+}
+
+/* .overlay:active {
+  background-color: none;
+} */
+
+.circle {
+  /* background-color: rgba(0, 0, 0, 0); */
+  border: 2px solid black;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
   .rotate {
     display: none;
   }
@@ -58,6 +81,28 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+}
+
+/* .overlay:active {
+  background-color: none;
+} */
+
+.circle {
+  /* background-color: rgba(0, 0, 0, 0); */
+  border: 2px solid black;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+  
 }
 
 /* @media all and (orientation: landscape) {

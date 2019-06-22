@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, HostListener } from "@angular/core";
 import { TutorialroomService } from "../tutorialroom.service";
 import { GameProgressionService } from "../game-progression.service";
 import { MatchService } from "../match.service";
@@ -9,7 +9,14 @@ import { InventoryService } from "../inventory.service";
   templateUrl: "./tutorialfront.component.html",
   styleUrls: ["./tutorialfront.component.css"]
 })
+
 export class TutorialfrontComponent implements OnInit {
+
+  @HostListener("mousemove", ["$event.target"])
+  onmousemove(target) {
+    console.log(target)
+  }
+
   items: any;
   unlockItems: any;
   inventoryItems: any[];
@@ -46,6 +53,7 @@ export class TutorialfrontComponent implements OnInit {
     // this.itemsToMatch = this.matchService.itemsToMatch;
   }
 
+  
   selectItem(inventoryItem) {
     // console.log("Match item name:", inventoryItem.match_item_name);
     this.inventoryService.collectItem(inventoryItem);
