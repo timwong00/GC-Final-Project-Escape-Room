@@ -1,21 +1,25 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class Room2Service {
   items: any;
   uItems: any;
   isShowing: boolean = true;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
   getRoomTwoItems() {
-    return this.http.get("/room-2-items", { responseType: "json" });
+    return this.http.get("http://localhost:5000/room-2-items", {
+      responseType: "json"
+    });
   }
 
   getRoomTwoUnlockItems() {
-    return this.http.get("/room-2-unlock-items", { responseType: "json" });
+    return this.http.get("http://localhost:5000/room-2-unlock-items", {
+      responseType: "json"
+    });
   }
 
   setUnlockItems(uItemList) {
@@ -35,4 +39,3 @@ export class Room2Service {
     this.isShowing = false;
   }
 }
-
