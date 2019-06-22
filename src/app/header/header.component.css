@@ -1,14 +1,10 @@
 .header {
-  padding-bottom: 5px;
-  border-bottom: 2px solid black;
+  padding: 3px;
+  /* border-bottom: 2px solid black; */
   display: flex;
   justify-content: space-between;
+  height: 6vh;
 }
-
-/* #menu {
-  justify-content: space-between;
-  height: 40px;
-} */
 
 #menu {
   display: flex;
@@ -21,6 +17,7 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  z-index: 999;
 }
 
 .openMenu-btn,
@@ -29,9 +26,10 @@
 }
 
 .openMenu-btn {
+  font-size: 18px;
   height: 32px;
   padding: 0px;
-  margin: 6px;
+  margin: 5px;
 }
 
 .openMenu-btn,
@@ -51,13 +49,14 @@
 
 #menu > p {
   font-size: 24px;
+  color: white;
 }
 
 .btn-container {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 150px;
+  width: 50%;
 }
 
 .menu-options {
@@ -77,14 +76,8 @@
   cursor: pointer;
 }
 
-.game-header {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-}
-
 .material-icons {
-  margin-top: 5px;
+  /* margin-top: 5px; */
   font-size: 36px;
 }
 
@@ -92,10 +85,11 @@
   display: flex;
   /* justify-content: space-between; */
   /* border: 1px solid white; */
-  margin: 5px;
+  /* margin: 5px; */
   width: 200px;
   background-color: slategray;
   border-radius: 15px;
+  margin: 5px;
   padding: 5px;
 }
 
@@ -131,9 +125,6 @@
 .battery-drain {
   background-color: green;
   height: 100%;
-  /* Animation code */
-  /* -webkit-animation-name: widthChange; Safari 4.0 - 8.0 */
-  /* -webkit-animation-duration: 60s; Safari 4.0 - 8.0 */
   animation-name: widthChange;
   animation-duration: 300s;
 }
@@ -153,10 +144,14 @@
   }
 }
 
+/* Mobile Landscape View */
+@media screen and (min-width: 568px) and (orientation: Landscape) {
+}
+
 @media screen and (min-width: 768px) {
-  .game-header {
+  /* .game-header {
     width: 95%;
-  }
+  } */
 
   #menu {
     width: 200px;
@@ -171,11 +166,12 @@
   .menu-options {
     font-size: 20px;
   }
+
   #battery {
     width: 200px;
   }
 
   #inventory {
-    width: 500px;
+    width: 50%;
   }
 }
