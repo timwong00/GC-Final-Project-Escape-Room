@@ -1,15 +1,18 @@
 <section class="background">
-  <div class="rotate">Please rotate to landscape to play!</div>
-  <!-- <h1>Tutorial Front Component</h1> -->
+  <div class="rotateMessage">Please rotate to landscape to play!</div>
 
   <section *ngIf="this.tutorialRoomService.isShowing" class="prompt">
-  <p class="verbiage">The insane surgeon, Dr. Lobotomy, has just escaped from jail. Known for performing unnecessary and inhumane
-    operations on unwilling participants, he’s suspected to be lurking in your town. After staying late at the office
-    one night, the last thing you remember is walking to your car in the dark. You just woke up here, strapped to a
-    chair, and know you must be Dr. Lobotomy’s next victim. Use the items you find in the room to escape before he
-    returns to finish his work!</p>
-  <button (click)="hidePrompt()">OK</button>
-</section>
+    <p class="verbiage">
+      The insane surgeon, Dr. Lobotomy, has just escaped from jail. Known for
+      performing unnecessary and inhumane operations on unwilling participants,
+      he’s suspected to be lurking in your town. After staying late at the
+      office one night, the last thing you remember is walking to your car in
+      the dark. You just woke up here, strapped to a chair, and know you must be
+      Dr. Lobotomy’s next victim. Use the items you find in the room to escape
+      before he returns to finish his work!
+    </p>
+    <span class="promptBtn" (click)="hidePrompt()">OK</span>
+  </section>
 
   <!-- <section>
 <div *ngFor="let uItem of unlockItems; index as i">
