@@ -7,14 +7,22 @@
 }
 
 .container {
-  margin: 0px;
+  /* margin: 0px; */
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  /* position: relative; */
   background-color: black;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 100px;
+  height: 100px;
 }
 
 h1 {
@@ -56,17 +64,15 @@ img {
   /* display: flex;
     align-content: center;
     flex-direction: row; */
-  padding: 30px;
+  padding: 60px;
   border-radius: 50%;
   background-color: red;
   opacity: 0.5;
 
   font-family: "true_liesregular";
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   font-style: normal;
-
-  margin: 10px;
 }
 
 .how-to-play {
@@ -74,17 +80,16 @@ img {
   /* display: flex;
     align-content: center;
     flex-direction: row; */
-  padding: 30px;
+  padding: 60px;
   border-radius: 50%;
   background-color: red;
   opacity: 0.5;
 
   font-family: "true_liesregular";
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
   font-style: normal;
 
-  margin: 10px;
 }
 
 .btn_container {
@@ -96,7 +101,16 @@ img {
 
 .directions {
   background-color: white;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+  width: 350%;
+  height: 350%;
+  padding: 15px;
 }
+  
 
 @media screen and (min-width: 768px) {
   .btn_container {
