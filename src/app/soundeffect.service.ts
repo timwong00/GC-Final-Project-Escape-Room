@@ -9,6 +9,8 @@ export class SoundeffectService {
   apikey = "?token=iiUhsGYnfh0aoVwFkiwBB1xqtAQj3Bpt2hPcPTq2";
 
   heartbeat: any;
+  soundeffect: any;
+  keyUnlockSoundURL:any;
   constructor(private http: HttpClient) {}
 
   getHeartbeat() {
@@ -43,4 +45,17 @@ export class SoundeffectService {
     return this.http.get(`${this.apiurl}` + "/399120/" + `${this.apikey}`);
   }
  
+  playKeyUnlock(){
+    this.getKeyUnlock().subscribe(response => {
+      this.soundeffect = response;
+      this.keyUnlockSoundURL = this.soundeffect.previews["preview-hq-mp3"];
+      let keyUnlock = new Audio(this.keyUnlockSoundURL);
+      keyUnlock.play();
+    });
+  }
+
+  // playKeyUnlock() {
+  //   let keyUnlock = new Audio(this.keyUnlockSoundURL);
+  //   keyUnlock.play();
+  // }
 }
