@@ -1,55 +1,69 @@
-.rotate {
+.background {
+  position: relative;
+  height: 86vh;
+  width: 100vw;
+}
+
+.rotateMessage {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
-  height: 85vh;
+  height: inherit;
   width: 100vw;
 }
 
 .prompt {
+  color: white;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 50%;
-  width: 50%;
+  height: 50vh;
+  width: 60vw;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 30px;
+  display: none;
 }
 
-.verbiage {
+/* .verbiage {
   color: white;
-  font-size: 22px;
+  font-size: 12px;
+  width: 50%;
+} */
+
+.promptBtn {
+  color: red;
+  background: none;
+  border: none;
 }
 
 /* Mobile Landscape View */
-@media all and (min-width: 568px) {
+@media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
     background-image: url("../../assets/img/Surgery-F-2.png");
     background-size: cover;
-    height: 80vh;
-    width: 100vw;
+    height: 77vh;
     background-repeat: no-repeat;
     background-position: center center;
   }
-  .rotate {
+
+  .rotateMessage {
     display: none;
+  }
+
+  .prompt {
+    display: flex;
   }
 }
 
-/* iPad Portrait View -- display rotate message */
-/* 
-@media all and (min-width: 768px) {
-  .background {
-    display: none;
-  }
-  .rotate {
-    display: block;
-  }
-} */
 /* iPad Landscape View */
-@media all and (min-width: 1024px) {
+@media screen and (min-width: 768px) and (orientation: Landscape) {
   .background {
     background-image: url("../../assets/img/Surgery-F-2.png");
     background-size: cover;
@@ -60,17 +74,7 @@
   }
 }
 
-/* @media all and (orientation: landscape) {
-  .background {
-    background-image: url("../../assets/img/Surgery-F.png");
-    background-size: cover;
-    height: 75vh;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-} */
-/* @media all and (max-width: 767px) {
+/* @media screen and (min-width: 1024px) {
   .background {
     background-image: url("../../assets/img/Surgery-F.png");
     background-size: cover;

@@ -1,63 +1,65 @@
 .header {
-  padding-bottom: 5px;
-  border-bottom: 2px solid black;
+  padding: 3px;
   display: flex;
   justify-content: space-between;
+  height: 6vh;
 }
 
-/* #menu {
-  justify-content: space-between;
-  height: 40px;
-} */
+.openMenu-btn {
+  font-size: 18px;
+  padding: 5px;
+  margin: 4px;
+}
 
+/* Popup menu */
 #menu {
+  background-color: slategrey;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 5px solid black;
-  width: 150px;
-  height: 200px;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-.openMenu-btn,
-.menu-options {
-  background-color: black;
+  border: 5px solid black;
+  width: 150px;
+  height: 200px;
+  z-index: 999;
 }
 
 .openMenu-btn {
-  height: 32px;
-  padding: 0px;
-  margin: 6px;
+  background-color: black;
 }
 
 .openMenu-btn,
 .menu-options {
-  background-color: none;
   border: none;
   outline: none;
   color: red;
 }
 
+.menu-options {
+  background-color: slategrey;
+}
+
+/* .openMenu-btn:active, */
 .openMenu-btn:hover,
-.openMenu-btn:active,
 .closeMenu-btn:hover,
 .menu-options:hover {
+  cursor: pointer;
   color: white;
 }
 
 #menu > p {
   font-size: 24px;
+  color: white;
 }
 
 .btn-container {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 150px;
+  width: 50%;
 }
 
 .menu-options {
@@ -77,14 +79,8 @@
   cursor: pointer;
 }
 
-.game-header {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-}
-
 .material-icons {
-  margin-top: 5px;
+  /* margin-top: 5px; */
   font-size: 36px;
 }
 
@@ -92,17 +88,18 @@
   display: flex;
   /* justify-content: space-between; */
   /* border: 1px solid white; */
-  margin: 5px;
-  width: 200px;
+  /* margin: 5px; */
+  width: 50%;
   background-color: slategray;
   border-radius: 15px;
-  padding: 5px;
+  margin: 1%;
+  padding: 5%;
 }
 
 .items {
-  height: 32px;
+  /* height: 32px; */
   /* border: 1px solid rgb(245, 222, 222); */
-  padding: 5px;
+  /* padding: 5px; */
   color: white;
 }
 
@@ -131,9 +128,6 @@
 .battery-drain {
   background-color: green;
   height: 100%;
-  /* Animation code */
-  /* -webkit-animation-name: widthChange; Safari 4.0 - 8.0 */
-  /* -webkit-animation-duration: 60s; Safari 4.0 - 8.0 */
   animation-name: widthChange;
   animation-duration: 300s;
 }
@@ -153,10 +147,30 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .game-header {
-    width: 95%;
+/* Mobile Landscape View */
+@media screen and (min-width: 568px) and (orientation: Landscape) {
+  .header {
+    height: 10vh;
   }
+
+  .openMenu-btn {
+    font-size: 16px;
+  }
+
+  #inventory {
+    display: flex;
+    width: 50%;
+    background-color: slategray;
+    border-radius: 15px;
+    margin: 1px;
+    padding: 5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* .game-header {
+    width: 95%;
+  } */
 
   #menu {
     width: 200px;
@@ -171,11 +185,12 @@
   .menu-options {
     font-size: 20px;
   }
+
   #battery {
     width: 200px;
   }
 
   #inventory {
-    width: 500px;
+    width: 50%;
   }
 }

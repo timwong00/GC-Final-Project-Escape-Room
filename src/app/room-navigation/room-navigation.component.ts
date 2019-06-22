@@ -12,21 +12,21 @@ export class RoomNavigationComponent implements OnInit {
   // hostlistener decorator declares a DOM event to listen for
   // in this case we are listening for window keydown specifically arrow keys
   // when those event are made, the functions are called
-  @HostListener(`window:keydown.arrowleft`) arrowLeftEvent() {
-    this.navigateLeft();
-  }
-
-  @HostListener(`window:keydown.arrowup`) arrowUpEvent() {
-    this.navigateFront();
-  }
-
-  @HostListener(`window:keydown.arrowright`) arrowRightEvent() {
-    this.navigateRight();
-  }
-
-  // change this to popup? or remove
-  @HostListener(`window:keydown.arrowdown`) arrowDownEvent() {
-    console.log("Don't turn back now! You have to get out");
+  @HostListener("window:keydown", ["$event"]) arrowLeftEvent(
+    event: KeyboardEvent
+  ) {
+    if (event.key === "ArrowLeft" || event.key === "a") {
+      this.navigateLeft();
+    }
+    if (event.key === "ArrowUp" || event.key === "w") {
+      this.navigateFront();
+    }
+    if (event.key === "ArrowRight" || event.key === "d") {
+      this.navigateRight();
+    }
+    if (event.key === "ArrowDown" || event.key === "s") {
+      console.log("Don't turn back now! You have to get out");
+    }
   }
 
   gameProgress: any;

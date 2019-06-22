@@ -1,6 +1,17 @@
-.rotate {
+.background {
+  position: relative;
+  height: 86vh;
+  width: 100vw;
+}
+
+.rotateMessage {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
-  height: 85vh;
+  height: inherit;
   width: 100vw;
 }
 
@@ -16,18 +27,19 @@
 }
 
 /* Mobile Landscape View */
-@media all and (min-width: 568px) {
+@media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
     background-image: url("../../assets/img/Surgery-R.png");
     background-size: cover;
-    height: 80vh;
-    width: 100vw;
+    height: 77vh;
     background-repeat: no-repeat;
     background-position: center center;
   }
-  .rotate {
+
+  .rotateMessage {
     display: none;
   }
+
   .key {
     display: block;
     right: 230px;
