@@ -15,15 +15,6 @@ export class TutorialfrontComponent implements OnInit {
   //   console.log(event);
   // }
 
-  flashlightCursor(mouseEvent) {
-    console.log(mouseEvent);
-    this.x = mouseEvent.clientX;
-    this.y = mouseEvent.clientY;
-    if (typeof this.x !== undefined) {
-      return this.x, this.y;
-    }
-  }
-
   items: any;
   unlockItems: any;
   inventoryItems: any[];
@@ -92,11 +83,20 @@ export class TutorialfrontComponent implements OnInit {
     this.tutorialRoomService.hidePrompt();
   }
 
-  moveFlashlightStyle() {
-    let flashlightStyle = {
-      top: this.y + "px",
-      left: this.x + "px"
-    };
-    return flashlightStyle;
+  flashlightCursor(mouseEvent) {
+    // console.log(mouseEvent);
+    this.x = mouseEvent.clientX;
+    this.y = mouseEvent.clientY;
+    if (typeof this.x !== undefined) {
+      return this.x, this.y;
+    }
   }
+
+  // moveFlashlightStyle() {
+  //   let flashlightStyle = {
+  //     top: this.y + "px",
+  //     left: this.x + "px"
+  //   };
+  //   return flashlightStyle;
+  // }
 }

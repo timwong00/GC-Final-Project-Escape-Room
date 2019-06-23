@@ -1,13 +1,12 @@
 <section class="background">
   <div class="overlay" (mousemove)="flashlightCursor($event)">
+    <div class="mobileFlashlight" cdkDragBoundary=".overlay" cdkDrag></div>
     <div
-      class="flashlight"
+      class="desktopFlashlight"
       [ngStyle]="{
         top: y + 'px',
         left: x + 'px'
       }"
-      cdkDragBoundary=".overlay"
-      cdkDrag
     ></div>
   </div>
   <div class="rotateMessage">Please rotate to landscape to play!</div>
