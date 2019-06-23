@@ -25,7 +25,7 @@ export class AppComponent {
   ) {}
 
   toggleShow() {
-    this.isShowing = !this.isShowing;
+    this.isShowing = !this.isShowing;    
   }
 
   startGame() {
@@ -37,4 +37,11 @@ export class AppComponent {
     this.room2Service.isShowing = true;
     this.room3Service.isShowing = true;
   }
+
+
 }
+
+
+
+
+

@@ -6,9 +6,14 @@
 }
 
 .openMenu-btn {
-  font-size: 18px;
   padding: 5px;
   margin: 4px;
+  font-family: 'insomniaregular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18x;
+  color: white;
+  background-color: black;
 }
 
 /* Popup menu */
@@ -21,21 +26,17 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border: 5px solid black;
-  width: 150px;
-  height: 200px;
+  border: 3px solid black;
+  border-radius: 15px;
+  height: 40%;
+  width: 30%;
   z-index: 999;
-}
-
-.openMenu-btn {
-  background-color: black;
 }
 
 .openMenu-btn,
 .menu-options {
   border: none;
   outline: none;
-  color: red;
 }
 
 .menu-options {
@@ -47,11 +48,14 @@
 .closeMenu-btn:hover,
 .menu-options:hover {
   cursor: pointer;
-  color: white;
+  color: red;
 }
 
 #menu > p {
-  font-size: 24px;
+  font-family: 'insomniaregular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 34px;
   color: white;
 }
 
@@ -66,6 +70,7 @@
   margin-bottom: 5px;
   width: 100%;
   height: 30px;
+  font-size: 24px;
 }
 
 .closeMenu-btn {
@@ -91,7 +96,7 @@
   /* margin: 5px; */
   width: 50%;
   background-color: slategray;
-  border-radius: 15px;
+  border-radius: 10px;
   margin: 1%;
   padding: 5%;
 }
@@ -172,10 +177,10 @@
     width: 95%;
   } */
 
-  #menu {
+  /* #menu {
     width: 200px;
     height: 300px;
-  }
+  } */
 
   .menu-options {
     margin-bottom: 25px;

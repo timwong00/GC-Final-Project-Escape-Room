@@ -32,28 +32,58 @@ section {
     width: 100vw;
   }
 
+
   .prompt {
+    background-color:  black;
     position: absolute;
-    left: 50%;
     top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    height: 50%;
-    width: 50%;
-    background-color: rgba(0, 0, 0, 0.8);
+    width: 90%;
+    height: 90%;
+    padding: 15px;
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
   }
   
-  .verbiage {
-    color: white;
-    font-size: 22px;
+  .promptBtn {
+    width: 50%;
+    font-family: 'insomniaregular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18x;
+    background-color: slategray;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 10px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  
+  .promptBtn:hover {
+    border: 1px solid slategray;
+  }
+    
+  h2 {
+    margin: 0;
+    font-family: 'insomniaregular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+  }
+  
 
 
   /* Mobile Landscape View */
-  @media all and (min-width: 568px) {
+  @media all and (min-width: 568px) and (orientation: Landscape) {
     .background {
       background-image: url("../../assets/img/Surgery-F-2.png");
       background-size: cover;
@@ -64,6 +94,11 @@ section {
     }
     .rotate {
       display: none;
+    }
+
+    .prompt {
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 90%;
     }
   }
   
@@ -78,7 +113,7 @@ section {
     }
   } */
   /* iPad Landscape View */
-  @media all and (min-width: 1024px) {
+  @media all and (min-width: 1024px) and (orientation: Landscape) {
     .background {
       background-image: url("../../assets/img/Surgery-F-2.png");
       background-size: cover;
@@ -87,4 +122,19 @@ section {
       background-repeat: no-repeat;
       background-position: center center;
     }
+    
+  .prompt {
+    padding: 100px;
+    height: 60%;
+    width: 60%;
   }
+
+  .promptBtn {
+    width: 25%;
+    height: 20%;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+}

@@ -1,98 +1,90 @@
 @font-face {
+  font-family: 'insomniaregular';
+  src: url("../assets/insomnia_1-webfont.woff2") format('woff2'),
+       url("../assets/insomnia_1-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: 'run_demoregular';
+  src: url("../assets/run_demo-webfont.woff2") format('woff2'),
+       url("../assets/run_demo-webfont.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* @font-face {
+  font-family: 'stranger_back_in_the_nightRg';
+  src: url("../assets/stranger_back_in_the_night-webfont.woff2") format('woff2'),
+       url('../assets/stranger_back_in_the_night-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+/* @font-face {
   font-family: "true_liesregular";
   src: url("../assets/true_lies-webfont.woff2") format("woff2"),
     url("../assets/true_lies-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 .container {
-  /* margin: 0px; */
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* position: relative; */
-  background-color: black;
-
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -50px;
-  margin-left: -50px;
-  width: 100px;
-  height: 100px;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
 }
 
 h1 {
-  position: relative;
-  padding: 5px;
   color: white;
-  opacity: 0.3;
-
-  font-family: "true_liesregular";
+  font-family: 'insomniaregular';
   font-size: 50px;
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
-  /* 
-    width: 50%; */
 }
 
 h3 {
-  position: relative;
-  padding: 5px;
   color: white;
-  opacity: 0.3;
-
-  font-family: "true_liesregular";
-  font-size: 20px;
-  font-weight: bold;
+  font-family: 'stranger_back_in_the_nightRg';
+  font-weight: normal;
   font-style: normal;
-  /* 
-    width: 50%; */
+  font-size: 30px;
 }
 
-img {
-  size: 30px;
-  background-color: grey;
-  opacity: 0.5;
+.how-to-play, .play {
+  height: 25%;
+  width: 50%;
+  margin-bottom: 10%;
+  font-family: 'insomniaregular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  padding: 20px;
 }
 
-.play {
-  position: relative;
-  /* display: flex;
-    align-content: center;
-    flex-direction: row; */
-  padding: 60px;
-  border-radius: 50%;
-  background-color: red;
-  opacity: 0.5;
-
-  font-family: "true_liesregular";
-  font-size: 20px;
-  font-weight: bold;
-  font-style: normal;
+button {
+  background-color: slategray;
+  border: 1px solid white;
+  border-radius: 15px;
 }
 
-.how-to-play {
-  position: relative;
-  /* display: flex;
-    align-content: center;
-    flex-direction: row; */
-  padding: 60px;
-  border-radius: 50%;
-  background-color: red;
-  opacity: 0.5;
-
-  font-family: "true_liesregular";
-  font-size: 20px;
-  font-weight: bold;
-  font-style: normal;
-
+.how-to-play:hover, .play:hover {
+  background-color: yellow;
+  border: 1px solid black;
 }
 
 .btn_container {
+  height: 60%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,20 +92,91 @@ img {
 }
 
 .directions {
-  background-color: white;
-  position: relative;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhZqML1UB7TGAiJpaSEkdgk46nRI8NZcJEwPctgJvHQ6E9ep5E");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.438);
+  background-blend-mode: multiply;
+  position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -50px;
-  margin-left: -50px;
-  width: 350%;
-  height: 350%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 80%;
   padding: 15px;
+  font-size: 20px;
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
 }
   
+h2 {
+  margin: 0;
+  font-family: 'insomniaregular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+}
 
-@media screen and (min-width: 768px) {
+.okBtn {
+  width: 50%;
+  font-family: 'insomniaregular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.okBtn:hover {
+  border: 1px solid slategray;
+}
+
+
+/* Mobile Landscape View */
+@media screen and (min-width: 568px) and (orientation: Landscape) {
   .btn_container {
     flex-direction: row;
+    width: 70%;
   }
+  
+  .how-to-play, .play {
+    height: 40%;
+    width: 35%;
+  }
+
+  .how-to-play {
+    margin-right: 10%;
+  }
+}
+
+
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 64px;
+  }
+
+  .how-to-play, .play {
+    height: 35%;
+  }
+
+  .directions {
+    padding: 100px;
+    height: 60%;
+    width: 60%;
+  }
+
+  .okBtn {
+    width: 25%;
+    height: 20%;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
 }
