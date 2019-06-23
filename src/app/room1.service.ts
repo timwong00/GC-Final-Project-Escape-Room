@@ -13,6 +13,7 @@ export class Room1Service {
   isShowing: boolean = true;
   // timeRemaining: number;
   itemsToMatch: any[] = [];
+  showingHint: boolean;
 
   constructor(
     private http: HttpClient
@@ -63,6 +64,21 @@ export class Room1Service {
   hidePrompt() {
     this.isShowing = false;
   }
+
+  showItemHint(i) {
+    this.items[i].showingHint = true;
+  }
+  showUnlockItemHint(i) {
+    this.uItems[i].showingHint = true;
+  }
+
+  hideItemHint(i) {
+    this.items[i].showingHint = false;
+  }
+  hideUnlockItemHint(i) {
+    this.uItems[i].showingHint = false;
+  }
+
 
   // endGame() {
   //   console.log(this.timerService.timeRemaining);

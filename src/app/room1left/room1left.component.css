@@ -20,6 +20,37 @@
     .rotate {
       display: none;
     }
+
+    .hint {
+    background-color: rgb(236, 236, 236);
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    border-radius: 15px;
+    border: 2px;
+    border-color: red;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+    width: 30%;
+    height: 20%;
+  }
+
+
+
+  .hintBtn {
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: slategray;
+    z-index: 15;
+    padding: 10px;
+    
+  }
   }
   
   /* iPad Portrait View -- display rotate message */
@@ -41,6 +72,18 @@
       width: 100vw;
       background-repeat: no-repeat;
       background-position: center center;
+    }
+
+    .hint {
+      font-size: 20px;
+    }
+  
+  
+  
+    .hintBtn {
+      padding: 15px;
+      font-size: 20px;
+      
     }
   }
   

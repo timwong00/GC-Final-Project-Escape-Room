@@ -49,4 +49,11 @@ export class Room1rightComponent implements OnInit {
     // this.scalpelName = this.scalpel.item_name;
     // this.scalpelImage = this.scalpel.item_image;
   }
+  showItemHint(i) {
+    this.room1Service.showItemHint(i);
+  }
+
+  hideItemHint(i) {
+    this.room1Service.hideItemHint(i);
+  }
 }

@@ -58,4 +58,18 @@ export class Room1leftComponent implements OnInit {
     this.matchService.checkMatch();
     // console.log(this.itemsToMatch);
   }
+  showUnlockHint(i) {
+    this.room1Service.showUnlockItemHint(i);
+  }
+
+  hideUnlockHint(i) {
+    this.room1Service.hideUnlockItemHint(i);
+  }
+  showItemHint(i) {
+    this.room1Service.showItemHint(i);
+  }
+
+  hideItemHint(i) {
+    this.room1Service.hideItemHint(i);
+  }
 }

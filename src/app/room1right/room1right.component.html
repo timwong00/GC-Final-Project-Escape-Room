@@ -3,12 +3,13 @@
     (click)="[selectItem(scalpel), removeItem(scalpelName)]">
   </div> -->
 <section class="background">
-  <div *ngFor="let item of items; index as i">
-    <img
-      src="{{ item.item_image }}"
-      class="item{{ i }}"
-      alt="{{ item.item_name }}"
-      (click)="[selectItem(item), removeItem(i)]"
-    />
-  </div>
+    <div *ngFor="let item of items; index as i">
+        <img src="{{ item.item_image }}" class="item{{ i }}" alt="{{ item.item_name }}"
+          (click)="showItemHint(i)" />
+        <div *ngIf="this.room1Service.items[i].showingHint" class="hint">
+          <p>{{ item.item_use }}</p>
+          <button class="hintBtn" (click)="[selectItem(item), removeItem(i)]">Grab Item</button>
+    
+        </div>
+      </div>
 </section>

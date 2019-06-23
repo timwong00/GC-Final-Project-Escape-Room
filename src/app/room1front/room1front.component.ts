@@ -98,4 +98,12 @@ export class Room1frontComponent implements OnInit {
   hidePrompt() {
     this.room1Service.hidePrompt();
   }
+
+  showUnlockHint(i) {
+    this.room1Service.showUnlockItemHint(i);
+  }
+
+  hideUnlockHint(i) {
+    this.room1Service.hideUnlockItemHint(i);
+  }
 }
