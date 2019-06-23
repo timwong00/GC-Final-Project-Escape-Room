@@ -15,6 +15,8 @@ export class TutorialfrontComponent implements OnInit {
   inventoryItems: any[];
   itemsToMatch: any[] = [];
   gameProgress: string;
+  x: any;
+  y: any;
   // isShowing: boolean = true;
 
   constructor(
@@ -47,32 +49,34 @@ export class TutorialfrontComponent implements OnInit {
   }
 
   selectItem(inventoryItem) {
-    // console.log("Match item name:", inventoryItem.match_item_name);
     this.inventoryService.collectItem(inventoryItem);
   }
 
   removeItem(index: number) {
     this.inventoryService.deleteItem(index);
-    // console.log(index);
   }
-
-  // toggleShow() {
-  //   this.isShowing = !this.isShowing;
-  // }
 
   setGameProgress(): void {
     this.gameProgressionService.setGameProgress(this.gameProgress);
   }
 
   matchItems2(itemToUnlock) {
-    // console.log(itemToUnlock);
     this.matchService.setUnlockItemToMatch(itemToUnlock);
-    // this.matchService.itemsToMatch.splice(1, 1, itemToUnlock);
     this.matchService.checkMatch();
-    // console.log(this.itemsToMatch);
   }
 
   hidePrompt() {
     this.tutorialRoomService.hidePrompt();
+  }
+
+  flashlightCursor(mouseEvent) {
+    this.x = mouseEvent.clientX;
+    this.y = mouseEvent.clientY;
+    if (typeof this.x !== undefined) {
+      return this.x, this.y;
+    }
+  }
+  stopCursor(event) {
+    console.log(event);
   }
 }
