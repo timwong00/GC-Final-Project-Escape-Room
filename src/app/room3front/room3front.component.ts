@@ -34,7 +34,7 @@ export class Room3frontComponent implements OnInit {
     }
 
     if (this.room3Service.items == undefined) {
-      this.room3Service.getRoomThreeItems().subscribe(response => {
+      this.room3Service.getRoomThreeUnlockItems().subscribe(response => {
         this.room3Service.setUnlockItems(response);
         this.unlockItems = this.room3Service.uItems;
       });

@@ -1,22 +1,9 @@
-<section class="background">
-  <div
-    class="overlay"
-    (mousemove)="flashlightCursor($event)"
-    (mouseout)="stopCursor($event)"
-  >
-    <div class="mobileFlashlight" cdkDragBoundary=".overlay" cdkDrag></div>
-    <div
-      class="desktopFlashlight"
-      [ngStyle]="{
-        top: y + 'px',
-        left: x + 'px'
-      }"
-    ></div>
-  </div>
+merg<section class="background">
   <div class="rotateMessage">Please rotate to landscape to play!</div>
 
   <section *ngIf="this.tutorialRoomService.isShowing" class="prompt">
-    <p class="verbiage">
+    <h2>The Operating Room</h2>
+    <p>
       The insane surgeon, Dr. Lobotomy, has just escaped from jail. Known for
       performing unnecessary and inhumane operations on unwilling participants,
       he’s suspected to be lurking in your town. After staying late at the
@@ -28,15 +15,4 @@
     <span class="promptBtn" (click)="hidePrompt()">OK</span>
   </section>
 
-  <!-- <section>
-<div *ngFor="let uItem of unlockItems; index as i">
-  <img src="{{ uItem.image }}" class="uItem{{ i }}" alt="{{ uItem.item_name }}" (click)="matchItems2(uItem.item_name)" >
-</div>
-</section>
-
-
-<div *ngFor="let item of items; index as i">
-  <img src="{{ item.image }}" class="item{{ i }}" alt="{{ item.item_name }}"
-    (click)="[selectItem(item), removeItem(i)]">
-</div> -->
 </section>
