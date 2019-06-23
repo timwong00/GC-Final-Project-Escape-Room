@@ -18,13 +18,14 @@ export class HeaderComponent implements OnInit {
   itemsToMatch: any[] = [];
   inventoryItems: any[];
   clickedMenu: boolean = false;
+  cursorImage: any;
 
   constructor(
     public timerService: TimerService,
     public matchService: MatchService,
     public inventoryService: InventoryService,
     public router: Router
-  ) {}
+  ) { }
 
   ngOnInit() {
     // console.log(this.inventoryService.inventoryItems);
@@ -53,5 +54,21 @@ export class HeaderComponent implements OnInit {
     this.matchService.setInventoryItemToMatch(inventoryItem);
     // this.matchService.checkMatch(inventoryItem);
     // this.itemsToMatch.splice(0, 1, clickedItem1);
+  }
+
+  itemCursor(item) {
+    console.log(item.item_image);
+    
+    // this.inventoryItems.itemCursor(item)
+    // access inventory item that is clicked on
+    //once item is clicked it calls the itemCursor method
+    //method shows url image as the cursor
+    // console.log(item);
+    // console.log(this.inventoryItems);
+    if (item.item_name === this.inventoryItems[0].item_name) {
+      this.cursorImage = item.item_image;
+      return this.cursorImage;
+    }
+
   }
 }

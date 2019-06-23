@@ -1,4 +1,4 @@
-<section class="header">
+<section class="header" [ngStyle]="{'cursor': 'url(https://i.imgur.com/dgiwq8p.png), auto'}">
   <button (click)="openMenu()" class="openMenu-btn">Menu</button>
   <div *ngIf="clickedMenu" id="menu">
     <p>Menu</p>
@@ -28,7 +28,7 @@
         src="{{ invItem.item_image }}"
         class="items invItem{{ i }}"
         alt="{{ invItem.item_name }}"
-        (click)="matchItems1(invItem.match_item_name)"
+        (click)="[matchItems1(invItem.match_item_name), itemCursor(invItem)]"
       />
     </div>
   </div>
