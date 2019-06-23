@@ -14,11 +14,17 @@ export class TutorialroomService {
 
   
   getTutorialItems() {
-    return this.http.get("http://localhost:5000/tutorial-items", { responseType: "json" });
+
+    return this.http.get("http://localhost:5000/tutorial-items", {
+      responseType: "json"
+    });
   }
 
   getTutorialUnlockItems() {
-    return this.http.get("http://localhost:5000/tutorial-unlock-items", { responseType: "json" });
+    return this.http.get("http://localhost:5000/tutorial-unlock-items", {
+      responseType: "json"
+    });
+
   }
 
   // hasItems() {

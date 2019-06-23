@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { Room2Service } from "../room2.service";
 import { GameProgressionService } from "../game-progression.service";
 import { MatchService } from "../match.service";
@@ -7,9 +7,9 @@ import { InventoryService } from "../inventory.service";
 // import { Router } from "@angular/router";
 
 @Component({
-  selector: 'room2front',
-  templateUrl: './room2front.component.html',
-  styleUrls: ['./room2front.component.css']
+  selector: "room2front",
+  templateUrl: "./room2front.component.html",
+  styleUrls: ["./room2front.component.css"]
 })
 export class Room2frontComponent implements OnInit {
   items: any;
@@ -17,14 +17,13 @@ export class Room2frontComponent implements OnInit {
   isShowing: boolean = false;
 
   constructor(
-    private room2Service: Room2Service,
+    public room2Service: Room2Service,
     private gameProgressionService: GameProgressionService,
     private matchService: MatchService,
-    private inventoryService: InventoryService,
-  ) { }
+    private inventoryService: InventoryService
+  ) {}
 
   ngOnInit() {
-
     if (this.room2Service.items == undefined) {
       this.room2Service.getRoomTwoItems().subscribe(response => {
         this.room2Service.setItems(response);
@@ -37,7 +36,6 @@ export class Room2frontComponent implements OnInit {
       this.room2Service.getRoomTwoUnlockItems().subscribe(response => {
         this.room2Service.setUnlockItems(response);
         this.unlockItems = this.room2Service.uItems;
-
       });
     } else {
       this.unlockItems = this.room2Service.uItems;
