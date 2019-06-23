@@ -43,7 +43,6 @@
   border: none;
 }
 
-
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
@@ -53,33 +52,6 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
-
- .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    background-blend-mode: multiply;
-}
-
-/* .overlay:active {
-  background-color: none;
-} */
-
-.circle {
-  /* background-color: rgba(0, 0, 0, 0); */
-  border: 2px solid black;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-  .rotate {
-    display: none;
-  }
-}
-
 
   .rotateMessage {
     display: none;
@@ -99,29 +71,57 @@
     width: 100vw;
     background-repeat: no-repeat;
     background-position: center center;
+    z-index: 0;
   }
 
   .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    background-blend-mode: multiply;
-}
+    height: 90vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+  }
 
-/* .overlay:active {
-  background-color: none;
-} */
+  /* .flashlight {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 100%;
+    height: 250px;
+    width: 250px;
+    cursor: move;
+    background: rgba(255, 255, 0, 0.384);
+    z-index: 0;
+    clip-path: circle(50%);
+    pointer-events: none; send mouse events beneath this layer
+  }  */
 
-.circle {
-  /* background-color: rgba(0, 0, 0, 0); */
-  border: 2px solid black;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-  
+  .flashlight {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    box-shadow: inset 0 0 150px 150px #000;
+  }
+
+  /* .flashlight {
+    width: 50px;
+    height: 50px;
+  } */
+
+  /* .flashlight:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px; */
+  /* border: 2000px solid rgba(0, 0, 0, 0.795); */
+  /* overflow: hidden; */
+  /* } */
 }
 
 /* @media screen and (min-width: 1024px) {

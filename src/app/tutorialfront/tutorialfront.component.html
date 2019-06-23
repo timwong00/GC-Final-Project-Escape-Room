@@ -1,10 +1,16 @@
-
-
-  <section class="background overlay">
-
-
+<section class="background">
+  <div class="overlay" (mousemove)="flashlightCursor($event)">
+    <div
+      class="flashlight"
+      [ngStyle]="{
+        top: y + 'px',
+        left: x + 'px'
+      }"
+      cdkDragBoundary=".overlay"
+      cdkDrag
+    ></div>
+  </div>
   <div class="rotateMessage">Please rotate to landscape to play!</div>
-
 
   <section *ngIf="this.tutorialRoomService.isShowing" class="prompt">
     <p class="verbiage">
@@ -18,8 +24,6 @@
     </p>
     <span class="promptBtn" (click)="hidePrompt()">OK</span>
   </section>
-
-<div class="circle" cdkDrag></div>
 
   <!-- <section>
 <div *ngFor="let uItem of unlockItems; index as i">

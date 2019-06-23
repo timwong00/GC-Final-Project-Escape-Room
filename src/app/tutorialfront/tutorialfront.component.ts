@@ -9,12 +9,19 @@ import { InventoryService } from "../inventory.service";
   templateUrl: "./tutorialfront.component.html",
   styleUrls: ["./tutorialfront.component.css"]
 })
-
 export class TutorialfrontComponent implements OnInit {
+  // @HostListener("mousemove", ["$event"])
+  // mouseOver(event) {
+  //   console.log(event);
+  // }
 
-  @HostListener("mousemove", ["$event.target"])
-  onmousemove(target) {
-    console.log(target)
+  flashlightCursor(mouseEvent) {
+    console.log(mouseEvent);
+    this.x = mouseEvent.clientX;
+    this.y = mouseEvent.clientY;
+    if (typeof this.x !== undefined) {
+      return this.x, this.y;
+    }
   }
 
   items: any;
@@ -22,6 +29,8 @@ export class TutorialfrontComponent implements OnInit {
   inventoryItems: any[];
   itemsToMatch: any[] = [];
   gameProgress: string;
+  x: any;
+  y: any;
   // isShowing: boolean = true;
 
   constructor(
@@ -53,7 +62,6 @@ export class TutorialfrontComponent implements OnInit {
     // this.itemsToMatch = this.matchService.itemsToMatch;
   }
 
-  
   selectItem(inventoryItem) {
     // console.log("Match item name:", inventoryItem.match_item_name);
     this.inventoryService.collectItem(inventoryItem);
@@ -82,5 +90,13 @@ export class TutorialfrontComponent implements OnInit {
 
   hidePrompt() {
     this.tutorialRoomService.hidePrompt();
+  }
+
+  moveFlashlightStyle() {
+    let flashlightStyle = {
+      top: this.y + "px",
+      left: this.x + "px"
+    };
+    return flashlightStyle;
   }
 }
