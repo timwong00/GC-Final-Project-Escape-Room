@@ -9,7 +9,7 @@
     />
     <div *ngIf="this.tutorialRoomService.uItems[i].showingHint" class="hint">
       <p>{{ uItem.item_use }}</p>
-      <button (click)="hideUnlockHint(i)">OK</button>
+      <button class= "hintBtn" (click)="hideUnlockHint(i)">OK</button>
     </div>
   </div>
 </section>
