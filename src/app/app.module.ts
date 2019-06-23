@@ -23,6 +23,7 @@ import { TutorialfrontComponent } from "./tutorialfront/tutorialfront.component"
 import { TutorialleftComponent } from "./tutorialleft/tutorialleft.component";
 import { TutorialrightComponent } from "./tutorialright/tutorialright.component";
 import { EndGameComponent } from './end-game/end-game.component';
+import { DragDropModule } from "@angular/cdk/drag-drop";
 
 const appRoutes: Routes = [
   { path: "", redirectTo: "/app-root", pathMatch: "full" },
@@ -63,7 +64,7 @@ const appRoutes: Routes = [
     EndGameComponent
   ],
 
-  imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(appRoutes)],
+  imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(appRoutes), DragDropModule],
 
   providers: [
     Room1Service,
