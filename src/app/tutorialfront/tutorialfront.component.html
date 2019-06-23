@@ -1,5 +1,9 @@
 <section class="background">
-  <div class="overlay" (mousemove)="flashlightCursor($event)">
+  <div
+    class="overlay"
+    (mousemove)="flashlightCursor($event)"
+    (mouseout)="stopCursor($event)"
+  >
     <div class="mobileFlashlight" cdkDragBoundary=".overlay" cdkDrag></div>
     <div
       class="desktopFlashlight"

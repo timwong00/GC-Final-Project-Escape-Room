@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { TutorialroomService } from "../tutorialroom.service";
 import { GameProgressionService } from "../game-progression.service";
 import { MatchService } from "../match.service";
@@ -10,11 +10,6 @@ import { InventoryService } from "../inventory.service";
   styleUrls: ["./tutorialfront.component.css"]
 })
 export class TutorialfrontComponent implements OnInit {
-  // @HostListener("mousemove", ["$event"])
-  // mouseOver(event) {
-  //   console.log(event);
-  // }
-
   items: any;
   unlockItems: any;
   inventoryItems: any[];
@@ -54,29 +49,20 @@ export class TutorialfrontComponent implements OnInit {
   }
 
   selectItem(inventoryItem) {
-    // console.log("Match item name:", inventoryItem.match_item_name);
     this.inventoryService.collectItem(inventoryItem);
   }
 
   removeItem(index: number) {
     this.inventoryService.deleteItem(index);
-    // console.log(index);
   }
-
-  // toggleShow() {
-  //   this.isShowing = !this.isShowing;
-  // }
 
   setGameProgress(): void {
     this.gameProgressionService.setGameProgress(this.gameProgress);
   }
 
   matchItems2(itemToUnlock) {
-    // console.log(itemToUnlock);
     this.matchService.setUnlockItemToMatch(itemToUnlock);
-    // this.matchService.itemsToMatch.splice(1, 1, itemToUnlock);
     this.matchService.checkMatch();
-    // console.log(this.itemsToMatch);
   }
 
   hidePrompt() {
@@ -84,19 +70,13 @@ export class TutorialfrontComponent implements OnInit {
   }
 
   flashlightCursor(mouseEvent) {
-    // console.log(mouseEvent);
     this.x = mouseEvent.clientX;
     this.y = mouseEvent.clientY;
     if (typeof this.x !== undefined) {
       return this.x, this.y;
     }
   }
-
-  // moveFlashlightStyle() {
-  //   let flashlightStyle = {
-  //     top: this.y + "px",
-  //     left: this.x + "px"
-  //   };
-  //   return flashlightStyle;
-  // }
+  stopCursor(event) {
+    console.log(event);
+  }
 }
