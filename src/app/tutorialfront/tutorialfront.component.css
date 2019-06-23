@@ -43,6 +43,7 @@
   border: none;
 }
 
+
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
@@ -52,6 +53,33 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
+
+ .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+}
+
+/* .overlay:active {
+  background-color: none;
+} */
+
+.circle {
+  /* background-color: rgba(0, 0, 0, 0); */
+  border: 2px solid black;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+  .rotate {
+    display: none;
+  }
+}
+
 
   .rotateMessage {
     display: none;
@@ -72,6 +100,28 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+}
+
+/* .overlay:active {
+  background-color: none;
+} */
+
+.circle {
+  /* background-color: rgba(0, 0, 0, 0); */
+  border: 2px solid black;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+  
 }
 
 /* @media screen and (min-width: 1024px) {

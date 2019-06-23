@@ -1,5 +1,10 @@
-<section class="background">
+
+
+  <section class="background overlay">
+
+
   <div class="rotateMessage">Please rotate to landscape to play!</div>
+
 
   <section *ngIf="this.tutorialRoomService.isShowing" class="prompt">
     <p class="verbiage">
@@ -13,6 +18,8 @@
     </p>
     <span class="promptBtn" (click)="hidePrompt()">OK</span>
   </section>
+
+<div class="circle" cdkDrag></div>
 
   <!-- <section>
 <div *ngFor="let uItem of unlockItems; index as i">
