@@ -108,4 +108,11 @@ export class Room1frontComponent implements OnInit {
       return this.x, this.y;
     }
   }
+
+  isMobileDevice() {
+    return (
+      typeof window.orientation !== "undefined" ||
+      navigator.userAgent.indexOf("IEMobile") !== -1
+    );
+  }
 }

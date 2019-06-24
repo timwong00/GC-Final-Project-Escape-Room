@@ -9,8 +9,14 @@
     (mousemove)="flashlightCursor($event)"
     (mouseout)="stopCursor($event)"
   >
-    <div class="mobileFlashlight" cdkDragBoundary=".overlay" cdkDrag></div>
     <div
+      *ngIf="isMobileDevice()"
+      class="mobileFlashlight"
+      cdkDragBoundary=".overlay"
+      cdkDrag
+    ></div>
+    <div
+      *ngIf="!isMobileDevice()"
       class="desktopFlashlight"
       [ngStyle]="{
         top: y + 'px',
