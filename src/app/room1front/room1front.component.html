@@ -4,11 +4,7 @@
     <img src="../../assets/img/rotate.png" class="rotateImg" />
   </div>
 
-  <div
-    class="overlay"
-    (mousemove)="flashlightCursor($event)"
-    (mouseout)="stopCursor($event)"
-  >
+  <div class="overlay" (mousemove)="flashlightCursor($event)">
     <div
       *ngIf="isMobileDevice()"
       class="mobileFlashlight"
@@ -42,7 +38,9 @@
     />
     <div *ngIf="this.room1Service.uItems[i].showingHint" class="hint">
       <p>{{ uItem.item_use }}</p>
-      <button class="hintBtn" (click)="hideUnlockHint(i)">OK</button>
+      <button class="hintBtn" (click)="hideUnlockHint(i)">
+        OK
+      </button>
     </div>
   </div>
 </section>

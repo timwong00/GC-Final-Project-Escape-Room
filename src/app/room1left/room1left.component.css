@@ -1,6 +1,6 @@
 /* Mobile Portrait View */
 .item1 {
-    display: none;
+  display: none;
 }
 
 .background {
@@ -29,47 +29,56 @@
   display: none;
 }
 
+.mobileFlashlight {
+  display: none;
+  cursor: move;
+}
+
+.desktopFlashlight {
+  display: none;
+}
 
 /* Mobile Landscape View */
 @media all and (min-width: 568px) and (orientation: Landscape) {
-    .background {
-      background-image: url("../../assets/img/Surgery-L.png");
-      background-size: cover;
-      height: 77vh;
-      /* width: 100vw; */
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
+  .background {
+    background-image: url("../../assets/img/Surgery-L.png");
+    background-size: cover;
+    height: 77vh;
+    /* width: 100vw; */
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 
-    .rotateMessage, .rotateImg {
-      display: none;
-    }
+  .rotateMessage,
+  .rotateImg {
+    display: none;
+  }
 
-    .item0 {
-      display: block;
-      position: absolute;
-      height: 15vh;
-      width: 10vw;
-      left: 30vw;
-      bottom: 25vh;
-    }
+  .item0 {
+    display: block;
+    position: absolute;
+    height: 15vh;
+    width: 10vw;
+    left: 30vw;
+    bottom: 25vh;
+  }
 
-    .uItem1 {
-      display: block;
-      position: absolute;
-      height: 70vh;
-      width: 30vw;
-      left: 10vw;
-      bottom: 5vh;
-    }
+  .uItem1 {
+    display: block;
+    position: absolute;
+    height: 70vh;
+    width: 30vw;
+    left: 10vw;
+    bottom: 5vh;
+  }
 
-    .hint {
+  .hint {
     background-color: rgb(236, 236, 236);
     z-index: 10;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     display: flex;
     border-radius: 15px;
     border: 2px;
@@ -88,14 +97,32 @@
     background-color: slategray;
     z-index: 15;
     padding: 10px;
-    
+  }
+
+  .overlay {
+    height: 77vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
+  }
+
+  .mobileFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    /* pointer-events: none; */
   }
 }
-  
-  
+
 /* iPad Portrait View */
 @media screen and (min-width: 768px) {
- 
   .background {
     position: relative;
     height: 86vh;
@@ -112,7 +139,7 @@
     height: inherit;
     width: 100vw;
   }
-  
+
   .rotateImg {
     width: 60%;
     margin-top: 10%;
@@ -123,42 +150,66 @@
   }
 }
 
-
 /* iPad Landscape / Desktop View */
 @media all and (min-width: 1024px) and (orientation: Landscape) {
   .background {
     height: 81vh;
   }
 
-  .rotateMessage, .rotateImg {
+  .rotateMessage,
+  .rotateImg {
     display: none;
   }
 
-    .hint {
-      font-size: 20px;
-    }
-    
-    .hintBtn {
-      padding: 15px;
-      font-size: 20px;
-    }
+  .hint {
+    font-size: 20px;
+  }
 
-    .item0 {
-      display: block;
-    }
+  .hintBtn {
+    padding: 15px;
+    font-size: 20px;
+  }
 
-    .uItem1 {
-      display: block;
-      height: 65vh;
-      width: 32vw;
-    }
+  .item0 {
+    display: block;
+  }
+
+  .uItem1 {
+    display: block;
+    height: 65vh;
+    width: 32vw;
+  }
+
+  .overlay {
+    height: 81vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
+  }
+
+  .mobileFlashlight {
+    width: 250px;
+    height: 250px;
+  }
+
+  .desktopFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    pointer-events: none;
+  }
 }
 
-  
 /* Desktop View - Item Positioning */
 @media all and (min-width: 1200px) {
   .uItem1 {
     width: 29vw;
   }
-
 }
