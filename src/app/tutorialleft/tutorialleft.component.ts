@@ -9,6 +9,8 @@ import { MatchService } from "../match.service";
 })
 export class TutorialleftComponent implements OnInit {
   unlockItems: any;
+  x: any;
+  y: any;
   constructor(
     private tutorialRoomService: TutorialroomService,
     private matchService: MatchService

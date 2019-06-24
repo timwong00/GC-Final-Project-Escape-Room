@@ -34,7 +34,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   display: flex;
   border-radius: 15px;
   border: 2px;
@@ -55,6 +55,11 @@
   padding: 10px;
 }
 
+.overlay {
+  pointer-events: none;
+  z-index: -10;
+}
+
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
@@ -65,7 +70,8 @@
     background-position: center center;
   }
 
-  .rotateMessage, .rotateImg {
+  .rotateMessage,
+  .rotateImg {
     display: none;
   }
 
@@ -74,12 +80,18 @@
     right: 230px;
     bottom: 165px;
   }
-}
 
+  .overlay {
+    height: 77vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
+  }
+}
 
 /* iPad Portrait View */
 @media screen and (min-width: 768px) {
- 
   .background {
     position: relative;
     height: 86vh;
@@ -96,12 +108,11 @@
     height: inherit;
     width: 100vw;
   }
-  
+
   .rotateImg {
     width: 60%;
     margin-top: 10%;
   }
-
 }
 
 /* iPad Landscape / Desktop View */
@@ -110,7 +121,8 @@
     height: 81vh;
   }
 
-  .rotateMessage, .rotateImg {
+  .rotateMessage,
+  .rotateImg {
     display: none;
   }
 
@@ -125,11 +137,17 @@
   .hint {
     font-size: 20px;
   }
-  
+
   .hintBtn {
     padding: 15px;
-    font-size: 20px;  
+    font-size: 20px;
   }
-  
 
+  .overlay {
+    height: 81vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
+  }
 }
