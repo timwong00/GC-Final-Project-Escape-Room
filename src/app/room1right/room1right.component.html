@@ -1,8 +1,7 @@
-<!-- <div>
-    <img src="{{ scalpelImage }}" class="uItem{{ i }}" alt="{{ scalpelName }}" 
-    (click)="[selectItem(scalpel), removeItem(scalpelName)]">
-  </div> -->
 <section class="background">
+    <div class="rotateMessage">Please rotate to landscape to play!
+        <img src="../../assets/img/rotate.png" class="rotateImg">
+      </div>
     <div *ngFor="let item of items; index as i">
         <img src="{{ item.item_image }}" class="item{{ i }}" alt="{{ item.item_name }}"
           (click)="showItemHint(i)" />

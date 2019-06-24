@@ -1,5 +1,7 @@
 <section class="background">
-  <!-- <h1>Room 1 Front Component</h1> -->
+  <div class="rotateMessage">Please rotate to landscape to play!
+    <img src="../../assets/img/rotate.png" class="rotateImg">
+  </div>
 
   <section *ngIf="this.room1Service.isShowing" class="prompt">
     <p class="verbiage">
@@ -19,14 +21,4 @@
     </div>
   </div>
 
-  <!-- <div *ngFor="let item of items; index as i">
-  <img src="{{ item.image }}" class="item{{ i }}" alt="{{ item.item_name }}"
-    (click)="[selectItem(item), removeItem(i)]">
-</div>  -->
-
-  <!-- 
-<div>
-    <img src="{{ doorImage }}" class="uItem{{ i }}" alt="{{ doorName }}" 
-    (click)="matchItems2(door.item_name)">
-  </div> -->
 </section>

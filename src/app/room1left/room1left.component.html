@@ -1,11 +1,14 @@
 <section class="background">
+    <div class="rotateMessage">Please rotate to landscape to play!
+        <img src="../../assets/img/rotate.png" class="rotateImg">
+      </div>
+        
   <div *ngFor="let uItem of unlockItems; index as i">
     <img src="{{ uItem.item_image }}" class="uItem{{ i }}" alt="{{ uItem.item_name }}"
       (click)="[matchItems2(uItem.item_name), showUnlockHint(i)]" />
     <div *ngIf="this.room1Service.uItems[i].showingHint" class="hint">
       <p>{{ uItem.item_use }}</p>
       <button class="hintBtn" (click)="hideUnlockHint(i)">OK</button>
-
     </div>
   </div>
 
@@ -19,13 +22,3 @@
     </div>
   </div>
 </section>
-<!-- <div>
-    <img src="{{ containerImage }}" class="uItem{{ i }}" alt="{{ containerName }}" 
-    (click)="matchItems2(container.item_name)">
-  </div>
-
-
-  <div>
-    <img src="{{ doorHandleImage }}" class="item{{ i }}" alt="{{ doorHandleName }}" 
-    (click)="[selectItem(doorHandle), removeItem(doorHandleName)]">
-  </div> -->
