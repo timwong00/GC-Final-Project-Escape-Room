@@ -1,7 +1,13 @@
 <section class="background">
+    <div class="rotateMessage">Please rotate to landscape to play!
+        <img src="../../assets/img/rotate.png" class="rotateImg">
+      </div>
 
   <section *ngIf="this.room2Service.isShowing" class="prompt">
-    <p class="verbiage">Congratulations! You have escaped the operation room and moved into the hallway. You are one step closer to escaping Dr. Lobotomy!</p>
+
+    <p>Congratulations! You have escaped the operation room and moved into the hallway. You are one
+      step closer to
+      escaping Dr. Lobotomy!</p>
     <button (click)="hidePrompt()">OK</button>
   </section>
 
@@ -22,3 +28,4 @@
     </div>
   </div>
 </section>
+

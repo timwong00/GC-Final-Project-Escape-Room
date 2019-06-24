@@ -167,10 +167,14 @@
   }
 }
 
+/* Tablet Portrait View */
 @media screen and (min-width: 768px) {
   /* .game-header {
     width: 95%;
   } */
+  .header {
+    height: 6vh;
+  }
 
   #menu {
     width: 200px;
@@ -193,4 +197,13 @@
   #inventory {
     width: 50%;
   }
+}
+
+
+/* Tablet Landscape / Desktop View */
+@media screen and (min-width: 1024px) and (orientation: Landscape) {
+  .header {
+    height: 10vh;
+  }
+
 }

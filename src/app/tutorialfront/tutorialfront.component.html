@@ -1,4 +1,8 @@
 <section class="background">
+
+  <div class="rotateMessage">Please rotate to landscape to play!
+    <img src="../../assets/img/rotate.png" class="rotateImg">
+  </div>
   <div
     class="overlay"
     (mousemove)="flashlightCursor($event)"
@@ -13,7 +17,6 @@
       }"
     ></div>
   </div>
-  <div class="rotateMessage">Please rotate to landscape to play!</div>
 
   <section *ngIf="this.tutorialRoomService.isShowing" class="prompt">
     <h2>The Operating Room</h2>
