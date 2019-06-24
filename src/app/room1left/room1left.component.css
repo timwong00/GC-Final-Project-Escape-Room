@@ -25,10 +25,6 @@
   margin-top: 10%;
 }
 
-.items {
-  display: none;
-}
-
 
 /* Mobile Landscape View */
 @media all and (min-width: 568px) and (orientation: Landscape) {
@@ -43,24 +39,6 @@
 
     .rotateMessage, .rotateImg {
       display: none;
-    }
-
-    .item0 {
-      display: block;
-      position: absolute;
-      height: 15vh;
-      width: 10vw;
-      left: 30vw;
-      bottom: 25vh;
-    }
-
-    .uItem1 {
-      display: block;
-      position: absolute;
-      height: 70vh;
-      width: 30vw;
-      left: 10vw;
-      bottom: 5vh;
     }
 
     .hint {
@@ -117,10 +95,6 @@
     width: 60%;
     margin-top: 10%;
   }
-
-  .items {
-    display: none;
-  }
 }
 
 
@@ -141,24 +115,8 @@
     .hintBtn {
       padding: 15px;
       font-size: 20px;
-    }
-
-    .item0 {
-      display: block;
-    }
-
-    .uItem1 {
-      display: block;
-      height: 65vh;
-      width: 32vw;
+      
     }
 }
 
   
-/* Desktop View - Item Positioning */
-@media all and (min-width: 1200px) {
-  .uItem1 {
-    width: 29vw;
-  }
-
-}
