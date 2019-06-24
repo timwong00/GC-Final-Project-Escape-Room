@@ -1,4 +1,18 @@
-merg<section class="background">
+<section class="background">
+  <div
+    class="overlay"
+    (mousemove)="flashlightCursor($event)"
+    (mouseout)="stopCursor($event)"
+  >
+    <div class="mobileFlashlight" cdkDragBoundary=".overlay" cdkDrag></div>
+    <div
+      class="desktopFlashlight"
+      [ngStyle]="{
+        top: y + 'px',
+        left: x + 'px'
+      }"
+    ></div>
+  </div>
   <div class="rotateMessage">Please rotate to landscape to play!</div>
 
   <section *ngIf="this.tutorialRoomService.isShowing" class="prompt">
@@ -14,5 +28,4 @@ merg<section class="background">
     </p>
     <span class="promptBtn" (click)="hidePrompt()">OK</span>
   </section>
-
 </section>
