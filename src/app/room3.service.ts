@@ -37,4 +37,20 @@ export class Room3Service {
   hidePrompt() {
     this.isShowing = false;
   }
+
+  showItemHint(i) {
+    this.items[i].showingHint = true;
+  }
+
+  showUnlockItemHint(i) {
+    this.uItems[i].showingHint = true;
+  }
+
+  hideItemHint(i) {
+    this.items[i].showingHint = false;
+  }
+  
+  hideUnlockItemHint(i) {
+    this.uItems[i].showingHint = false;
+  }
 }
