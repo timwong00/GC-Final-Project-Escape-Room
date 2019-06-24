@@ -6,7 +6,7 @@
   <div *ngFor="let item of items; index as i">
     <img
       src="{{ item.item_image }}"
-      class="{{ item.item_name }}"
+      class="item{{i}} items"
       alt="{{ item.item_name }}"
       (click)="showItemHint(i)"
     />

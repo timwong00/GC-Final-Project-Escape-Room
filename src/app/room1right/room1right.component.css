@@ -1,8 +1,4 @@
 /* Mobile Portrait View */
-.item0 {
-    display: none;
-}
-
 .background {
   position: relative;
   height: 86vh;
@@ -23,6 +19,10 @@
 .rotateImg {
   width: 80%;
   margin-top: 10%;
+}
+
+.items {
+  display: none;
 }
 
 

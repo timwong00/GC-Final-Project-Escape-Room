@@ -21,6 +21,10 @@
   margin-top: 10%;
 }
 
+.items {
+  display: none;
+}
+
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
@@ -35,13 +39,14 @@
     display: none;
   }
 
-  .arm {
-    height: 120px;
-    width: 250px;
+  .uItem0 {
+    display: block;
+    height: 28vh;
+    width: 30vw;
     position: absolute;
-    bottom: 50px;
+    bottom: 20vh;
     left: 0;
-    z-index: 1;
+    /* z-index: 1; */
   }
 
   .hint {
@@ -107,7 +112,12 @@
     /* background-blend-mode: multiply; */
     mix-blend-mode: hard-light;
   }
+
+  .items {
+    display: none;
+  }
 }
+
 
 /* iPad Landscape / Desktop View */
 @media all and (min-width: 1024px) and (orientation: Landscape) {
@@ -128,14 +138,22 @@
     font-size: 20px;  
   }
 
-  .arm {
-    height: 400px;
-    width: 590px;
-    position: absolute;
-    bottom: 150px;
-    left: 0;
+  .uItem0 {
+    display: block;
+    height: 25vh;
+    width: 32vw;
+    bottom: 25vh;
   }
 
 }
 
 
+/* Desktop View - Item Positioning */
+@media all and (min-width: 1200px) {
+  .uItem0 {
+    height: 28vh;
+    width: 30vw;
+    bottom: 20vh;
+  }
+
+}
