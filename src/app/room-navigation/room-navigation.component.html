@@ -12,7 +12,7 @@
     class="material-icons navigationArrows"
     (click)="navigateFront()"
     [ngClass]="{
-      activeLeft: this.gameProgressionService.navigateDirection === 'front'
+      activeFront: this.gameProgressionService.navigateDirection === 'front'
     }"
   >
     arrow_drop_up
@@ -21,7 +21,7 @@
     class="material-icons navigationArrows"
     (click)="navigateRight()"
     [ngClass]="{
-      activeLeft: this.gameProgressionService.navigateDirection === 'right'
+      activeRight: this.gameProgressionService.navigateDirection === 'right'
     }"
   >
     arrow_right
