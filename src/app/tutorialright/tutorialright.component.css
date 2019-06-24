@@ -21,13 +21,6 @@
   margin-top: 10%;
 }
 
-.key {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  display: none;
-}
-
 .hint {
   background-color: rgb(236, 236, 236);
   z-index: 10;
@@ -59,6 +52,9 @@
   pointer-events: none;
   z-index: -10;
 }
+.items {
+  display: none;
+}
 
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
@@ -75,10 +71,13 @@
     display: none;
   }
 
-  .key {
+  .item0 {
     display: block;
-    right: 230px;
-    bottom: 165px;
+    position: absolute;
+    width: 7vw;
+    height: 10vh;
+    right: 30vw;
+    bottom: 20vh;
   }
 
   .overlay {
@@ -113,6 +112,10 @@
     width: 60%;
     margin-top: 10%;
   }
+
+  .items {
+    display: none;
+  }
 }
 
 /* iPad Landscape / Desktop View */
@@ -126,12 +129,11 @@
     display: none;
   }
 
-  .key {
+  .item0 {
     display: block;
-    width: 70px;
-    height: 70px;
-    right: 400px;
-    bottom: 210px;
+    bottom: 25vh;
+    width: 7vw;
+    height: 10vh;
   }
 
   .hint {
@@ -149,5 +151,14 @@
     background-color: rgba(0, 0, 0, 0.863);
     /* background-blend-mode: multiply; */
     mix-blend-mode: hard-light;
+  }
+}
+
+/* Desktop View - Item Positioning */
+@media all and (min-width: 1200px) {
+  .item0 {
+    bottom: 20vh;
+    width: 7vw;
+    height: 10vh;
   }
 }
