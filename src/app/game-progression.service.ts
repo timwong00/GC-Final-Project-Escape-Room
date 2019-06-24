@@ -21,10 +21,10 @@ export class GameProgressionService {
     return this.gameProgress;
   }
 
-  playGame(){
+  playGame() {
     this.playingGame = true;
   }
-   stopGame(){
-     this.playingGame = false;
-   }
+  stopGame() {
+    this.playingGame = false;
+  }
 }

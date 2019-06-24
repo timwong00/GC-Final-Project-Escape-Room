@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener } from "@angular/core";
 import { TimerService } from "../timer.service";
 import { InventoryService } from "../inventory.service";
 import { MatchService } from "../match.service";
-import { GameProgressionService} from "../game-progression.service";
+import { GameProgressionService } from "../game-progression.service";
 import { Router } from "@angular/router";
 
 @Component({
@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
   inventoryItems: any[];
   clickedMenu: boolean = false;
   timeRemaining: any;
-  playingGame:boolean;
+  playingGame: boolean;
 
   constructor(
     public timerService: TimerService,
@@ -44,7 +44,7 @@ export class HeaderComponent implements OnInit {
 
   stopTimer(): void {
     this.timerService.stopTimer();
-    // this.router.navigate(["/app-root"]);
+    // this.router.navigate([{ outlets: { outletName: ['landingPage'] } }]);
   }
 
   openMenu() {
@@ -62,14 +62,16 @@ export class HeaderComponent implements OnInit {
     // this.itemsToMatch.splice(0, 1, clickedItem1);
   }
 
-  checkTimer() {
-    // while(this.timeRemaining > 0) {
-    //   this.timeRemaining = this.timerService.getTime();
-    // }
-    this.timeRemaining = this.timerService.getTime();
-    if(this.timeRemaining === 0) {
-      this.timerService.endGame();
-    }
-    // set playing game back to false when reset game or quit game
-}
+  // checkTimer() {
+  //   this.timeRemaining = this.timerService.getTime();
+  //   // set playing game back to false when reset game or quit game
+  // }
+  // endGame() {
+  //   while (this.timeRemaining > 0) {
+  //     this.timeRemaining = this.timerService.getTime();
+  //   }
+  //   if (this.timeRemaining === 0) {
+  //     this.timerService.endGame();
+  //   }
+  // }
 }

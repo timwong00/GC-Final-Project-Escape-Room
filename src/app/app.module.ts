@@ -22,7 +22,7 @@ import { RoomNavigationComponent } from "./room-navigation/room-navigation.compo
 import { TutorialfrontComponent } from "./tutorialfront/tutorialfront.component";
 import { TutorialleftComponent } from "./tutorialleft/tutorialleft.component";
 import { TutorialrightComponent } from "./tutorialright/tutorialright.component";
-import { EndGameComponent } from './end-game/end-game.component';
+import { EndGameComponent } from "./end-game/end-game.component";
 import { DragDropModule } from "@angular/cdk/drag-drop";
 
 const appRoutes: Routes = [
@@ -64,7 +64,12 @@ const appRoutes: Routes = [
     EndGameComponent
   ],
 
-  imports: [BrowserModule, HttpClientModule, RouterModule.forRoot(appRoutes), DragDropModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes),
+    DragDropModule
+  ],
 
   providers: [
     Room1Service,

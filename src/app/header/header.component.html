@@ -19,8 +19,7 @@
   </div>
   <div *ngIf="this.timerService.finishedTutorial" id="battery">
     <div class="battery battery-drain">
-      <div *ngIf="playingGame; then checkTimer()"></div>
-      {{ this.timerService.timeRemaining }} seconds left
+      {{ this.timerService.timeRemaining }}
     </div>
   </div>
   <div id="inventory">

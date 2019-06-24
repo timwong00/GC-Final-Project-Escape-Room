@@ -13,16 +13,19 @@ export class TimerService {
   constructor(
     private router: Router,
     private gameProgressionService: GameProgressionService
-    ) {}
+  ) {}
 
   startTimer() {
     this.interval = setInterval(() => {
-      if (this.timeRemaining >= 0) {
+      if (this.timeRemaining > 0) {
         return this.timeRemaining--;
-      } else {
-        clearInterval(this.interval);
-        this.timeRemaining = 300;
+      } else if (this.timeRemaining === 0) {
+        this.endGame();
       }
+      // else {
+      //   clearInterval(this.interval);
+      //   this.timeRemaining = 300;
+      // }
     }, 1000);
     this.finishedTutorial = true;
     return this.finishedTutorial;
@@ -36,23 +39,16 @@ export class TimerService {
 
   getTime() {
     // this.interval.onTimeout(console.log("end game"));
-    return this.timeRemaining
+    return this.timeRemaining;
   }
 
   endGame() {
-    console.log("End game");
     this.router.navigate(["/endgame"]);
+    this.finishedTutorial = false;
+    clearInterval(this.interval);
+    this.timeRemaining = 300;
     this.gameProgressionService.stopGame();
-      // while(this.timeRemaining > 0) {
-      //   this.getTime();
-      // }
-    // if (this.timeRemaining = 0) {
-    //   console.log("end game");
-      // this.router.navigate(["/endgame"]);
-      // this.gameProgressionService.setGameProgress("Game Lost");
-    // } else {
-    //   return;
-    // }
+    this.gameProgressionService.setGameProgress(null);
+    return this.finishedTutorial;
   }
-
 }
