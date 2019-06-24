@@ -54,7 +54,7 @@
 
 
 /* Mobile Landscape View */
-@media all and (min-width: 568px) {
+@media all and (min-width: 568px) and (orientation: Landscape)  {
   .background {
     background-image: url("../../assets/img/Surgery-F-2.png");
     background-size: cover;

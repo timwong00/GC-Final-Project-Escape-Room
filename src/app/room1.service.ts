@@ -68,6 +68,7 @@ export class Room1Service {
   showItemHint(i) {
     this.items[i].showingHint = true;
   }
+
   showUnlockItemHint(i) {
     this.uItems[i].showingHint = true;
   }
@@ -75,6 +76,7 @@ export class Room1Service {
   hideItemHint(i) {
     this.items[i].showingHint = false;
   }
+  
   hideUnlockItemHint(i) {
     this.uItems[i].showingHint = false;
   }

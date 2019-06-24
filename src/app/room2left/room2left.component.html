@@ -1,4 +1,7 @@
 <section class="background">
+    <div class="rotateMessage">Please rotate to landscape to play!
+        <img src="../../assets/img/rotate.png" class="rotateImg">
+      </div>
 
   <div *ngFor="let uItem of unlockItems; index as i">
     <img
@@ -8,7 +11,6 @@
       (click)="matchItems2(uItem.item_name)"
     />
   </div>
-
 
   <div *ngFor="let item of items; index as i">
       <img

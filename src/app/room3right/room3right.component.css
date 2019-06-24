@@ -1,47 +1,79 @@
-.rotate {
-  display: none;
+/* Mobile Portrait View */
+.background {
+  position: relative;
+  height: 86vh;
+  width: 100vw;
 }
 
-/* iPad Portrait View -- display rotate message */
-/* 
-  @media all and (min-width: 768px) {
-    .background {
-      display: none;
-    }
-    .rotate {
-      display: block;
-    }
-  } */
+.rotateMessage {
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: inherit;
+  width: 100vw;
+}
 
-/* iPad Landscape View */
-/* @media all and (min-width: 1024px) {
+.rotateImg {
+  width: 80%;
+  margin-top: 10%;
+}
+
+
+
+/* Mobile Landscape View */
+@media all and (min-width: 568px) and (orientation: Landscape) {
   .background {
-    background-image: url("../../assets/img/LAB-R.png");
+    background-image: url("../../assets/img/LAB-F.png");
     background-size: cover;
-    height: 85vh;
-    width: 85vw;
+    height: 77vh;
+    /* width: 100vw; */
     background-repeat: no-repeat;
     background-position: center center;
   }
-} */
+  .rotateMessage, .rotateImg {
+    display: none;
+  }
+}
 
-/* @media all and (orientation: landscape) {
+
+
+/* iPad Portrait View */
+@media screen and (min-width: 768px) {
+ 
+  .background {
+    position: relative;
+    height: 86vh;
+    width: 100vw;
+  }
+
+  .rotateMessage {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: inherit;
+    width: 100vw;
+  }
+  
+  .rotateImg {
+    width: 60%;
+    margin-top: 10%;
+  }
+}
+
+
+  /* iPad Landscape / Desktop View */
+  @media all and (min-width: 1024px) and (orientation: Landscape) {
     .background {
-      background-image: url("../../assets/img/Surgery-F.png");
-      background-size: cover;
-      height: 75vh;
-      width: 100vw;
-      background-repeat: no-repeat;
-      background-position: center center;
+      height: 81vh;
     }
-  } */
-/* @media all and (max-width: 767px) {
-    .background {
-      background-image: url("../../assets/img/Surgery-F.png");
-      background-size: cover;
-      height: 100vh;
-      width: 150vw;
-      background-repeat: no-repeat;
-      background-position: center center;
+  
+    .rotateMessage, .rotateImg {
+      display: none;
     }
-  } */
+  }

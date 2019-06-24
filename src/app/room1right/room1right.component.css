@@ -27,7 +27,7 @@
 
 
 /* Mobile Landscape View */
-@media all and (min-width: 568px) {
+@media all and (min-width: 568px) and (orientation: Landscape) {
     .background {
       background-image: url("../../assets/img/Surgery-R.png");
       background-size: cover;
@@ -97,7 +97,7 @@
 
 
   /* iPad Landscape / Desktop View */
-  @media all and (min-width: 1024px) {
+  @media all and (min-width: 1024px) and (orientation: Landscape) {
     .background {
       height: 81vh;
     }
