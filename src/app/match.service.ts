@@ -44,6 +44,7 @@ export class MatchService {
       if (this.tutorialRoomService.uItems.length == 0) {
         this.router.navigate(["/room1front"]);
         this.timerService.startTimer();
+        this.gameProgressionService.playGame();
         this.gameProgressionService.setGameProgress("Room 1");
         this.gameProgressionService.navigateDirection = "front";
       }
