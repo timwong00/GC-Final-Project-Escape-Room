@@ -47,6 +47,5 @@ export class TimerService {
     this.stopTimer();
     this.gameProgressionService.stopGame();
     this.gameProgressionService.setGameProgress(null);
-    return this.finishedTutorial;
   }
 }
