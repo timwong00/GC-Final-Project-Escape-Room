@@ -64,7 +64,18 @@ export class Room3frontComponent implements OnInit {
     this.room3Service.hidePrompt();
   }
 
-  // toggleShow() {
-  //   this.isShowing = !this.isShowing;
-  // }
+  showUnlockHint(i) {
+    this.room3Service.showUnlockItemHint(i);
+  }
+
+  hideUnlockHint(i) {
+    this.room3Service.hideUnlockItemHint(i);
+  }
+  showItemHint(i) {
+    this.room3Service.showItemHint(i);
+  }
+
+  hideItemHint(i) {
+    this.room3Service.hideItemHint(i);
+  }
 }

@@ -12,15 +12,7 @@
   font-size: 45px;
 }
 
-.activeFront {
-  color: yellow;
-}
-
-.activeLeft {
-  color: yellow;
-}
-
-.activeRight {
+.active {
   color: yellow;
 }
 
