@@ -39,4 +39,18 @@ export class Room2leftComponent implements OnInit {
     this.matchService.checkMatch();
   }
 
+  showUnlockHint(i) {
+    this.room2Service.showUnlockItemHint(i);
+  }
+
+  hideUnlockHint(i) {
+    this.room2Service.hideUnlockItemHint(i);
+  }
+  showItemHint(i) {
+    this.room2Service.showItemHint(i);
+  }
+
+  hideItemHint(i) {
+    this.room2Service.hideItemHint(i);
+  }
 }

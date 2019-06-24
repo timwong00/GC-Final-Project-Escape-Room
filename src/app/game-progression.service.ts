@@ -4,6 +4,7 @@ import { Injectable } from "@angular/core";
   providedIn: "root"
 })
 export class GameProgressionService {
+  playingGame: boolean;
   gameProgress: any = null;
   navigateDirection: any = "front";
   constructor() {}
@@ -18,5 +19,12 @@ export class GameProgressionService {
   getGameProgress() {
     // console.log(this.gameProgress);
     return this.gameProgress;
+  }
+
+  playGame() {
+    this.playingGame = true;
+  }
+  stopGame() {
+    this.playingGame = false;
   }
 }

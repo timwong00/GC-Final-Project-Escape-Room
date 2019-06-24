@@ -36,5 +36,6 @@ export class AppComponent {
     this.room1Service.isShowing = true;
     this.room2Service.isShowing = true;
     this.room3Service.isShowing = true;
+    
   }
 }

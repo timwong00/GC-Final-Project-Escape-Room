@@ -1,3 +1,4 @@
+/* Mobile Portrait View */
 .background {
   position: relative;
   height: 86vh;
@@ -15,6 +16,15 @@
   width: 100vw;
 }
 
+.rotateImg {
+  width: 80%;
+  margin-top: 10%;
+}
+
+.items {
+  display: none;
+}
+
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
@@ -25,17 +35,18 @@
     background-position: center center;
   }
   
-  .rotateMessage {
+  .rotateMessage, .rotateImg {
     display: none;
   }
 
-  .resize {
-    height: 120px;
-    width: 250px;
+  .uItem0 {
+    display: block;
+    height: 28vh;
+    width: 30vw;
     position: absolute;
-    bottom: 50px;
+    bottom: 20vh;
     left: 0;
-    z-index: 1;
+    /* z-index: 1; */
   }
 
   .hint {
@@ -55,10 +66,7 @@
     justify-content: center;
     padding: 15px;
     width: 30%;
-    height: 20%;
   }
-
-
 
   .hintBtn {
     border-radius: 5px;
@@ -71,76 +79,81 @@
 
 }
 
-/* iPad Portrait View -- display rotate message */
-/* 
-@media all and (min-width: 768px) {
+
+/* iPad Portrait View */
+@media screen and (min-width: 768px) {
+ 
   .background {
-    display: none;
-  }
-  .rotate {
-    display: block;
-  }
-} */
-/* iPad Landscape View */
-@media all and (min-width: 1024px) {
-  .background {
-    background-image: url("../../assets/img/Surgery-L.png");
-    background-size: cover;
-    height: 85vh;
+    position: relative;
+    height: 86vh;
     width: 100vw;
-    background-repeat: no-repeat;
-    background-position: center center;
   }
 
-  .resize {
-    height: 400px;
-    width: 590px;
-    position: absolute;
-    bottom: 150px;
-    left: 0;
+  .rotateMessage {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: inherit;
+    width: 100vw;
+  }
+  
+  .rotateImg {
+    width: 60%;
+    margin-top: 10%;
+  }
+
+  .overlay {
+    height: 90vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
+  }
+
+  .items {
+    display: none;
   }
 }
 
-/* @media all and (orientation: landscape) {
-  .background {
-    background-image: url("../../assets/img/Surgery-F.png");
-    background-size: cover;
-    height: 75vh;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-} */
-/* @media all and (max-width: 767px) {
-  .background {
-    background-image: url("../../assets/img/Surgery-F.png");
-    background-size: cover;
-    height: 100vh;
-    width: 150vw;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-} */
 
-@media all and (min-width: 1024px) {
+/* iPad Landscape / Desktop View */
+@media all and (min-width: 1024px) and (orientation: Landscape) {
   .background {
-    background-image: url("../../assets/img/Surgery-L.png");
-    background-size: cover;
-    height: 85vh;
-    width: 100vw;
-    background-repeat: no-repeat;
-    background-position: center center;
+    height: 81vh;
   }
 
+  .rotateMessage, .rotateImg {
+    display: none;
+  }
+  
   .hint {
     font-size: 20px;
   }
 
-
-
   .hintBtn {
     padding: 15px;
-    font-size: 20px;
-    
+    font-size: 20px;  
   }
+
+  .uItem0 {
+    display: block;
+    height: 25vh;
+    width: 32vw;
+    bottom: 25vh;
+  }
+
+}
+
+
+/* Desktop View - Item Positioning */
+@media all and (min-width: 1200px) {
+  .uItem0 {
+    height: 28vh;
+    width: 30vw;
+    bottom: 20vh;
+  }
+
 }

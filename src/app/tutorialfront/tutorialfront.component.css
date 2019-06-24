@@ -1,3 +1,4 @@
+/* Mobile Portrait View */
 .background {
   position: relative;
   height: 86vh;
@@ -15,6 +16,11 @@
   width: 100vw;
 }
 
+.rotateImg {
+  width: 80%;
+  margin-top: 10%;
+}
+
 .prompt {
   color: white;
   position: absolute;
@@ -30,12 +36,6 @@
   padding: 30px;
   display: none;
 }
-
-/* .verbiage {
-  color: white;
-  font-size: 12px;
-  width: 50%;
-} */
 
 .promptBtn {
   color: red;
@@ -61,7 +61,7 @@
     background-position: center center;
   }
 
-  .rotateMessage {
+  .rotateMessage, .rotateImg {
     display: none;
   }
 
@@ -91,16 +91,29 @@
   }
 }
 
-/* iPad Landscape View */
-@media screen and (min-width: 768px) and (orientation: Landscape) {
+/* iPad Portrait View */
+@media screen and (min-width: 768px) {
+ 
   .background {
-    background-image: url("../../assets/img/Surgery-F-2.png");
-    background-size: cover;
-    height: 85vh;
+    position: relative;
+    height: 86vh;
     width: 100vw;
-    background-repeat: no-repeat;
-    background-position: center center;
-    z-index: 0;
+  }
+
+  .rotateMessage {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: inherit;
+    width: 100vw;
+  }
+  
+  .rotateImg {
+    width: 60%;
+    margin-top: 10%;
   }
 
   .overlay {
@@ -124,6 +137,7 @@
     clip-path: circle(50%);
     pointer-events: none; send mouse events beneath this layer
   }  */
+
   .mobileFlashlight {
     display: none;
   }
@@ -160,13 +174,16 @@
   /* } */
 }
 
-/* @media screen and (min-width: 1024px) {
+
+/* Tablet Landscape / Desktop View */
+@media screen and (min-width: 1024px) and (orientation: Landscape) {
   .background {
-    background-image: url("../../assets/img/Surgery-F.png");
-    background-size: cover;
-    height: 100vh;
-    width: 150vw;
-    background-repeat: no-repeat;
-    background-position: center center;
+    height: 81vh;
   }
-} */
+
+  .rotateMessage, .rotateImg {
+    display: none;
+  }  
+}
+
+
