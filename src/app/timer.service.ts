@@ -6,7 +6,7 @@ import { GameProgressionService } from "../app/game-progression.service";
   providedIn: "root"
 })
 export class TimerService {
-  timeRemaining: number = 5;
+  timeRemaining: number = 300;
   interval;
   finishedTutorial: boolean = false;
 
@@ -44,9 +44,7 @@ export class TimerService {
 
   endGame() {
     this.router.navigate(["/endgame"]);
-    this.finishedTutorial = false;
-    clearInterval(this.interval);
-    this.timeRemaining = 300;
+    this.stopTimer();
     this.gameProgressionService.stopGame();
     this.gameProgressionService.setGameProgress(null);
     return this.finishedTutorial;
