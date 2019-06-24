@@ -3,7 +3,7 @@
     class="material-icons navigationArrows"
     (click)="navigateLeft()"
     [ngClass]="{
-      activeLeft: this.gameProgressionService.navigateDirection === 'left'
+      active: this.gameProgressionService.navigateDirection === 'left'
     }"
   >
     arrow_left
@@ -12,7 +12,7 @@
     class="material-icons navigationArrows"
     (click)="navigateFront()"
     [ngClass]="{
-      activeFront: this.gameProgressionService.navigateDirection === 'front'
+      active: this.gameProgressionService.navigateDirection === 'front'
     }"
   >
     arrow_drop_up
@@ -21,7 +21,7 @@
     class="material-icons navigationArrows"
     (click)="navigateRight()"
     [ngClass]="{
-      activeRight: this.gameProgressionService.navigateDirection === 'right'
+      active: this.gameProgressionService.navigateDirection === 'right'
     }"
   >
     arrow_right
