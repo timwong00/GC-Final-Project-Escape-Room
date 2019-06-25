@@ -1,5 +1,4 @@
 import { Injectable } from "@angular/core";
-import { IterableChangeRecord_ } from "@angular/core/src/change_detection/differs/default_iterable_differ";
 
 @Injectable({
   providedIn: "root"
@@ -12,7 +11,9 @@ export class InventoryService {
   constructor() {}
 
   collectItem(inventoryItem) {
+    console.log(inventoryItem)
     this.inventoryItems.push(inventoryItem);
+    console.log(this.inventoryItems);
     // console.log(inventoryItem.match_item_name);
     // console.log(this.inventoryItems);
     return this.inventoryItems;

@@ -30,12 +30,6 @@
   display: none;
 }
 
-.rotate {
-    color: white;
-    height: 85vh;
-    width: 100vw;
-  }
-
   .prompt {
     background-color:  black;
     position: absolute;
@@ -161,7 +155,13 @@
       z-index: 15;
       padding: 10px;
     }
-      .overlay {
+
+    .prompt {
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 90%;
+    }
+
+  .overlay {
     height: 77vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.863);
@@ -207,11 +207,6 @@
     width: 60%;
     margin-top: 10%;
   }
-  
-  .prompt {
-      background-color: rgba(0, 0, 0, 0.8);
-      width: 90%;
-    }
   
 
   .items {
