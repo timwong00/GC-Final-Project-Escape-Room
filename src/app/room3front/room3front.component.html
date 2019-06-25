@@ -4,12 +4,13 @@
   </div>
 
   <section *ngIf="this.room3Service.isShowing" class="prompt">
-    <p class="verbiage">
+    <h2>Dr. Lobotomy's Lab</h2>
+    <p>
       Great job! You have found Dr. Lobotomy's laboratory, which holds your
       escape route to the outside world. Hurry to find your way out before the
       crazy doctor returns or your battery runs out!! !
     </p>
-    <button (click)="hidePrompt()">OK</button>
+    <button class="promptBtn" (click)="hidePrompt()">OK</button>
   </section>
 
   <div *ngFor="let uItem of unlockItems; index as i">

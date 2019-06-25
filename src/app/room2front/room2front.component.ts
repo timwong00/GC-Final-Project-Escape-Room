@@ -20,6 +20,8 @@ export class Room2frontComponent implements OnInit {
   x: any;
   y: any;
 
+  isShowing: boolean = false;
+  // gameProgress: string;
 
   constructor(
     public room2Service: Room2Service,

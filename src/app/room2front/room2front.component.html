@@ -5,11 +5,12 @@
   </div>
 
   <section *ngIf="this.room2Service.isShowing" class="prompt">
-    <p>
-      Congratulations! You have escaped the operation room and moved into the
-      hallway. You are one step closer to escaping Dr. Lobotomy!
-    </p>
-    <button (click)="hidePrompt()">OK</button>
+    <h2>The Hallway</h2>
+    <p>Congratulations! You have escaped the operation room and moved into the hallway. You are one
+      step closer to
+      escaping Dr. Lobotomy!</p>
+
+    <button class="promptBtn" (click)="hidePrompt()">OK</button>
   </section>
 
   <div class="overlay" (mousemove)="flashlightCursor($event)">
@@ -35,7 +36,7 @@
 
     <div *ngIf="this.room2Service.items[i].showingHint" class="hint">
       <p>{{ item.item_use }}</p>
-      <button class="hintBtn" (click)="[selectItem(item), removeItem(i)]">
+      <button class="hintBtn" (click)="[selectItem(item, i), removeItem(i)]">
         Grab Item
       </button>
     </div>

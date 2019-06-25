@@ -30,8 +30,57 @@
   display: none;
 }
 
+  .prompt {
+    background-color:  black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    padding: 15px;
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .promptBtn {
+    width: 50%;
+    font-family: 'insomniaregular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18x;
+    background-color: slategray;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 10px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .promptBtn:hover {
+    border: 1px solid slategray;
+  }
+    
+  h2 {
+    margin: 0;
+    font-family: 'insomniaregular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+  }
+
+
+
   /* Mobile Landscape View */
-  @media all and (min-width: 568px) and (orientation: Landscape) {
+  @media all and (min-width: 568px) and (orientation: Landscape){
     .background {
       background-image: url("../../assets/img/Hallway-F.png");
       background-size: cover;
@@ -106,7 +155,13 @@
       z-index: 15;
       padding: 10px;
     }
-      .overlay {
+
+    .prompt {
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 90%;
+    }
+
+  .overlay {
     height: 77vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.863);
@@ -152,6 +207,7 @@
     width: 60%;
     margin-top: 10%;
   }
+  
 
   .items {
     display: none;
@@ -221,6 +277,22 @@
     background-color: rgba(255, 228, 74, 0.479);
     pointer-events: none;
   }
+ 
+    .prompt {
+      padding: 100px;
+      height: 60%;
+      width: 60%;
+    }
+
+    .promptBtn {
+      width: 25%;
+      height: 20%;
+    }
+
+    h2 {
+      font-size: 26px;
+    }
+  
   }
 
   
