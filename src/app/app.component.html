@@ -1,6 +1,6 @@
 
 <section class="container" *ngIf="!playingGame">
-  <h1>BlackOut</h1>
+  <img class="logo" src="assets\img\blackout.png" alt="logo">
   <div class="btn_container">
     <button class="how-to-play" (click)="toggleShow()">HOW TO PLAY</button>
     <button class="play" [routerLink]="['/tutorialfront']" (click)="startGame()">
@@ -24,7 +24,6 @@
   </section>
 </section>
 
-<!-- <img src="" alt="logo"> -->
 <!-- <h3>Can you escape?!</h3> -->
 <!-- <img class="splatter" src="http://static.indigoimages.ca/2015/shop/orange-paint-splatter.png"> -->
 

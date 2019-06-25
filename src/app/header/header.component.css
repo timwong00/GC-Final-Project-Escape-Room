@@ -5,6 +5,11 @@
   height: 6vh;
 }
 
+.logo {
+  max-width: 70%;
+  height: auto;
+}
+
 .openMenu-btn {
   padding: 5px;
   margin: 4px;

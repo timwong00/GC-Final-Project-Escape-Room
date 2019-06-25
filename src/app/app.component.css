@@ -30,6 +30,11 @@
   font-style: normal;
 } */
 
+.logo {
+    max-width: 70%;
+    height: auto;
+  }
+
 .container {
   padding: 10px;
   display: flex;
