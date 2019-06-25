@@ -1,4 +1,5 @@
 <section class="header">
+
   <button (click)="openMenu()" class="openMenu-btn">Menu</button>
   <div *ngIf="clickedMenu" id="menu">
     <p>Menu</p>
@@ -14,11 +15,13 @@
       </button>
     </div>
   </div>
+
   <div *ngIf="this.timerService.finishedTutorial" id="battery">
     <div class="battery battery-drain">
       {{ this.timerService.timeRemaining }}
     </div>
   </div>
+
   <div id="inventory">
     <div *ngFor="let invItem of inventoryItems; index as i">
       <img
@@ -29,4 +32,5 @@
       />
     </div>
   </div>
+  
 </section>

@@ -22,26 +22,55 @@
 }
 
 .prompt {
-  color: white;
+  background-color:  black;
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  height: 50vh;
-  width: 60vw;
-  background-color: rgba(0, 0, 0, 0.8);
+  width: 90%;
+  height: 90%;
+  padding: 15px;
+  font-size: 20px;
+  color: white;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 30px;
-  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
 }
 
 .promptBtn {
-  color: red;
-  background: none;
-  border: none;
+  width: 50%;
+  font-family: 'insomniaregular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18x;
+  background-color: slategray;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 10px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.promptBtn:hover {
+  border: 1px solid slategray;
+}
+  
+h2 {
+  margin: 0;
+  font-family: 'insomniaregular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+}
+
+
+
+
 
 .mobileFlashlight {
   display: none;
@@ -67,7 +96,8 @@
   }
 
   .prompt {
-    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 90%;
   }
 
   .overlay {
@@ -147,6 +177,24 @@
   /* border: 2000px solid rgba(0, 0, 0, 0.795); */
   /* overflow: hidden; */
   /* } */
+  h1 {
+    font-size: 64px;
+  }
+
+  .prompt {
+    padding: 100px;
+    height: 60%;
+    width: 60%;
+  }
+
+  .promptBtn {
+    width: 25%;
+    height: 20%;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
 }
 
 /* Tablet Landscape / Desktop View */
