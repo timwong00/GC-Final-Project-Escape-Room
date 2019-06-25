@@ -101,11 +101,55 @@
   padding: 5%;
 }
 
+.selected {
+  background-color: yellow;
+  border-radius: 15px;
+  }
+
+/* .item-box:active {
+  background-color: yellow;
+} */
+
 .items {
   /* height: 32px; */
   /* border: 1px solid rgb(245, 222, 222); */
   /* padding: 5px; */
   color: white;
+  width: 5vw;
+  height: 90%;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* .items.selected:active {
+  background-color: yellow;
+  opacity: 0.7;
+} */
+
+.items:hover {
+  background-color: yellow;
+  opacity: 0.7;
+}
+
+/* .items:active {
+  background-color: yellow;
+} */
+
+/* .selected {
+  background-color: red;
+  opacity: 0.7;
+} */
+
+.item-box {
+  /* width: 50px; */
+  /* height: 90%;  */
+  /* border: 1px solid black;
+  border-radius: 15px; 
+  object-fit: contain; */
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #battery:after {
