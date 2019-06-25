@@ -1,4 +1,5 @@
 /* Mobile Portrait View */
+
 .background {
   position: relative;
   height: 86vh;
@@ -21,10 +22,10 @@
   margin-top: 10%;
 }
 
+
 .items {
   display: none;
 }
-
 
   /* Mobile Landscape View */
   @media all and (min-width: 568px) and (orientation: Landscape) {
@@ -103,12 +104,10 @@
       padding: 10px;
     }
 
-  }
-  
+}
 
 /* iPad Portrait View */
 @media screen and (min-width: 768px) {
- 
   .background {
     position: relative;
     height: 86vh;
@@ -125,7 +124,7 @@
     height: inherit;
     width: 100vw;
   }
-  
+
   .rotateImg {
     width: 60%;
     margin-top: 10%;
@@ -136,16 +135,16 @@
   }
 }
 
+/* iPad Landscape / Desktop View */
+@media all and (min-width: 1024px) and (orientation: Landscape) {
+  .background {
+    height: 81vh;
+  }
 
-  /* iPad Landscape / Desktop View */
-  @media all and (min-width: 1024px) and (orientation: Landscape) {
-    .background {
-      height: 81vh;
-    }
+  .hint {
+    font-size: 20px;
+  }
 
-    .hint {
-      font-size: 20px;
-    }
   
     .hintBtn {
       padding: 15px;
@@ -207,3 +206,4 @@
     }
 
 }
+
