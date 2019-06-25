@@ -30,83 +30,84 @@
   display: none;
 }
 
-  /* Mobile Landscape View */
-  @media all and (min-width: 568px) and (orientation: Landscape) {
-    .background {
-      background-image: url("../../assets/img/Hallway-F.png");
-      background-size: cover;
-      height: 77vh;
-      /* width: 100vw; */
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
+/* Mobile Landscape View */
+@media all and (min-width: 568px) and (orientation: Landscape) {
+  .background {
+    background-image: url("../../assets/img/Hallway-F.png");
+    background-size: cover;
+    height: 77vh;
+    /* width: 100vw; */
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 
-    .rotateMessage, .rotateImg {
-      display: none;
-    }
+  .rotateMessage,
+  .rotateImg {
+    display: none;
+  }
 
-    /* badge scanner */
-    .uItem0 {
-      border: 1px solid yellow;
-      display: block;
-      position: absolute;
-      height: 10vh;
-      width: 6vw;
-      right: 33vw;
-      top: 17vh;
-    }
+  /* badge scanner */
+  .uItem0 {
+    border: 1px solid yellow;
+    display: block;
+    position: absolute;
+    height: 10vh;
+    width: 6vw;
+    right: 33vw;
+    top: 17vh;
+  }
 
-    /* extinguisher box */
-    .uItem2 {
-      border: 1px solid yellow;
-      display: block;
-      position: absolute;
-      height: 35vh;
-      width: 20vw;
-      left: 10vw;
-      top: 16vh;
-      z-index: 5;
-    }
+  /* extinguisher box */
+  .uItem2 {
+    border: 1px solid yellow;
+    display: block;
+    position: absolute;
+    height: 35vh;
+    width: 20vw;
+    left: 10vw;
+    top: 16vh;
+    z-index: 5;
+  }
 
-    /* fire extinguisher */
-    .item3 {
-      display: block;
-      position: absolute;
-      height: 34vh;
-      width: 18vw;
-      left: 10vw;
-      top: 17vh;
-      z-index: 1;
-    }
+  /* fire extinguisher */
+  .item3 {
+    display: block;
+    position: absolute;
+    height: 34vh;
+    width: 18vw;
+    left: 10vw;
+    top: 17vh;
+    z-index: 1;
+  }
 
-    .hint {
-      background-color: rgb(236, 236, 236);
-      z-index: 10;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      display: flex;
-      border-radius: 15px;
-      border: 2px;
-      border-color: red;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-      padding: 15px;
-      width: 30%;
-      height: 20%;
-    }
-    
-    .hintBtn {
-      border-radius: 5px;
-      border: 1px solid white;
-      background-color: slategray;
-      z-index: 15;
-      padding: 10px;
-    }
-      .overlay {
+  .hint {
+    background-color: rgb(236, 236, 236);
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    border-radius: 15px;
+    border: 2px;
+    border-color: red;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 15px;
+    width: 30%;
+    height: 20%;
+  }
+
+  .hintBtn {
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: slategray;
+    z-index: 15;
+    padding: 10px;
+  }
+  .overlay {
     height: 77vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.863);
@@ -126,7 +127,6 @@
     background-color: rgba(255, 228, 74, 0.479);
     /* pointer-events: none; */
   }
-
 }
 
 /* iPad Portrait View */
@@ -167,35 +167,36 @@
   .hint {
     font-size: 20px;
   }
-    .hintBtn {
-      padding: 15px;
-      font-size: 20px;
-    }
-  
-    .rotateMessage, .rotateImg {
-      display: none;
-    }
-    
-    /* badge scanner */
-    .uItem0 {
-      border: 1px solid yellow;
-      display: block;
-      top: 19vh;
-    }
+  .hintBtn {
+    padding: 15px;
+    font-size: 20px;
+  }
 
-    /* extinguisher box */
-    .uItem2 {
-      border: 1px solid yellow;
-      display: block;
-      z-index: 5;
-    }
+  .rotateMessage,
+  .rotateImg {
+    display: none;
+  }
 
-    /* fire extinguisher */
-    .item3 {
-      display: block;
-      z-index: 1;
-    }
-  
+  /* badge scanner */
+  .uItem0 {
+    border: 1px solid yellow;
+    display: block;
+    top: 19vh;
+  }
+
+  /* extinguisher box */
+  .uItem2 {
+    border: 1px solid yellow;
+    display: block;
+    z-index: 5;
+  }
+
+  /* fire extinguisher */
+  .item3 {
+    display: block;
+    z-index: 1;
+  }
+
   .overlay {
     height: 81vh;
     width: 100vw;
@@ -221,35 +222,33 @@
     background-color: rgba(255, 228, 74, 0.479);
     pointer-events: none;
   }
+}
+
+/* Desktop View - Item Positioning */
+@media all and (min-width: 1200px) {
+  /* badge scanner */
+  .uItem0 {
+    border: 1px solid yellow;
+    display: block;
+    top: 15vh;
+    right: 34vw;
+    width: 5vw;
   }
 
-  
-    /* Desktop View - Item Positioning */
-@media all and (min-width: 1200px) {
-    /* badge scanner */
-    .uItem0 {
-      border: 1px solid yellow;
-      display: block;
-      top: 15vh;
-      right: 34vw;
-      width: 5vw;
-    }
+  /* extinguisher box */
+  .uItem2 {
+    border: 1px solid yellow;
+    display: block;
+    width: 18vw;
+    left: 12vw;
+    z-index: 5;
+  }
 
-    /* extinguisher box */
-    .uItem2 {
-      border: 1px solid yellow;
-      display: block;
-      width: 18vw;
-      left: 12vw;
-      z-index: 5;
-    }
-
-    /* fire extinguisher */
-    .item3 {
-      display: block;
-      width: 16vw;
-      left: 12vw;
-      z-index: 1;
-    }
-
+  /* fire extinguisher */
+  .item3 {
+    display: block;
+    width: 16vw;
+    left: 12vw;
+    z-index: 1;
+  }
 }

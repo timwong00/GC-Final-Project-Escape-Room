@@ -30,7 +30,6 @@
   display: none;
 }
 
-
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {

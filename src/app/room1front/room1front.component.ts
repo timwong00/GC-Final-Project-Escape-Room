@@ -19,7 +19,6 @@ export class Room1frontComponent implements OnInit {
   x: any;
   y: any;
 
-
   constructor(
     public room1Service: Room1Service,
     public gameProgressionService: GameProgressionService,

@@ -82,7 +82,7 @@
   .rotateImg {
     display: none;
   }
-  
+
   /* door */
   .uItem0 {
     border: 1px solid yellow;
@@ -173,7 +173,6 @@
   }
 }
 
-
 /* iPad Landscape / Desktop View */
 @media screen and (min-width: 1024px) and (orientation: Landscape) {
   .background {
@@ -230,7 +229,6 @@
     /* visibility: hidden; */
   }
 }
-
 
 /* Desktop View - Item Positioning */
 @media screen and (min-width: 1024px) {

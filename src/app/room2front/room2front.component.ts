@@ -20,7 +20,6 @@ export class Room2frontComponent implements OnInit {
   x: any;
   y: any;
 
-
   constructor(
     public room2Service: Room2Service,
     private gameProgressionService: GameProgressionService,
