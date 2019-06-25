@@ -1,5 +1,4 @@
 /* Mobile Portrait View */
-
 .background {
   position: relative;
   height: 86vh;
@@ -22,8 +21,12 @@
   margin-top: 10%;
 }
 
+.mobileFlashlight {
+  display: none;
+  cursor: move;
+}
 
-.items {
+.desktopFlashlight {
   display: none;
 }
 
@@ -103,6 +106,26 @@
       z-index: 15;
       padding: 10px;
     }
+      .overlay {
+    height: 77vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
+  }
+
+  .mobileFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    /* pointer-events: none; */
+  }
 
 }
 
@@ -144,8 +167,6 @@
   .hint {
     font-size: 20px;
   }
-
-  
     .hintBtn {
       padding: 15px;
       font-size: 20px;
@@ -174,6 +195,32 @@
       display: block;
       z-index: 1;
     }
+  
+  .overlay {
+    height: 81vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
+  }
+
+  .mobileFlashlight {
+    width: 250px;
+    height: 250px;
+  }
+
+  .desktopFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    pointer-events: none;
+  }
   }
 
   
@@ -206,4 +253,3 @@
     }
 
 }
-

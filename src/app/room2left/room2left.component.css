@@ -24,10 +24,17 @@
 .items {
   display: none;
 }
+.mobileFlashlight {
+  display: none;
+  cursor: move;
+}
 
+.desktopFlashlight {
+  display: none;
+}
 
   /* Mobile Landscape View */
-  @media all and (min-width: 568px) and (orientation: Landscape)  {
+  @media screen and (min-width: 568px) and (orientation: Landscape)  {
     .background {
       background-image: url("../../assets/img/Hallway-L.png");
       background-size: cover;
@@ -90,14 +97,31 @@
       z-index: 15;
       padding: 10px; 
     }
-
+      .overlay {
+    height: 77vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
   }
-  
-  /* iPad Portrait View -- display rotate message */
-  
+
+  .mobileFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    /* pointer-events: none; */
+  }
+
+    }
+
 /* iPad Portrait View */
 @media screen and (min-width: 768px) {
- 
   .background {
     position: relative;
     height: 86vh;
@@ -114,7 +138,7 @@
     height: inherit;
     width: 100vw;
   }
-  
+
   .rotateImg {
     width: 60%;
     margin-top: 10%;
@@ -125,25 +149,27 @@
   }
 }
 
+/* iPad Landscape / Desktop View */
+@media screen and (min-width: 1024px) and (orientation: Landscape) {
+  .background {
+    height: 81vh;
+  }
 
-  /* iPad Landscape / Desktop View */
-  @media all and (min-width: 1024px) and (orientation: Landscape) {
-    .background {
-      height: 81vh;
-    }
+  .hint {
+    font-size: 20px;
+  }
 
-    .hint {
-      font-size: 20px;
-    }
+  .hintBtn {
+    padding: 15px;
+    font-size: 20px;
+  }
 
-    .hintBtn {
-      padding: 15px;
-      font-size: 20px;  
-    }
+  .rotateMessage,
+  .rotateImg {
+    display: none;
+  }
 
-    .rotateMessage, .rotateImg {
-      display: none;
-    }
+
 
     /* badge */
     .item0 {
@@ -159,6 +185,18 @@
       display: block;
       z-index: 5;
     }
+    .overlay {
+    height: 81vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
+  }
+
+  .mobileFlashlight {
+    width: 250px;
+    height: 250px;
+  }
   }
 
   
@@ -179,5 +217,18 @@
       height: 25vh;
       z-index: 5;
     }
-  
+
+  .desktopFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    pointer-events: none;
+  }
 }
+

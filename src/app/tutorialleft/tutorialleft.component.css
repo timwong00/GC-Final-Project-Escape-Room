@@ -21,6 +21,11 @@
   margin-top: 10%;
 }
 
+.overlay {
+  pointer-events: none;
+  z-index: -10;
+}
+
 .items {
   display: none;
 }
@@ -35,8 +40,9 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
-  
-  .rotateMessage, .rotateImg {
+
+  .rotateMessage,
+  .rotateImg {
     display: none;
   }
 
@@ -57,7 +63,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     display: flex;
     border-radius: 15px;
     border: 2px;
@@ -76,15 +82,19 @@
     background-color: slategray;
     z-index: 15;
     padding: 10px;
-    
   }
 
+  .overlay {
+    height: 77vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
+  }
 }
-
 
 /* iPad Portrait View */
 @media screen and (min-width: 768px) {
- 
   .background {
     position: relative;
     height: 86vh;
@@ -101,7 +111,7 @@
     height: inherit;
     width: 100vw;
   }
-  
+
   .rotateImg {
     width: 60%;
     margin-top: 10%;
@@ -126,17 +136,18 @@
     height: 81vh;
   }
 
-  .rotateMessage, .rotateImg {
+  .rotateMessage,
+  .rotateImg {
     display: none;
   }
-  
+
   .hint {
     font-size: 20px;
   }
 
   .hintBtn {
     padding: 15px;
-    font-size: 20px;  
+    font-size: 20px;
   }
 
   .uItem0 {
@@ -146,8 +157,14 @@
     bottom: 25vh;
   }
 
+  .overlay {
+    height: 81vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
+  }
 }
-
 
 /* Desktop View - Item Positioning */
 @media all and (min-width: 1200px) {
@@ -156,5 +173,4 @@
     width: 30vw;
     bottom: 20vh;
   }
-
 }

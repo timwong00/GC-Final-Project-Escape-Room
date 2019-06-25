@@ -17,8 +17,9 @@ export class Room2frontComponent implements OnInit {
   inventoryItems: any[];
   itemsToMatch: any[] = [];
   gameProgress: string;
+  x: any;
+  y: any;
 
-  // isShowing: boolean = false;
 
   constructor(
     public room2Service: Room2Service,
@@ -81,5 +82,20 @@ export class Room2frontComponent implements OnInit {
 
   hideItemHint(i) {
     this.room2Service.hideItemHint(i);
+  }
+
+  flashlightCursor(mouseEvent) {
+    this.x = mouseEvent.clientX;
+    this.y = mouseEvent.clientY;
+    if (typeof this.x !== undefined) {
+      return this.x, this.y;
+    }
+  }
+
+  isMobileDevice() {
+    return (
+      typeof window.orientation !== "undefined" ||
+      navigator.userAgent.indexOf("IEMobile") !== -1
+    );
   }
 }

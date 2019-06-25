@@ -76,6 +76,7 @@ export class TutorialfrontComponent implements OnInit {
       return this.x, this.y;
     }
   }
+
   stopCursor(event) {
     console.log(event);
   }

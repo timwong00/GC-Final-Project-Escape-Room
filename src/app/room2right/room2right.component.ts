@@ -1,23 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { Room2Service } from "../room2.service";
 import { MatchService } from "../match.service";
 import { InventoryService } from "../inventory.service";
 
 @Component({
-  selector: 'room2right',
-  templateUrl: './room2right.component.html',
-  styleUrls: ['./room2right.component.css']
+  selector: "room2right",
+  templateUrl: "./room2right.component.html",
+  styleUrls: ["./room2right.component.css"]
 })
 export class Room2rightComponent implements OnInit {
   unlockItems: any;
   items: any;
   inventoryItems: any[];
   itemsToMatch: any[] = [];
+  x: any;
+  y: any;
+
   constructor(
     private room2Service: Room2Service,
     private matchService: MatchService,
     private inventoryService: InventoryService
-    ) { }
+  ) {}
 
   ngOnInit() {
     this.items = this.room2Service.items;
@@ -51,5 +54,20 @@ export class Room2rightComponent implements OnInit {
 
   hideItemHint(i) {
     this.room2Service.hideItemHint(i);
+  }
+
+  flashlightCursor(mouseEvent) {
+    this.x = mouseEvent.clientX;
+    this.y = mouseEvent.clientY;
+    if (typeof this.x !== undefined) {
+      return this.x, this.y;
+    }
+  }
+
+  isMobileDevice() {
+    return (
+      typeof window.orientation !== "undefined" ||
+      navigator.userAgent.indexOf("IEMobile") !== -1
+    );
   }
 }
