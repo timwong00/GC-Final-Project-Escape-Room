@@ -1,8 +1,4 @@
 /* Mobile Portrait View */
-.item0, .item3, .uItem0, .uItem1, .uItem2 {
-  display: none;
-}
-
 .background {
   position: relative;
   height: 86vh;
@@ -25,9 +21,22 @@
   margin-top: 10%;
 }
 
+.items {
+  display: none;
+}
+
+.mobileFlashlight {
+  display: none;
+  cursor: move;
+}
+
+.desktopFlashlight {
+  display: none;
+}
+
 
 /* Mobile Landscape View */
-@media all and (min-width: 568px) and (orientation: Landscape) {
+@media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
     background-image: url("../../assets/img/Hallway-R.png");
     background-size: cover;
@@ -36,8 +45,42 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
-  .rotateMessage, .rotateImg {
+  .rotateMessage,
+  .rotateImg {
     display: none;
+  }
+
+  /* arm */
+  .item1 {
+    display: block;
+    position: absolute;
+    height: 28vh;
+    width: 18vw;
+    left: 18vw;
+    top: 32vh;
+    z-index: 1;
+  }
+
+  /* scissors */
+  .item2 {
+    display: block;
+    position: absolute;
+    height: 10vh;
+    width: 7vw;
+    right: 15vw;
+    top: 12vh;
+  }
+
+  /* glass case */
+  .uItem3 {
+    border: 1px solid yellow;
+    display: block;
+    position: absolute;
+    height: 62vh;
+    width: 22vw;
+    top: 0;
+    left: 15vw;
+    z-index: 5;
   }
 
   .hint {
@@ -46,7 +89,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     display: flex;
     border-radius: 15px;
     border: 2px;
@@ -64,16 +107,33 @@
     border: 1px solid white;
     background-color: slategray;
     z-index: 15;
-    padding: 10px; 
+    padding: 10px;
   }
 
+  .overlay {
+    height: 77vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
+  }
+
+  .mobileFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    /* pointer-events: none; */
+  }
 }
-
-
 
 /* iPad Portrait View */
 @media screen and (min-width: 768px) {
- 
   .background {
     position: relative;
     height: 86vh;
@@ -90,16 +150,33 @@
     height: inherit;
     width: 100vw;
   }
-  
+
   .rotateImg {
     width: 60%;
     margin-top: 10%;
   }
+
+  .items {
+    display: none;
+  }
 }
 
+/* iPad Landscape / Desktop View */
+@media all and (min-width: 1024px) and (orientation: Landscape) {
+  .background {
+    height: 81vh;
+  }
 
-  /* iPad Landscape / Desktop View */
-  @media all and (min-width: 1024px) and (orientation: Landscape) {
+  .rotateMessage,
+  .rotateImg {
+    display: none;
+  }
+  .hint {
+    font-size: 20px;
+  }
+
+/* iPad Landscape / Desktop View */
+@media screen and (min-width: 1024px) and (orientation: Landscape) {
     .background {
       height: 81vh;
     }
@@ -115,4 +192,94 @@
       padding: 15px;
       font-size: 20px;  
     }
+
+  /* arm */
+  .item1 {
+    display: block;
+    height: 20vh;
+    width: 14vw;
+    top: 34vh;
+    z-index: 1;
   }
+
+  /* scissors */
+  .item2 {
+    display: block;
+    height: 9vh;
+    width: 7vw;
+    top: 19vh;
+  }
+
+  /* glass case */
+  .uItem3 {
+    border: 1px solid yellow;
+    display: block;
+    height: 50vh;
+    width: 27vw;
+    top: 8vh;
+    left: 10vw;
+    z-index: 5;
+  }
+  
+  .overlay {
+    height: 81vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
+  }
+
+  .mobileFlashlight {
+    width: 250px;
+    height: 250px;
+  }
+
+  .desktopFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    pointer-events: none;
+  }
+}
+
+
+/* Desktop View - Item Positioning */
+@media all and (min-width: 1200px) {
+  /* arm */
+  .item1 {
+    display: block;
+    height: 30vh;
+    width: 16vw;
+    top: 34vh;
+    z-index: 1;
+  }
+
+  /* scissors */
+  .item2 {
+    display: block;
+    height: 9vh;
+    width: 5vw;
+    top: 14vh;
+    right: 18vw; 
+  }
+
+  /* glass case */
+  .uItem3 {
+    border: 1px solid yellow;
+    display: block;
+    height: 65vh;
+    width: 24vw;
+    top: 0;
+    left: 15vw;
+    z-index: 5;
+  }
+  
+  
+}
+

@@ -3,8 +3,6 @@ import { Room1Service } from "../room1.service";
 import { GameProgressionService } from "../game-progression.service";
 import { MatchService } from "../match.service";
 import { InventoryService } from "../inventory.service";
-// import { TimerService } from "../timer.service";
-// import { Router } from "@angular/router";
 
 @Component({
   selector: "room1front",
@@ -16,21 +14,18 @@ export class Room1frontComponent implements OnInit {
   unlockItems: any;
   inventoryItems: any[];
   itemsToMatch: any[] = [];
-  isShowing: boolean = false;
+  // isShowing: boolean = false;
   gameProgress: string;
-  door: any;
-  doorName: string;
-  doorImage: any;
-  // timeRemaining: number;
+  x: any;
+  y: any;
+
 
   constructor(
     public room1Service: Room1Service,
     public gameProgressionService: GameProgressionService,
     public matchService: MatchService,
     public inventoryService: InventoryService
-  ) // private timerService: TimerService,
-  // private router: Router
-  {}
+  ) {}
 
   ngOnInit() {
     // this.timeRemaining = this.timerService.timeRemaining;
@@ -78,9 +73,9 @@ export class Room1frontComponent implements OnInit {
     // console.log(index);
   }
 
-  toggleShow() {
-    this.isShowing = !this.isShowing;
-  }
+  // toggleShow() {
+  //   this.isShowing = !this.isShowing;
+  // }
 
   // need to set game progress when advancing to next level
   setGameProgress(): void {
@@ -105,5 +100,20 @@ export class Room1frontComponent implements OnInit {
 
   hideUnlockHint(i) {
     this.room1Service.hideUnlockItemHint(i);
+  }
+
+  flashlightCursor(mouseEvent) {
+    this.x = mouseEvent.clientX;
+    this.y = mouseEvent.clientY;
+    if (typeof this.x !== undefined) {
+      return this.x, this.y;
+    }
+  }
+
+  isMobileDevice() {
+    return (
+      typeof window.orientation !== "undefined" ||
+      navigator.userAgent.indexOf("IEMobile") !== -1
+    );
   }
 }

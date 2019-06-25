@@ -1,22 +1,9 @@
 <section class="background">
-  <div class="rotateMessage">Please rotate to landscape to play!
-    <img src="../../assets/img/rotate.png" class="rotateImg">
+  <div class="rotateMessage">
+    Please rotate to landscape to play!
+    <img src="../../assets/img/rotate.png" class="rotateImg" />
   </div>
-  <div
-    class="overlay"
-    (mousemove)="flashlightCursor($event)"
-    (mouseout)="stopCursor($event)"
-  >
-    <div class="mobileFlashlight" cdkDragBoundary=".overlay" cdkDrag></div>
-    <div
-      class="desktopFlashlight"
-      [ngStyle]="{
-        top: y + 'px',
-        left: x + 'px'
-      }"
-    ></div>
-  </div>
-
+  <div class="overlay"></div>
 
   <section *ngIf="this.tutorialRoomService.isShowing" class="prompt">
     <h2>The Operating Room</h2>

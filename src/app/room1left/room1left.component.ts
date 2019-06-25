@@ -13,12 +13,8 @@ export class Room1leftComponent implements OnInit {
   unlockItems: any;
   inventoryItems: any[];
   itemsToMatch: any[] = [];
-  // container: any;
-  // containerName: string;
-  // containerImage: any;
-  // doorHandle: any;
-  // doorHandleName: string;
-  // doorHandleImage: any;
+  x: any;
+  y: any;
 
   constructor(
     private room1Service: Room1Service,
@@ -71,5 +67,20 @@ export class Room1leftComponent implements OnInit {
 
   hideItemHint(i) {
     this.room1Service.hideItemHint(i);
+  }
+
+  flashlightCursor(mouseEvent) {
+    this.x = mouseEvent.clientX;
+    this.y = mouseEvent.clientY;
+    if (typeof this.x !== undefined) {
+      return this.x, this.y;
+    }
+  }
+
+  isMobileDevice() {
+    return (
+      typeof window.orientation !== "undefined" ||
+      navigator.userAgent.indexOf("IEMobile") !== -1
+    );
   }
 }

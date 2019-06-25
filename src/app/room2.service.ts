@@ -8,6 +8,8 @@ export class Room2Service {
   items: any;
   uItems: any;
   isShowing: boolean = true;
+  itemsToMatch: any[] = [];
+  showingHint: boolean;
 
   constructor(private http: HttpClient) {}
   getRoomTwoItems() {

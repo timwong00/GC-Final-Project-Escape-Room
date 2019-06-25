@@ -1,8 +1,4 @@
 /* Mobile Portrait View */
-.item0 {
-    display: none;
-}
-
 .background {
   position: relative;
   height: 86vh;
@@ -25,9 +21,21 @@
   margin-top: 10%;
 }
 
+.items {
+  display: none;
+}
+
+.mobileFlashlight {
+  display: none;
+  cursor: move;
+}
+
+.desktopFlashlight {
+  display: none;
+}
 
 /* Mobile Landscape View */
-@media all and (min-width: 568px) and (orientation: Landscape) {
+@media screen and (min-width: 568px) and (orientation: Landscape) {
     .background {
       background-image: url("../../assets/img/Surgery-R.png");
       background-size: cover;
@@ -38,6 +46,16 @@
     }
     .rotateMessage, .rotateImg {
       display: none;
+    }
+
+    /* scalpel */
+    .item1 {
+      display: block;
+      position: absolute;
+      height: 11vh;
+      width: 13vw;
+      bottom: 15vh;
+      left: 20vw;
     }
 
     .hint {
@@ -67,12 +85,31 @@
       padding: 10px;
       
     }
+
+  .overlay {
+    height: 77vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
   }
- 
- 
+
+  .mobileFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    /* pointer-events: none; */
+  }
+}
+
 /* iPad Portrait View */
 @media screen and (min-width: 768px) {
- 
   .background {
     position: relative;
     height: 86vh;
@@ -89,16 +126,19 @@
     height: inherit;
     width: 100vw;
   }
-  
+
   .rotateImg {
     width: 60%;
     margin-top: 10%;
   }
+
+  .items {
+    display: none;
+  }
 }
 
-
   /* iPad Landscape / Desktop View */
-  @media all and (min-width: 1024px) and (orientation: Landscape) {
+  @media screen and (min-width: 1024px) and (orientation: Landscape) {
     .background {
       height: 81vh;
     }
@@ -116,5 +156,45 @@
       font-size: 20px;
       
     }
+
+    .item1 {
+      display: block;
+      bottom: 21vh;
+    }
+    
+      .overlay {
+    height: 81vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
+  }
+
+  .mobileFlashlight {
+    width: 250px;
+    height: 250px;
+  }
   }
   
+
+  /* Desktop View - Item Positioning */
+@media all and (min-width: 1200px) {
+    .item1 {
+      display: block;
+      bottom: 16vh;
+    }
+
+  .desktopFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    pointer-events: none;
+  }
+}
+

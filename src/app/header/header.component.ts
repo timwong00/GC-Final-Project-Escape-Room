@@ -31,7 +31,6 @@ export class HeaderComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // console.log(this.inventoryService.inventoryItems);
     this.inventoryItems = this.inventoryService.inventoryItems;
     this.playingGame = this.gameProgressionService.playingGame;
   }
@@ -44,7 +43,6 @@ export class HeaderComponent implements OnInit {
 
   stopTimer(): void {
     this.timerService.stopTimer();
-    // this.router.navigate([{ outlets: { outletName: ['landingPage'] } }]);
   }
 
   openMenu() {
@@ -56,22 +54,10 @@ export class HeaderComponent implements OnInit {
   }
 
   matchItems1(inventoryItem) {
-    // console.log(inventoryItem);
     this.matchService.setInventoryItemToMatch(inventoryItem);
-    // this.matchService.checkMatch(inventoryItem);
-    // this.itemsToMatch.splice(0, 1, clickedItem1);
   }
 
-  // checkTimer() {
-  //   this.timeRemaining = this.timerService.getTime();
-  //   // set playing game back to false when reset game or quit game
-  // }
-  // endGame() {
-  //   while (this.timeRemaining > 0) {
-  //     this.timeRemaining = this.timerService.getTime();
-  //   }
-  //   if (this.timeRemaining === 0) {
-  //     this.timerService.endGame();
-  //   }
-  // }
+  quitGame() {
+    location.reload();
+  }
 }
