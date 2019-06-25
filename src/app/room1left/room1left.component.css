@@ -1,8 +1,4 @@
 /* Mobile Portrait View */
-.item1 {
-    display: none;
-}
-
 .background {
   position: relative;
   height: 86vh;
@@ -25,6 +21,10 @@
   margin-top: 10%;
 }
 
+.items {
+  display: none;
+}
+
 
 /* Mobile Landscape View */
 @media all and (min-width: 568px) and (orientation: Landscape) {
@@ -39,6 +39,28 @@
 
     .rotateMessage, .rotateImg {
       display: none;
+    }
+
+    /* container */
+    .uItem1 {
+      display: block;
+      position: absolute;
+      height: 65vh;
+      width: 30vw;
+      left: 10vw;
+      bottom: 8vh;
+      z-index: 5;
+    }
+
+    /* door handle */
+    .item0 {
+      display: block;
+      position: absolute;
+      height: 12vh;
+      width: 13vw;
+      top: 40vh;
+      left: 25vw;
+      z-index: 1;
     }
 
     .hint {
@@ -95,6 +117,10 @@
     width: 60%;
     margin-top: 10%;
   }
+
+  .items {
+    display: none;
+  }
 }
 
 
@@ -115,8 +141,32 @@
     .hintBtn {
       padding: 15px;
       font-size: 20px;
-      
+    }
+
+    .uItem1 {
+      display: block;
+      height: 58vh;
+      width: 38vw;
+      bottom: 10vh;
+      z-index: 5;
+    }
+
+    .item0 {
+      display: block;
+      z-index: 1;
     }
 }
 
-  
+  /* Desktop View - Item Positioning */
+@media all and (min-width: 1200px) {
+  .uItem1 {
+    height: 63vh;
+    width: 28vw;
+    bottom: 15vh;
+  }
+
+  .item0 {
+    display: block;
+    width: 12vw;
+  }
+}

@@ -7,7 +7,7 @@
     <img
       src="{{ uItem.item_image }}"
       alt="{{ uItem.item_name }}"
-      class="arm"
+      class="uItem{{i}} items"
       (click)="[ matchItems2(uItem.item_name), showUnlockHint(i)]"
     />
     <div *ngIf="this.tutorialRoomService.uItems[i].showingHint" class="hint">

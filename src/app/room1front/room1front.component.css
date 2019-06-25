@@ -33,10 +33,6 @@
     color: red;
 }
 
-.uItem1 {
-    display: none;
-}
-
 .prompt {
   color: white;
   position: absolute;
@@ -50,6 +46,10 @@
   flex-direction: column;
   justify-content: center;
   padding: 30px;
+}
+
+.items {
+  display: none;
 }
 
 
@@ -66,6 +66,18 @@
 
   .rotateMessage, .rotateImg {
     display: none;
+  }
+  
+  /* door */
+  .uItem0 {
+    border: 1px solid yellow;
+    display: block;
+    position: absolute;
+    height: 20vh;
+    width: 10vw;
+    left: 18vw;
+    top: 18vh;
+    /* visibility: hidden; */
   }
 
   .hint {
@@ -121,6 +133,10 @@
     width: 60%;
     margin-top: 10%;
   }
+
+  .items {
+    display: none;
+  }
 }
 
 
@@ -142,4 +158,30 @@
     padding: 15px;
     font-size: 20px;  
   }
+  .uItem0 {
+    border: 1px solid yellow;
+    display: block;
+    position: absolute;
+    height: 20vh;
+    width: 10vw;
+    left: 15vw;
+    top: 22vh;
+    /* visibility: hidden; */
+  }
+}
+
+
+/* Desktop View - Item Positioning */
+@media all and (min-width: 1200px) {
+  .uItem0 {
+    border: 1px solid yellow;
+    display: block;
+    position: absolute;
+    height: 20vh;
+    width: 10vw;
+    left: 18vw;
+    top: 20vh;
+    /* visibility: hidden; */
+  }
+
 }

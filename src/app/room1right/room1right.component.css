@@ -1,8 +1,4 @@
 /* Mobile Portrait View */
-.item0 {
-    display: none;
-}
-
 .background {
   position: relative;
   height: 86vh;
@@ -25,6 +21,10 @@
   margin-top: 10%;
 }
 
+.items {
+  display: none;
+}
+
 
 /* Mobile Landscape View */
 @media all and (min-width: 568px) and (orientation: Landscape) {
@@ -38,6 +38,16 @@
     }
     .rotateMessage, .rotateImg {
       display: none;
+    }
+
+    /* scalpel */
+    .item1 {
+      display: block;
+      position: absolute;
+      height: 11vh;
+      width: 13vw;
+      bottom: 15vh;
+      left: 20vw;
     }
 
     .hint {
@@ -94,6 +104,10 @@
     width: 60%;
     margin-top: 10%;
   }
+
+  .items {
+    display: none;
+  }
 }
 
 
@@ -116,5 +130,19 @@
       font-size: 20px;
       
     }
+
+    .item1 {
+      display: block;
+      bottom: 21vh;
+    }
   }
   
+
+  /* Desktop View - Item Positioning */
+@media all and (min-width: 1200px) {
+    .item1 {
+      display: block;
+      bottom: 16vh;
+    }
+
+}

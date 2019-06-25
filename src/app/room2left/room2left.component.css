@@ -1,9 +1,4 @@
 /* Mobile Portrait View */
-.item1, .item2, .item3, .uItem0, .uItem1, .uItem2, .uItem3  {
-    display: none;
-}
-
-
 .background {
   position: relative;
   height: 86vh;
@@ -26,6 +21,10 @@
   margin-top: 10%;
 }
 
+.items {
+  display: none;
+}
+
 
   /* Mobile Landscape View */
   @media all and (min-width: 568px) and (orientation: Landscape)  {
@@ -40,6 +39,29 @@
 
     .rotateMessage, .rotateImg {
       display: none;
+    }
+
+    /* badge */
+    .item0 {
+      display: block;
+      position: absolute;
+      height: 8vh;
+      width: 3vw;
+      top: 47vh;
+      left: 48vw;
+      z-index: 1;
+    }
+
+    /* jacket */
+    .uItem1 {
+      border: 1px solid yellow;
+      display: block;
+      position: absolute;
+      height: 20vh;
+      width: 15vw;
+      top: 40vh;
+      left: 45vw;
+      z-index: 5;
     }
 
     .hint {
@@ -97,6 +119,10 @@
     width: 60%;
     margin-top: 10%;
   }
+
+  .items {
+    display: none;
+  }
 }
 
 
@@ -118,4 +144,40 @@
     .rotateMessage, .rotateImg {
       display: none;
     }
+
+    /* badge */
+    .item0 {
+      display: block;
+      height: 7vh;
+      top: 46vh;
+      z-index: 1;
+    }
+    
+    /* jacket */
+    .uItem1 {
+      border: 1px solid yellow;
+      display: block;
+      z-index: 5;
+    }
   }
+
+  
+/* Desktop View - Item Positioning */
+@media all and (min-width: 1200px) {
+    /* badge */
+    .item0 {
+      display: block;
+      width: 2vw;
+      top: 47vh;
+      z-index: 1;
+    }
+    
+    /* jacket */
+    .uItem1 {
+      border: 1px solid yellow;
+      display: block;
+      height: 25vh;
+      z-index: 5;
+    }
+  
+}

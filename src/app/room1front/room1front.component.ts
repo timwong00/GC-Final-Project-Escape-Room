@@ -16,11 +16,11 @@ export class Room1frontComponent implements OnInit {
   unlockItems: any;
   inventoryItems: any[];
   itemsToMatch: any[] = [];
-  isShowing: boolean = false;
+  // isShowing: boolean = false;
   gameProgress: string;
-  door: any;
-  doorName: string;
-  doorImage: any;
+  // door: any;
+  // doorName: string;
+  // doorImage: any;
   // timeRemaining: number;
 
   constructor(
@@ -78,9 +78,9 @@ export class Room1frontComponent implements OnInit {
     // console.log(index);
   }
 
-  toggleShow() {
-    this.isShowing = !this.isShowing;
-  }
+  // toggleShow() {
+  //   this.isShowing = !this.isShowing;
+  // }
 
   // need to set game progress when advancing to next level
   setGameProgress(): void {
