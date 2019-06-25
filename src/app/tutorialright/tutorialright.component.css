@@ -56,6 +56,8 @@
   display: none;
 }
 
+
+
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
@@ -116,6 +118,7 @@
   .items {
     display: none;
   }
+
 }
 
 /* iPad Landscape / Desktop View */
@@ -129,6 +132,7 @@
     display: none;
   }
 
+  /* key */
   .item0 {
     display: block;
     bottom: 25vh;

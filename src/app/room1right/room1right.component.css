@@ -35,46 +35,56 @@
 }
 
 /* Mobile Landscape View */
-@media all and (min-width: 568px) and (orientation: Landscape) {
-  .background {
-    background-image: url("../../assets/img/Surgery-R.png");
-    background-size: cover;
-    height: 77vh;
-    /* width: 100vw; */
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  .rotateMessage,
-  .rotateImg {
-    display: none;
-  }
+@media screen and (min-width: 568px) and (orientation: Landscape) {
+    .background {
+      background-image: url("../../assets/img/Surgery-R.png");
+      background-size: cover;
+      height: 77vh;
+      /* width: 100vw; */
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+    .rotateMessage, .rotateImg {
+      display: none;
+    }
 
-  .hint {
-    background-color: rgb(236, 236, 236);
-    z-index: 10;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    border-radius: 15px;
-    border: 2px;
-    border-color: red;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding: 15px;
-    width: 30%;
-  }
+    /* scalpel */
+    .item1 {
+      display: block;
+      position: absolute;
+      height: 11vh;
+      width: 13vw;
+      bottom: 15vh;
+      left: 20vw;
+    }
 
-  .hintBtn {
-    border-radius: 5px;
-    border: 1px solid white;
-    background-color: slategray;
-    z-index: 15;
-    padding: 10px;
-  }
+    .hint {
+      background-color: rgb(236, 236, 236);
+      z-index: 10;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      display: flex;
+      border-radius: 15px;
+      border: 2px;
+      border-color: red;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      padding: 15px;
+      width: 30%;
+    }
+  
+    .hintBtn {
+      border-radius: 5px;
+      border: 1px solid white;
+      background-color: slategray;
+      z-index: 15;
+      padding: 10px;
+      
+    }
 
   .overlay {
     height: 77vh;
@@ -121,29 +131,38 @@
     width: 60%;
     margin-top: 10%;
   }
-}
 
-/* iPad Landscape / Desktop View */
-@media all and (min-width: 1024px) and (orientation: Landscape) {
-  .background {
-    height: 81vh;
-  }
-
-  .rotateMessage,
-  .rotateImg {
+  .items {
     display: none;
   }
+}
 
-  .hint {
-    font-size: 20px;
-  }
+  /* iPad Landscape / Desktop View */
+  @media screen and (min-width: 1024px) and (orientation: Landscape) {
+    .background {
+      height: 81vh;
+    }
+  
+    .rotateMessage, .rotateImg {
+      display: none;
+    }
 
-  .hintBtn {
-    padding: 15px;
-    font-size: 20px;
-  }
+    .hint {
+      font-size: 20px;
+    }
+    
+    .hintBtn {
+      padding: 15px;
+      font-size: 20px;
+      
+    }
 
-  .overlay {
+    .item1 {
+      display: block;
+      bottom: 21vh;
+    }
+    
+      .overlay {
     height: 81vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.863);
@@ -155,6 +174,15 @@
     width: 250px;
     height: 250px;
   }
+  }
+  
+
+  /* Desktop View - Item Positioning */
+@media all and (min-width: 1200px) {
+    .item1 {
+      display: block;
+      bottom: 16vh;
+    }
 
   .desktopFlashlight {
     display: block;
@@ -169,3 +197,4 @@
     pointer-events: none;
   }
 }
+

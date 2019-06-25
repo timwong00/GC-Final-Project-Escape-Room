@@ -25,6 +25,7 @@ export class Room2rightComponent implements OnInit {
   ngOnInit() {
     this.items = this.room2Service.items;
     this.unlockItems = this.room2Service.uItems;
+    this.itemsToMatch = this.matchService.itemsToMatch;
   }
 
   selectItem(inventoryItem) {

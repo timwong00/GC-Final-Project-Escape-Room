@@ -33,10 +33,6 @@
   color: red;
 }
 
-.items {
-  display: none;
-}
-
 .prompt {
   color: white;
   position: absolute;
@@ -50,6 +46,10 @@
   flex-direction: column;
   justify-content: center;
   padding: 30px;
+}
+
+.items {
+  display: none;
 }
 
 .mobileFlashlight {
@@ -82,7 +82,8 @@
   .rotateImg {
     display: none;
   }
-
+  
+  /* door */
   .uItem0 {
     border: 1px solid yellow;
     display: block;
@@ -172,6 +173,7 @@
   }
 }
 
+
 /* iPad Landscape / Desktop View */
 @media screen and (min-width: 1024px) and (orientation: Landscape) {
   .background {
@@ -217,7 +219,6 @@
     background-color: rgba(255, 228, 74, 0.479);
     pointer-events: none;
   }
-
   .uItem0 {
     border: 1px solid yellow;
     display: block;
@@ -229,6 +230,7 @@
     /* visibility: hidden; */
   }
 }
+
 
 /* Desktop View - Item Positioning */
 @media screen and (min-width: 1024px) {

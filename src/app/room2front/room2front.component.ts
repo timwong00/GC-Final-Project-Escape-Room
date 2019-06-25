@@ -14,8 +14,12 @@ import { InventoryService } from "../inventory.service";
 export class Room2frontComponent implements OnInit {
   items: any;
   unlockItems: any;
+  inventoryItems: any[];
+  itemsToMatch: any[] = [];
+  gameProgress: string;
   x: any;
   y: any;
+
 
   constructor(
     public room2Service: Room2Service,
@@ -50,6 +54,10 @@ export class Room2frontComponent implements OnInit {
 
   removeItem(index) {
     this.room2Service.deleteItem(index);
+  }
+
+  setGameProgress(): void {
+    this.gameProgressionService.setGameProgress(this.gameProgress);
   }
 
   matchItems2(itemToUnlock) {

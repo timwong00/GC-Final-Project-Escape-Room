@@ -1,14 +1,4 @@
 /* Mobile Portrait View */
-.item1,
-.item2,
-.item3,
-.uItem0,
-.uItem1,
-.uItem2,
-.uItem3 {
-  display: none;
-}
-
 .background {
   position: relative;
   height: 86vh;
@@ -31,6 +21,9 @@
   margin-top: 10%;
 }
 
+.items {
+  display: none;
+}
 .mobileFlashlight {
   display: none;
   cursor: move;
@@ -40,50 +33,71 @@
   display: none;
 }
 
-/* Mobile Landscape View */
-@media all and (min-width: 568px) and (orientation: Landscape) {
-  .background {
-    background-image: url("../../assets/img/Hallway-L.png");
-    background-size: cover;
-    height: 77vh;
-    /* width: 100vw; */
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
+  /* Mobile Landscape View */
+  @media screen and (min-width: 568px) and (orientation: Landscape)  {
+    .background {
+      background-image: url("../../assets/img/Hallway-L.png");
+      background-size: cover;
+      height: 77vh;
+      /* width: 100vw; */
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
 
-  .rotateMessage,
-  .rotateImg {
-    display: none;
-  }
+    .rotateMessage, .rotateImg {
+      display: none;
+    }
 
-  .hint {
-    background-color: rgb(236, 236, 236);
-    z-index: 10;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    border-radius: 15px;
-    border: 2px;
-    border-color: red;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding: 15px;
-    width: 30%;
-  }
+    /* badge */
+    .item0 {
+      display: block;
+      position: absolute;
+      height: 8vh;
+      width: 3vw;
+      top: 47vh;
+      left: 48vw;
+      z-index: 1;
+    }
 
-  .hintBtn {
-    border-radius: 5px;
-    border: 1px solid white;
-    background-color: slategray;
-    z-index: 15;
-    padding: 10px;
-  }
+    /* jacket */
+    .uItem1 {
+      border: 1px solid yellow;
+      display: block;
+      position: absolute;
+      height: 20vh;
+      width: 15vw;
+      top: 40vh;
+      left: 45vw;
+      z-index: 5;
+    }
 
-  .overlay {
+    .hint {
+      background-color: rgb(236, 236, 236);
+      z-index: 10;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      display: flex;
+      border-radius: 15px;
+      border: 2px;
+      border-color: red;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      padding: 15px;
+      width: 30%;
+    }
+
+    .hintBtn {
+      border-radius: 5px;
+      border: 1px solid white;
+      background-color: slategray;
+      z-index: 15;
+      padding: 10px; 
+    }
+      .overlay {
     height: 77vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.863);
@@ -103,9 +117,8 @@
     background-color: rgba(255, 228, 74, 0.479);
     /* pointer-events: none; */
   }
-}
 
-/* iPad Portrait View -- display rotate message */
+    }
 
 /* iPad Portrait View */
 @media screen and (min-width: 768px) {
@@ -130,10 +143,14 @@
     width: 60%;
     margin-top: 10%;
   }
+
+  .items {
+    display: none;
+  }
 }
 
 /* iPad Landscape / Desktop View */
-@media all and (min-width: 1024px) and (orientation: Landscape) {
+@media screen and (min-width: 1024px) and (orientation: Landscape) {
   .background {
     height: 81vh;
   }
@@ -152,7 +169,23 @@
     display: none;
   }
 
-  .overlay {
+
+
+    /* badge */
+    .item0 {
+      display: block;
+      height: 7vh;
+      top: 46vh;
+      z-index: 1;
+    }
+    
+    /* jacket */
+    .uItem1 {
+      border: 1px solid yellow;
+      display: block;
+      z-index: 5;
+    }
+    .overlay {
     height: 81vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.863);
@@ -164,6 +197,26 @@
     width: 250px;
     height: 250px;
   }
+  }
+
+  
+/* Desktop View - Item Positioning */
+@media all and (min-width: 1200px) {
+    /* badge */
+    .item0 {
+      display: block;
+      width: 2vw;
+      top: 47vh;
+      z-index: 1;
+    }
+    
+    /* jacket */
+    .uItem1 {
+      border: 1px solid yellow;
+      display: block;
+      height: 25vh;
+      z-index: 5;
+    }
 
   .desktopFlashlight {
     display: block;
@@ -178,3 +231,4 @@
     pointer-events: none;
   }
 }
+

@@ -1,8 +1,4 @@
 /* Mobile Portrait View */
-.item1 {
-  display: none;
-}
-
 .background {
   position: relative;
   height: 86vh;
@@ -39,38 +35,41 @@
 }
 
 /* Mobile Landscape View */
-@media all and (min-width: 568px) and (orientation: Landscape) {
-  .background {
-    background-image: url("../../assets/img/Surgery-L.png");
-    background-size: cover;
-    height: 77vh;
-    /* width: 100vw; */
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
+@media screen and (min-width: 568px) and (orientation: Landscape) {
+    .background {
+      background-image: url("../../assets/img/Surgery-L.png");
+      background-size: cover;
+      height: 77vh;
+      /* width: 100vw; */
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
 
-  .rotateMessage,
-  .rotateImg {
-    display: none;
-  }
+    .rotateMessage, .rotateImg {
+      display: none;
+    }
 
-  .item0 {
-    display: block;
-    position: absolute;
-    height: 15vh;
-    width: 10vw;
-    left: 30vw;
-    bottom: 25vh;
-  }
+    /* container */
+    .uItem1 {
+      display: block;
+      position: absolute;
+      height: 65vh;
+      width: 30vw;
+      left: 10vw;
+      bottom: 8vh;
+      z-index: 5;
+    }
 
-  .uItem1 {
-    display: block;
-    position: absolute;
-    height: 70vh;
-    width: 30vw;
-    left: 10vw;
-    bottom: 5vh;
-  }
+    /* door handle */
+    .item0 {
+      display: block;
+      position: absolute;
+      height: 12vh;
+      width: 13vw;
+      top: 40vh;
+      left: 25vw;
+      z-index: 1;
+    }
 
   .hint {
     background-color: rgb(236, 236, 236);
@@ -151,7 +150,7 @@
 }
 
 /* iPad Landscape / Desktop View */
-@media all and (min-width: 1024px) and (orientation: Landscape) {
+@media screen and (min-width: 1024px) and (orientation: Landscape) {
   .background {
     height: 81vh;
   }
@@ -160,25 +159,28 @@
   .rotateImg {
     display: none;
   }
+  
+    .hint {
+      font-size: 20px;
+    }
+    
+    .hintBtn {
+      padding: 15px;
+      font-size: 20px;
+    }
 
-  .hint {
-    font-size: 20px;
-  }
+    .uItem1 {
+      display: block;
+      height: 58vh;
+      width: 38vw;
+      bottom: 10vh;
+      z-index: 5;
+    }
 
-  .hintBtn {
-    padding: 15px;
-    font-size: 20px;
-  }
-
-  .item0 {
-    display: block;
-  }
-
-  .uItem1 {
-    display: block;
-    height: 65vh;
-    width: 32vw;
-  }
+    .item0 {
+      display: block;
+      z-index: 1;
+    }
 
   .overlay {
     height: 81vh;
@@ -208,8 +210,16 @@
 }
 
 /* Desktop View - Item Positioning */
+
 @media all and (min-width: 1200px) {
   .uItem1 {
-    width: 29vw;
+    height: 63vh;
+    width: 28vw;
+    bottom: 15vh;
+  }
+  .item0 {
+    display: block;
+    width: 12vw;
   }
 }
+

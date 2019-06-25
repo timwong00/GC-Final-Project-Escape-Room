@@ -30,6 +30,7 @@
   display: none;
 }
 
+
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
@@ -45,14 +46,15 @@
     display: none;
   }
 
+  /* wrist strap */
   .uItem0 {
     display: block;
+    position: absolute;
     height: 28vh;
     width: 30vw;
     position: absolute;
     bottom: 20vh;
     left: 0;
-    /* z-index: 1; */
   }
 
   .hint {
