@@ -23,7 +23,14 @@
 
 .items {
   display: none;
+  cursor: pointer;
+  opacity: 0.8;
 }
+
+.items:hover {
+  opacity: 1;
+}
+
 .mobileFlashlight {
   display: none;
   cursor: move;

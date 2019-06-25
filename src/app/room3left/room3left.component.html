@@ -1,24 +1,51 @@
 <section class="background">
-  <div class="rotateMessage">Please rotate to landscape to play!
-    <img src="../../assets/img/rotate.png" class="rotateImg">
+  <div class="rotateMessage">
+    Please rotate to landscape to play!
+    <img src="../../assets/img/rotate.png" class="rotateImg" />
   </div>
 
-  <div *ngFor="let uItem of unlockItems; index as i">
+  <div class="overlay" (mousemove)="flashlightCursor($event)">
+    <div
+      *ngIf="isMobileDevice()"
+      class="mobileFlashlight"
+      cdkDragBoundary=".overlay"
+      cdkDrag
+    ></div>
+    <div
+      *ngIf="!isMobileDevice()"
+      class="desktopFlashlight"
+      [ngStyle]="{
+        top: y + 'px',
+        left: x + 'px'
+      }"
+    ></div>
 
-    <img src="{{ uItem.item_image }}" class="uItem{{ i }}" alt="{{ uItem.item_name }}"
-      (click)="[matchItems2(uItem.item_name), showUnlockHint(i)]" />
-    <div *ngIf="this.room3Service.uItems[i].showingHint" class="hint">
-      <p>{{ uItem.item_use }}</p>
-      <button class="hintBtn" (click)="hideUnlockHint(i)">OK</button>
+    <div *ngFor="let uItem of unlockItems; index as i">
+      <img
+        src="{{ uItem.item_image }}"
+        class="uItem{{ i }}"
+        alt="{{ uItem.item_name }}"
+        (click)="[matchItems2(uItem.item_name), showUnlockHint(i)]"
+      />
+      <div *ngIf="this.room3Service.uItems[i].showingHint" class="hint">
+        <p>{{ uItem.item_use }}</p>
+        <button class="hintBtn" (click)="hideUnlockHint(i)">OK</button>
+      </div>
     </div>
-  </div>
 
-  <div *ngFor="let item of items; index as i">
-    <img src="{{ item.item_image }}" class="item{{ i }}" alt="{{ item.item_name }}"
-      (click)="showItemHint(i)" />
-    <div *ngIf="this.room3Service.items[i].showingHint" class="hint">
-      <p>{{ item.item_use }}</p>
-      <button class="hintBtn" (click)="[selectItem(item), removeItem(i)]">Grab Item</button>
+    <div *ngFor="let item of items; index as i">
+      <img
+        src="{{ item.item_image }}"
+        class="item{{ i }}"
+        alt="{{ item.item_name }}"
+        (click)="showItemHint(i)"
+      />
+      <div *ngIf="this.room3Service.items[i].showingHint" class="hint">
+        <p>{{ item.item_use }}</p>
+        <button class="hintBtn" (click)="[selectItem(item), removeItem(i)]">
+          Grab Item
+        </button>
+      </div>
     </div>
   </div>
 </section>

@@ -1,7 +1,7 @@
 @font-face {
-  font-family: 'insomniaregular';
-  src: url("../assets/insomnia_1-webfont.woff2") format('woff2'),
-       url("../assets/insomnia_1-webfont.woff") format('woff');
+  font-family: "insomniaregular";
+  src: url("../assets/insomnia_1-webfont.woff2") format("woff2"),
+    url("../assets/insomnia_1-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -46,7 +46,7 @@
 
 h1 {
   color: white;
-  font-family: 'insomniaregular';
+  font-family: "insomniaregular";
   font-size: 50px;
   font-weight: normal;
   font-style: normal;
@@ -54,17 +54,18 @@ h1 {
 
 h3 {
   color: white;
-  font-family: 'stranger_back_in_the_nightRg';
+  font-family: "stranger_back_in_the_nightRg";
   font-weight: normal;
   font-style: normal;
   font-size: 30px;
 }
 
-.how-to-play, .play {
+.how-to-play,
+.play {
   height: 25%;
   width: 50%;
   margin-bottom: 10%;
-  font-family: 'insomniaregular';
+  font-family: "insomniaregular";
   font-weight: normal;
   font-style: normal;
   font-size: 24px;
@@ -75,9 +76,11 @@ button {
   background-color: slategray;
   border: 1px solid white;
   border-radius: 15px;
+  cursor: pointer;
 }
 
-.how-to-play:hover, .play:hover {
+.how-to-play:hover,
+.play:hover {
   background-color: yellow;
   border: 1px solid black;
 }
@@ -113,10 +116,10 @@ button {
   align-items: center;
   text-align: center;
 }
-  
+
 h2 {
   margin: 0;
-  font-family: 'insomniaregular';
+  font-family: "insomniaregular";
   font-weight: normal;
   font-style: normal;
   font-size: 20px;
@@ -124,7 +127,7 @@ h2 {
 
 .okBtn {
   width: 50%;
-  font-family: 'insomniaregular';
+  font-family: "insomniaregular";
   font-weight: normal;
   font-style: normal;
   font-size: 18px;
@@ -135,15 +138,15 @@ h2 {
   border: 1px solid slategray;
 }
 
-
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .btn_container {
     flex-direction: row;
     width: 70%;
   }
-  
-  .how-to-play, .play {
+
+  .how-to-play,
+  .play {
     height: 40%;
     width: 35%;
   }
@@ -153,14 +156,13 @@ h2 {
   }
 }
 
-
-
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 64px;
   }
 
-  .how-to-play, .play {
+  .how-to-play,
+  .play {
     height: 35%;
   }
 
@@ -178,5 +180,4 @@ h2 {
   h2 {
     font-size: 26px;
   }
-
 }

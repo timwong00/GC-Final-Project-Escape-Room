@@ -14,17 +14,21 @@
   height: inherit;
   width: 100vw;
 }
+
 .rotateImg {
   width: 80%;
   margin-top: 10%;
 }
+
 .mobileFlashlight {
   display: none;
   cursor: move;
 }
 .desktopFlashlight {
   display: none;
+  /* z-index: 10; */
 }
+
 .prompt {
   background-color: black;
   position: absolute;
@@ -42,6 +46,7 @@
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
+  z-index: 100;
 }
 
 .promptBtn {
@@ -194,7 +199,7 @@ h2 {
   }
 }
 /* iPad Landscape / Desktop View */
-@media all and (min-width: 1024px) and (orientation: Landscape) {
+@media screen and (min-width: 1024px) and (orientation: Landscape) {
   .background {
     height: 81vh;
   }

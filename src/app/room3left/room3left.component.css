@@ -21,10 +21,18 @@
   margin-top: 10%;
 }
 
+.mobileFlashlight {
+  display: none;
+  cursor: move;
+}
+
+.desktopFlashlight {
+  display: none;
+  /* z-index: 10; */
+}
 
 /* Mobile Landscape View */
-@media all and (min-width: 568px) and (orientation: Landscape) {
-
+@media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
     background-image: url("../../assets/img/Hallway-R.png");
     background-size: cover;
@@ -32,7 +40,8 @@
     background-repeat: no-repeat;
     background-position: center center;
   }
-  .rotateMessage, .rotateImg {
+  .rotateMessage,
+  .rotateImg {
     display: none;
   }
 
@@ -42,7 +51,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     display: flex;
     border-radius: 15px;
     border: 2px;
@@ -60,15 +69,32 @@
     border: 1px solid white;
     background-color: slategray;
     z-index: 15;
-    padding: 10px; 
+    padding: 10px;
   }
 
+  .overlay {
+    height: 77vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
+  }
+  .mobileFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    /* pointer-events: none; */
+  }
 }
-
 
 /* iPad Portrait View */
 @media screen and (min-width: 768px) {
- 
   .background {
     position: relative;
     height: 86vh;
@@ -85,34 +111,52 @@
     height: inherit;
     width: 100vw;
   }
-  
+
   .rotateImg {
     width: 60%;
     margin-top: 10%;
   }
-
-
 }
 
+/* iPad Landscape / Desktop View */
+@media screen and (min-width: 1024px) and (orientation: Landscape) {
+  .background {
+    height: 81vh;
+  }
 
-
-
-  /* iPad Landscape / Desktop View */
-  @media all and (min-width: 1024px) and (orientation: Landscape) {
-    .background {
-      height: 81vh;
-    }
-  
-    .rotateMessage, .rotateImg {
-      display: none;
-    }
-      .hint {
+  .rotateMessage,
+  .rotateImg {
+    display: none;
+  }
+  .hint {
     font-size: 20px;
   }
 
   .hintBtn {
     padding: 15px;
-    font-size: 20px;  
+    font-size: 20px;
   }
-  
+  .overlay {
+    height: 81vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
   }
+  .mobileFlashlight {
+    width: 250px;
+    height: 250px;
+  }
+  .desktopFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    pointer-events: none;
+  }
+}
