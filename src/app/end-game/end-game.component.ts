@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { TimerService } from "../timer.service";
 import { GameProgressionService } from "../game-progression.service";
+import { TutorialroomService } from "../tutorialroom.service";
+import { Room1Service } from "../room1.service";
+import { Room2Service } from "../room2.service";
+import { Room3Service } from "../room3.service";
 
 @Component({
   selector: 'end-game',
@@ -11,10 +15,16 @@ export class EndGameComponent implements OnInit {
   gameProgress: string;
   gameLost: boolean = false;
   gameWon: boolean = false;
+  playingGame: boolean = false;
+  isShowing: boolean = false;
 
   constructor(
     private timerService: TimerService,
-    private gameProgressionService: GameProgressionService
+    private gameProgressionService: GameProgressionService,
+    private tutorialRoomService: TutorialroomService,
+    private room1Service: Room1Service,
+    private room2Service: Room2Service,
+    private room3Service: Room3Service
     ) { }
 
   ngOnInit() {
@@ -24,6 +34,16 @@ export class EndGameComponent implements OnInit {
     } else {
       this.gameLost = true;
     }
+
+    // startGame() {
+    //   this.gameProgressionService.setGameProgress("Tutorial");
+    //   this.playingGame = true;
+    //   this.tutorialRoomService.isShowing = true;
+    //   this.room1Service.isShowing = true;
+    //   this.room2Service.isShowing = true;
+    //   this.room3Service.isShowing = true;
+    // }
+
   }
 
 

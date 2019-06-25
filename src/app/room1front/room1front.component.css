@@ -34,18 +34,50 @@
 }
 
 .prompt {
-  color: white;
+  background-color:  black;
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  height: 50%;
-  width: 50%;
-  background-color: rgba(0, 0, 0, 0.8);
+  width: 90%;
+  height: 90%;
+  padding: 15px;
+  font-size: 20px;
+  color: white;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.promptBtn {
+  width: 50%;
+  font-family: 'insomniaregular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18x;
+  background-color: slategray;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 10px;
+  color: black;
+  display: flex;
   justify-content: center;
-  padding: 30px;
+  align-items: center;
+}
+
+.promptBtn:hover {
+  border: 1px solid slategray;
+}
+  
+h2 {
+  margin: 0;
+  font-family: 'insomniaregular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
 }
 
 .items {
@@ -101,7 +133,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
     display: flex;
     border-radius: 15px;
     border: 2px;
@@ -112,8 +144,9 @@
     justify-content: center;
     padding: 15px;
     width: 30%;
+    height: 20%;
   }
-
+  
   .hintBtn {
     border-radius: 5px;
     border: 1px solid white;
@@ -121,6 +154,11 @@
     z-index: 15;
     padding: 10px;
   }
+
+  .prompt {
+      background-color: rgba(0, 0, 0, 0.8);
+      width: 90%;
+    }
 
   .overlay {
     height: 77vh;
@@ -161,7 +199,12 @@
     color: white;
     height: inherit;
     width: 100vw;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
   }
+  
+
 
   .rotateImg {
     width: 60%;
@@ -228,6 +271,21 @@
     top: 22vh;
     /* visibility: hidden; */
   }
+
+  .prompt {
+    padding: 100px;
+    height: 60%;
+    width: 60%;
+  }
+
+  .promptBtn {
+    width: 25%;
+    height: 20%;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
 }
 
 /* Desktop View - Item Positioning */
@@ -243,3 +301,5 @@
     /* visibility: hidden; */
   }
 }
+  
+
