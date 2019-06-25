@@ -34,7 +34,6 @@
   display: none;
 }
 
-
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
@@ -162,7 +161,7 @@
 }
 
 /* iPad Landscape / Desktop View */
-@media all and (min-width: 1024px) and (orientation: Landscape) {
+@media screen and (min-width: 1024px) and (orientation: Landscape) {
   .background {
     height: 81vh;
   }
@@ -174,25 +173,11 @@
   .hint {
     font-size: 20px;
   }
-}
 
-/* iPad Landscape / Desktop View */
-@media screen and (min-width: 1024px) and (orientation: Landscape) {
-    .background {
-      height: 81vh;
-    }
-  
-    .rotateMessage, .rotateImg {
-      display: none;
-    }
-        .hint {
-      font-size: 20px;
-    }
-
-    .hintBtn {
-      padding: 15px;
-      font-size: 20px;  
-    }
+  .hintBtn {
+    padding: 15px;
+    font-size: 20px;
+  }
 
   /* arm */
   .item1 {
@@ -221,7 +206,7 @@
     left: 10vw;
     z-index: 5;
   }
-  
+
   .overlay {
     height: 81vh;
     width: 100vw;
@@ -249,7 +234,6 @@
   }
 }
 
-
 /* Desktop View - Item Positioning */
 @media all and (min-width: 1200px) {
   /* arm */
@@ -267,7 +251,7 @@
     height: 9vh;
     width: 5vw;
     top: 14vh;
-    right: 18vw; 
+    right: 18vw;
   }
 
   /* glass case */
@@ -280,7 +264,4 @@
     left: 15vw;
     z-index: 5;
   }
-  
-  
 }
-

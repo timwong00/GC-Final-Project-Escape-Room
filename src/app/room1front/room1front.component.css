@@ -114,7 +114,7 @@ h2 {
   .rotateImg {
     display: none;
   }
-  
+
   /* door */
   .uItem0 {
     border: 1px solid yellow;
@@ -216,7 +216,6 @@ h2 {
   }
 }
 
-
 /* iPad Landscape / Desktop View */
 @media screen and (min-width: 1024px) and (orientation: Landscape) {
   .background {
@@ -288,7 +287,6 @@ h2 {
     font-size: 26px;
   }
 }
-
 
 /* Desktop View - Item Positioning */
 @media screen and (min-width: 1024px) {

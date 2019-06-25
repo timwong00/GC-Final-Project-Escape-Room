@@ -4,7 +4,6 @@
   height: 86vh;
   width: 100vw;
 }
-
 .rotateMessage {
   font-size: 24px;
   display: flex;
@@ -15,152 +14,139 @@
   height: inherit;
   width: 100vw;
 }
-
 .rotateImg {
   width: 80%;
   margin-top: 10%;
 }
-
 .mobileFlashlight {
   display: none;
   cursor: move;
 }
-
 .desktopFlashlight {
   display: none;
 }
+.prompt {
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  padding: 15px;
+  font-size: 20px;
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
 
-  .prompt {
-    background-color:  black;
+.promptBtn {
+  width: 50%;
+  font-family: "insomniaregular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18x;
+  background-color: slategray;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 10px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promptBtn:hover {
+  border: 1px solid slategray;
+}
+
+h2 {
+  margin: 0;
+  font-family: "insomniaregular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+}
+/* Mobile Landscape View */
+@media all and (min-width: 568px) and (orientation: Landscape) {
+  .background {
+    background-image: url("../../assets/img/Hallway-F.png");
+    background-size: cover;
+    height: 77vh;
+    /* width: 100vw; */
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .rotateMessage,
+  .rotateImg {
+    display: none;
+  }
+  /* badge scanner */
+  .uItem0 {
+    border: 1px solid yellow;
+    display: block;
+    position: absolute;
+    height: 10vh;
+    width: 6vw;
+    right: 33vw;
+    top: 17vh;
+  }
+  /* extinguisher box */
+  .uItem2 {
+    border: 1px solid yellow;
+    display: block;
+    position: absolute;
+    height: 35vh;
+    width: 20vw;
+    left: 10vw;
+    top: 16vh;
+    z-index: 5;
+  }
+  /* fire extinguisher */
+  .item3 {
+    display: block;
+    position: absolute;
+    height: 34vh;
+    width: 18vw;
+    left: 10vw;
+    top: 17vh;
+    z-index: 1;
+  }
+  .hint {
+    background-color: rgb(236, 236, 236);
+    z-index: 10;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90%;
-    height: 90%;
-    padding: 15px;
-    font-size: 20px;
-    color: white;
-    border-radius: 15px;
     display: flex;
+    border-radius: 15px;
+    border: 2px;
+    border-color: red;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
     text-align: center;
-  }
-  
-  .promptBtn {
-    width: 50%;
-    font-family: 'insomniaregular';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 18x;
-    background-color: slategray;
-    border: 1px solid white;
-    border-radius: 15px;
-    padding: 10px;
-    color: black;
-    display: flex;
     justify-content: center;
-    align-items: center;
-  }
-  
-  .promptBtn:hover {
-    border: 1px solid slategray;
-  }
-    
-  h2 {
-    margin: 0;
-    font-family: 'insomniaregular';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 20px;
+    padding: 15px;
+    width: 30%;
+    height: 20%;
   }
 
-
-
-  /* Mobile Landscape View */
-  @media all and (min-width: 568px) and (orientation: Landscape){
-    .background {
-      background-image: url("../../assets/img/Hallway-F.png");
-      background-size: cover;
-      height: 77vh;
-      /* width: 100vw; */
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
-
-    .rotateMessage, .rotateImg {
-      display: none;
-    }
-
-    /* badge scanner */
-    .uItem0 {
-      border: 1px solid yellow;
-      display: block;
-      position: absolute;
-      height: 10vh;
-      width: 6vw;
-      right: 33vw;
-      top: 17vh;
-    }
-
-    /* extinguisher box */
-    .uItem2 {
-      border: 1px solid yellow;
-      display: block;
-      position: absolute;
-      height: 35vh;
-      width: 20vw;
-      left: 10vw;
-      top: 16vh;
-      z-index: 5;
-    }
-
-    /* fire extinguisher */
-    .item3 {
-      display: block;
-      position: absolute;
-      height: 34vh;
-      width: 18vw;
-      left: 10vw;
-      top: 17vh;
-      z-index: 1;
-    }
-
-    .hint {
-      background-color: rgb(236, 236, 236);
-      z-index: 10;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
-      display: flex;
-      border-radius: 15px;
-      border: 2px;
-      border-color: red;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-      padding: 15px;
-      width: 30%;
-      height: 20%;
-    }
-    
-    .hintBtn {
-      border-radius: 5px;
-      border: 1px solid white;
-      background-color: slategray;
-      z-index: 15;
-      padding: 10px;
-    }
-
-    .prompt {
-      background-color: rgba(0, 0, 0, 0.8);
-      width: 90%;
-    }
-
+  .hintBtn {
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: slategray;
+    z-index: 15;
+    padding: 10px;
+  }
+  .prompt {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 90%;
+  }
   .overlay {
     height: 77vh;
     width: 100vw;
@@ -168,7 +154,6 @@
     /* background-blend-mode: multiply; */
     mix-blend-mode: hard-light;
   }
-
   .mobileFlashlight {
     display: block;
     position: absolute;
@@ -181,9 +166,7 @@
     background-color: rgba(255, 228, 74, 0.479);
     /* pointer-events: none; */
   }
-
 }
-
 /* iPad Portrait View */
 @media screen and (min-width: 768px) {
   .background {
@@ -191,7 +174,6 @@
     height: 86vh;
     width: 100vw;
   }
-
   .rotateMessage {
     font-size: 24px;
     display: flex;
@@ -202,56 +184,51 @@
     height: inherit;
     width: 100vw;
   }
-
   .rotateImg {
     width: 60%;
     margin-top: 10%;
   }
-  
 
   .items {
     display: none;
   }
 }
-
 /* iPad Landscape / Desktop View */
 @media all and (min-width: 1024px) and (orientation: Landscape) {
   .background {
     height: 81vh;
   }
-
   .hint {
     font-size: 20px;
   }
-    .hintBtn {
-      padding: 15px;
-      font-size: 20px;
-    }
-  
-    .rotateMessage, .rotateImg {
-      display: none;
-    }
-    
-    /* badge scanner */
-    .uItem0 {
-      border: 1px solid yellow;
-      display: block;
-      top: 19vh;
-    }
+  .hintBtn {
+    padding: 15px;
+    font-size: 20px;
+  }
 
-    /* extinguisher box */
-    .uItem2 {
-      border: 1px solid yellow;
-      display: block;
-      z-index: 5;
-    }
+  .rotateMessage,
+  .rotateImg {
+    display: none;
+  }
 
-    /* fire extinguisher */
-    .item3 {
-      display: block;
-      z-index: 1;
-    }
-  
+  /* badge scanner */
+  .uItem0 {
+    border: 1px solid yellow;
+    display: block;
+    top: 19vh;
+  }
+  /* extinguisher box */
+  .uItem2 {
+    border: 1px solid yellow;
+    display: block;
+    z-index: 5;
+  }
+  /* fire extinguisher */
+  .item3 {
+    display: block;
+    z-index: 1;
+  }
+
   .overlay {
     height: 81vh;
     width: 100vw;
@@ -259,12 +236,10 @@
     /* background-blend-mode: multiply; */
     mix-blend-mode: hard-light;
   }
-
   .mobileFlashlight {
     width: 250px;
     height: 250px;
   }
-
   .desktopFlashlight {
     display: block;
     position: absolute;
@@ -277,51 +252,44 @@
     background-color: rgba(255, 228, 74, 0.479);
     pointer-events: none;
   }
- 
-    .prompt {
-      padding: 100px;
-      height: 60%;
-      width: 60%;
-    }
 
-    .promptBtn {
-      width: 25%;
-      height: 20%;
-    }
-
-    h2 {
-      font-size: 26px;
-    }
-  
+  .prompt {
+    padding: 100px;
+    height: 60%;
+    width: 60%;
   }
+  .promptBtn {
+    width: 25%;
+    height: 20%;
+  }
+  h2 {
+    font-size: 26px;
+  }
+}
 
-  
-    /* Desktop View - Item Positioning */
+/* Desktop View - Item Positioning */
 @media all and (min-width: 1200px) {
-    /* badge scanner */
-    .uItem0 {
-      border: 1px solid yellow;
-      display: block;
-      top: 15vh;
-      right: 34vw;
-      width: 5vw;
-    }
-
-    /* extinguisher box */
-    .uItem2 {
-      border: 1px solid yellow;
-      display: block;
-      width: 18vw;
-      left: 12vw;
-      z-index: 5;
-    }
-
-    /* fire extinguisher */
-    .item3 {
-      display: block;
-      width: 16vw;
-      left: 12vw;
-      z-index: 1;
-    }
-
+  /* badge scanner */
+  .uItem0 {
+    border: 1px solid yellow;
+    display: block;
+    top: 15vh;
+    right: 34vw;
+    width: 5vw;
+  }
+  /* extinguisher box */
+  .uItem2 {
+    border: 1px solid yellow;
+    display: block;
+    width: 18vw;
+    left: 12vw;
+    z-index: 5;
+  }
+  /* fire extinguisher */
+  .item3 {
+    display: block;
+    width: 16vw;
+    left: 12vw;
+    z-index: 1;
+  }
 }

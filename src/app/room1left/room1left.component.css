@@ -36,40 +36,41 @@
 
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
-    .background {
-      background-image: url("../../assets/img/Surgery-L.png");
-      background-size: cover;
-      height: 77vh;
-      /* width: 100vw; */
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
+  .background {
+    background-image: url("../../assets/img/Surgery-L.png");
+    background-size: cover;
+    height: 77vh;
+    /* width: 100vw; */
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 
-    .rotateMessage, .rotateImg {
-      display: none;
-    }
+  .rotateMessage,
+  .rotateImg {
+    display: none;
+  }
 
-    /* container */
-    .uItem1 {
-      display: block;
-      position: absolute;
-      height: 65vh;
-      width: 30vw;
-      left: 10vw;
-      bottom: 8vh;
-      z-index: 5;
-    }
+  /* container */
+  .uItem1 {
+    display: block;
+    position: absolute;
+    height: 65vh;
+    width: 30vw;
+    left: 10vw;
+    bottom: 8vh;
+    z-index: 5;
+  }
 
-    /* door handle */
-    .item0 {
-      display: block;
-      position: absolute;
-      height: 12vh;
-      width: 13vw;
-      top: 40vh;
-      left: 25vw;
-      z-index: 1;
-    }
+  /* door handle */
+  .item0 {
+    display: block;
+    position: absolute;
+    height: 12vh;
+    width: 13vw;
+    top: 40vh;
+    left: 25vw;
+    z-index: 1;
+  }
 
   .hint {
     background-color: rgb(236, 236, 236);
@@ -159,28 +160,28 @@
   .rotateImg {
     display: none;
   }
-  
-    .hint {
-      font-size: 20px;
-    }
-    
-    .hintBtn {
-      padding: 15px;
-      font-size: 20px;
-    }
 
-    .uItem1 {
-      display: block;
-      height: 58vh;
-      width: 38vw;
-      bottom: 10vh;
-      z-index: 5;
-    }
+  .hint {
+    font-size: 20px;
+  }
 
-    .item0 {
-      display: block;
-      z-index: 1;
-    }
+  .hintBtn {
+    padding: 15px;
+    font-size: 20px;
+  }
+
+  .uItem1 {
+    display: block;
+    height: 58vh;
+    width: 38vw;
+    bottom: 10vh;
+    z-index: 5;
+  }
+
+  .item0 {
+    display: block;
+    z-index: 1;
+  }
 
   .overlay {
     height: 81vh;
@@ -222,4 +223,3 @@
     width: 12vw;
   }
 }
-
