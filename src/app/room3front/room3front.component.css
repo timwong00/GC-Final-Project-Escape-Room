@@ -26,7 +26,7 @@
 }
 
 .prompt {
-  background-color:  black;
+  background-color: black;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -46,27 +46,28 @@
 
 .promptBtn {
   width: 50%;
-  font-family: 'insomniaregular';
+  font-family: "insomniaregular";
   font-weight: normal;
   font-style: normal;
   font-size: 18x;
-  background-color: slategray;
-  border: 1px solid white;
+  border: 1px solid black;
+  background-color: whitesmoke;
   border-radius: 15px;
   padding: 10px;
   color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .promptBtn:hover {
   border: 1px solid slategray;
 }
-  
+
 h2 {
   margin: 0;
-  font-family: 'insomniaregular';
+  font-family: "insomniaregular";
   font-weight: normal;
   font-style: normal;
   font-size: 20px;
@@ -76,10 +77,18 @@ h2 {
   display: none;
 }
 
+.mobileFlashlight {
+  display: none;
+  cursor: move;
+}
+.desktopFlashlight {
+  display: none;
+  /* z-index: 10; */
+}
+
 
 /* Mobile Landscape View */
-@media all and (min-width: 568px) and (orientation: Landscape) {
-
+@media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
     background-image: url("../../assets/img/Hallway-R.png");
     background-size: cover;
@@ -88,7 +97,8 @@ h2 {
     background-repeat: no-repeat;
     background-position: center center;
   }
-  .rotateMessage, .rotateImg {
+  .rotateMessage,
+  .rotateImg {
     display: none;
   }
 
@@ -98,7 +108,7 @@ h2 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     display: flex;
     border-radius: 15px;
     border: 2px;
@@ -116,7 +126,7 @@ h2 {
     border: 1px solid white;
     background-color: slategray;
     z-index: 15;
-    padding: 10px; 
+    padding: 10px;
   }
 
   .prompt {
@@ -148,13 +158,29 @@ h2 {
       position: absolute;
     }
 
+  .overlay {
+    height: 77vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
+  }
+  .mobileFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    /* pointer-events: none; */
+  }
 }
-
-
 
 /* iPad Portrait View */
 @media screen and (min-width: 768px) {
- 
   .background {
     position: relative;
     height: 86vh;
@@ -171,7 +197,7 @@ h2 {
     height: inherit;
     width: 100vw;
   }
-  
+
   .rotateImg {
     width: 60%;
     margin-top: 10%;
@@ -183,27 +209,25 @@ h2 {
   }
 }
 
+/* iPad Landscape / Desktop View */
+@media all and (min-width: 1024px) and (orientation: Landscape) {
+  .background {
+    height: 81vh;
+  }
 
+  .rotateMessage,
+  .rotateImg {
+    display: none;
+  }
 
-  /* iPad Landscape / Desktop View */
-  @media all and (min-width: 1024px) and (orientation: Landscape) {
-    .background {
-      height: 81vh;
-    }
-  
-    .rotateMessage, .rotateImg {
-      display: none;
-    }
-    
   .hint {
     font-size: 20px;
   }
 
   .hintBtn {
     padding: 15px;
-    font-size: 20px;  
+    font-size: 20px;
   }
-  
 
   .prompt {
     padding: 100px;
@@ -239,6 +263,30 @@ h2 {
       .item4 {
         display: block;
       }
+  .overlay {
+    height: 81vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
+  }
+  .mobileFlashlight {
+    width: 250px;
+    height: 250px;
+  }
+  .desktopFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    pointer-events: none;
+  }
+
 }
 
 

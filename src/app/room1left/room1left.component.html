@@ -19,7 +19,6 @@
         left: x + 'px'
       }"
     ></div>
-  </div>
 
   <div *ngFor="let uItem of unlockItems; index as i" [ngClass]="{'hidden': this.room1Service.uItems[i].collected}">
     <img
@@ -32,7 +31,7 @@
       <p>{{ uItem.item_use }}</p>
       <button class="hintBtn" (click)="hideUnlockHint(i)">OK</button>
     </div>
-  </div>
+
 
   <div *ngFor="let item of items; index as i" [ngClass]="{'hidden': this.room1Service.items[i].collected}">
     <img
@@ -46,6 +45,7 @@
       <button class="hintBtn" (click)="[selectItem(item), removeItem(i)]">
         Grab Item
       </button>
+
     </div>
   </div>
 </section>

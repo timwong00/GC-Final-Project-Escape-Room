@@ -17,6 +17,7 @@
       <img src="{{ uItem.item_image }}" class="uItem{{ i }} items" alt="{{ uItem.item_name }}"
         (click)="[matchItems2(uItem.item_name), showUnlockHint(i)]" />
 
+
       <div *ngIf="this.room2Service.uItems[i].showingHint" class="hint">
         <p>{{ uItem.item_use }}</p>
         <button class="hintBtn" (click)="hideUnlockHint(i)">OK</button>

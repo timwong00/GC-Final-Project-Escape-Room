@@ -6,9 +6,10 @@
 
   <section *ngIf="this.room2Service.isShowing" class="prompt">
     <h2>The Hallway</h2>
-    <p>Congratulations! You have escaped the operation room and moved into the hallway. You are one
-      step closer to
-      escaping Dr. Lobotomy!</p>
+    <p>
+      Congratulations! You have escaped the operation room and moved into the
+      hallway. You are one step closer to escaping Dr. Lobotomy!
+    </p>
 
     <button class="promptBtn" (click)="hidePrompt()">OK</button>
   </section>
@@ -28,7 +29,7 @@
         left: x + 'px'
       }"
     ></div>
-  </div>
+
 
   <div *ngFor="let item of items; index as i" [ngClass]="{'hidden': this.room2Service.items[i].collected}">
     <img
@@ -42,8 +43,8 @@
       <button class="hintBtn" (click)="[selectItem(item, i), removeItem(i)]">
         Grab Item
       </button>
+
     </div>
-  </div>
 
   <div *ngFor="let uItem of unlockItems; index as i" [ngClass]="{'hidden': this.room2Service.uItems[i].collected}">
     <img
@@ -53,9 +54,11 @@
       (click)="[matchItems2(uItem.item_name), showUnlockHint(i)]"
     />
 
-    <div *ngIf="this.room2Service.uItems[i].showingHint" class="hint">
-      <p>{{ uItem.item_use }}</p>
-      <button class="hintBtn" (click)="hideUnlockHint(i)">OK</button>
+
+      <div *ngIf="this.room2Service.uItems[i].showingHint" class="hint">
+        <p>{{ uItem.item_use }}</p>
+        <button class="hintBtn" (click)="hideUnlockHint(i)">OK</button>
+      </div>
     </div>
   </div>
 </section>
