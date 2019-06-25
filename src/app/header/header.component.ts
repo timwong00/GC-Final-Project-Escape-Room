@@ -28,7 +28,8 @@ export class HeaderComponent implements OnInit {
     public inventoryService: InventoryService,
     public router: Router,
     public gameProgressionService: GameProgressionService
-  ) {}
+  ) { }
+
 
   ngOnInit() {
     // console.log(this.inventoryService.inventoryItems);
@@ -74,4 +75,16 @@ export class HeaderComponent implements OnInit {
   //     this.timerService.endGame();
   //   }
   // }
+
+  clickedItem(index) {
+    if (this.inventoryItems[index].isSelected) {
+      this.inventoryItems[index].isSelected = false;
+    }
+    else {
+      for (let i = 0; i < this.inventoryItems.length; i++) {
+        this.inventoryItems[i].isSelected = false;
+      }
+      this.inventoryItems[index].isSelected = true;
+    }
+  }
 }
