@@ -14,6 +14,8 @@ export class Room1Service {
   // timeRemaining: number;
   itemsToMatch: any[] = [];
   showingHint: boolean;
+  collected: boolean = false;
+
 
   constructor(
     private http: HttpClient
@@ -42,7 +44,8 @@ export class Room1Service {
     // let index = this.items.findIndex(
     //   item => item.item_name == itemName.item_name
     // );
-    this.items.splice(index, 1);
+    // this.items.splice(index, 1);
+    this.items[index].collected = true;
     // return this.items;
     // console.log(this.items);
     // console.log(index);

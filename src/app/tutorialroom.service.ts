@@ -9,6 +9,7 @@ export class TutorialroomService {
   uItems: any;
   isShowing: boolean = true;
   showingHint: boolean;
+  collected: boolean = false;
 
   constructor(private http: HttpClient) {}
 
@@ -53,7 +54,8 @@ export class TutorialroomService {
     );
     // console.log(index);
     // // console.log(itemName, index);
-    this.items.splice(index, 1);
+    // this.items.splice(index, 1);
+    this.items[index].collected = true;
     // return this.items;
   }
 

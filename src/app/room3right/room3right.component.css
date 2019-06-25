@@ -1,4 +1,8 @@
 /* Mobile Portrait View */
+.hidden {
+  display: none;
+}
+
 .background {
   position: relative;
   height: 86vh;
@@ -21,6 +25,9 @@
   margin-top: 10%;
 }
 
+.items {
+  display: none;
+}
 
 
 /* Mobile Landscape View */
@@ -63,6 +70,17 @@
     padding: 10px; 
   }
 
+  /* stool leg */
+  .item0 {
+    display: block;
+    position: absolute;  
+  }
+
+  /* lock */
+  .item3 {
+    display: block;
+    position: absolute;
+  }
 }
 
 /* iPad Portrait View */
@@ -89,6 +107,10 @@
     width: 60%;
     margin-top: 10%;
   }
+
+  .items {
+    display: none;
+  }
 }
 
 
@@ -102,4 +124,19 @@
     .rotateMessage, .rotateImg {
       display: none;
     }
+
+  /* stool leg */
+  .item0 {
+    display: block;
   }
+
+  /* lock */
+  .item3 {
+    display: block;
+  }
+  }
+
+  
+/* Desktop View - Item Positioning */
+@media all and (min-width: 1200px) {
+}

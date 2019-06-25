@@ -1,4 +1,8 @@
 /* Mobile Portrait View */
+.hidden {
+  display: none;
+}
+
 .background {
   position: relative;
   height: 86vh;
@@ -19,6 +23,10 @@
 .rotateImg {
   width: 80%;
   margin-top: 10%;
+}
+
+.items {
+  display: none;
 }
 
 
@@ -63,6 +71,23 @@
     padding: 10px; 
   }
 
+  /* stool */
+  .uItem0 {
+    display: block;
+    position: absolute;
+  }
+
+  /* jar */
+  .item1 {
+    display: block;
+    position: absolute;
+  }
+
+  /* key */
+  .item2 {
+    display: block;
+    position: absolute;
+  }
 }
 
 
@@ -91,7 +116,9 @@
     margin-top: 10%;
   }
 
-
+  .items {
+    display: none;
+  }
 }
 
 
@@ -115,4 +142,19 @@
     font-size: 20px;  
   }
   
+  .uItem0 {
+    display: block;
   }
+
+  .item1 {
+    display: block;
+  }
+
+  .item2 {
+    display: block;
+  }
+  }
+
+  /* Desktop View - Item Positioning */
+@media all and (min-width: 1200px) {
+}

@@ -1,4 +1,8 @@
 /* Mobile Portrait View */
+.hidden {
+  display: none;
+}
+
 .background {
   position: relative;
   height: 86vh;
@@ -68,7 +72,9 @@ h2 {
   font-size: 20px;
 }
 
-
+.items {
+  display: none;
+}
 
 
 /* Mobile Landscape View */
@@ -117,6 +123,31 @@ h2 {
     background-color: rgba(0, 0, 0, 0.8);
     width: 90%;
   }
+
+  /* glove */
+  .uItem1 {
+    display: block;
+    position: absolute;
+  }
+
+  /* drawer */
+  .uItem2 {
+    display: block;
+    position: absolute;
+  }
+
+  /* glove */
+  .item3 {
+    display: block;
+    position: absolute;
+  }
+
+    /* chisel */
+    .item4 {
+      display: block;
+      position: absolute;
+    }
+
 }
 
 
@@ -144,6 +175,11 @@ h2 {
   .rotateImg {
     width: 60%;
     margin-top: 10%;
+  }
+
+  
+  .items {
+    display: none;
   }
 }
 
@@ -184,4 +220,28 @@ h2 {
     font-size: 26px;
   }
 
+    /* glove */
+    .uItem1 {
+      display: block;
+    }
+  
+    /* drawer */
+    .uItem2 {
+      display: block;
+    }
+  
+    /* glove */
+    .item3 {
+      display: block;
+    }
+    
+      /* chisel */
+      .item4 {
+        display: block;
+      }
 }
+
+
+  /* Desktop View - Item Positioning */
+  @media all and (min-width: 1200px) {
+  }

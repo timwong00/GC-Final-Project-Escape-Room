@@ -30,14 +30,13 @@
     ></div>
   </div>
 
-  <div *ngFor="let item of items; index as i">
+  <div *ngFor="let item of items; index as i" [ngClass]="{'hidden': this.room2Service.items[i].collected}">
     <img
       src="{{ item.item_image }}"
       class="item{{ i }} items"
       alt="{{ item.item_name }}"
       (click)="showItemHint(i)"
     />
-
     <div *ngIf="this.room2Service.items[i].showingHint" class="hint">
       <p>{{ item.item_use }}</p>
       <button class="hintBtn" (click)="[selectItem(item, i), removeItem(i)]">
@@ -46,7 +45,7 @@
     </div>
   </div>
 
-  <div *ngFor="let uItem of unlockItems; index as i">
+  <div *ngFor="let uItem of unlockItems; index as i" [ngClass]="{'hidden': this.room2Service.uItems[i].collected}">
     <img
       src="{{ uItem.item_image }}"
       class="uItem{{ i }} items"

@@ -21,7 +21,7 @@
     ></div>
   </div>
 
-  <div *ngFor="let uItem of unlockItems; index as i">
+  <div *ngFor="let uItem of unlockItems; index as i" [ngClass]="{'hidden': this.room2Service.uItems[i].collected}">
     <img src="{{ uItem.item_image }}" class="uItem{{ i }} items" alt="{{ uItem.item_name }}"
       (click)="[matchItems2(uItem.item_name), showUnlockHint(i)]" />
     <div *ngIf="this.room2Service.uItems[i].showingHint" class="hint">
@@ -30,7 +30,7 @@
     </div>
   </div>
 
-  <div *ngFor="let item of items; index as i">
+  <div *ngFor="let item of items; index as i" [ngClass]="{'hidden': this.room2Service.items[i].collected}">
     <img src="{{ item.item_image }}" class="item{{ i }} items" alt="{{ item.item_name }}"
       (click)="showItemHint(i)" />
 
