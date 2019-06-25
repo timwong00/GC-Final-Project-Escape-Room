@@ -8,6 +8,8 @@ export class Room3Service {
   items: any;
   uItems: any;
   isShowing: boolean = true;
+  showingHint: boolean;
+  collected: boolean = false;
 
   constructor(private http: HttpClient) {}
   getRoomThreeItems() {
@@ -27,7 +29,8 @@ export class Room3Service {
   }
 
   deleteItem(index) {
-    this.items.splice(index, 1);
+    // this.items.splice(index, 1);
+    this.items[index].collected = true;
   }
 
   setItems(itemList) {

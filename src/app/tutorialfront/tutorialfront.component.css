@@ -22,25 +22,51 @@
 }
 
 .prompt {
-  color: white;
+  background-color: black;
   position: absolute;
-  left: 50%;
   top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  height: 50vh;
-  width: 60vw;
-  background-color: rgba(0, 0, 0, 0.8);
+  width: 90%;
+  height: 90%;
+  padding: 15px;
+  font-size: 20px;
+  color: white;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 30px;
-  display: none;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
 }
 
 .promptBtn {
-  color: red;
-  background: none;
-  border: none;
+  width: 50%;
+  font-family: "insomniaregular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18x;
+  border: 1px solid black;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  padding: 10px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.promptBtn:hover {
+  border: 1px solid slategray;
+}
+
+h2 {
+  margin: 0;
+  font-family: "insomniaregular";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
 }
 
 .mobileFlashlight {
@@ -61,12 +87,14 @@
     background-position: center center;
   }
 
-  .rotateMessage, .rotateImg {
+  .rotateMessage,
+  .rotateImg {
     display: none;
   }
 
   .prompt {
-    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 90%;
   }
 
   .overlay {
@@ -93,7 +121,6 @@
 
 /* iPad Portrait View */
 @media screen and (min-width: 768px) {
- 
   .background {
     position: relative;
     height: 86vh;
@@ -110,37 +137,55 @@
     height: inherit;
     width: 100vw;
   }
-  
+
   .rotateImg {
     width: 60%;
     margin-top: 10%;
   }
 
+  h1 {
+    font-size: 64px;
+  }
+
+  .prompt {
+    padding: 100px;
+    height: 60%;
+    width: 60%;
+  }
+
+  .promptBtn {
+    width: 25%;
+    height: 20%;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+}
+
+/* Tablet Landscape / Desktop View */
+@media screen and (min-width: 1024px) and (orientation: Landscape) {
+  .background {
+    height: 81vh;
+  }
+
+  .rotateMessage,
+  .rotateImg {
+    display: none;
+  }
+
   .overlay {
-    height: 90vh;
+    height: 81vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.863);
     /* background-blend-mode: multiply; */
     mix-blend-mode: hard-light;
   }
 
-  /* .flashlight {
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-radius: 100%;
-    height: 250px;
-    width: 250px;
-    cursor: move;
-    background: rgba(255, 255, 0, 0.384);
-    z-index: 0;
-    clip-path: circle(50%);
-    pointer-events: none; send mouse events beneath this layer
-  }  */
-
   .mobileFlashlight {
     display: none;
   }
+
   .desktopFlashlight {
     display: block;
     position: absolute;
@@ -154,36 +199,4 @@
     background-color: rgba(255, 228, 74, 0.479);
     pointer-events: none;
   }
-
-  /* .flashlight {
-    width: 50px;
-    height: 50px;
-  } */
-
-  /* .flashlight:after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    width: 150px;
-    height: 150px; */
-  /* border: 2000px solid rgba(0, 0, 0, 0.795); */
-  /* overflow: hidden; */
-  /* } */
 }
-
-
-/* Tablet Landscape / Desktop View */
-@media screen and (min-width: 1024px) and (orientation: Landscape) {
-  .background {
-    height: 81vh;
-  }
-
-  .rotateMessage, .rotateImg {
-    display: none;
-  }  
-}
-
-
