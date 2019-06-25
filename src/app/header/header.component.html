@@ -1,5 +1,4 @@
 <section class="header">
-
   <button (click)="openMenu()" class="openMenu-btn">Menu</button>
   <div *ngIf="clickedMenu" id="menu">
     <p>Menu</p>
@@ -21,16 +20,18 @@
       {{ this.timerService.timeRemaining }}
     </div>
   </div>
-
-  <div id="inventory">
-    <div *ngFor="let invItem of inventoryItems; index as i">
+  <div id="inventory" class="selected">
+    <div
+      *ngFor="let invItem of inventoryItems; index as i"
+      class="item-box"
+      [ngClass]="{ selected: invItem.isSelected }"
+    >
       <img
         src="{{ invItem.item_image }}"
         class="items invItem{{ i }}"
         alt="{{ invItem.item_name }}"
-        (click)="matchItems1(invItem.match_item_name)"
+        (click)="[matchItems1(invItem.match_item_name), clickedItem(i)]"
       />
     </div>
   </div>
-  
 </section>
