@@ -16,11 +16,9 @@ export class Room1Service {
   showingHint: boolean;
   collected: boolean = false;
 
-
   constructor(
-    private http: HttpClient
-  ) // private gameProgressionService: GameProgressionService,
-  // private timerService: TimerService,
+    private http: HttpClient // private gameProgressionService: GameProgressionService,
+  ) // private timerService: TimerService,
   // private router: Router
   {}
 
@@ -56,13 +54,13 @@ export class Room1Service {
     // console.log(this.items);
   }
 
-  hasItems() {
-    return this.items;
-  }
+  // hasItems() {
+  //   return this.items;
+  // }
 
-  hasUnlockItems() {
-    return this.uItems;
-  }
+  // hasUnlockItems() {
+  //   return this.uItems;
+  // }
 
   hidePrompt() {
     this.isShowing = false;
@@ -79,11 +77,10 @@ export class Room1Service {
   hideItemHint(i) {
     this.items[i].showingHint = false;
   }
-  
+
   hideUnlockItemHint(i) {
     this.uItems[i].showingHint = false;
   }
-
 
   // endGame() {
   //   console.log(this.timerService.timeRemaining);
