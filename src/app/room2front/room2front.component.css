@@ -24,6 +24,7 @@
   display: none;
   cursor: move;
 }
+
 .desktopFlashlight {
   display: none;
   /* z-index: 10; */
@@ -77,6 +78,17 @@ h2 {
   font-style: normal;
   font-size: 20px;
 }
+
+.items {
+  display: none;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.items:hover {
+  opacity: 1;
+}
+
 /* Mobile Landscape View */
 @media all and (min-width: 568px) and (orientation: Landscape) {
   .background {
