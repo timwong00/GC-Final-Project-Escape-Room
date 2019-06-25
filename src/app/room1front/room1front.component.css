@@ -7,6 +7,10 @@
 }
 
 /* Mobile Portrait View */
+.hidden {
+  display: none;
+}
+
 .background {
   position: relative;
   height: 86vh;

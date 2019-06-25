@@ -18,6 +18,7 @@ export class TutorialfrontComponent implements OnInit {
   x: any;
   y: any;
   // isShowing: boolean = true;
+  // collected: boolean;
 
   constructor(
     public tutorialRoomService: TutorialroomService,
@@ -46,6 +47,7 @@ export class TutorialfrontComponent implements OnInit {
       this.unlockItems = this.tutorialRoomService.uItems;
     }
     // this.itemsToMatch = this.matchService.itemsToMatch;
+    // this.collected = this.inventoryService.collected;
   }
 
   selectItem(inventoryItem) {

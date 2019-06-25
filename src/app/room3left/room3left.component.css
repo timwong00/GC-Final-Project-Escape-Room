@@ -1,4 +1,8 @@
 /* Mobile Portrait View */
+.hidden {
+  display: none;
+}
+
 .background {
   position: relative;
   height: 86vh;
@@ -19,6 +23,10 @@
 .rotateImg {
   width: 80%;
   margin-top: 10%;
+}
+
+.items {
+  display: none;
 }
 
 .mobileFlashlight {
@@ -73,6 +81,23 @@
     cursor: pointer;
   }
 
+  /* stool */
+  .uItem0 {
+    display: block;
+    position: absolute;
+  }
+
+  /* jar */
+  .item1 {
+    display: block;
+    position: absolute;
+  }
+
+  /* key */
+  .item2 {
+    display: block;
+    position: absolute;
+  }
   .overlay {
     height: 77vh;
     width: 100vw;
@@ -117,6 +142,10 @@
     width: 60%;
     margin-top: 10%;
   }
+
+  .items {
+    display: none;
+  }
 }
 
 /* iPad Landscape / Desktop View */
@@ -137,6 +166,23 @@
     padding: 15px;
     font-size: 20px;
   }
+  
+  .uItem0 {
+    display: block;
+  }
+
+  .item1 {
+    display: block;
+  }
+
+  .item2 {
+    display: block;
+  }
+  }
+
+  /* Desktop View - Item Positioning */
+@media all and (min-width: 1200px) {
+
   .overlay {
     height: 81vh;
     width: 100vw;
@@ -161,3 +207,4 @@
     pointer-events: none;
   }
 }
+

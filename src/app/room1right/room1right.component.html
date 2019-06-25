@@ -20,19 +20,20 @@
       }"
     ></div>
 
-    <div *ngFor="let item of items; index as i">
-      <img
-        src="{{ item.item_image }}"
-        class="item{{ i }} items"
-        alt="{{ item.item_name }}"
-        (click)="showItemHint(i)"
-      />
-      <div *ngIf="this.room1Service.items[i].showingHint" class="hint">
-        <p>{{ item.item_use }}</p>
-        <button class="hintBtn" (click)="[selectItem(item), removeItem(i)]">
-          Grab Item
-        </button>
-      </div>
+
+  <div *ngFor="let item of items; index as i" [ngClass]="{'hidden': this.room1Service.items[i].collected}">
+    <img
+      src="{{ item.item_image }}"
+      class="item{{ i }} items"
+      alt="{{ item.item_name }}"
+      (click)="showItemHint(i)"
+    />
+    <div *ngIf="this.room1Service.items[i].showingHint" class="hint">
+      <p>{{ item.item_use }}</p>
+      <button class="hintBtn" (click)="[selectItem(item), removeItem(i)]">
+        Grab Item
+      </button>
+
     </div>
   </div>
 </section>
