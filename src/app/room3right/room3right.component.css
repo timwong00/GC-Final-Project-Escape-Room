@@ -27,6 +27,7 @@
 
 .items {
   display: none;
+}
 
 .mobileFlashlight {
   display: none;
@@ -91,14 +92,14 @@
   /* stool leg */
   .item0 {
     display: block;
-    position: absolute;  
+    position: absolute;
   }
 
   /* lock */
   .item3 {
     display: block;
     position: absolute;
-
+  }
   .mobileFlashlight {
     display: block;
     position: absolute;
@@ -110,7 +111,7 @@
     border-radius: 100%;
     background-color: rgba(255, 228, 74, 0.479);
     /* pointer-events: none; */
-    }
+  }
 }
 
 /* iPad Portrait View */
@@ -144,13 +145,14 @@
 
 /* iPad Landscape / Desktop View */
 @media screen and (min-width: 1024px) and (orientation: Landscape) {
-    .background {
-      height: 81vh;
-    }
-  
-    .rotateMessage, .rotateImg {
-      display: none;
-    }
+  .background {
+    height: 81vh;
+  }
+
+  .rotateMessage,
+  .rotateImg {
+    display: none;
+  }
 
   /* stool leg */
   .item0 {
@@ -161,12 +163,10 @@
   .item3 {
     display: block;
   }
-  }
+}
 
-  
 /* Desktop View - Item Positioning */
 @media screen and (min-width: 1200px) {
-
   .rotateMessage,
   .rotateImg {
     display: none;
@@ -195,4 +195,3 @@
     pointer-events: none;
   }
 }
-
