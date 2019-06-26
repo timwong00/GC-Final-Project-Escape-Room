@@ -34,7 +34,7 @@ export class AppComponent {
     // change to "Tutorial"
     this.gameProgressionService.setGameProgress("Tutorial");
     this.playingGame = true;
-    this.soundEffectService.playCreepyAmbient();
+    this.soundEffectService.playHighCreepyAmbient();
     this.tutorialRoomService.isShowing = true;
     this.room1Service.isShowing = true;
     this.room2Service.isShowing = true;

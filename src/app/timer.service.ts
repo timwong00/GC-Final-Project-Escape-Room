@@ -22,14 +22,18 @@ export class TimerService {
   startTimer() {
     this.interval = setInterval(() => {
       if (this.timeRemaining > 0) {
-        if (this.timeRemaining === 150) {
+        if (this.timeRemaining === 240) {
           this.soundEffectService.playLowHeartbeat();
-        } else if (this.timeRemaining === 80) {
+          // this.soundEffectService.stopCreepyAmbient();
+          this.soundEffectService.playMidCreepyAmbient();
+        } else if (this.timeRemaining === 150) {
           this.soundEffectService.stopHeartbeat();
           this.soundEffectService.playMidHeartbeat();
-        } else if (this.timeRemaining === 30) {
+        } else if (this.timeRemaining === 60) {
           this.soundEffectService.stopHeartbeat();
           this.soundEffectService.playHighHeartbeat();
+          this.soundEffectService.stopCreepyAmbient();
+          this.soundEffectService.playLowCreepyAmbient();
         }
         this.minutes = Math.floor(this.timeRemaining / 60);
         this.seconds = this.timeRemaining - this.minutes * 60;
