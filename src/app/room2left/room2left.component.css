@@ -73,7 +73,6 @@
 
   /* jacket */
   .uItem1 {
-    border: 1px solid yellow;
     display: block;
     position: absolute;
     height: 20vh;
@@ -192,7 +191,6 @@
 
   /* jacket */
   .uItem1 {
-    border: 1px solid yellow;
     display: block;
     z-index: 5;
   }
@@ -235,7 +233,6 @@
 
   /* jacket */
   .uItem1 {
-    border: 1px solid yellow;
     display: block;
     height: 25vh;
     z-index: 5;

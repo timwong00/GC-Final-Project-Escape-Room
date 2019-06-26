@@ -82,13 +82,12 @@
 
   /* glass case */
   .uItem3 {
-    border: 1px solid yellow;
     display: block;
     position: absolute;
-    height: 62vh;
-    width: 22vw;
-    top: 0;
-    left: 15vw;
+    height: 28vh;
+    width: 18vw;
+    left: 18vw;
+    top: 32vh;
     z-index: 5;
   }
 
@@ -209,12 +208,10 @@
 
   /* glass case */
   .uItem3 {
-    border: 1px solid yellow;
     display: block;
-    height: 50vh;
-    width: 27vw;
-    top: 8vh;
-    left: 10vw;
+    height: 20vh;
+    width: 14vw;
+    top: 34vh;
     z-index: 5;
   }
 
@@ -267,7 +264,6 @@
 
   /* glass case */
   .uItem3 {
-    border: 1px solid yellow;
     display: block;
     height: 65vh;
     width: 24vw;
