@@ -7,6 +7,7 @@
   position: relative;
   height: 86vh;
   width: 100vw;
+  z-index: 1;
 }
 .rotateMessage {
   font-size: 24px;
@@ -117,16 +118,16 @@ h2 {
     right: 33vw;
     top: 17vh;
   }
-  /* extinguisher box */
+  /* extinguisher strap */
   .uItem2 {
-    border: 1px solid yellow;
     display: block;
     position: absolute;
-    height: 35vh;
-    width: 20vw;
-    left: 10vw;
-    top: 16vh;
-    z-index: 5;
+    height: 20vh;
+    width: auto;
+    left: 20vw;
+    top: 30vh;
+    transform: rotate(90deg);    
+    z-index: 15;
   }
   /* fire extinguisher */
   .item3 {
@@ -304,8 +305,8 @@ h2 {
   .uItem2 {
     border: 1px solid yellow;
     display: block;
-    width: 18vw;
-    left: 12vw;
+    /* width: 18vw; */
+    /* left: 12vw; */
     z-index: 5;
   }
   /* fire extinguisher */
