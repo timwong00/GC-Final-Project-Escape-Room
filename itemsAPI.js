@@ -5,35 +5,35 @@ const items = express.Router();
 const pool = require("./connection");
 
 function getTutorialItems(res) {
-  pool.query("select * from tutorialescapeitems").then(result=>res.json(result.rows));
+  pool.query("select * from tutorialescapeitems order by id").then(result=>res.json(result.rows));
 }
 
 function getTutorialUnlockItems(res) {
-  pool.query("select * from tutorialUnlockItems").then(result=>res.json(result.rows));
+  pool.query("select * from tutorialUnlockItems order by id").then(result=>res.json(result.rows));
 }
 
 function getRoomOneItems(res) {
-  pool.query("select * from room1escapeitems").then(result=>res.json(result.rows));
+  pool.query("select * from room1escapeitems order by id").then(result=>res.json(result.rows));
 }
 
 function getRoomOneUnlockItems(res) {
-  pool.query("select * from room1UnlockItems").then(result=>res.json(result.rows));
+  pool.query("select * from room1UnlockItems order by id").then(result=>res.json(result.rows));
 }
 
 function getRoomTwoItems(res) {
-  pool.query("select * from room2escapeitems").then(result=>res.json(result.rows));
+  pool.query("select * from room2escapeitems order by id").then(result=>res.json(result.rows));
 }
 
 function getRoomTwoUnlockItems(res) {
-  pool.query("select * from room2UnlockItems").then(result=>res.json(result.rows));
+  pool.query("select * from room2UnlockItems order by id").then(result=>res.json(result.rows));
 }
 
 function getRoomThreeItems(res) {
-  pool.query("select * from room3escapeitems").then(result=>res.json(result.rows));
+  pool.query("select * from room3escapeitems order by id").then(result=>res.json(result.rows));
 }
 
 function getRoomThreeUnlockItems(res) {
-  pool.query("select * from room3UnlockItems").then(result=>res.json(result.rows));
+  pool.query("select * from room3UnlockItems order by id").then(result=>res.json(result.rows));
 }
 
 items.get("/tutorial-items", (req, res) => {

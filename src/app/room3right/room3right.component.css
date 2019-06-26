@@ -93,12 +93,16 @@
   .item0 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
 
   /* lock */
   .item3 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
 
   .mobileFlashlight {
@@ -161,7 +165,12 @@
   }
 
   /* lock */
-  .item3 {
+  .uItem3 {
+    display: block;
+  }
+
+  /* door */
+  .uItem4 {
     display: block;
   }
 

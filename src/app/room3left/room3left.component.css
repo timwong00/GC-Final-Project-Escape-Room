@@ -85,19 +85,26 @@
   .uItem0 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
 
-  /* jar */
-  .item1 {
+  /* beaker */
+  .uItem1 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
 
   /* key */
   .item2 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
+  
   .overlay {
     height: 77vh;
     width: 100vw;
@@ -167,14 +174,17 @@
     font-size: 20px;
   }
 
+  /* stool */
   .uItem0 {
     display: block;
   }
 
+  /* beaker */
   .item1 {
     display: block;
   }
 
+  /* key */
   .item2 {
     display: block;
   }
