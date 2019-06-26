@@ -5,8 +5,16 @@
   </div>
 
   <div class="overlay">
-    <div *ngFor="let item of items; index as i" [ngClass]="{'hidden': this.tutorialRoomService.items[i].collected}">
-      <img src="{{ item.item_image }}" class="item{{i}} items" alt="{{ item.item_name }}" (click)="showItemHint(i)" />
+    <div
+      *ngFor="let item of items; index as i"
+      [ngClass]="{ hidden: this.tutorialRoomService.items[i].collected }"
+    >
+      <img
+        src="{{ item.item_image }}"
+        class="item{{ i }} items"
+        alt="{{ item.item_name }}"
+        (click)="showItemHint(i)"
+      />
       <div *ngIf="this.tutorialRoomService.items[i].showingHint" class="hint">
         <p>{{ item.item_use }}</p>
         <button class="hintBtn" (click)="[selectItem(item), removeItem(item)]">
@@ -15,10 +23,15 @@
       </div>
     </div>
 
-    <img *ngIf="!this.flashlightCollected" src="../../assets/img/Tut-Flashlight.png" alt="flashlight"
-      class="flashlightImg" (click)="flashlightFound()">
+    <img
+      *ngIf="!this.tutorialRoomService.flashlightCollected"
+      src="../../assets/img/Tut-Flashlight.png"
+      alt="flashlight"
+      class="flashlightImg"
+      (click)="flashlightFound()"
+    />
 
-    <div *ngIf="this.flashlightClue" class="flashlightClue">
+    <div *ngIf="this.tutorialRoomService.flashlightClue" class="flashlightClue">
       <p>You've found a flashlight!</p>
       <button class="flashlightBtn" (click)="flashlightOn()">OK</button>
     </div>
