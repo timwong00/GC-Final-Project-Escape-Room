@@ -27,6 +27,7 @@
 
 .items {
   display: none;
+  cursor: pointer;
 }
 
 .mobileFlashlight {
@@ -104,7 +105,7 @@
     height: 20vh;
     width: 20vw;
   }
-  
+
   .overlay {
     height: 77vh;
     width: 100vw;
@@ -180,7 +181,7 @@
   }
 
   /* beaker */
-  .item1 {
+  .uItem1 {
     display: block;
   }
 

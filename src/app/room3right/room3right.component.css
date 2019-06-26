@@ -27,6 +27,7 @@
 
 .items {
   display: none;
+  cursor: pointer;
 }
 
 .mobileFlashlight {
@@ -98,11 +99,20 @@
   }
 
   /* lock */
-  .item3 {
+  .uItem3 {
     display: block;
     position: absolute;
     height: 20vh;
     width: 20vw;
+  }
+
+  .uItem4 {
+    display: block;
+    position: absolute;
+    height: 20vh;
+    width: 20vw;
+    right: 0;
+    /* delete right later */
   }
 
   .mobileFlashlight {
@@ -201,9 +211,9 @@
 }
 
 /* Desktop View - Item Positioning */
-@media screen and (min-width: 1200px) {
+/* @media screen and (min-width: 1200px) {
   .rotateMessage,
   .rotateImg {
     display: none;
   }
-}
+} */

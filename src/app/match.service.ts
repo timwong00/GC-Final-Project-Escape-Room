@@ -28,10 +28,8 @@ export class MatchService {
     private tutorialRoomService: TutorialroomService,
     private router: Router,
     private timerService: TimerService,
-    private soundEffectService: SoundeffectService,
-    private timerService: TimerService
-  ) { }
-
+    private soundEffectService: SoundeffectService
+  ) {}
 
   setInventoryItemToMatch(inventoryItem) {
     this.itemsToMatch.splice(0, 1, inventoryItem);
@@ -78,7 +76,6 @@ export class MatchService {
         }
       }
     }
-
   }
 
   checkMatch() {

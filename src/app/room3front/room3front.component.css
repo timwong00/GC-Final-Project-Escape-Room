@@ -76,6 +76,7 @@ h2 {
 
 .items {
   display: none;
+  cursor: pointer;
 }
 
 .mobileFlashlight {
