@@ -14,6 +14,8 @@ export class SoundeffectService {
   bgm: any;
   bgmURL: any;
   creepyAmbient: any;
+  glassBreak: any;
+  glassBreakURL: any;
 
   constructor(private http: HttpClient) {}
 
@@ -25,9 +27,9 @@ export class SoundeffectService {
     return this.http.get(`${this.apiurl}` + "/366887/" + `${this.apikey}`);
   }
 
-  // getBreakWindow() {
-  //   return this.http.get(`${this.apiurl}` + "/448004/" + `${this.apikey}`);
-  // }
+  getBreakWindow() {
+    return this.http.get(`${this.apiurl}` + "/203371/" + `${this.apikey}`);
+  }
 
   // getKeyUnlock() {
   //   return this.http.get(`${this.apiurl}` + "/235467/" + `${this.apikey}`);
@@ -118,5 +120,14 @@ export class SoundeffectService {
     // this.creepyAmbient.loop = false;
     this.creepyAmbient.pause();
     this.creepyAmbient.currentTime = 0;
+  }
+
+  playGlassBreak() {
+    this.getBreakWindow().subscribe(response => {
+      this.soundeffect = response;
+      this.glassBreakURL = this.soundeffect.previews["preview-hq-mp3"];
+      this.glassBreak = new Audio(this.glassBreakURL);
+      this.glassBreak.play();
+    });
   }
 }
