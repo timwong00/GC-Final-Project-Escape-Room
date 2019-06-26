@@ -67,13 +67,13 @@ export class MatchService {
         this.router.navigate(["/room3front"]);
         this.gameProgressionService.setGameProgress("Room 3");
         this.gameProgressionService.navigateDirection = "front";
-      } else if (this.gameProgressionService.gameProgress === "Room 3") {
-        if (this.itemsToMatch[0] == "door" && this.itemsToMatch[1] == "door") {
-          this.soundEffectService.stopCreepyAmbient();
-          this.soundEffectService.stopHeartbeat();
-          this.router.navigate(["/endgame"]);
-          this.gameProgressionService.setGameProgress("Game Won");
-        }
+      }
+    } else if (this.gameProgressionService.gameProgress === "Room 3") {
+      if (this.itemsToMatch[0] == "door" && this.itemsToMatch[1] == "door") {
+        this.soundEffectService.stopCreepyAmbient();
+        this.soundEffectService.stopHeartbeat();
+        this.router.navigate(["/endgame"]);
+        this.gameProgressionService.setGameProgress("Game Won");
       }
     }
   }

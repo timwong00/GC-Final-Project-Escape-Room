@@ -124,8 +124,8 @@ h2 {
 
   .hintBtn {
     border-radius: 5px;
-    border: 1px solid white;
-    background-color: slategray;
+    border: 1px solid black;
+    background-color: whitesmoke;
     z-index: 15;
     padding: 10px;
   }
@@ -218,7 +218,7 @@ h2 {
 }
 
 /* iPad Landscape / Desktop View */
-@media all and (min-width: 1024px) and (orientation: Landscape) {
+@media screen and (min-width: 1024px) and (orientation: Landscape) {
   .background {
     height: 81vh;
   }
@@ -298,5 +298,5 @@ h2 {
 }
 
 /* Desktop View - Item Positioning */
-@media all and (min-width: 1200px) {
-}
+/* @media screen and (min-width: 1200px) {
+} */
