@@ -20,7 +20,7 @@
   font-weight: normal;
   font-style: normal;
   color: white;
-  border-radius: 15px;
+  border-radius: 15px;  
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -68,12 +68,40 @@ h2 {
 
   .prompt {
     background-color: rgba(0, 0, 0, 0.8);
-   
   }
 }
+   
+  .promptBtn {
+    /* width: 50%; */
+    font-family: 'insomniaregular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24x;
+    background-color: slategray;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    color: black;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .how-to-play:hover, .play:hover {
+    background-color: yellow;
+    border: 1px solid black;
+  }
+    
+  h2 {
+    margin: 0;
+    font-family: 'insomniaregular';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+  }
+
 
 /* iPad Portrait View -- display rotate message */
-/* 
+
   @media all and (min-width: 768px) {
     .background {
       display: none;
@@ -81,15 +109,9 @@ h2 {
     .rotate {
       display: block;
     }
-  } */
+  }
 /* iPad Landscape View */
 @media all and (min-width: 1024px) and (orientation: Landscape) {
-  
-
-  .prompt {
-    
-  }
-
   
 
   h2 {
