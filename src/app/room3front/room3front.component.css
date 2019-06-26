@@ -96,7 +96,7 @@ h2 {
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
-    background-image: url("../../assets/img/Hallway-R.png");
+    background-image: url("../../assets/img/LAB-F.png");
     background-size: cover;
     height: 80vh;
     width: 100vw;
@@ -152,8 +152,12 @@ h2 {
   .uItem2 {
     display: block;
     position: absolute;
-    height: 20vh;
-    width: 20vw;
+    max-width: 20%;
+  height: auto;
+  width: auto;
+    top: 43vh;
+    left:67vw;
+    z-index: 5;
   }
 
   /* code */
@@ -162,6 +166,7 @@ h2 {
     position: absolute;
     height: 20vh;
     width: 20vw;
+    z-index: 1;
   }
 
   /* crow bar */
@@ -265,10 +270,13 @@ h2 {
   /* drawer */
   .uItem2 {
     display: block;
+    top: 44vh;
+    z-index: 5;
   }
 
   /* code */
   .item3 {
+    z-index: 1;
     display: block;
   }
 
