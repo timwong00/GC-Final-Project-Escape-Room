@@ -96,7 +96,7 @@ h2 {
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
-    background-image: url("../../assets/img/Hallway-R.png");
+    background-image: url("../../assets/img/LAB-F.png");
     background-size: cover;
     height: 80vh;
     width: 100vw;
@@ -144,24 +144,32 @@ h2 {
   .item1 {
     display: block;
     position: absolute;
-    height: 20vh;
-    width: 20vw;
+    height: 9vh;
+    width: 4vw;
+    right: 10vw;
+    top: 42vh;
+    transform: rotate(90deg);
   }
 
   /* drawer */
   .uItem2 {
     display: block;
     position: absolute;
-    height: 20vh;
-    width: 20vw;
+    /* height: 10vh;
+    width: 10vw;
+    right: 32vw;
+    top: 50vh; */
   }
 
   /* code */
   .item3 {
     display: block;
     position: absolute;
-    height: 20vh;
-    width: 20vw;
+    height: 18vh;
+    width: 6vw;
+    top: 48vh;
+    right: 20vw;
+    transform: rotate(90deg);
   }
 
   /* crow bar */
@@ -169,11 +177,14 @@ h2 {
     display: block;
     position: absolute;
     height: 20vh;
-    width: 20vw;
+    width: 3vw;
+    bottom: 5vh;
+    left: 2vw;
+    transform: rotate(-25deg);
   }
 
   .overlay {
-    height: 77vh;
+    height: 80vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.863);
     /* background-blend-mode: multiply; */
@@ -265,11 +276,19 @@ h2 {
   /* drawer */
   .uItem2 {
     display: block;
+    /* height: 6vh;
+    width: 10vw;
+    right: 31vw;
+    top: 49vh; */
   }
 
   /* code */
   .item3 {
     display: block;
+    height: 18vh;
+    width: 7vw;
+    top: 46vh;
+    right: 18vw;
   }
 
   /* chisel */
@@ -303,5 +322,32 @@ h2 {
 }
 
 /* Desktop View - Item Positioning */
-/* @media screen and (min-width: 1200px) {
-} */
+@media screen and (min-width: 1200px) {
+/* tongs */
+.item1 {
+  display: block;
+}
+
+/* drawer */
+.uItem2 {
+  display: block;
+  /* height: 8vh;
+  width: 9vw;
+  right: 34vw;
+  top: 60vh; */
+}
+
+/* code */
+.item3 {
+  display: block;
+  top: 51vh;
+}
+
+/* chisel */
+.item4 {
+  display: block;
+  height: 23vh;
+  width: 3vw;
+  bottom: 1vh; 
+}
+}

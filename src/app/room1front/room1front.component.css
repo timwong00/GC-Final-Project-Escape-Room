@@ -125,14 +125,12 @@ h2 {
 
   /* door */
   .uItem0 {
-    border: 1px solid yellow;
     display: block;
     position: absolute;
-    height: 20vh;
-    width: 10vw;
-    left: 18vw;
-    top: 18vh;
-    /* visibility: hidden; */
+    height: 10vh;
+    width: 5vw;
+    left: 23vw;
+    top: 23vh;
   }
 
   .hint {
@@ -268,15 +266,14 @@ h2 {
     background-color: rgba(255, 228, 74, 0.479);
     pointer-events: none;
   }
+
+  /* door */
   .uItem0 {
-    border: 1px solid yellow;
     display: block;
-    position: absolute;
-    height: 20vh;
-    width: 10vw;
-    left: 15vw;
-    top: 22vh;
-    /* visibility: hidden; */
+    height: 6vh;
+    width: 5vw;
+    left: 21vw;
+    top: 30vh;  
   }
 
   .prompt {
@@ -298,13 +295,10 @@ h2 {
 /* Desktop View - Item Positioning */
 @media screen and (min-width: 1024px) {
   .uItem0 {
-    border: 1px solid yellow;
     display: block;
-    position: absolute;
-    height: 20vh;
-    width: 10vw;
-    left: 18vw;
-    top: 20vh;
-    /* visibility: hidden; */
+    height: 7vh;
+    width: 4vw;
+    left: 23vw;
+    top: 26vh;  
   }
 }

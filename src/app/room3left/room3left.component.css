@@ -48,7 +48,7 @@
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
-    background-image: url("../../assets/img/Hallway-R.png");
+    background-image: url("../../assets/img/LAB-L.png");
     background-size: cover;
     height: 77vh;
     background-repeat: no-repeat;
@@ -91,24 +91,32 @@
   .uItem0 {
     display: block;
     position: absolute;
-    height: 20vh;
-    width: 20vw;
+    height: 18vh;
+    width: 15vw;
+    bottom: 3vh;
+    right: 17vw;
   }
 
   /* beaker */
   .uItem1 {
     display: block;
     position: absolute;
-    height: 20vh;
-    width: 20vw;
+    height: 12vh;
+    width: 7vw;
+    top: 7vh;
+    left: 25vw;
+    z-index: 5;
   }
 
   /* key */
   .item2 {
     display: block;
     position: absolute;
-    height: 20vh;
-    width: 20vw;
+    height: 3vh;
+    width: 4vw;
+    top: 14vh;
+    left: 27vw;
+    z-index: 1;
   }
 
   .overlay {
@@ -183,16 +191,23 @@
   /* stool */
   .uItem0 {
     display: block;
+    height: 16vh;
+    width: 15vw;
+    bottom: 12vh;
+    right: 17vw;
   }
 
   /* beaker */
   .uItem1 {
     display: block;
+    top: 12vh;
+    z-index: 5;
   }
 
   /* key */
   .item2 {
     display: block;
+    top: 19vh;
   }
 
   .overlay {
@@ -223,7 +238,27 @@
 }
 
 /* Desktop View - Item Positioning */
-/* @media all and (min-width: 1200px) {
+@media all and (min-width: 1200px) {
+  /* stool */
+  .uItem0 {
+    display: block;
+    width: 11vw;
+    bottom: 6vh;
+    right: 18vw;
+  }
 
+  /* beaker */
+  .uItem1 {
+    display: block;
+    top: 5vh;
+    height: 14vh;
+    z-index: 5;
+  }
+
+  /* key */
+  .item2 {
+    display: block;
+    top: 15vh;
+  }
  
-} */
+}

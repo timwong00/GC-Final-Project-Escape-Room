@@ -32,7 +32,7 @@ export class AppComponent {
 
   startGame() {
     // change to "Tutorial"
-    this.gameProgressionService.setGameProgress("Tutorial");
+    this.gameProgressionService.setGameProgress("Room 3");
     this.playingGame = true;
     this.soundEffectService.playHighCreepyAmbient();
     this.tutorialRoomService.isShowing = true;
