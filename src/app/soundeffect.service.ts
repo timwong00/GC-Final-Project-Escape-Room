@@ -86,7 +86,7 @@ export class SoundeffectService {
   }
 
   stopHeartbeat() {
-    this.heartbeat.loop = false;
+    // this.heartbeat.loop = false;
     this.heartbeat.pause();
     this.heartbeat.currentTime = 0;
   }
@@ -102,7 +102,7 @@ export class SoundeffectService {
   }
 
   stopCreepyAmbient() {
-    this.creepyAmbient.loop = false;
+    // this.creepyAmbient.loop = false;
     this.creepyAmbient.pause();
     this.creepyAmbient.currentTime = 0;
   }

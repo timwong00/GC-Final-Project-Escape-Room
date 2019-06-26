@@ -70,10 +70,10 @@ export class MatchService {
       }
     } else if (this.gameProgressionService.gameProgress === "Room 3") {
       if (this.itemsToMatch[0] == "door" && this.itemsToMatch[1] == "door") {
-        this.soundEffectService.stopCreepyAmbient();
-        this.soundEffectService.stopHeartbeat();
         this.router.navigate(["/endgame"]);
         this.gameProgressionService.setGameProgress("Game Won");
+        // this.soundEffectService.stopCreepyAmbient();
+        // this.soundEffectService.stopHeartbeat();
       }
     }
   }
@@ -98,7 +98,6 @@ export class MatchService {
           item => item.match_item_name == this.itemsToMatch[0]
         );
         this.inventoryService.inventoryItems.splice(index2, 1);
-        // console.log(this.room1Service.uItems);
       } else if (this.gameProgressionService.gameProgress === "Room 2") {
         let index = this.room2Service.uItems.findIndex(
           item => item.item_name == this.itemsToMatch[1]
@@ -118,11 +117,11 @@ export class MatchService {
         );
         this.inventoryService.inventoryItems.splice(index2, 1);
       }
-      // console.log(this.itemsToMatch);
-
+      console.log(this.itemsToMatch);
+      console.log("this works");
       this.enterNextRoom();
       this.itemsToMatch = [];
-      // console.log("Items match");
+      console.log("Items match");
     } else if (this.itemsToMatch[0] !== this.itemsToMatch[1]) {
       this.itemsToMatch = [];
       // console.log("Items do not match");
