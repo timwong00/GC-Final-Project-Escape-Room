@@ -48,7 +48,7 @@
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
-    background-image: url("../../assets/img/Surgery-L.png");
+    background-image: url("../../assets/img/Surgery-L-no-handle.png");
     background-size: cover;
     height: 77vh;
     /* width: 100vw; */
@@ -63,13 +63,12 @@
 
   /* container */
   .uItem1 {
-    border: 1px solid yellow;
     display: block;
     position: absolute;
-    height: 65vh;
-    width: 30vw;
-    left: 10vw;
-    bottom: 8vh;
+    height: 9vh;
+    width: 7vw;
+    right: 10vw;
+    bottom: 37vh;
     z-index: 5;
   }
 
@@ -79,8 +78,8 @@
     position: absolute;
     height: 12vh;
     width: 13vw;
-    top: 40vh;
-    left: 25vw;
+    right: 5vw;
+    bottom: 36vh;
     z-index: 1;
   }
 
@@ -185,17 +184,15 @@
 
   /* container */
   .uItem1 {
-    border: 1px solid yellow;
     display: block;
-    height: 58vh;
-    width: 38vw;
-    bottom: 10vh;
+    right: 7vw;
     z-index: 5;
   }
 
   /* door handle */
   .item0 {
     display: block;
+    right: 2vw;
     z-index: 1;
   }
 
@@ -229,13 +226,21 @@
 /* Desktop View - Item Positioning */
 
 @media all and (min-width: 1200px) {
+  /* container */
   .uItem1 {
-    height: 63vh;
-    width: 28vw;
-    bottom: 15vh;
+    display: block;
+    width: 5vw;
+    right: 10vw;
+    bottom: 38vh;
+    z-index: 5;
   }
+
+  /* door handle */
   .item0 {
     display: block;
-    width: 12vw;
+    width: 10vw;
+    right: 6vw;
+    bottom: 37vh;
+    z-index: 1;
   }
 }
