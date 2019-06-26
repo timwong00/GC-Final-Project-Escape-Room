@@ -155,16 +155,19 @@ h2 {
   .uItem2 {
     display: block;
     position: absolute;
-    /* height: 10vh;
-    width: 10vw;
-    right: 32vw;
-    top: 50vh; */
+    max-width: 20%;
+  height: auto;
+  width: auto;
+    top: 43vh;
+    left:67vw;
+    z-index: 5;
   }
 
   /* code */
   .item3 {
     display: block;
     position: absolute;
+    z-index: 1;
     height: 18vh;
     width: 6vw;
     top: 48vh;
@@ -276,14 +279,13 @@ h2 {
   /* drawer */
   .uItem2 {
     display: block;
-    /* height: 6vh;
-    width: 10vw;
-    right: 31vw;
-    top: 49vh; */
+    top: 44vh;
+    z-index: 5;
   }
 
   /* code */
   .item3 {
+    z-index: 1;
     display: block;
     height: 18vh;
     width: 7vw;
