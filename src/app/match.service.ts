@@ -126,6 +126,12 @@ export class MatchService {
         );
         this.inventoryService.inventoryItems.splice(index2, 1);
       }
+      if (
+        this.itemsToMatch[0] == "glass case" &&
+        this.itemsToMatch[1] == "glass case"
+      ) {
+        this.soundEffectService.playGlassBreak();
+      }
       this.enterNextRoom();
       this.itemsToMatch = [];
       this.selected = false;
