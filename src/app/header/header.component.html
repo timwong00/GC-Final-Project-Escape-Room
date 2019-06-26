@@ -1,6 +1,7 @@
 <section class="header">
-  <button (click)="openMenu()" class="openMenu-btn">Menu</button>
-  <div *ngIf="clickedMenu" id="menu">
+  <img src="../../assets/img/blackout.png" alt="blackout logo" class="logo">
+  <!-- <button (click)="openMenu()" class="openMenu-btn">Menu</button> -->
+  <!-- <div *ngIf="clickedMenu" id="menu">
     <p>Menu</p>
     <i (click)="closeMenu()" class="material-icons closeMenu-btn">
       clear
@@ -13,7 +14,7 @@
         Quit Game
       </button>
     </div>
-  </div>
+  </div> -->
 
   <div *ngIf="this.timerService.finishedTutorial" id="battery">
     <div class="battery battery-drain">
@@ -40,4 +41,7 @@
       />
     </div>
   </div>
+  <button class="quit_btn" (click)="quitGame()">
+      Quit Game
+    </button>
 </section>
