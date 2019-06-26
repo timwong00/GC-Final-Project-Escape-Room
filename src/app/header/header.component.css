@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'digital-7regular';
+  src: url('../../assets/digital-7-webfont.woff2') format('woff2'),
+       url('../../assets/digital-7-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 .header {
   padding: 6px;
   display: flex;
@@ -24,6 +33,10 @@
 }
 
 .time {
+  font-family: 'digital-7regular';
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 2px;
   font-size: 20px;
   position: relative;
   top: 15%;
