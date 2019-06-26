@@ -1,13 +1,14 @@
-<section *ngIf="gameLost" class="prompt">
-  <p>you lose</p>
+<main class="prompt">
+<section *ngIf="gameLost"  class="endGame">
+  <p>YOU LOSE</p>
   <button class="promptBtn" (click)="quitGame()">
     Try Again
   </button>
 </section>
-
-<section *ngIf="gameWon" class="prompt">
-  <p>you win</p>
+<section *ngIf="gameWon" class="endGame">
+  <p>YOU WIN</p>
   <button class="promptBtn" (click)="quitGame()">
     Play Again
   </button>
 </section>
+</main>

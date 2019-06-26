@@ -1,34 +1,78 @@
 .rotate {
-    color: white;
-    height: 85vh;
-    width: 100vw;
-  }
+  color: white;
+  height: 85vh;
+  width: 100vw;
+}
+
+.prompt {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhZqML1UB7TGAiJpaSEkdgk46nRI8NZcJEwPctgJvHQ6E9ep5E");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.438);
+  background-blend-mode: multiply;
+  position: relative;
+  /* transform: translate(-50%, -50%); */
+  height: 86vh;
+  width: 100vw;
+  /* padding: 15px; */
+  font-size: 55px;
+  font-family: 'insomniaregular';
+  font-weight: normal;
+  font-style: normal;
+  color: white;
+  border-radius: 15px;  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
   
+}
+
+.promptBtn {
+  width: auto;
+  font-family: 'insomniaregular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 40x;
+  background-color: slategray;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 20px;
+  color: black;
+  justify-content: center;
+  align-items: center;
+}
+
+.how-to-play:hover, .play:hover {
+  background-color: yellow;
+  border: 1px solid black;
+}
+  
+h2 {
+  margin: 0;
+  font-family: 'insomniaregular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+}
+
+
+
+/* Mobile Landscape View */
+@media all and (min-width: 568px) and (orientation: Landscape){
+  
+  .rotate {
+    display: none;
+  }
+
   .prompt {
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhZqML1UB7TGAiJpaSEkdgk46nRI8NZcJEwPctgJvHQ6E9ep5E");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.438);
-    background-blend-mode: multiply;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    height: 90%;
-    padding: 15px;
-    font-size: 20px;
-    color: white;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
   }
-  
+}
+   
   .promptBtn {
-    width: 50%;
+    /* width: 50%; */
     font-family: 'insomniaregular';
     font-weight: normal;
     font-style: normal;
@@ -38,15 +82,14 @@
     border-radius: 15px;
     padding: 20px;
     color: black;
-    display: flex;
     justify-content: center;
     align-items: center;
   }
-/*   
+  
   .how-to-play:hover, .play:hover {
     background-color: yellow;
     border: 1px solid black;
-  } */
+  }
     
   h2 {
     margin: 0;
@@ -55,63 +98,24 @@
     font-style: normal;
     font-size: 20px;
   }
-  
-  
-  
-  /* Mobile Landscape View */
-  @media all and (min-width: 568px) and (orientation: Landscape){
+
+
+/* iPad Portrait View -- display rotate message */
+
+  @media all and (min-width: 768px) {
     .background {
-      background-image: url("../../assets/img/Hallway-F.png");
-      background-size: cover;
-      height: 80vh;
-      width: 100vw;
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
-    .rotate {
       display: none;
     }
-  
-    .prompt {
-      background-color: rgba(0, 0, 0, 0.8);
-      width: 90%;
+    .rotate {
+      display: block;
     }
   }
+/* iPad Landscape View */
+@media all and (min-width: 1024px) and (orientation: Landscape) {
   
-  /* iPad Portrait View -- display rotate message */
-  /* 
-    @media all and (min-width: 768px) {
-      .background {
-        display: none;
-      }
-      .rotate {
-        display: block;
-      }
-    } */
-  /* iPad Landscape View */
-  @media all and (min-width: 1024px) and (orientation: Landscape) {
-    .background {
-      background-image: url("../../assets/img/Hallway-F.png");
-      background-size: cover;
-      height: 85vh;
-      width: 100vw;
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
-  
-    .prompt {
-      padding: 100px;
-      height: 60%;
-      width: 60%;
-    }
-  
-    .promptBtn {
-      width: 25%;
-      height: 20%;
-    }
-  
-    h2 {
-      font-size: 26px;
-    }
-  
+
+  h2 {
+    font-size: 26px;
   }
+
+}
