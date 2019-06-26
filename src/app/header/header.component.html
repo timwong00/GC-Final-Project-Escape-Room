@@ -30,7 +30,7 @@
     <div
       *ngFor="let invItem of inventoryItems; index as i"
       class="item-box"
-      [ngClass]="{ selected: invItem.isSelected }"
+      [ngClass]="{ selected: this.matchService.selected }"
     >
       <img
         src="{{ invItem.item_image }}"

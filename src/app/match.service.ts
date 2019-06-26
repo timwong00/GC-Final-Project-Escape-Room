@@ -18,7 +18,7 @@ export class MatchService {
   itemsToMatch: any[] = [];
   inventoryItems: any[] = [];
   gameProgress: any;
-
+  selected: boolean = false;
   constructor(
     private room1Service: Room1Service,
     private room2Service: Room2Service,
@@ -32,7 +32,16 @@ export class MatchService {
   ) {}
 
   setInventoryItemToMatch(inventoryItem) {
-    this.itemsToMatch.splice(0, 1, inventoryItem);
+    // if selected can use to unlock if not selected cant unlock/hint will pop up
+    if (this.selected === false) {
+      this.itemsToMatch.splice(0, 1, inventoryItem);
+      this.selected = true;
+      // console.log(this.itemsToMatch);
+    } else if (this.selected === true) {
+      this.itemsToMatch = [];
+      this.selected = false;
+      // console.log("else", this.itemsToMatch);
+    }
   }
 
   setUnlockItemToMatch(unlockItem) {
@@ -117,13 +126,13 @@ export class MatchService {
         );
         this.inventoryService.inventoryItems.splice(index2, 1);
       }
-      console.log(this.itemsToMatch);
-      console.log("this works");
       this.enterNextRoom();
       this.itemsToMatch = [];
-      console.log("Items match");
+      this.selected = false;
+      // console.log("Items match");
     } else if (this.itemsToMatch[0] !== this.itemsToMatch[1]) {
       this.itemsToMatch = [];
+      this.selected = false;
       // console.log("Items do not match");
     }
   }
