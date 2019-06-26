@@ -173,14 +173,14 @@
     padding: 15px;
     font-size: 20px;
   }
-  
+
   /* stool */
   .uItem0 {
     display: block;
   }
 
   /* beaker */
-  .uItem1 {
+  .item1 {
     display: block;
   }
 
@@ -188,10 +188,6 @@
   .item2 {
     display: block;
   }
-  }
-
-  /* Desktop View - Item Positioning */
-@media all and (min-width: 1200px) {
 
   .overlay {
     height: 81vh;
@@ -200,10 +196,12 @@
     /* background-blend-mode: multiply; */
     mix-blend-mode: hard-light;
   }
+
   .mobileFlashlight {
     width: 250px;
     height: 250px;
   }
+
   .desktopFlashlight {
     display: block;
     position: absolute;
@@ -218,3 +216,8 @@
   }
 }
 
+/* Desktop View - Item Positioning */
+/* @media all and (min-width: 1200px) {
+
+ 
+} */

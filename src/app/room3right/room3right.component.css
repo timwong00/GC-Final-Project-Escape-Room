@@ -173,10 +173,19 @@
   .uItem4 {
     display: block;
   }
+
+  .overlay {
+    height: 81vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    mix-blend-mode: hard-light;
+  }
+
   .mobileFlashlight {
     width: 250px;
     height: 250px;
   }
+
   .desktopFlashlight {
     display: block;
     position: absolute;
@@ -196,12 +205,5 @@
   .rotateMessage,
   .rotateImg {
     display: none;
-  }
-  .overlay {
-    height: 81vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.863);
-    /* background-blend-mode: multiply; */
-    mix-blend-mode: hard-light;
   }
 }
