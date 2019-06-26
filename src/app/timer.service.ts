@@ -35,7 +35,6 @@ export class TimerService {
         this.seconds = this.timeRemaining - this.minutes * 60;
         return this.timeRemaining--, this.minutes, this.seconds;
       } else if (this.timeRemaining === 0) {
-        this.soundEffectService.stopHeartbeat();
         this.endGame();
       }
     }, 1000);
@@ -57,6 +56,8 @@ export class TimerService {
   endGame() {
     this.router.navigate(["/endgame"]);
     this.stopTimer();
+    this.soundEffectService.stopHeartbeat();
+    this.soundEffectService.stopCreepyAmbient();
     this.gameProgressionService.stopGame();
     this.gameProgressionService.setGameProgress(null);
   }

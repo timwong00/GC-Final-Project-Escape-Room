@@ -10,13 +10,19 @@ export class SoundeffectService {
 
   heartbeat: any;
   soundeffect: any;
-  keyUnlockSoundURL: any;
   heartbeatSoundURL: any;
+  bgm: any;
+  bgmURL: any;
+  creepyAmbient: any;
 
   constructor(private http: HttpClient) {}
 
   getHeartbeat() {
     return this.http.get(`${this.apiurl}` + "/332812/" + `${this.apikey}`);
+  }
+
+  getCreepyAmbient() {
+    return this.http.get(`${this.apiurl}` + "/366887/" + `${this.apikey}`);
   }
 
   // getBreakWindow() {
@@ -83,5 +89,21 @@ export class SoundeffectService {
     this.heartbeat.loop = false;
     this.heartbeat.pause();
     this.heartbeat.currentTime = 0;
+  }
+
+  playCreepyAmbient() {
+    this.getCreepyAmbient().subscribe(response => {
+      this.bgm = response;
+      this.bgmURL = this.bgm.previews["preview-hq-mp3"];
+      this.creepyAmbient = new Audio(this.bgmURL);
+      this.creepyAmbient.play();
+      this.creepyAmbient.loop = true;
+    });
+  }
+
+  stopCreepyAmbient() {
+    this.creepyAmbient.loop = false;
+    this.creepyAmbient.pause();
+    this.creepyAmbient.currentTime = 0;
   }
 }
