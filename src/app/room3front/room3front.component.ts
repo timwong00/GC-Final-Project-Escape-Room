@@ -15,6 +15,8 @@ export class Room3frontComponent implements OnInit {
   inventoryItems: any[];
   gameProgress: string;
   // isShowing: boolean = false;
+  x: any;
+  y: any;
 
   constructor(
     public room3Service: Room3Service,
@@ -77,5 +79,20 @@ export class Room3frontComponent implements OnInit {
 
   hideItemHint(i) {
     this.room3Service.hideItemHint(i);
+  }
+
+  flashlightCursor(mouseEvent) {
+    this.x = mouseEvent.clientX;
+    this.y = mouseEvent.clientY;
+    if (typeof this.x !== undefined) {
+      return this.x, this.y;
+    }
+  }
+
+  isMobileDevice() {
+    return (
+      typeof window.orientation !== "undefined" ||
+      navigator.userAgent.indexOf("IEMobile") !== -1
+    );
   }
 }

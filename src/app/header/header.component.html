@@ -9,26 +9,28 @@
       <button class="menu-options">
         How to play
       </button>
-      <button class="menu-options">
-        Reset Game
-      </button>
-      <button class="menu-options" (click)="stopTimer()">
+      <button class="menu-options" (click)="quitGame()">
         Quit Game
       </button>
     </div>
   </div>
+
   <div *ngIf="this.timerService.finishedTutorial" id="battery">
     <div class="battery battery-drain">
       {{ this.timerService.timeRemaining }}
     </div>
   </div>
-  <div id="inventory">
-    <div *ngFor="let invItem of inventoryItems; index as i">
+  <div id="inventory" class="selected">
+    <div
+      *ngFor="let invItem of inventoryItems; index as i"
+      class="item-box"
+      [ngClass]="{ selected: invItem.isSelected }"
+    >
       <img
         src="{{ invItem.item_image }}"
         class="items invItem{{ i }}"
         alt="{{ invItem.item_name }}"
-        (click)="matchItems1(invItem.match_item_name)"
+        (click)="[matchItems1(invItem.match_item_name), clickedItem(i)]"
       />
     </div>
   </div>

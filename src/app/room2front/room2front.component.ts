@@ -14,7 +14,11 @@ import { InventoryService } from "../inventory.service";
 export class Room2frontComponent implements OnInit {
   items: any;
   unlockItems: any;
-  isShowing: boolean = false;
+  inventoryItems: any[];
+  itemsToMatch: any[] = [];
+  gameProgress: string;
+  x: any;
+  y: any;
 
   constructor(
     public room2Service: Room2Service,
@@ -51,6 +55,10 @@ export class Room2frontComponent implements OnInit {
     this.room2Service.deleteItem(index);
   }
 
+  setGameProgress(): void {
+    this.gameProgressionService.setGameProgress(this.gameProgress);
+  }
+
   matchItems2(itemToUnlock) {
     this.matchService.setUnlockItemToMatch(itemToUnlock);
     this.matchService.checkMatch();
@@ -73,5 +81,20 @@ export class Room2frontComponent implements OnInit {
 
   hideItemHint(i) {
     this.room2Service.hideItemHint(i);
+  }
+
+  flashlightCursor(mouseEvent) {
+    this.x = mouseEvent.clientX;
+    this.y = mouseEvent.clientY;
+    if (typeof this.x !== undefined) {
+      return this.x, this.y;
+    }
+  }
+
+  isMobileDevice() {
+    return (
+      typeof window.orientation !== "undefined" ||
+      navigator.userAgent.indexOf("IEMobile") !== -1
+    );
   }
 }
