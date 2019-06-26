@@ -91,14 +91,27 @@ export class SoundeffectService {
     this.heartbeat.currentTime = 0;
   }
 
-  playCreepyAmbient() {
+  playHighCreepyAmbient() {
     this.getCreepyAmbient().subscribe(response => {
       this.bgm = response;
       this.bgmURL = this.bgm.previews["preview-hq-mp3"];
       this.creepyAmbient = new Audio(this.bgmURL);
+      this.creepyAmbient.volume = 1;
       this.creepyAmbient.play();
       this.creepyAmbient.loop = true;
     });
+  }
+
+  playMidCreepyAmbient() {
+    this.creepyAmbient.volume = 0.4;
+    this.creepyAmbient.play();
+    this.creepyAmbient.loop = true;
+  }
+
+  playLowCreepyAmbient() {
+    this.creepyAmbient.volume = 0.2;
+    this.creepyAmbient.play();
+    this.creepyAmbient.loop = true;
   }
 
   stopCreepyAmbient() {
