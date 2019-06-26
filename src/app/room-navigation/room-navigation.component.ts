@@ -1,7 +1,7 @@
 import { Component, OnInit, HostListener } from "@angular/core";
 import { Router } from "@angular/router";
 import { GameProgressionService } from "../game-progression.service";
-import { fromEvent } from "rxjs";
+import { InventoryService } from "../inventory.service";
 
 @Component({
   selector: "room-navigation",
@@ -33,7 +33,8 @@ export class RoomNavigationComponent implements OnInit {
   // navigateDirection: any;
   constructor(
     public router: Router,
-    public gameProgressionService: GameProgressionService
+    public gameProgressionService: GameProgressionService,
+    public inventoryService: InventoryService
   ) {
     console.log(this.gameProgressionService.gameProgress);
   }

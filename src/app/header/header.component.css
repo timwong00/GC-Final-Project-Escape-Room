@@ -8,12 +8,19 @@
 .openMenu-btn {
   padding: 5px;
   margin: 4px;
-  font-family: 'insomniaregular';
+  font-family: "insomniaregular";
   font-weight: normal;
   font-style: normal;
   font-size: 18x;
   color: white;
   background-color: black;
+}
+
+.time {
+  font-size: 20px;
+  position: relative;
+  top: 15%;
+  left: 40%;
 }
 
 /* Popup menu */
@@ -52,7 +59,7 @@
 }
 
 #menu > p {
-  font-family: 'insomniaregular';
+  font-family: "insomniaregular";
   font-weight: normal;
   font-style: normal;
   font-size: 34px;
@@ -104,7 +111,7 @@
 .selected {
   background-color: yellow;
   border-radius: 15px;
-  }
+}
 
 /* .item-box:active {
   background-color: yellow;
@@ -248,11 +255,9 @@
   }
 }
 
-
 /* Tablet Landscape / Desktop View */
 @media screen and (min-width: 1024px) and (orientation: Landscape) {
   .header {
     height: 10vh;
   }
-
 }
