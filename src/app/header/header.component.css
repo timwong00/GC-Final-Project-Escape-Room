@@ -12,6 +12,11 @@
   margin-left: 10px;
 }
 
+.logo {
+  max-width: 70%;
+  height: auto;
+}
+
 .openMenu-btn {
   padding: 5px;
   margin: 4px;
@@ -206,6 +211,7 @@
   /* margin-top: 20px; */
   border-radius: 5px;
 }
+
 
 .battery-drain {
   background-color: green;
