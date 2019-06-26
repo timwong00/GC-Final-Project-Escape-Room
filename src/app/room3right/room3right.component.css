@@ -100,6 +100,7 @@
     display: block;
     position: absolute;
   }
+
   .mobileFlashlight {
     display: block;
     position: absolute;
@@ -163,21 +164,6 @@
   .item3 {
     display: block;
   }
-}
-
-/* Desktop View - Item Positioning */
-@media screen and (min-width: 1200px) {
-  .rotateMessage,
-  .rotateImg {
-    display: none;
-  }
-  .overlay {
-    height: 81vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.863);
-    /* background-blend-mode: multiply; */
-    mix-blend-mode: hard-light;
-  }
   .mobileFlashlight {
     width: 250px;
     height: 250px;
@@ -193,5 +179,20 @@
     border-radius: 100%;
     background-color: rgba(255, 228, 74, 0.479);
     pointer-events: none;
+  }
+}
+
+/* Desktop View - Item Positioning */
+@media screen and (min-width: 1200px) {
+  .rotateMessage,
+  .rotateImg {
+    display: none;
+  }
+  .overlay {
+    height: 81vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.863);
+    /* background-blend-mode: multiply; */
+    mix-blend-mode: hard-light;
   }
 }

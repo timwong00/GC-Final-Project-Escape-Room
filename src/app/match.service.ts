@@ -7,6 +7,7 @@ import { GameProgressionService } from "./game-progression.service";
 import { Router } from "@angular/router";
 import { TutorialroomService } from "./tutorialroom.service";
 import { TimerService } from "./timer.service";
+import { SoundeffectService } from "./soundeffect.service";
 
 @Injectable({
   providedIn: "root"
@@ -26,7 +27,8 @@ export class MatchService {
     private gameProgressionService: GameProgressionService,
     private tutorialRoomService: TutorialroomService,
     private router: Router,
-    private timerService: TimerService
+    private timerService: TimerService,
+    private soundEffectService: SoundeffectService
   ) {}
 
   setInventoryItemToMatch(inventoryItem) {
@@ -41,11 +43,10 @@ export class MatchService {
 
   enterNextRoom() {
     if (this.gameProgressionService.gameProgress === "Tutorial") {
-      // if (this.tutorialRoomService.uItems.length == 0) 
-        // console.log(this.itemsToMatch[0]);
-        // console.log(this.itemsToMatch[1]);
-        
-        if (this.itemsToMatch[0] == "wrist strap" && this.itemsToMatch[1] == "wrist strap") {
+      if (
+        this.itemsToMatch[0] == "wrist strap" &&
+        this.itemsToMatch[1] == "wrist strap"
+      ) {
         this.router.navigate(["/room1front"]);
         this.timerService.startTimer();
         this.gameProgressionService.playGame();
@@ -59,7 +60,10 @@ export class MatchService {
         this.gameProgressionService.navigateDirection = "front";
       }
     } else if (this.gameProgressionService.gameProgress === "Room 2") {
-      if (this.itemsToMatch[0] == "badge scanner" && this.itemsToMatch[1] == "badge scanner") {
+      if (
+        this.itemsToMatch[0] == "badge scanner" &&
+        this.itemsToMatch[1] == "badge scanner"
+      ) {
         this.router.navigate(["/room3front"]);
         this.gameProgressionService.setGameProgress("Room 3");
         this.gameProgressionService.navigateDirection = "front";
@@ -113,7 +117,7 @@ export class MatchService {
         this.inventoryService.inventoryItems.splice(index2, 1);
       }
       console.log(this.itemsToMatch);
-      
+
       this.enterNextRoom();
       this.itemsToMatch = [];
       console.log("Items match");
