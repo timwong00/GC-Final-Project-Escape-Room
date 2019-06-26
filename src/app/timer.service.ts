@@ -7,9 +7,11 @@ import { SoundeffectService } from "./soundeffect.service";
   providedIn: "root"
 })
 export class TimerService {
-  timeRemaining: number = 10;
+  timeRemaining: number = 300;
   interval;
   finishedTutorial: boolean = false;
+  minutes: number;
+  seconds: number;
 
   constructor(
     private router: Router,
@@ -29,7 +31,9 @@ export class TimerService {
           this.soundEffectService.stopHeartbeat();
           this.soundEffectService.playHighHeartbeat();
         }
-        return this.timeRemaining--;
+        this.minutes = Math.floor(this.timeRemaining / 60);
+        this.seconds = this.timeRemaining - this.minutes * 60;
+        return this.timeRemaining--, this.minutes, this.seconds;
       } else if (this.timeRemaining === 0) {
         this.soundEffectService.stopHeartbeat();
         this.endGame();
