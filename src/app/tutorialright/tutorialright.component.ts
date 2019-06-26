@@ -9,6 +9,8 @@ import { InventoryService } from "../inventory.service";
 })
 export class TutorialrightComponent implements OnInit {
   items: any;
+  flashlightCollected: boolean = false;
+  flashlightClue: boolean = false;
   constructor(
     private tutorialRoomService: TutorialroomService,
     private inventoryService: InventoryService
@@ -46,4 +48,16 @@ export class TutorialrightComponent implements OnInit {
   //   this.tutorialRoomService.hideItemHint(i);
   //   // console.log(this.tutorialRoomService.showingHint);
   // }
+
+  flashlightFound() {
+    this.flashlightCollected = !this.flashlightCollected;
+    this.flashlightClue = !this.flashlightClue;
+    console.log("flashlight yo");
+  }
+
+  flashlightOn() {
+    this.flashlightClue = !this.flashlightClue;
+    console.log("hiiii");
+    
+  }
 }
