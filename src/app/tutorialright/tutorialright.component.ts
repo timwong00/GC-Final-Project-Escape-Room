@@ -9,8 +9,8 @@ import { InventoryService } from "../inventory.service";
 })
 export class TutorialrightComponent implements OnInit {
   items: any;
-  flashlightCollected: boolean = false;
-  flashlightClue: boolean = false;
+  // flashlightCollected: boolean = false;
+  // flashlightClue: boolean = false;
   constructor(
     private tutorialRoomService: TutorialroomService,
     private inventoryService: InventoryService
@@ -50,14 +50,10 @@ export class TutorialrightComponent implements OnInit {
   // }
 
   flashlightFound() {
-    this.flashlightCollected = !this.flashlightCollected;
-    this.flashlightClue = !this.flashlightClue;
-    console.log("flashlight yo");
+    this.tutorialRoomService.flashlightFound();
   }
 
   flashlightOn() {
-    this.flashlightClue = !this.flashlightClue;
-    console.log("hiiii");
-    
+    this.tutorialRoomService.flashlightOn();
   }
 }

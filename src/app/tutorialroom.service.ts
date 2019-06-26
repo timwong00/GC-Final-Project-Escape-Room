@@ -10,12 +10,12 @@ export class TutorialroomService {
   isShowing: boolean = true;
   showingHint: boolean;
   collected: boolean = false;
+  flashlightCollected: boolean = false;
+  flashlightClue: boolean = false;
 
   constructor(private http: HttpClient) {}
 
-  
   getTutorialItems() {
-
     return this.http.get("http://localhost:5000/tutorial-items", {
       responseType: "json"
     });
@@ -25,7 +25,6 @@ export class TutorialroomService {
     return this.http.get("http://localhost:5000/tutorial-unlock-items", {
       responseType: "json"
     });
-
   }
 
   // hasItems() {
@@ -78,5 +77,13 @@ export class TutorialroomService {
 
   hideUnlockItemHint(i) {
     this.uItems[i].showingHint = false;
+  }
+
+  flashlightFound() {
+    this.flashlightCollected = !this.flashlightCollected;
+    this.flashlightClue = !this.flashlightClue;
+  }
+  flashlightOn() {
+    this.flashlightClue = !this.flashlightClue;
   }
 }
