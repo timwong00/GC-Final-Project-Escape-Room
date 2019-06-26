@@ -43,7 +43,7 @@
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
-    background-image: url("../../assets/img/Hallway-R.png");
+    background-image: url("../../assets/img/LAB-L.png");
     background-size: cover;
     height: 77vh;
     background-repeat: no-repeat;

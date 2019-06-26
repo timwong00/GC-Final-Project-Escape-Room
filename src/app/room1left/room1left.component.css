@@ -63,6 +63,7 @@
 
   /* container */
   .uItem1 {
+    border: 1px solid yellow;
     display: block;
     position: absolute;
     height: 65vh;
@@ -182,7 +183,9 @@
     font-size: 20px;
   }
 
+  /* container */
   .uItem1 {
+    border: 1px solid yellow;
     display: block;
     height: 58vh;
     width: 38vw;
@@ -190,6 +193,7 @@
     z-index: 5;
   }
 
+  /* door handle */
   .item0 {
     display: block;
     z-index: 1;

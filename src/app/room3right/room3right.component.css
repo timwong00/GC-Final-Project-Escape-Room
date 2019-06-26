@@ -43,7 +43,7 @@
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
-    background-image: url("../../assets/img/Hallway-R.png");
+    background-image: url("../../assets/img/Lab-R.png");
     background-size: cover;
     height: 77vh;
     background-repeat: no-repeat;
@@ -100,13 +100,16 @@
 
   /* lock */
   .uItem3 {
+    border: 1px solid yellow;
     display: block;
     position: absolute;
     height: 20vh;
     width: 20vw;
   }
 
+  /* door */
   .uItem4 {
+    border: 1px solid yellow;
     display: block;
     position: absolute;
     height: 20vh;
@@ -186,11 +189,13 @@
   /* lock */
   .uItem3 {
     display: block;
+    border: 1px solid yellow;
   }
 
   /* door */
   .uItem4 {
     display: block;
+    border: 1px solid yellow;
   }
 
   .overlay {
