@@ -109,7 +109,7 @@ export class SoundeffectService {
   }
 
   playLowCreepyAmbient() {
-    this.creepyAmbient.volume = 0.2;
+    this.creepyAmbient.volume = 0.1;
     this.creepyAmbient.play();
     this.creepyAmbient.loop = true;
   }
