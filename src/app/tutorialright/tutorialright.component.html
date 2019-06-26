@@ -4,19 +4,23 @@
     <img src="../../assets/img/rotate.png" class="rotateImg" />
   </div>
 
-  <div class="overlay"></div>
-  <div *ngFor="let item of items; index as i" [ngClass]="{'hidden': this.tutorialRoomService.items[i].collected}" >
-    <img
-      src="{{ item.item_image }}"
-      class="item{{i}} items"
-      alt="{{ item.item_name }}"
-      (click)="showItemHint(i)"
-    />
-    <div *ngIf="this.tutorialRoomService.items[i].showingHint" class="hint">
-      <p>{{ item.item_use }}</p>
-      <button class="hintBtn" (click)="[selectItem(item), removeItem(item)]">
-        Grab Item
-      </button>
+  <div class="overlay">
+    <div *ngFor="let item of items; index as i" [ngClass]="{'hidden': this.tutorialRoomService.items[i].collected}">
+      <img src="{{ item.item_image }}" class="item{{i}} items" alt="{{ item.item_name }}" (click)="showItemHint(i)" />
+      <div *ngIf="this.tutorialRoomService.items[i].showingHint" class="hint">
+        <p>{{ item.item_use }}</p>
+        <button class="hintBtn" (click)="[selectItem(item), removeItem(item)]">
+          Grab Item
+        </button>
+      </div>
+    </div>
+
+    <img *ngIf="!this.flashlightCollected" src="../../assets/img/Tut-Flashlight.png" alt="flashlight"
+      class="flashlightImg" (click)="flashlightFound()">
+
+    <div *ngIf="this.flashlightClue" class="flashlightClue">
+      <p>You've found a flashlight!</p>
+      <button class="flashlightBtn" (click)="flashlightOn()">OK</button>
     </div>
   </div>
 </section>
