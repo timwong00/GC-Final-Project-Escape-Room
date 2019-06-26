@@ -5,7 +5,7 @@
   </div>
   <div class="overlay"></div>
 
-  <div *ngFor="let uItem of unlockItems; index as i">
+  <div *ngFor="let uItem of unlockItems; index as i" [ngClass]="{'hidden': this.tutorialRoomService.uItems[i].collected}">
     <img
       src="{{ uItem.item_image }}"
       alt="{{ uItem.item_name }}"

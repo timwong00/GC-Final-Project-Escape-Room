@@ -60,4 +60,15 @@ export class HeaderComponent implements OnInit {
   quitGame() {
     location.reload();
   }
+
+  clickedItem(index) {
+    if (this.inventoryItems[index].isSelected) {
+      this.inventoryItems[index].isSelected = false;
+    } else {
+      for (let i = 0; i < this.inventoryItems.length; i++) {
+        this.inventoryItems[i].isSelected = false;
+      }
+      this.inventoryItems[index].isSelected = true;
+    }
+  }
 }

@@ -10,6 +10,8 @@ export class Room2Service {
   isShowing: boolean = true;
   itemsToMatch: any[] = [];
   showingHint: boolean;
+  collected: boolean = false;
+
 
   constructor(private http: HttpClient) {}
   getRoomTwoItems() {
@@ -34,9 +36,10 @@ export class Room2Service {
   }
 
   deleteItem(index) {
-    this.items.splice(index, 1);
+    // this.items.splice(index, 1);
+    this.items[index].collected = true;
   }
-
+  
   hidePrompt() {
     this.isShowing = false;
   }
