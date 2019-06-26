@@ -48,7 +48,7 @@
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
-    background-image: url("../../assets/img/Hallway-R.png");
+    background-image: url("../../assets/img/Lab-R.png");
     background-size: cover;
     height: 77vh;
     background-repeat: no-repeat;
@@ -99,25 +99,31 @@
   .item0 {
     display: block;
     position: absolute;
-    height: 20vh;
-    width: 20vw;
+    height: 18vh;
+    width: 3vw;
+    transform: rotate(90deg);
+    bottom: 0vh;
+    left: 20vw;
   }
 
   /* lock */
   .uItem3 {
     display: block;
     position: absolute;
-    height: 20vh;
-    width: 20vw;
+    height: 12vh;
+    width: 15vw;
+    bottom: 7vh;
+    right: 19vw;
   }
 
+  /* door */
   .uItem4 {
     display: block;
     position: absolute;
-    height: 20vh;
-    width: 20vw;
-    right: 0;
-    /* delete right later */
+    height: 12vh;
+    width: 15vw;
+    bottom: 7vh;
+    right: 19vw;
   }
 
   .mobileFlashlight {
@@ -186,16 +192,23 @@
   /* stool leg */
   .item0 {
     display: block;
+    bottom: -1vh;
   }
 
   /* lock */
   .uItem3 {
     display: block;
+    bottom: 13vh;
+    right: 17vw;
+    z-index: 5;
   }
 
   /* door */
   .uItem4 {
     display: block;
+    bottom: 13vh;
+    right: 17vw;
+    z-index: 1;
   }
 
   .overlay {
@@ -225,9 +238,33 @@
 }
 
 /* Desktop View - Item Positioning */
-/* @media screen and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .rotateMessage,
   .rotateImg {
     display: none;
   }
-} */
+  
+  /* stool leg */
+  .item0 {
+    display: block;
+    height: 20vh;
+    width: 2vw;
+    bottom: -6vh;
+  }
+
+  /* lock */
+  .uItem3 {
+    display: block;
+    bottom: 6vh;
+    right: 19vw;
+    z-index: 5;
+  }
+
+  /* door */
+  .uItem4 {
+    display: block;
+    bottom: 6vh;
+    right: 19vw;
+    z-index: 1;
+  }
+}

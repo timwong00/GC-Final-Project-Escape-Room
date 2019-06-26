@@ -42,11 +42,11 @@
     justify-content: center;
     align-items: center;
   }
-  
+/*   
   .how-to-play:hover, .play:hover {
     background-color: yellow;
     border: 1px solid black;
-  }
+  } */
     
   h2 {
     margin: 0;
