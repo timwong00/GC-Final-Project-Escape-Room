@@ -76,6 +76,12 @@ h2 {
 
 .items {
   display: none;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.items:hover {
+  opacity: 1;
 }
 
 .mobileFlashlight {
@@ -123,8 +129,8 @@ h2 {
 
   .hintBtn {
     border-radius: 5px;
-    border: 1px solid white;
-    background-color: slategray;
+    border: 1px solid black;
+    background-color: whitesmoke;
     z-index: 15;
     padding: 10px;
   }
@@ -134,28 +140,36 @@ h2 {
     width: 90%;
   }
 
-  /* glove */
-  .uItem1 {
+  /* tongs */
+  .item1 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
 
   /* drawer */
   .uItem2 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
 
-  /* glove */
+  /* code */
   .item3 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
 
-  /* chisel */
+  /* crow bar */
   .item4 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
 
   .overlay {
@@ -209,7 +223,7 @@ h2 {
 }
 
 /* iPad Landscape / Desktop View */
-@media all and (min-width: 1024px) and (orientation: Landscape) {
+@media screen and (min-width: 1024px) and (orientation: Landscape) {
   .background {
     height: 81vh;
   }
@@ -243,8 +257,8 @@ h2 {
     font-size: 26px;
   }
 
-  /* glove */
-  .uItem1 {
+  /* tongs */
+  .item1 {
     display: block;
   }
 
@@ -253,7 +267,7 @@ h2 {
     display: block;
   }
 
-  /* glove */
+  /* code */
   .item3 {
     display: block;
   }
@@ -262,6 +276,7 @@ h2 {
   .item4 {
     display: block;
   }
+
   .overlay {
     height: 81vh;
     width: 100vw;
@@ -288,5 +303,5 @@ h2 {
 }
 
 /* Desktop View - Item Positioning */
-@media all and (min-width: 1200px) {
-}
+/* @media screen and (min-width: 1200px) {
+} */

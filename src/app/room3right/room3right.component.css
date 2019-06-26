@@ -27,6 +27,12 @@
 
 .items {
   display: none;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.items:hover {
+  opacity: 1;
 }
 
 .mobileFlashlight {
@@ -93,13 +99,27 @@
   .item0 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
 
   /* lock */
-  .item3 {
+  .uItem3 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
+
+  .uItem4 {
+    display: block;
+    position: absolute;
+    height: 20vh;
+    width: 20vw;
+    right: 0;
+    /* delete right later */
+  }
+
   .mobileFlashlight {
     display: block;
     position: absolute;
@@ -154,34 +174,42 @@
     display: none;
   }
 
+  .hint {
+    font-size: 20px;
+  }
+
+  .hintBtn {
+    padding: 15px;
+    font-size: 20px;
+  }
+
   /* stool leg */
   .item0 {
     display: block;
   }
 
   /* lock */
-  .item3 {
+  .uItem3 {
     display: block;
   }
-}
 
-/* Desktop View - Item Positioning */
-@media screen and (min-width: 1200px) {
-  .rotateMessage,
-  .rotateImg {
-    display: none;
+  /* door */
+  .uItem4 {
+    display: block;
   }
+
   .overlay {
     height: 81vh;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.863);
-    /* background-blend-mode: multiply; */
     mix-blend-mode: hard-light;
   }
+
   .mobileFlashlight {
     width: 250px;
     height: 250px;
   }
+
   .desktopFlashlight {
     display: block;
     position: absolute;
@@ -195,3 +223,11 @@
     pointer-events: none;
   }
 }
+
+/* Desktop View - Item Positioning */
+/* @media screen and (min-width: 1200px) {
+  .rotateMessage,
+  .rotateImg {
+    display: none;
+  }
+} */

@@ -27,6 +27,12 @@
 
 .items {
   display: none;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.items:hover {
+  opacity: 1;
 }
 
 .mobileFlashlight {
@@ -85,19 +91,26 @@
   .uItem0 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
 
-  /* jar */
-  .item1 {
+  /* beaker */
+  .uItem1 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
 
   /* key */
   .item2 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
+
   .overlay {
     height: 77vh;
     width: 100vw;
@@ -166,22 +179,21 @@
     padding: 15px;
     font-size: 20px;
   }
-  
+
+  /* stool */
   .uItem0 {
     display: block;
   }
 
-  .item1 {
+  /* beaker */
+  .uItem1 {
     display: block;
   }
 
+  /* key */
   .item2 {
     display: block;
   }
-  }
-
-  /* Desktop View - Item Positioning */
-@media all and (min-width: 1200px) {
 
   .overlay {
     height: 81vh;
@@ -190,10 +202,12 @@
     /* background-blend-mode: multiply; */
     mix-blend-mode: hard-light;
   }
+
   .mobileFlashlight {
     width: 250px;
     height: 250px;
   }
+
   .desktopFlashlight {
     display: block;
     position: absolute;
@@ -208,3 +222,8 @@
   }
 }
 
+/* Desktop View - Item Positioning */
+/* @media all and (min-width: 1200px) {
+
+ 
+} */

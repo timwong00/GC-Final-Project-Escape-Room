@@ -1,6 +1,7 @@
 <section class="header">
-  <button (click)="openMenu()" class="openMenu-btn">Menu</button>
-  <div *ngIf="clickedMenu" id="menu">
+  <img src="../../assets/img/blackout.png" alt="blackout logo" class="logo">
+  <!-- <button (click)="openMenu()" class="openMenu-btn">Menu</button> -->
+  <!-- <div *ngIf="clickedMenu" id="menu">
     <p>Menu</p>
     <i (click)="closeMenu()" class="material-icons closeMenu-btn">
       clear
@@ -13,19 +14,26 @@
         Quit Game
       </button>
     </div>
-  </div>
+  </div> -->
 
   <div *ngIf="this.timerService.finishedTutorial" id="battery">
     <div class="battery battery-drain">
-      {{ this.timerService.timeRemaining }}
+      <span class="time"
+        >{{ this.timerService.minutes }}:{{
+          this.timerService.seconds < 10
+            ? "0" + this.timerService.seconds
+            : this.timerService.seconds
+        }}</span
+      >
     </div>
   </div>
   <div id="inventory" class="selected">
     <div
       *ngFor="let invItem of inventoryItems; index as i"
       class="item-box"
-      [ngClass]="{ selected: invItem.isSelected }"
+      [ngClass]="{ selected: this.matchService.selected }"
     >
+
       <img
         src="{{ invItem.item_image }}"
         class="items invItem{{ i }}"
@@ -34,4 +42,7 @@
       />
     </div>
   </div>
+  <button class="quit_btn" (click)="quitGame()">
+      Quit Game
+    </button>
 </section>
