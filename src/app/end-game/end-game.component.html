@@ -1,11 +1,11 @@
-<section *ngIf="gameLost" class="prompt">
+<section *ngIf="gameLost" class="endGame">
   <p>you lose</p>
-  <button class="promptBtn" [routerLink]="['/tutorialfront']" 
+  <button class="endGameBtn" [routerLink]="['/app-root']" 
     (click)="startGame()">Try Again</button>
 </section>
 
-<section *ngIf="gameWon" class="prompt">
+<section *ngIf="gameWon" class="endGame">
   <p>you win</p>
-  <button class="promptBtn" [routerLink]="['/tutorialfront']" 
+  <button class="endGameBtn" [routerLink]="['/app-root']" 
     (click)="startGame()">Play Again</button>
 </section>  

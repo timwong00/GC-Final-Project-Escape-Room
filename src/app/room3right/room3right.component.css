@@ -111,6 +111,7 @@
     position: absolute;
     height: 20vh;
     width: 20vw;
+    right: 0;
   }
 
   .mobileFlashlight {
