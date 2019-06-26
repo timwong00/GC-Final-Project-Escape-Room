@@ -8,6 +8,7 @@ export class Room3Service {
   items: any;
   uItems: any;
   isShowing: boolean = true;
+  itemsToMatch: any[] = [];
   showingHint: boolean;
   collected: boolean = false;
 

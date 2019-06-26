@@ -27,7 +27,7 @@ export class MatchService {
     private tutorialRoomService: TutorialroomService,
     private router: Router,
     private timerService: TimerService
-  ) {}
+  ) { }
 
   setInventoryItemToMatch(inventoryItem) {
     this.itemsToMatch.splice(0, 1, inventoryItem);
@@ -42,10 +42,10 @@ export class MatchService {
   enterNextRoom() {
     if (this.gameProgressionService.gameProgress === "Tutorial") {
       // if (this.tutorialRoomService.uItems.length == 0) 
-        // console.log(this.itemsToMatch[0]);
-        // console.log(this.itemsToMatch[1]);
-        
-        if (this.itemsToMatch[0] == "wrist strap" && this.itemsToMatch[1] == "wrist strap") {
+      // console.log(this.itemsToMatch[0]);
+      // console.log(this.itemsToMatch[1]);
+
+      if (this.itemsToMatch[0] == "wrist strap" && this.itemsToMatch[1] == "wrist strap") {
         this.router.navigate(["/room1front"]);
         this.timerService.startTimer();
         this.gameProgressionService.playGame();
@@ -63,13 +63,15 @@ export class MatchService {
         this.router.navigate(["/room3front"]);
         this.gameProgressionService.setGameProgress("Room 3");
         this.gameProgressionService.navigateDirection = "front";
-      } else if (this.gameProgressionService.gameProgress === "Room 3") {
-        if (this.itemsToMatch[0] == "door" && this.itemsToMatch[1] == "door") {
-          this.router.navigate(["/endgame"]);
-          this.gameProgressionService.setGameProgress("Game Won");
-        }
+      }
+    } else if (this.gameProgressionService.gameProgress === "Room 3") {
+      if (this.itemsToMatch[0] == "door" && this.itemsToMatch[1] == "door") {
+        console.log("be free!");
+        this.router.navigate(["/endgame"]);
+        this.gameProgressionService.setGameProgress("Game Won");
       }
     }
+
   }
 
   checkMatch() {
@@ -112,8 +114,8 @@ export class MatchService {
         );
         this.inventoryService.inventoryItems.splice(index2, 1);
       }
-      console.log(this.itemsToMatch);
-      
+      // console.log(this.itemsToMatch);
+
       this.enterNextRoom();
       this.itemsToMatch = [];
       console.log("Items match");

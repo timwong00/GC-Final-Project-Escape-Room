@@ -14,7 +14,7 @@ export class Room3frontComponent implements OnInit {
   unlockItems: any;
   inventoryItems: any[];
   gameProgress: string;
-  // isShowing: boolean = false;
+  itemsToMatch: any[] = [];
   x: any;
   y: any;
 

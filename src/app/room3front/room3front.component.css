@@ -134,28 +134,36 @@ h2 {
     width: 90%;
   }
 
-  /* glove */
-  .uItem1 {
+  /* tongs */
+  .item1 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
 
   /* drawer */
   .uItem2 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
 
-  /* glove */
+  /* code */
   .item3 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
 
-  /* chisel */
+  /* crow bar */
   .item4 {
     display: block;
     position: absolute;
+    height: 20vh;
+    width: 20vw;
   }
 
   .overlay {
@@ -243,8 +251,8 @@ h2 {
     font-size: 26px;
   }
 
-  /* glove */
-  .uItem1 {
+  /* tongs */
+  .item1 {
     display: block;
   }
 
@@ -253,7 +261,7 @@ h2 {
     display: block;
   }
 
-  /* glove */
+  /* code */
   .item3 {
     display: block;
   }
@@ -262,6 +270,7 @@ h2 {
   .item4 {
     display: block;
   }
+
   .overlay {
     height: 81vh;
     width: 100vw;
