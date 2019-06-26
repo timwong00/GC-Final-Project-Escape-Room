@@ -103,7 +103,6 @@
 
   /* lock */
   .uItem3 {
-    border: 1px solid yellow;
     display: block;
     position: absolute;
     height: 12vh;
@@ -114,7 +113,6 @@
 
   /* door */
   .uItem4 {
-    border: 1px solid yellow;
     display: block;
     position: absolute;
     height: 12vh;
@@ -195,7 +193,6 @@
   /* lock */
   .uItem3 {
     display: block;
-    border: 1px solid yellow;
     bottom: 13vh;
     right: 17vw;
     z-index: 5;
@@ -204,7 +201,6 @@
   /* door */
   .uItem4 {
     display: block;
-    border: 1px solid yellow;
     bottom: 13vh;
     right: 17vw;
     z-index: 1;
@@ -254,7 +250,6 @@
   /* lock */
   .uItem3 {
     display: block;
-    border: 1px solid yellow;
     bottom: 6vh;
     right: 19vw;
     z-index: 5;
@@ -263,7 +258,6 @@
   /* door */
   .uItem4 {
     display: block;
-    border: 1px solid yellow;
     bottom: 6vh;
     right: 19vw;
     z-index: 1;
