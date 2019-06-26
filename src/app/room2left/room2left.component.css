@@ -1,4 +1,8 @@
 /* Mobile Portrait View */
+.hidden {
+  display: none;
+}
+
 .background {
   position: relative;
   height: 86vh;
@@ -23,7 +27,14 @@
 
 .items {
   display: none;
+  cursor: pointer;
+  opacity: 0.8;
 }
+
+.items:hover {
+  opacity: 1;
+}
+
 .mobileFlashlight {
   display: none;
   cursor: move;
@@ -93,11 +104,13 @@
 
   .hintBtn {
     border-radius: 5px;
-    border: 1px solid white;
-    background-color: slategray;
+    border: 1px solid black;
+    background-color: whitesmoke;
     z-index: 15;
     padding: 10px;
+    cursor: pointer;
   }
+
   .overlay {
     height: 77vh;
     width: 100vw;

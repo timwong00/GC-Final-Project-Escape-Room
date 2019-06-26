@@ -7,6 +7,7 @@ import { GameProgressionService } from "./game-progression.service";
 import { Router } from "@angular/router";
 import { TutorialroomService } from "./tutorialroom.service";
 import { TimerService } from "./timer.service";
+import { SoundeffectService } from "./soundeffect.service";
 
 @Injectable({
   providedIn: "root"
@@ -17,7 +18,7 @@ export class MatchService {
   itemsToMatch: any[] = [];
   inventoryItems: any[] = [];
   gameProgress: any;
-
+  selected: boolean = false;
   constructor(
     private room1Service: Room1Service,
     private room2Service: Room2Service,
@@ -26,11 +27,21 @@ export class MatchService {
     private gameProgressionService: GameProgressionService,
     private tutorialRoomService: TutorialroomService,
     private router: Router,
-    private timerService: TimerService
+    private timerService: TimerService,
+    private soundEffectService: SoundeffectService
   ) {}
 
   setInventoryItemToMatch(inventoryItem) {
-    this.itemsToMatch.splice(0, 1, inventoryItem);
+    // if selected can use to unlock if not selected cant unlock/hint will pop up
+    if (this.selected === false) {
+      this.itemsToMatch.splice(0, 1, inventoryItem);
+      this.selected = true;
+      // console.log(this.itemsToMatch);
+    } else if (this.selected === true) {
+      this.itemsToMatch = [];
+      this.selected = false;
+      // console.log("else", this.itemsToMatch);
+    }
   }
 
   setUnlockItemToMatch(unlockItem) {
@@ -41,7 +52,10 @@ export class MatchService {
 
   enterNextRoom() {
     if (this.gameProgressionService.gameProgress === "Tutorial") {
-      if (this.tutorialRoomService.uItems.length == 0) {
+      if (
+        this.itemsToMatch[0] == "wrist strap" &&
+        this.itemsToMatch[1] == "wrist strap"
+      ) {
         this.router.navigate(["/room1front"]);
         this.timerService.startTimer();
         this.gameProgressionService.playGame();
@@ -49,21 +63,26 @@ export class MatchService {
         this.gameProgressionService.navigateDirection = "front";
       }
     } else if (this.gameProgressionService.gameProgress === "Room 1") {
-      if (this.room1Service.uItems.length == 0) {
+      if (this.itemsToMatch[0] == "door" && this.itemsToMatch[1] == "door") {
         this.router.navigate(["/room2front"]);
         this.gameProgressionService.setGameProgress("Room 2");
         this.gameProgressionService.navigateDirection = "front";
       }
     } else if (this.gameProgressionService.gameProgress === "Room 2") {
-      if (this.room2Service.uItems.length == 0) {
+      if (
+        this.itemsToMatch[0] == "badge scanner" &&
+        this.itemsToMatch[1] == "badge scanner"
+      ) {
         this.router.navigate(["/room3front"]);
         this.gameProgressionService.setGameProgress("Room 3");
         this.gameProgressionService.navigateDirection = "front";
-      } else if (this.gameProgressionService.gameProgress === "Room 3") {
-        if (this.room3Service.uItems.length == 0) {
-          this.router.navigate(["/endgame"]);
-          this.gameProgressionService.setGameProgress("Game Won");
-        }
+      }
+    } else if (this.gameProgressionService.gameProgress === "Room 3") {
+      if (this.itemsToMatch[0] == "door" && this.itemsToMatch[1] == "door") {
+        this.router.navigate(["/endgame"]);
+        this.gameProgressionService.setGameProgress("Game Won");
+        // this.soundEffectService.stopCreepyAmbient();
+        // this.soundEffectService.stopHeartbeat();
       }
     }
   }
@@ -74,7 +93,7 @@ export class MatchService {
         let index = this.tutorialRoomService.uItems.findIndex(
           item => item.item_name == this.itemsToMatch[1]
         );
-        this.tutorialRoomService.uItems.splice(index, 1);
+        this.tutorialRoomService.uItems[index].collected = true;
         let index2 = this.inventoryService.inventoryItems.findIndex(
           item => item.match_item_name == this.itemsToMatch[0]
         );
@@ -83,17 +102,16 @@ export class MatchService {
         let index = this.room1Service.uItems.findIndex(
           item => item.item_name == this.itemsToMatch[1]
         );
-        this.room1Service.uItems.splice(index, 1);
+        this.room1Service.uItems[index].collected = true;
         let index2 = this.inventoryService.inventoryItems.findIndex(
           item => item.match_item_name == this.itemsToMatch[0]
         );
         this.inventoryService.inventoryItems.splice(index2, 1);
-        console.log(this.room1Service.uItems);
       } else if (this.gameProgressionService.gameProgress === "Room 2") {
         let index = this.room2Service.uItems.findIndex(
           item => item.item_name == this.itemsToMatch[1]
         );
-        this.room2Service.uItems.splice(index, 1);
+        this.room2Service.uItems[index].collected = true;
         let index2 = this.inventoryService.inventoryItems.findIndex(
           item => item.match_item_name == this.itemsToMatch[0]
         );
@@ -102,7 +120,7 @@ export class MatchService {
         let index = this.room3Service.uItems.findIndex(
           item => item.item_name == this.itemsToMatch[1]
         );
-        this.room3Service.uItems.splice(index, 1);
+        this.room3Service.uItems[index].collected = true;
         let index2 = this.inventoryService.inventoryItems.findIndex(
           item => item.match_item_name == this.itemsToMatch[0]
         );
@@ -110,9 +128,11 @@ export class MatchService {
       }
       this.enterNextRoom();
       this.itemsToMatch = [];
-      console.log("Items match");
+      this.selected = false;
+      // console.log("Items match");
     } else if (this.itemsToMatch[0] !== this.itemsToMatch[1]) {
       this.itemsToMatch = [];
+      this.selected = false;
       // console.log("Items do not match");
     }
   }

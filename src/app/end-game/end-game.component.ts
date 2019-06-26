@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 import { TimerService } from "../timer.service";
 import { GameProgressionService } from "../game-progression.service";
 import { TutorialroomService } from "../tutorialroom.service";
@@ -7,9 +7,9 @@ import { Room2Service } from "../room2.service";
 import { Room3Service } from "../room3.service";
 
 @Component({
-  selector: 'end-game',
-  templateUrl: './end-game.component.html',
-  styleUrls: ['./end-game.component.css']
+  selector: "end-game",
+  templateUrl: "./end-game.component.html",
+  styleUrls: ["./end-game.component.css"]
 })
 export class EndGameComponent implements OnInit {
   gameProgress: string;
@@ -25,7 +25,7 @@ export class EndGameComponent implements OnInit {
     private room1Service: Room1Service,
     private room2Service: Room2Service,
     private room3Service: Room3Service
-    ) { }
+  ) {}
 
   ngOnInit() {
     this.gameProgress = this.gameProgressionService.getGameProgress();
@@ -34,27 +34,9 @@ export class EndGameComponent implements OnInit {
     } else {
       this.gameLost = true;
     }
-
-    // startGame() {
-    //   this.gameProgressionService.setGameProgress("Tutorial");
-    //   this.playingGame = true;
-    //   this.tutorialRoomService.isShowing = true;
-    //   this.room1Service.isShowing = true;
-    //   this.room2Service.isShowing = true;
-    //   this.room3Service.isShowing = true;
-    // }
-
   }
 
-
-  // endGame() {
-  //   this.timerService.endGame();
-  // }
-
-  // gameOver() {
-    
-  // }
-
-  
-
+  quitGame() {
+    location.reload();
+  }
 }
