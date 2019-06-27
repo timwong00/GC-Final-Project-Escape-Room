@@ -50,7 +50,14 @@
   background-color: whitesmoke;
   z-index: 15;
   padding: 10px;
-  width: 50%;
+  width: 50%;    
+  font-family: "insomniaregular";
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hintBtn:active {
+  background-color: yellow;
 }
 
 .overlay {

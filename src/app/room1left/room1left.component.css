@@ -110,6 +110,13 @@
     padding: 10px;
     cursor: pointer;
     width: 50%;
+    font-family: "insomniaregular";
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .hintBtn:active {
+    background-color: yellow;
   }
 
   .overlay {
