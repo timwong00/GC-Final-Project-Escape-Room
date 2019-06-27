@@ -108,6 +108,7 @@
     z-index: 15;
     padding: 10px;
     cursor: pointer;
+    width: 50%;
   }
 
   .overlay {
@@ -167,13 +168,15 @@
     height: 81vh;
   }
 
-  .hint, .noMatch {
+  .hint {
     font-size: 20px;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
   }
 
-  .hintBtn, .noMatchBtn {
-    padding: 15px;
+  .hintBtn {
     font-size: 20px;
+    margin-top: 2vh;
   }
 
   .rotateMessage,

@@ -141,6 +141,7 @@ h2 {
     background-color: whitesmoke;
     z-index: 15;
     padding: 10px;
+    width: 50%;
   }
 
   .prompt {
@@ -265,13 +266,15 @@ h2 {
     display: none;
   }
 
-  .hint, .noMatch {
+  .hint {
     font-size: 20px;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
   }
 
-  .hintBtn, .noMatchBtn {
-    padding: 15px;
+  .hintBtn {
     font-size: 20px;
+    margin-top: 2vh;
   }
 
   .prompt {

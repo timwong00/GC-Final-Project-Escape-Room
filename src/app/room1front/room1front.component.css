@@ -166,6 +166,7 @@ h2 {
     z-index: 15;
     padding: 10px;
     cursor: pointer;
+    width: 50%;
   }
 
   .prompt {
@@ -250,11 +251,14 @@ h2 {
 
   .hint, .noMatch {
     font-size: 20px;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
   }
 
   .hintBtn, .noMatchBtn {
-    padding: 15px;
+    /* padding: 15px; */
     font-size: 20px;
+    margin-top: 2vh;
   }
 
   .overlay {
