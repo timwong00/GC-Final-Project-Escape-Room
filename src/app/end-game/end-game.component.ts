@@ -34,6 +34,7 @@ export class EndGameComponent implements OnInit {
     } else {
       this.gameLost = true;
     }
+    this.timerService.stopTimer();
   }
 
   quitGame() {
