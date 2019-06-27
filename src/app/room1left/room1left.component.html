@@ -24,7 +24,7 @@
         <button class="noMatchBtn" (click)="hideNoMatch()">OK</button>
       </div>
     </div>
-
+    
     <div *ngFor="let item of items; index as i" [ngClass]="{ hidden: this.room1Service.items[i].collected }">
       <img src="{{ item.item_image }}" class="item{{ i }} items" alt="{{ item.item_name }}" (click)="showItemHint(i)" />
       <div *ngIf="this.room1Service.items[i].showingHint" class="hint">
@@ -34,6 +34,5 @@
         </button>
       </div>
     </div>
-
   </div>
 </section>

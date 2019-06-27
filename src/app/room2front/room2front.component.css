@@ -72,7 +72,8 @@
 }
 
 .promptBtn:hover {
-  border: 1px solid slategray;
+  border: 1px solid yellow;
+  background-color: yellow;
 }
 
 h2 {
@@ -93,6 +94,12 @@ h2 {
   opacity: 1;
 }
 
+.promptText {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
@@ -107,6 +114,7 @@ h2 {
   .rotateImg {
     display: none;
   }
+
   /* badge scanner */
   .uItem0 {
     display: block;
@@ -116,6 +124,7 @@ h2 {
     right: 33vw;
     top: 17vh;
   }
+
   /* extinguisher strap */
   .uItem2 {
     display: block;
@@ -127,6 +136,7 @@ h2 {
     z-index: 5;
     transform: rotate(90deg);
   }
+
   /* fire extinguisher */
   .item3 {
     display: block;
@@ -137,6 +147,7 @@ h2 {
     top: 17vh;
     z-index: 1;
   }
+
   .hint, .noMatch {
     background-color: rgb(236, 236, 236);
     z-index: 10;
@@ -164,11 +175,14 @@ h2 {
     z-index: 15;
     padding: 10px;
     cursor: pointer;
+    width: 50%;
   }
+
   .prompt {
     background-color: rgba(0, 0, 0, 0.8);
     width: 90%;
   }
+  
   .overlay {
     height: 77vh;
     width: 100vw;
@@ -176,6 +190,7 @@ h2 {
     /* background-blend-mode: multiply; */
     mix-blend-mode: hard-light;
   }
+
   .mobileFlashlight {
     display: block;
     position: absolute;
@@ -188,7 +203,14 @@ h2 {
     background-color: rgba(255, 228, 74, 0.479);
     /* pointer-events: none; */
   }
+  
+  .promptText {
+    font-size: 22px;
+    line-height: 30px;
+  }
 }
+
+
 /* iPad Portrait View */
 @media screen and (min-width: 768px) {
   .background {
@@ -214,18 +236,31 @@ h2 {
   .items {
     display: none;
   }
+  
+  .promptText {
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
+
+
 /* iPad Landscape / Desktop View */
 @media screen and (min-width: 1024px) and (orientation: Landscape) {
   .background {
     height: 81vh;
   }
+
   .hint, .noMatch {
     font-size: 20px;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
   }
+
   .hintBtn, .noMatchBtn {
-    padding: 15px;
+    /*padding: 15px;*/
+
     font-size: 20px;
+    margin-top: 2vh;
   }
 
   .rotateMessage,

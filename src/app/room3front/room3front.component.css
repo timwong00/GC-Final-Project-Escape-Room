@@ -63,7 +63,8 @@
 }
 
 .promptBtn:hover {
-  border: 1px solid slategray;
+  border: 1px solid yellow;
+  background-color: yellow;
 }
 
 h2 {
@@ -92,6 +93,13 @@ h2 {
   display: none;
   /* z-index: 10; */
 }
+
+
+.promptText {
+  font-size: 18px;
+  line-height: 24px;
+}
+
 
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
@@ -133,6 +141,7 @@ h2 {
     background-color: whitesmoke;
     z-index: 15;
     padding: 10px;
+    width: 50%;
   }
 
   .prompt {
@@ -205,6 +214,11 @@ h2 {
     background-color: rgba(255, 228, 74, 0.479);
     /* pointer-events: none; */
   }
+
+  .promptText {
+    font-size: 22px;
+    line-height: 30px;
+  }
 }
 
 /* iPad Portrait View */
@@ -234,6 +248,11 @@ h2 {
   .items {
     display: none;
   }
+
+  .promptText {
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 /* iPad Landscape / Desktop View */
@@ -249,11 +268,17 @@ h2 {
 
   .hint, .noMatch {
     font-size: 20px;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
   }
 
-  .hintBtn, .noMatchBtn {
-    padding: 15px;
+
+  .hintBtn {
+
+/*   .hintBtn, .noMatchBtn {
+    padding: 15px; */
     font-size: 20px;
+    margin-top: 2vh;
   }
 
   .prompt {

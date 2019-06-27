@@ -148,8 +148,7 @@ export class MatchService {
       }
       this.itemsToMatch = [];
       this.selected = false;
-
-      // console.log("Items do not match");
+      this.notAMatch = true;
     }
   }
 
