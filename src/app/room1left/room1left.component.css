@@ -83,7 +83,7 @@
     z-index: 1;
   }
 
-  .hint {
+  .hint, .noMatch {
     background-color: rgb(236, 236, 236);
     z-index: 10;
     position: absolute;
@@ -102,7 +102,7 @@
     width: 30%;
   }
 
-  .hintBtn {
+  .hintBtn, .noMatchBtn {
     border-radius: 5px;
     border: 1px solid black;
     background-color: whitesmoke;
@@ -174,14 +174,18 @@
     display: none;
   }
 
-  .hint {
+  .hint, .noMatch {
     font-size: 20px;
     padding-top: 3vh;
     padding-bottom: 3vh;
   }
 
+
   .hintBtn {
     /* padding: 15px; */
+ /*  .hintBtn, .noMatchBtn {
+    padding: 15px; */
+
     font-size: 20px;
     margin-top: 2vh;
   }
