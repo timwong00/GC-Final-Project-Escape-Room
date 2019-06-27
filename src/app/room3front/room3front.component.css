@@ -93,6 +93,13 @@ h2 {
   /* z-index: 10; */
 }
 
+
+.promptText {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
   .background {
@@ -205,6 +212,11 @@ h2 {
     background-color: rgba(255, 228, 74, 0.479);
     /* pointer-events: none; */
   }
+
+  .promptText {
+    font-size: 22px;
+    line-height: 30px;
+  }
 }
 
 /* iPad Portrait View */
@@ -233,6 +245,11 @@ h2 {
 
   .items {
     display: none;
+  }
+
+  .promptText {
+    font-size: 24px;
+    line-height: 36px;
   }
 }
 

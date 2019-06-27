@@ -6,29 +6,6 @@
   font-style: normal;
 }
 
-/* @font-face {
-  font-family: 'run_demoregular';
-  src: url("../assets/run_demo-webfont.woff2") format('woff2'),
-       url("../assets/run_demo-webfont.woff") format('woff');
-  font-weight: normal;
-  font-style: normal;
-} */
-
-/* @font-face {
-  font-family: 'stranger_back_in_the_nightRg';
-  src: url("../assets/stranger_back_in_the_night-webfont.woff2") format('woff2'),
-       url('../assets/stranger_back_in_the_night-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-} */
-
-/* @font-face {
-  font-family: "true_liesregular";
-  src: url("../assets/true_lies-webfont.woff2") format("woff2"),
-    url("../assets/true_lies-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-} */
 
 .logo {
     max-width: 70%;
@@ -49,20 +26,25 @@
   height: 100vh;
 }
 
-h1 {
+/* h1 {
   color: white;
   font-family: "insomniaregular";
   font-size: 50px;
   font-weight: normal;
   font-style: normal;
-}
+} */
 
-h3 {
+/* h3 {
   color: white;
   font-family: "stranger_back_in_the_nightRg";
   font-weight: normal;
   font-style: normal;
   font-size: 30px;
+} */
+
+p {
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .how-to-play,
@@ -112,7 +94,7 @@ button {
   width: 75%;
   height: 80%;
   padding: 15px;
-  font-size: 20px;
+  /* font-size: 20px; */
   color: white;
   border-radius: 15px;
   display: flex;
@@ -159,6 +141,11 @@ h2 {
   .how-to-play {
     margin-right: 10%;
   }
+
+  p {
+    font-size: 22px;
+    line-height: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -184,5 +171,10 @@ h2 {
 
   h2 {
     font-size: 26px;
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 36px;
   }
 }
