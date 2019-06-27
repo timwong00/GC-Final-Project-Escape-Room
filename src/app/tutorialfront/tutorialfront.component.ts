@@ -79,7 +79,10 @@ export class TutorialfrontComponent implements OnInit {
     }
   }
 
-  stopCursor(event) {
-    console.log(event);
+  isMobileDevice() {
+    return (
+      typeof window.orientation !== "undefined" ||
+      navigator.userAgent.indexOf("IEMobile") !== -1
+    );
   }
 }

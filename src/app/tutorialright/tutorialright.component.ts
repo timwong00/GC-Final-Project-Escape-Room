@@ -9,6 +9,8 @@ import { InventoryService } from "../inventory.service";
 })
 export class TutorialrightComponent implements OnInit {
   items: any;
+  x: any;
+  y: any;
   // flashlightCollected: boolean = false;
   // flashlightClue: boolean = false;
   constructor(
@@ -55,5 +57,20 @@ export class TutorialrightComponent implements OnInit {
 
   flashlightOn() {
     this.tutorialRoomService.flashlightOn();
+  }
+
+  flashlightCursor(mouseEvent) {
+    this.x = mouseEvent.clientX;
+    this.y = mouseEvent.clientY;
+    if (typeof this.x !== undefined) {
+      return this.x, this.y;
+    }
+  }
+
+  isMobileDevice() {
+    return (
+      typeof window.orientation !== "undefined" ||
+      navigator.userAgent.indexOf("IEMobile") !== -1
+    );
   }
 }

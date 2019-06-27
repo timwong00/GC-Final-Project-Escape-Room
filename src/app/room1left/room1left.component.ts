@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Room1Service } from "../room1.service";
 import { MatchService } from "../match.service";
 import { InventoryService } from "../inventory.service";
+import { SoundeffectService } from "../soundeffect.service";
 
 @Component({
   selector: "room1left",
@@ -19,7 +20,8 @@ export class Room1leftComponent implements OnInit {
   constructor(
     private room1Service: Room1Service,
     private matchService: MatchService,
-    private inventoryService: InventoryService
+    private inventoryService: InventoryService,
+    private soundEffectService: SoundeffectService
   ) {}
 
   ngOnInit() {
@@ -35,6 +37,8 @@ export class Room1leftComponent implements OnInit {
     // this.inventoryItems = this.inventoryService.inventoryItems;
     this.itemsToMatch = this.matchService.itemsToMatch;
     // console.log(this.inventoryItems);
+
+    this.soundEffectService.getCutDoorHandle();
   }
 
   selectItem(inventoryItem) {
