@@ -97,4 +97,8 @@ export class Room2frontComponent implements OnInit {
       navigator.userAgent.indexOf("IEMobile") !== -1
     );
   }
+  
+  hideNoMatch() {
+    this.matchService.hideNoMatch();
+  }
 }
