@@ -18,6 +18,8 @@ export class SoundeffectService {
   glassBreakURL: any;
   cutDoorHandle: any;
   cutDoorHandleURL: any;
+  keyCode: any;
+  keyCodeURL: any;
 
   constructor(private http: HttpClient) {}
 
@@ -46,6 +48,16 @@ export class SoundeffectService {
         this.soundeffect = response;
         this.cutDoorHandleURL = this.soundeffect.previews["preview-hq-mp3"];
         this.cutDoorHandle = new Audio(this.cutDoorHandleURL);
+      });
+  }
+
+  getKeyCode() {
+    return this.http
+      .get(`${this.apiurl}` + "/262277/" + `${this.apikey}`)
+      .subscribe(response => {
+        this.soundeffect = response;
+        this.keyCodeURL = this.soundeffect.previews["preview-hq-mp3"];
+        this.keyCode = new Audio(this.keyCodeURL);
       });
   }
 
@@ -113,5 +125,13 @@ export class SoundeffectService {
 
   playCutDoorHandle() {
     this.cutDoorHandle.play();
+  }
+
+  playKeyCode() {
+    this.keyCode.currentTime = 1.2;
+    this.keyCode.play();
+    setTimeout(() => {
+      this.keyCode.pause();
+    }, 3000);
   }
 }

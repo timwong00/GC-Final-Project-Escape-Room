@@ -138,6 +138,12 @@ export class MatchService {
       ) {
         this.soundEffectService.playCutDoorHandle();
       }
+      if (
+        this.itemsToMatch[0] == "combination lock" &&
+        this.itemsToMatch[1] == "combination lock"
+      ) {
+        this.soundEffectService.playKeyCode();
+      }
       this.enterNextRoom();
       this.itemsToMatch = [];
       this.selected = false;

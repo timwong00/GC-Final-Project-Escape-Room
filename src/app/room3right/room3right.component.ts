@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Room3Service } from "../room3.service";
 import { InventoryService } from "../inventory.service";
 import { MatchService } from "../match.service";
+import { SoundeffectService } from "../soundeffect.service";
 
 @Component({
   selector: "room3right",
@@ -19,7 +20,8 @@ export class Room3rightComponent implements OnInit {
   constructor(
     private room3Service: Room3Service,
     private inventoryService: InventoryService,
-    private matchService: MatchService
+    private matchService: MatchService,
+    private soundEffectService: SoundeffectService
   ) {}
 
   ngOnInit() {
@@ -27,6 +29,8 @@ export class Room3rightComponent implements OnInit {
 
     this.unlockItems = this.room3Service.uItems;
     this.itemsToMatch = this.matchService.itemsToMatch;
+
+    this.soundEffectService.getKeyCode();
   }
 
   selectItem(inventoryItem) {
