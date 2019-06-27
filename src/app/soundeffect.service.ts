@@ -16,6 +16,8 @@ export class SoundeffectService {
   creepyAmbient: any;
   glassBreak: any;
   glassBreakURL: any;
+  cutDoorHandle: any;
+  cutDoorHandleURL: any;
 
   constructor(private http: HttpClient) {}
 
@@ -28,41 +30,24 @@ export class SoundeffectService {
   }
 
   getBreakWindow() {
-    return this.http.get(`${this.apiurl}` + "/203371/" + `${this.apikey}`);
+    return this.http
+      .get(`${this.apiurl}` + "/203371/" + `${this.apikey}`)
+      .subscribe(response => {
+        this.soundeffect = response;
+        this.glassBreakURL = this.soundeffect.previews["preview-hq-mp3"];
+        this.glassBreak = new Audio(this.glassBreakURL);
+      });
   }
 
-  // getKeyUnlock() {
-  //   return this.http.get(`${this.apiurl}` + "/235467/" + `${this.apikey}`);
-  // }
-
-  // getDoorUnlock() {
-  //   return this.http.get(`${this.apiurl}` + "/214000/" + `${this.apikey}`);
-  // }
-
-  // getScissorCutting() {
-  //   return this.http.get(`${this.apiurl}` + "/457038/" + `${this.apikey}`);
-  // }
-
-  // getChairLeg() {
-  //   return this.http.get(`${this.apiurl}` + "/328559/" + `${this.apikey}`);
-  // }
-
-  // getChiselSound() {
-  //   return this.http.get(`${this.apiurl}` + "/461441/" + `${this.apikey}`);
-  // }
-
-  // getKeyCode() {
-  //   return this.http.get(`${this.apiurl}` + "/399120/" + `${this.apikey}`);
-  // }
-
-  // playKeyUnlock() {
-  //   this.getKeyUnlock().subscribe(response => {
-  //     this.soundeffect = response;
-  //     this.keyUnlockSoundURL = this.soundeffect.previews["preview-hq-mp3"];
-  //     let keyUnlock = new Audio(this.keyUnlockSoundURL);
-  //     keyUnlock.play();
-  //   });
-  // }
+  getCutDoorHandle() {
+    return this.http
+      .get(`${this.apiurl}` + "/185608/" + `${this.apikey}`)
+      .subscribe(response => {
+        this.soundeffect = response;
+        this.cutDoorHandleURL = this.soundeffect.previews["preview-hq-mp3"];
+        this.cutDoorHandle = new Audio(this.cutDoorHandleURL);
+      });
+  }
 
   playLowHeartbeat() {
     this.getHeartbeat().subscribe(response => {
@@ -123,11 +108,10 @@ export class SoundeffectService {
   }
 
   playGlassBreak() {
-    this.getBreakWindow().subscribe(response => {
-      this.soundeffect = response;
-      this.glassBreakURL = this.soundeffect.previews["preview-hq-mp3"];
-      this.glassBreak = new Audio(this.glassBreakURL);
-      this.glassBreak.play();
-    });
+    this.glassBreak.play();
+  }
+
+  playCutDoorHandle() {
+    this.cutDoorHandle.play();
   }
 }

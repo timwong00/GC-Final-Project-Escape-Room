@@ -81,8 +81,8 @@ export class MatchService {
       if (this.itemsToMatch[0] == "door" && this.itemsToMatch[1] == "door") {
         this.router.navigate(["/endgame"]);
         this.gameProgressionService.setGameProgress("Game Won");
-        // this.soundEffectService.stopCreepyAmbient();
-        // this.soundEffectService.stopHeartbeat();
+        this.soundEffectService.stopCreepyAmbient();
+        this.soundEffectService.stopHeartbeat();
       }
     }
   }
@@ -131,6 +131,12 @@ export class MatchService {
         this.itemsToMatch[1] == "glass case"
       ) {
         this.soundEffectService.playGlassBreak();
+      }
+      if (
+        this.itemsToMatch[0] == "container" &&
+        this.itemsToMatch[1] == "container"
+      ) {
+        this.soundEffectService.playCutDoorHandle();
       }
       this.enterNextRoom();
       this.itemsToMatch = [];
