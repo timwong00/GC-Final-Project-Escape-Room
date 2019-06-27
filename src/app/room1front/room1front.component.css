@@ -75,7 +75,8 @@
 }
 
 .promptBtn:hover {
-  border: 1px solid slategray;
+  border: 1px solid yellow;
+  background-color: yellow;
 }
 
 h2 {
