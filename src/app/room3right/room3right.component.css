@@ -122,6 +122,7 @@
     width: 15vw;
     bottom: 7vh;
     right: 19vw;
+    z-index: 5;
   }
 
   /* door */
@@ -132,6 +133,7 @@
     width: 15vw;
     bottom: 7vh;
     right: 19vw;
+    z-index: 1;
   }
 
   .mobileFlashlight {
