@@ -94,12 +94,10 @@ h2 {
   /* z-index: 10; */
 }
 
-
 .promptText {
   font-size: 18px;
   line-height: 24px;
 }
-
 
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
@@ -116,7 +114,8 @@ h2 {
     display: none;
   }
 
-  .hint, .noMatch {
+  .hint,
+  .noMatch {
     background-color: rgb(236, 236, 236);
     z-index: 10;
     position: absolute;
@@ -135,13 +134,21 @@ h2 {
     width: 30%;
   }
 
-  .hintBtn, .noMatchBtn {
+  .hintBtn,
+  .noMatchBtn {
     border-radius: 5px;
     border: 1px solid black;
     background-color: whitesmoke;
     z-index: 15;
     padding: 10px;
     width: 50%;
+    font-family: "insomniaregular";
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .hintBtn:active {
+    background-color: yellow;
   }
 
   .prompt {
@@ -165,10 +172,10 @@ h2 {
     display: block;
     position: absolute;
     max-width: 20%;
-  height: auto;
-  width: auto;
+    height: auto;
+    width: auto;
     top: 43vh;
-    left:67vw;
+    left: 67vw;
     z-index: 5;
   }
 
@@ -266,17 +273,16 @@ h2 {
     display: none;
   }
 
-  .hint, .noMatch {
+  .hint,
+  .noMatch {
     font-size: 20px;
     padding-top: 3vh;
     padding-bottom: 3vh;
   }
 
-
-  .hintBtn {
-
-/*   .hintBtn, .noMatchBtn {
-    padding: 15px; */
+  .hintBtn,
+  .noMatchBtn {
+    padding: 15px;
     font-size: 20px;
     margin-top: 2vh;
   }
@@ -350,31 +356,31 @@ h2 {
 
 /* Desktop View - Item Positioning */
 @media screen and (min-width: 1200px) {
-/* tongs */
-.item1 {
-  display: block;
-}
+  /* tongs */
+  .item1 {
+    display: block;
+  }
 
-/* drawer */
-.uItem2 {
-  display: block;
-  /* height: 8vh;
+  /* drawer */
+  .uItem2 {
+    display: block;
+    /* height: 8vh;
   width: 9vw;
   right: 34vw;
   top: 60vh; */
-}
+  }
 
-/* code */
-.item3 {
-  display: block;
-  top: 51vh;
-}
+  /* code */
+  .item3 {
+    display: block;
+    top: 51vh;
+  }
 
-/* chisel */
-.item4 {
-  display: block;
-  height: 23vh;
-  width: 3vw;
-  bottom: 1vh; 
-}
+  /* chisel */
+  .item4 {
+    display: block;
+    height: 23vh;
+    width: 3vw;
+    bottom: 1vh;
+  }
 }

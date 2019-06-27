@@ -151,16 +151,15 @@ export class MatchService {
       this.selected = false;
       // console.log("Items match");
     } else if (this.itemsToMatch[0] !== this.itemsToMatch[1]) {
-      if (this.itemsToMatch.length == 2){
+      if (this.itemsToMatch.length == 2) {
         this.notAMatch = true;
-        console.log("nomatch hint")
       } else {
-        console.log("nomatch no hint")
-        return
+        return;
       }
       this.itemsToMatch = [];
       this.selected = false;
-      this.notAMatch = true;
+
+      // console.log("Items do not match");
     }
   }
 
