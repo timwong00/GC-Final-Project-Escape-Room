@@ -1,20 +1,27 @@
 <section class="container" *ngIf="!playingGame">
-  <img class="logo" src="assets\img\blackout.png" alt="logo">
+  <img class="logo flicker-4" src="assets\img\blackout.png" alt="logo" />
   <div class="btn_container">
     <button class="how-to-play" (click)="toggleShow()">HOW TO PLAY</button>
-    <button class="play" [routerLink]="['/tutorialfront']" (click)="startGame()">
+    <button
+      class="play"
+      [routerLink]="['/tutorialfront']"
+      (click)="startGame()"
+    >
       PLAY
     </button>
   </div>
 
-
   <section *ngIf="isShowing" class="directions">
     <h2>Welcome to BlackOut</h2>
     <p>
-      BlackOut is an escape room in which you will need to put together clues in order to move into the next room. Click
-      on objects in the room to find hints. If you "grab" an item, it will be added to your inventory for later use.
-      When you think you've solved a clue, click the item in your inventory then click the object you think it matches with. When
-      items match up, they will disappear, usually allowing access to a new clue! Use the directional arrows at the bottom of the page to see what is to the left, right, and front of you in each room!
+      BlackOut is an escape room in which you will need to put together clues in
+      order to move into the next room. Click on objects in the room to find
+      hints. If you "grab" an item, it will be added to your inventory for later
+      use. When you think you've solved a clue, click the item in your inventory
+      then click the object you think it matches with. When items match up, they
+      will disappear, usually allowing access to a new clue! Use the directional
+      arrows at the bottom of the page to see what is to the left, right, and
+      front of you in each room!
     </p>
     <button (click)="toggleShow()" class="okBtn">OK</button>
   </section>
