@@ -16,22 +16,21 @@
   width: 100vw;
   /* padding: 15px; */
   font-size: 55px;
-  font-family: 'insomniaregular';
+  font-family: "insomniaregular";
   font-weight: normal;
   font-style: normal;
   color: white;
-  border-radius: 15px;  
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   text-align: center;
-  
 }
 
 .promptBtn {
   width: auto;
-  font-family: 'insomniaregular';
+  font-family: "insomniaregular";
   font-weight: normal;
   font-style: normal;
   font-size: 40x;
@@ -42,26 +41,25 @@
   color: black;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
-.how-to-play:hover, .play:hover {
+.how-to-play:hover,
+.play:hover {
   background-color: yellow;
   border: 1px solid black;
 }
-  
+
 h2 {
   margin: 0;
-  font-family: 'insomniaregular';
+  font-family: "insomniaregular";
   font-weight: normal;
   font-style: normal;
   font-size: 20px;
 }
 
-
-
 /* Mobile Landscape View */
-@media all and (min-width: 568px) and (orientation: Landscape){
-  
+@media all and (min-width: 568px) and (orientation: Landscape) {
   .rotate {
     display: none;
   }
@@ -69,11 +67,10 @@ h2 {
   .prompt {
     background-color: rgba(0, 0, 0, 0.8);
   }
-}
-   
+
   .promptBtn {
     /* width: 50%; */
-    font-family: 'insomniaregular';
+    font-family: "insomniaregular";
     font-weight: normal;
     font-style: normal;
     font-size: 24x;
@@ -84,38 +81,37 @@ h2 {
     color: black;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
-  
-  .how-to-play:hover, .play:hover {
+
+  .how-to-play:hover,
+  .play:hover {
     background-color: yellow;
     border: 1px solid black;
   }
-    
+
   h2 {
     margin: 0;
-    font-family: 'insomniaregular';
+    font-family: "insomniaregular";
     font-weight: normal;
     font-style: normal;
     font-size: 20px;
   }
-
+}
 
 /* iPad Portrait View -- display rotate message */
 
-  @media all and (min-width: 768px) {
-    .background {
-      display: none;
-    }
-    .rotate {
-      display: block;
-    }
+@media screen and (min-width: 768px) {
+  .background {
+    display: none;
   }
+  .rotate {
+    display: block;
+  }
+}
 /* iPad Landscape View */
-@media all and (min-width: 1024px) and (orientation: Landscape) {
-  
-
+@media screen and (min-width: 1024px) and (orientation: Landscape) {
   h2 {
     font-size: 26px;
   }
-
 }

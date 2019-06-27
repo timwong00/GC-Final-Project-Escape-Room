@@ -21,22 +21,18 @@
   .room-navigation-arrows {
     height: 10vh;
   }
-
 }
-
 
 /* Tablet Portrait View */
 @media screen and (min-width: 768px) {
   .room-navigation-arrows {
     height: 6vh;
   }
-} 
-
+}
 
 /* Tablet Landscape / Desktop View */
 @media screen and (min-width: 1024px) and (orientation: Landscape) {
   .room-navigation-arrows {
     height: 6vh;
   }
-
 }
