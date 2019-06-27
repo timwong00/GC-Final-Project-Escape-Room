@@ -6,9 +6,9 @@
 
   <section *ngIf="this.room2Service.isShowing" class="prompt">
     <h2>The Hallway</h2>
-    <p>
+    <p class="promptText">
       Congratulations! You have escaped the operation room and moved into the
-      hallway. You are one step closer to escaping Dr. Lobotomy!
+      hallway. You are one step closer to escaping Dr. Lobotomy, but hurry! Every second counts with your flashlight battery dying!
     </p>
 
     <button class="promptBtn" (click)="hidePrompt()">OK</button>
@@ -62,6 +62,12 @@
         <p>{{ uItem.item_use }}</p>
         <button class="hintBtn" (click)="hideUnlockHint(i)">OK</button>
       </div>
+   
+    
+    <div *ngIf="this.matchService.notAMatch" class="noMatch">
+      <p>These items do not match!</p>
+      <button class="noMatchBtn" (click)="hideNoMatch()">OK</button>
     </div>
+  </div>
   </div>
 </section>

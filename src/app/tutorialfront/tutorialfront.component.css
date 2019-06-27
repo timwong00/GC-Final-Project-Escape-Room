@@ -30,7 +30,7 @@
   width: 90%;
   height: 90%;
   padding: 15px;
-  font-size: 20px;
+  /* font-size: 20px; */
   color: white;
   border-radius: 15px;
   display: flex;
@@ -59,8 +59,9 @@
 }
 
 .promptBtn:hover {
-  border: 1px solid slategray;
-}
+    border: 1px solid yellow;
+    background-color: yellow;
+  }
 
 h2 {
   margin: 0;
@@ -79,6 +80,12 @@ h2 {
   display: none;
   /* z-index: 10; */
 }
+
+p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
 
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
@@ -120,6 +127,8 @@ h2 {
     background-color: rgba(255, 228, 74, 0.479);
     /* pointer-events: none; */
   }
+
+
 }
 
 /* iPad Portrait View */
@@ -163,6 +172,11 @@ h2 {
 
   h2 {
     font-size: 26px;
+  }
+
+  p {
+    font-size: 24px;
+    line-height: 36px;
   }
 }
 

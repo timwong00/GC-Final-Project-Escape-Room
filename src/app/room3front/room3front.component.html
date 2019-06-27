@@ -9,7 +9,7 @@
     <p>
       Great job! You have found Dr. Lobotomy's laboratory, which holds your
       escape route to the outside world. Hurry to find your way out before the
-      crazy doctor returns or your battery runs out!! !
+      crazy doctor returns or your battery runs out!
     </p>
     <button class="promptBtn" (click)="hidePrompt()">OK</button>
   </section>
@@ -44,6 +44,12 @@
         <p>{{ uItem.item_use }}</p>
         <button class="hintBtn" (click)="hideUnlockHint(i)">OK</button>
       </div>
+
+      <div *ngIf="this.matchService.notAMatch" class="noMatch">
+        <p>These items do not match!</p>
+        <button class="noMatchBtn" (click)="hideNoMatch()">OK</button>
+      </div>
+      
     </div>
 
     <div
