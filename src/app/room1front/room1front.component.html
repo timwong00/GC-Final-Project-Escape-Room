@@ -45,6 +45,12 @@
           OK
         </button>
       </div>
+      
+    <div *ngIf="this.matchService.notAMatch" class="noMatch">
+      <p>These items do not match!</p>
+      <button class="noMatchBtn" (click)="hideNoMatch()">OK</button>
+    </div>
+
     </div>
   </div>
 </section>

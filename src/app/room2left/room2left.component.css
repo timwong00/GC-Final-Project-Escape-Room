@@ -82,7 +82,7 @@
     z-index: 5;
   }
 
-  .hint {
+  .hint, .noMatch {
     background-color: rgb(236, 236, 236);
     z-index: 10;
     position: absolute;
@@ -101,7 +101,7 @@
     width: 30%;
   }
 
-  .hintBtn {
+  .hintBtn, .noMatchBtn {
     border-radius: 5px;
     border: 1px solid black;
     background-color: whitesmoke;
@@ -167,11 +167,11 @@
     height: 81vh;
   }
 
-  .hint {
+  .hint, .noMatch {
     font-size: 20px;
   }
 
-  .hintBtn {
+  .hintBtn, .noMatchBtn {
     padding: 15px;
     font-size: 20px;
   }

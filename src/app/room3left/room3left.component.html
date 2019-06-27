@@ -35,6 +35,12 @@
         <button class="hintBtn" (click)="hideUnlockHint(i)">OK</button>
       </div>
 
+      <div *ngIf="this.matchService.notAMatch" class="noMatch">
+        <p>These items do not match!</p>
+        <button class="noMatchBtn" (click)="hideNoMatch()">OK</button>
+      </div>
+    </div>
+
       <div
         *ngFor="let item of items; index as i"
         [ngClass]="{ hidden: this.room3Service.items[i].collected }"
@@ -52,6 +58,5 @@
           </button>
         </div>
       </div>
-    </div>
   </div>
 </section>

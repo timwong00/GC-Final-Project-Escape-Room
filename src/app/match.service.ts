@@ -19,6 +19,8 @@ export class MatchService {
   inventoryItems: any[] = [];
   gameProgress: any;
   selected: boolean = false;
+  notAMatch: boolean = false;
+
   constructor(
     private room1Service: Room1Service,
     private room2Service: Room2Service,
@@ -139,7 +141,12 @@ export class MatchService {
     } else if (this.itemsToMatch[0] !== this.itemsToMatch[1]) {
       this.itemsToMatch = [];
       this.selected = false;
+      this.notAMatch = true;
       // console.log("Items do not match");
     }
+  }
+
+  hideNoMatch() {
+    this.notAMatch = false;
   }
 }
