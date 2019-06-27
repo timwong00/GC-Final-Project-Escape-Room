@@ -59,7 +59,7 @@ h2 {
 }
 
 /* Mobile Landscape View */
-@media all and (min-width: 568px) and (orientation: Landscape) {
+@media screen and (min-width: 568px) and (orientation: Landscape) {
   .rotate {
     display: none;
   }

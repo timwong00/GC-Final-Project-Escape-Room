@@ -59,7 +59,8 @@
     display: none;
   }
 
-  .hint, .noMatch {
+  .hint,
+  .noMatch {
     background-color: rgb(236, 236, 236);
     z-index: 10;
     position: absolute;
@@ -181,20 +182,16 @@
     display: none;
   }
 
-  .hint {
-/*   .hint, .noMatch {
- */
+  .hint,
+  .noMatch {
     font-size: 20px;
     padding-top: 3vh;
     padding-bottom: 3vh;
   }
 
-
-  .hintBtn {
-
-/*   .hintBtn, .noMatchBtn {
-    padding: 15px; */
-
+  .hintBtn,
+  .noMatchBtn {
+    /* padding: 15px; */
     font-size: 20px;
     margin-top: 2vh;
   }
@@ -249,7 +246,7 @@
 }
 
 /* Desktop View - Item Positioning */
-@media all and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   /* stool */
   .uItem0 {
     display: block;
@@ -271,5 +268,4 @@
     display: block;
     top: 15vh;
   }
- 
 }
