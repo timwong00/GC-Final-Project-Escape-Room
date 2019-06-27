@@ -1,11 +1,12 @@
 <main class="prompt">
 <section *ngIf="gameLost"  class="endGame">
   <h2>YOU LOSE</h2>
-  <p>Your flashlight battery ran out! Without the flashlight, you couldn't find the clues to escape before Dr. Lobotomy returned. He won't let another escape attempt occur as easy next time!</p>
+  <p>Your flashlight battery ran out! Without the flashlight, you couldn't find the clues to escape before Dr. Lobotomy returned, and he won't let another escape attempt occur as easy next time!</p>
   <button class="promptBtn" (click)="quitGame()">
     Try Again
   </button>
 </section>
+
 <section *ngIf="gameWon" class="endGame">
   <h2>YOU WIN</h2>
   <p>Congratulations! You connected the clues and escaped the clutches of Dr. Lobotomy. You're one of the lucky few who encounter the crazy doctor who live to see another day!</p>
