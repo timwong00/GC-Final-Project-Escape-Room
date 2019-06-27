@@ -12,7 +12,7 @@ export class TutorialleftComponent implements OnInit {
   x: any;
   y: any;
   constructor(
-    private tutorialRoomService: TutorialroomService,
+    public tutorialRoomService: TutorialroomService,
     private matchService: MatchService
   ) {}
 
