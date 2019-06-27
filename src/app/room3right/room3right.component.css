@@ -59,7 +59,8 @@
     display: none;
   }
 
-  .hint, .noMatch {
+  .hint,
+  .noMatch {
     background-color: rgb(236, 236, 236);
     z-index: 10;
     position: absolute;
@@ -78,7 +79,8 @@
     width: 30%;
   }
 
-  .hintBtn, .noMatchBtn {
+  .hintBtn,
+  .noMatchBtn {
     border-radius: 5px;
     border: 1px solid black;
     background-color: whitesmoke;
@@ -86,6 +88,13 @@
     padding: 10px;
     cursor: pointer;
     width: 50%;
+    font-family: "insomniaregular";
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .hintBtn:active {
+    background-color: yellow;
   }
 
   .overlay {
@@ -115,6 +124,7 @@
     width: 15vw;
     bottom: 7vh;
     right: 19vw;
+    z-index: 5;
   }
 
   /* door */
@@ -125,6 +135,7 @@
     width: 15vw;
     bottom: 7vh;
     right: 19vw;
+    z-index: 1;
   }
 
   .mobileFlashlight {
@@ -181,18 +192,16 @@
     display: none;
   }
 
-  .hint, .noMatch {
+  .hint,
+  .noMatch {
     font-size: 20px;
     padding-top: 3vh;
     padding-bottom: 3vh;
   }
 
-
-  .hintBtn {
-
-/*   .hintBtn, .noMatchBtn {
-    padding: 15px; */
-
+  .hintBtn,
+  .noMatchBtn {
+    padding: 15px;
     font-size: 20px;
     margin-top: 2vh;
   }
@@ -251,7 +260,7 @@
   .rotateImg {
     display: none;
   }
-  
+
   /* stool leg */
   .item0 {
     display: block;

@@ -1,17 +1,9 @@
-.rotate {
-  color: white;
-  height: 85vh;
-  width: 100vw;
-}
-
 .prompt {
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhZqML1UB7TGAiJpaSEkdgk46nRI8NZcJEwPctgJvHQ6E9ep5E");
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.438);
-  background-blend-mode: multiply;
-  position: relative;
-  /* transform: translate(-50%, -50%); */
+  background-color: black;
+  /* position: relative; */
   height: 86vh;
   width: 100vw;
   /* padding: 15px; */
@@ -22,32 +14,41 @@
   color: white;
   border-radius: 15px;
   display: flex;
+  align-items: center;
+}
+
+.endGame {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   text-align: center;
+  /* z-index: 100; */
 }
 
 .promptBtn {
-  width: auto;
+  width: 50%;
   font-family: "insomniaregular";
   font-weight: normal;
   font-style: normal;
-  font-size: 40x;
-  background-color: slategray;
-  border: 1px solid white;
+  font-size: 18x;
+  border: 1px solid black;
+  background-color: whitesmoke;
   border-radius: 15px;
-  padding: 20px;
+  padding: 10px;
   color: black;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   cursor: pointer;
 }
 
-.how-to-play:hover,
-.play:hover {
+.promptBtn:hover {
+  border: 1px solid yellow;
   background-color: yellow;
-  border: 1px solid black;
 }
 
 h2 {
@@ -56,62 +57,45 @@ h2 {
   font-weight: normal;
   font-style: normal;
   font-size: 20px;
+  color: white;
+}
+
+p {
+  font-size: 18px;
+  line-height: 24px;
+  color: white;
 }
 
 /* Mobile Landscape View */
-@media all and (min-width: 568px) and (orientation: Landscape) {
-  .rotate {
-    display: none;
+@media screen and (min-width: 568px) and (orientation: Landscape) {
+  p {
+    font-size: 22px;
+    line-height: 30px;
   }
+}
 
-  .prompt {
-    background-color: rgba(0, 0, 0, 0.8);
+/* iPad Portrait View */
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+/* iPad Landscape / Desktop View */
+@media screen and (min-width: 1024px) and (orientation: Landscape) {
+  .endGame {
+    padding: 100px;
   }
 
   .promptBtn {
-    /* width: 50%; */
-    font-family: "insomniaregular";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24x;
-    background-color: slategray;
-    border: 1px solid white;
-    border-radius: 15px;
-    padding: 20px;
-    color: black;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    width: 25%;
+    height: 20%;
+    margin-top: 10px;
   }
 
-  .how-to-play:hover,
-  .play:hover {
-    background-color: yellow;
-    border: 1px solid black;
-  }
-
-  h2 {
-    margin: 0;
-    font-family: "insomniaregular";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 20px;
-  }
-}
-
-/* iPad Portrait View -- display rotate message */
-
-@media screen and (min-width: 768px) {
-  .background {
-    display: none;
-  }
-  .rotate {
-    display: block;
-  }
-}
-/* iPad Landscape View */
-@media screen and (min-width: 1024px) and (orientation: Landscape) {
   h2 {
     font-size: 26px;
+    margin-bottom: 10px;
   }
 }
