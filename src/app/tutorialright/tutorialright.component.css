@@ -54,7 +54,6 @@
   padding: 10px;
   cursor: pointer;
   width: 50%;
-
 }
 
 .overlay {
@@ -66,6 +65,24 @@
 .flashlightImg {
   display: none;
   cursor: pointer;
+}
+
+.items {
+  opacity: 0.5;
+}
+
+.items:hover {
+  opacity: 1;
+}
+
+.mobileFlashlight {
+  display: none;
+  cursor: move;
+}
+
+.desktopFlashlight {
+  display: none;
+  /* z-index: 10; */
 }
 
 /* Mobile Landscape View */
@@ -108,6 +125,20 @@
     right: 20vw;
     bottom: 20vh;
     opacity: 0.9;
+    /* cursor: pointer; */
+  }
+
+  .mobileFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    /* pointer-events: none; */
   }
 }
 
@@ -172,9 +203,9 @@
     padding-bottom: 3vh;
   }
 
-  .hintBtn, .flashlightBtn {
-    /* padding: 15px; */
-
+  .hintBtn,
+  .flashlightBtn {
+    padding: 15px;
     font-size: 20px;
     margin-top: 2vh;
   }
@@ -193,6 +224,24 @@
     width: 20vw;
     right: 18w;
     bottom: 25vh;
+  }
+
+  .mobileFlashlight {
+    width: 250px;
+    height: 250px;
+  }
+
+  .desktopFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    pointer-events: none;
   }
 }
 

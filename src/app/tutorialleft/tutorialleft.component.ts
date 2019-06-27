@@ -36,4 +36,19 @@ export class TutorialleftComponent implements OnInit {
   hideUnlockHint(i) {
     this.tutorialRoomService.hideUnlockItemHint(i);
   }
+
+  flashlightCursor(mouseEvent) {
+    this.x = mouseEvent.clientX;
+    this.y = mouseEvent.clientY;
+    if (typeof this.x !== undefined) {
+      return this.x, this.y;
+    }
+  }
+
+  isMobileDevice() {
+    return (
+      typeof window.orientation !== "undefined" ||
+      navigator.userAgent.indexOf("IEMobile") !== -1
+    );
+  }
 }

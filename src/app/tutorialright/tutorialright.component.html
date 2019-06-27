@@ -4,7 +4,22 @@
     <img src="../../assets/img/rotate.png" class="rotateImg" />
   </div>
 
-  <div class="overlay">
+  <div class="overlay" (mousemove)="flashlightCursor($event)">
+    <div
+      *ngIf="this.tutorialRoomService.flashlightCollected && isMobileDevice()"
+      class="mobileFlashlight"
+      cdkDragBoundary=".overlay"
+      cdkDrag
+    ></div>
+    <div
+      *ngIf="this.tutorialRoomService.flashlightCollected && !isMobileDevice()"
+      class="desktopFlashlight"
+      [ngStyle]="{
+        top: y + 'px',
+        left: x + 'px'
+      }"
+    ></div>
+
     <div
       *ngFor="let item of items; index as i"
       [ngClass]="{ hidden: this.tutorialRoomService.items[i].collected }"
