@@ -17,18 +17,17 @@ export class Room1Service {
   collected: boolean = false;
 
   constructor(
-    private http: HttpClient // private gameProgressionService: GameProgressionService, // private timerService: TimerService,
-  ) // private router: Router
-  {}
+    private http: HttpClient // private gameProgressionService: GameProgressionService, // private timerService: TimerService, // private router: Router
+  ) {}
 
   getRoomOneItems() {
-    return this.http.get("/room-1-items", {
+    return this.http.get("http://localhost:5000/room-1-items", {
       responseType: "json"
     });
   }
 
   getRoomOneUnlockItems() {
-    return this.http.get("/room-1-unlock-items", {
+    return this.http.get("http://localhost:5000/room-1-unlock-items", {
       responseType: "json"
     });
   }

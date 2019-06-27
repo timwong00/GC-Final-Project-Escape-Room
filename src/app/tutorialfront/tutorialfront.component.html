@@ -3,8 +3,6 @@
     Please rotate to landscape to play!
     <img src="../../assets/img/rotate.png" class="rotateImg" />
   </div>
-  <div class="overlay"></div>
-
   <section *ngIf="this.tutorialRoomService.isShowing" class="prompt">
     <h2>The Operating Room</h2>
     <p>
@@ -18,4 +16,21 @@
     </p>
     <span class="promptBtn" (click)="hidePrompt()">OK</span>
   </section>
+
+  <div class="overlay" (mousemove)="flashlightCursor($event)">
+    <div
+      *ngIf="this.tutorialRoomService.flashlightCollected && isMobileDevice()"
+      class="mobileFlashlight"
+      cdkDragBoundary=".overlay"
+      cdkDrag
+    ></div>
+    <div
+      *ngIf="this.tutorialRoomService.flashlightCollected && !isMobileDevice()"
+      class="desktopFlashlight"
+      [ngStyle]="{
+        top: y + 'px',
+        left: x + 'px'
+      }"
+    ></div>
+  </div>
 </section>

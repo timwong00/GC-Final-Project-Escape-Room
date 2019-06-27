@@ -25,7 +25,8 @@
   margin-top: 10%;
 }
 
-.hint, .flashlightClue {
+.hint,
+.flashlightClue {
   background-color: rgb(236, 236, 236);
   z-index: 10;
   position: absolute;
@@ -44,12 +45,14 @@
   width: 30%;
 }
 
-.hintBtn, .flashlightBtn {
+.hintBtn,
+.flashlightBtn {
   border-radius: 5px;
   border: 1px solid black;
   background-color: whitesmoke;
   z-index: 15;
   padding: 10px;
+  cursor: pointer;
 }
 
 .overlay {
@@ -57,11 +60,29 @@
   z-index: -10;
 }
 
-.items, .flashlightImg {
+.items,
+.flashlightImg {
   display: none;
+  cursor: pointer;
 }
 
+.items {
+  opacity: 0.5;
+}
 
+.items:hover {
+  opacity: 1;
+}
+
+.mobileFlashlight {
+  display: none;
+  cursor: move;
+}
+
+.desktopFlashlight {
+  display: none;
+  /* z-index: 10; */
+}
 
 /* Mobile Landscape View */
 @media screen and (min-width: 568px) and (orientation: Landscape) {
@@ -102,13 +123,23 @@
     width: 20vw;
     right: 20vw;
     bottom: 20vh;
-    opacity: .9;
+    opacity: 0.9;
     /* cursor: pointer; */
   }
-  
+
+  .mobileFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    /* pointer-events: none; */
+  }
 }
-
-
 
 /* iPad Portrait View */
 @media screen and (min-width: 768px) {
@@ -146,7 +177,7 @@
 }
 
 /* iPad Landscape / Desktop View */
-@media all and (min-width: 1024px) and (orientation: Landscape) {
+@media screen and (min-width: 1024px) and (orientation: Landscape) {
   .background {
     height: 81vh;
   }
@@ -164,11 +195,13 @@
     height: 10vh;
   }
 
-  .hint, .flashlightClue {
+  .hint,
+  .flashlightClue {
     font-size: 20px;
   }
 
-  .hintBtn, .flashlightBtn {
+  .hintBtn,
+  .flashlightBtn {
     padding: 15px;
     font-size: 20px;
   }
@@ -188,10 +221,28 @@
     right: 18w;
     bottom: 25vh;
   }
+
+  .mobileFlashlight {
+    width: 250px;
+    height: 250px;
+  }
+
+  .desktopFlashlight {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: rgba(255, 228, 74, 0.479);
+    pointer-events: none;
+  }
 }
 
 /* Desktop View - Item Positioning */
-@media all and (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .item0 {
     bottom: 20vh;
     width: 7vw;
