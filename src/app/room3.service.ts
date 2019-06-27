@@ -14,13 +14,13 @@ export class Room3Service {
 
   constructor(private http: HttpClient) {}
   getRoomThreeItems() {
-    return this.http.get("http://localhost:5000/room-3-items", {
+    return this.http.get("/room-3-items", {
       responseType: "json"
     });
   }
 
   getRoomThreeUnlockItems() {
-    return this.http.get("http://localhost:5000/room-3-unlock-items", {
+    return this.http.get("/room-3-unlock-items", {
       responseType: "json"
     });
   }
@@ -53,7 +53,7 @@ export class Room3Service {
   hideItemHint(i) {
     this.items[i].showingHint = false;
   }
-  
+
   hideUnlockItemHint(i) {
     this.uItems[i].showingHint = false;
   }

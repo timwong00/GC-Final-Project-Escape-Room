@@ -12,16 +12,15 @@ export class Room2Service {
   showingHint: boolean;
   collected: boolean = false;
 
-
   constructor(private http: HttpClient) {}
   getRoomTwoItems() {
-    return this.http.get("http://localhost:5000/room-2-items", {
+    return this.http.get("/room-2-items", {
       responseType: "json"
     });
   }
 
   getRoomTwoUnlockItems() {
-    return this.http.get("http://localhost:5000/room-2-unlock-items", {
+    return this.http.get("/room-2-unlock-items", {
       responseType: "json"
     });
   }
@@ -39,7 +38,7 @@ export class Room2Service {
     // this.items.splice(index, 1);
     this.items[index].collected = true;
   }
-  
+
   hidePrompt() {
     this.isShowing = false;
   }
@@ -55,7 +54,7 @@ export class Room2Service {
   hideItemHint(i) {
     this.items[i].showingHint = false;
   }
-  
+
   hideUnlockItemHint(i) {
     this.uItems[i].showingHint = false;
   }

@@ -12,8 +12,8 @@ export class TutorialrightComponent implements OnInit {
   // flashlightCollected: boolean = false;
   // flashlightClue: boolean = false;
   constructor(
-    private tutorialRoomService: TutorialroomService,
-    private inventoryService: InventoryService
+    public tutorialRoomService: TutorialroomService,
+    public inventoryService: InventoryService
   ) {}
 
   ngOnInit() {
