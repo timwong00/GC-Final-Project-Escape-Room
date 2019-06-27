@@ -34,9 +34,10 @@ export class EndGameComponent implements OnInit {
     } else {
       this.gameLost = true;
     }
+    this.timerService.stopTimer();
   }
 
   quitGame() {
-    location.reload();
+    location.replace("https://gc-escape-room.herokuapp.com");
   }
 }

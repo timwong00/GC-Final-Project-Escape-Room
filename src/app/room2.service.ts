@@ -14,13 +14,13 @@ export class Room2Service {
 
   constructor(private http: HttpClient) {}
   getRoomTwoItems() {
-    return this.http.get("http://localhost:5000/room-2-items", {
+    return this.http.get("/room-2-items", {
       responseType: "json"
     });
   }
 
   getRoomTwoUnlockItems() {
-    return this.http.get("http://localhost:5000/room-2-unlock-items", {
+    return this.http.get("/room-2-unlock-items", {
       responseType: "json"
     });
   }

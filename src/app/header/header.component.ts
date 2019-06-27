@@ -58,7 +58,7 @@ export class HeaderComponent implements OnInit {
   }
 
   quitGame() {
-    location.reload();
+    location.replace("https://gc-escape-room.herokuapp.com");
   }
 
   clickedItem(index) {
